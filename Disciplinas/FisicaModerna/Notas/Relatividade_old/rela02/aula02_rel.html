@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />   
+    <link type="text/css" rel="stylesheet" href="../../../css_e_js/local.css" />
+
+    <link href='../../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';https://tex.stackexchange.com/questions/58141/equations-inside-enumerate-aligned-on-items-number
+      SyntaxHighlighter.all();
+    </script>
+
+     <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\\(', '\\)']],
+           macros: {
+              bra: ["{\\left\\langle #1 \\right\\rvert}",1],
+              ket: ["{\\left\\lvert #1 \\right\\rangle}",1],
+              braket:["{\\left\\langle #1 \\vert #2 \\right\\rangle}",2],
+              opProj:["{\\left\\lvert #1 \\right\\rangle\\left\\langle #1 \\right\\rvert}",1],
+              opUni:["{\\left\\lvert #1 \\right\\rangle\\left\\langle #1 \\right\\rvert \+ \\left\\lvert #2 \\right\\rangle\\left\\langle #2 \\right\\rvert}",2],
+              arcsec: "{\\operatorname{arcsec}}",
+              arccot: "{\\operatorname{arccot}}",
+              arccsc: "{\\operatorname{arcsc}}",
+              sech: "{\\operatorname{sech}}",
+              csch: "{\\operatorname{csch}}",
+              argsinh: "{\\operatorname{arg sinh}}",
+              argcosh: "{\\operatorname{arg cosh}}",
+              argtanh: "{\\operatorname{arg tanh}}",
+              argcoth: "{\\operatorname{arg coth}}",
+              argsech: "{\\operatorname{arg sech}}",
+              argcsch: "{\\operatorname{arg csch}}",
+              dbar: "{\\mathscr'26\\mkern-12mu \\mathrm{d}}"
+          }
+         }
+       };
+     </script>    
+
+<!--     <script src="../../../../../comunHtml/mathjax_new_v3.x/tex-chtml.js" id="MathJax-script" async></script> -->
+    <script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    
+    <script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+    
+    <script src="../../../../../comunHtml/jquery/dist/jquery.min.js"></script>
+    <script>
+    
+    $(document).ready(function(){
+      $(".expand").click(function(){
+        target_num = $(this).attr("id").split("-")[1];
+        content_id = "#expandable-".concat(target_num);
+        $(content_id).slideToggle('fast');
+      });
+    });
+    </script>
+
+    <style>
+      .expand {
+        font-style: italic;
+        font-size: 12px;
+        cursor: pointer;
+        color: blue;
+      }
+        .expandable {
+        display:none;
+        margin-left: 3%;
+        margin-right: 3%;
+        color: #3e3e3e;
+/*         text-align: justify; */
+      }
+    </style>
+    
+    <style>
+      ol.alpha_list {
+        counter-reset: item;
+        list-style: none;
+      }
+      ol.alpha_list li:before {
+        content: counter(item,  lower-latin) ")  ";
+        counter-increment: item;
+        margin-left: -30px;
+      }
+    </style>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Física Contemporânea</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h2>A relatividade de Galileo</h2>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/relGalileo1.png', 'Zoom', '1650')">
+          <img src="figuras/relGalileo1.png" width="800" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01: Movimento relativo
+          </p>
+      </div>
+      
+      <p>
+        Galileo se pergunto como seria visto um mesmo fenômeno físico por dois observadores diferente, por exemplo como seria vista a queda de uma pedra, deixada cair desde um carro em movimento em relação a um observador na terra, em relação ao condutor do carro e o observador na Terra? Galileo realizou esse experimento com uma bola de canhão e um barco e respondeu que o observador em Terra observa o que chamamos de movimento parabólico e o observador no carro observa a queda normal livre da pedra. Assim Galileo percebe algo que não é tão obvio, um mesmo fenômeno físico pode ter mais de uma descrição correta e essa descrição depende da situação do observador, mas é possível ir da descrição dada por um observador à descrição dada por outro observador. Neste ponto é provável que Galileo tenha entrado em um empasse, o observador, será que existe um observador privilegiado? Um observador que diga que um certo tipo de movimento tem uma dada descrição e essa seja a descrição correta do movimento? É aqui onde entra Newton. Newton entende o problema de Galileo e formula o que chamamos de principio da relatividade da mecânica:       
+      </p>
+  
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p align="center"><b>
+      As leis da física são as mesmas em todo sistema inercial
+      </b></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        Primeiro devemos definir o que é um sistema inercia. Um <b>sistema inercial</b> é um sistema sobre o qual não atuam nenhuma força ou, igualmente, um sistema sobre o qual a soma de todas as forças externa é igual a zero. Segundo a primeira lei de Newton esse sistema deve estar em repouso ou se movendo com velocidade constante. Se movendo em relação ao que? Para responder a essa duvida Newton diz que o sistema inercial por excelência é aquele sistema no qual as estrelas estão fixas, assim qualquer outro sistema que esteja em repouso em relação a aquele sistema ou em movimento com velocidade constante também é um sistema inercial. Devemos perceber que em toda esta discussão o fundamental é a medida da velocidade de um sistema em relação a outro. 
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/sistemasDeReferencia.png', 'Zoom', '1650')">
+          <img src="figuras/sistemasDeReferencia.png" width="500" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 02: Sistemas de referência
+          </p>
+      </div>
+      
+      <p>
+         A fim de entender um pouco melhor o principio de relatividade de Galileo consideremos a seguinte situação: dois sistemas de referência inerciais, um se movendo com velocidade constante em relação ao outro. Como mostra a figura, representaremos esses sistemas pelos eixos coordenados $S$ e $S'$. Observadores em ambos dos sistemas observam um <b>evento</b> no espaço, esse evento é o evento $B$. Para o observador no sistema $S$ a coordenada do evento é $\vec{r}$ e para o observador em $S'$ a coordenada do evento é $\vec{r}'$, da figura podemos ver que é possível escrever uma relação entre $\vec{r}$ e $\vec{r}'$ simplesmente somando os vetores
+        \[ 
+        \vec{r}'=\vec{r}+\vec{R}
+        \]
+        onde $\vec{R}$ é a posição do sistema $S'$ em relação ao sistema $S$. Para que fique mais claro o papel de cada um dos observadores, podemos escrever a equação anterior como
+        
+        \begin{equation}
+          \vec{R}_{B/S'}=\vec{R}_{B/S}+\vec{R}_{s'/s}\label{relnewtonPos}
+        \end{equation}
+        
+        onde $\vec{R}_{B/S'}$ é a posição do evento $B$ em relação a $S'$, $\vec{R}_{B/S}$ é a posição do evento $B$ em relação a $S$ e $\vec{R}_{s'/s}$ é a posição do sistema $S'$ em relação ao sistema $S$. Derivando a equação anterior temos
+        
+        \begin{equation}
+          \vec{V}_{B/S'}=\vec{V}_{B/S}+\vec{V}_{s'/s}\label{relnewtonVel}
+        \end{equation}
+        
+        onde $\vec{V}_{B/S'}$ é a posição do evento $B$ em relação a $S'$, $\vec{V}_{B/S}$ é a posição do evento $B$ em relação a $S$ e $\vec{V}_{s'/s}$ é a posição do sistema $S'$ em relação ao sistema $S$. Derivando novamente temos
+        
+        \[
+        \vec{a}_{B/S'}=\vec{a}_{B/S}
+        \]
+        
+        multiplicando pela massa do objeto
+        
+        \begin{equation}
+          \vec{F}_{B/S'}=\vec{F}_{B/S}\label{relNewton}
+        \end{equation}
+        
+        e está aqui o principio de relatividade de Newton, como o sistema $S'$ se move com velocidade constante em relação a $S$, ambos observadores percebem que sobre o corpo atua a mesma força e dessa forma estão de acordo que é a mesma lei física que descreve o movimento, essa é a essência do principio de relatividade de Galileo.
+      </p>
+      
+      
+            <!--<div style="width:100%;margin-left: auto;margin-right: auto;">
+        <div style="display: flex; padding-bottom: 0px;">
+        
+          <div style="flex: 30%; padding-right: 30px">
+            <a href="javascript:newWin('figuras/figCone02_a.png', 'Zoom', '1650')">
+              <img src="figuras/figCone02_a.png" style="width:100%">
+            </a>
+            <p style="text-align: center; font-size:80%">
+              <b>a)</b> Gráfico de $\displaystyle f(x,y)=\sqrt{x^2+y^2}$
+            </p>
+          </div>
+          
+          <div style="flex: 30%; padding-left: 30px;">
+            <a href="javascript:newWin('figuras/figCone02_b1.png', 'Zoom', '1650')">
+              <img src="figuras/figCone02_b1.png" style="width:100%">
+            </a>
+            <p style="text-align: center; font-size:80%">
+              <b>b)</b> Interseções de planos com cone
+            </p>
+          </div>
+          
+          <div style="flex: 30%; padding-left: 30px;">
+            <a href="javascript:newWin('figuras/figCone02_b2.png', 'Zoom', '1650')">
+              <img src="figuras/figCone02_b2.png" style="width:100%">
+            </a>
+            <p style="text-align: center; font-size:80%">
+              <b>c)</b> Analise do gráfico do cone $\displaystyle f(x,y)=\sqrt{x^2+y^2}$
+            </p>
+          </div>
+          
+        </div>
+      </div>
+      
+
+      
+      <figure style="margin-top:-30px">
+        <div class = "ggbContainer"> 
+          <a href="https://www.geogebra.org/material/iframe/id/dhppzd7w/width/836/height/502/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" width="836px" height="502px" style="border:0px;" width="836px" height="502px" style="border:0px;">
+            Abrir com o<br>GeoGebra
+          </a>
+          <img src="figuras/curvasDeNivelGeo.png" width="836px" height="502px" alt="polar_coordinates" class="border" >
+          <iframe src="figuras/curvasDeNivelGeo.png" allowfullscreen width="836px" height="502px" class="hiddenIframe"></iframe>
+        </div>       
+      </figure>
+      -->
+      
+<!--
+
+
+
+
+    <h6><a href="exemplos/exemplo1.4.23.html" target="_blank">Exemplo Q1.4.23</a></h6>
+        Encontre a área do refletor parabólico cuja forma se obtém ao rotar o arco parabólico $y=x^2$, $9\leq x \leq 1$ ao redor do eixo $y$
+      <p>-->
+      
+    <!--  
+      <h6><a href="exemplos/exemplo1.4.22.html" target="_blank">Exemplo Q1.4.22</a></h6>
+      
+      <p>
+        
+      </p>    <h6><a href="exemplos/exemplo1.4.2.html" target="_blank">Exemplo Q1.4.3</a></h6>
+      
+      <p>
+        
+      </p>-->
+      
+     
+      
+<!--      <h5>Exemplo 3</h5>
+      <p>
+        Escreva a identidade de Parseval correspondente ao problema \ref{ex1.3.2}.\ref{ex397}
+      </p>-->
+<!--
+      \left( \right)   \left|\, z \,\right|  
+      
+      \left[ \right]   \left\{ \righ\}
+        
+        \begin{align*}
+        \end{align*}
+       
+      <ol>
+        <li>
+          
+        </li>
+        <li>
+          
+        </li>
+      </ol>
+        
+        \[
+          \begin{bmatrix}
+          \end{bmatrix}
+        \]
+      
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig01.png', 'Zoom', '1650')">
+          <img src="figuras/fig01.png" width="400" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01:  Sistema massa mola.
+          </p>
+      </div>
+      
+      
+      
+      <div style='padding: 15px; width: 425px;float:right;'>
+          <img src="figuras/Bessel32.gif" width="400" align="right">
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01:  Uma solução do problema da membrana vibrante a qual é dada em termos da funções de Bessel.
+          </p>
+      </div>
+      
+      <h5>Exemplo 03</h5>
+      
+      <p>
+        
+        <img src="figuras/linha_b.png">
+      </p>
+         
+      <table class="tabela_de_lista2">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <table class="tabela_de_lista2">      
+      <tr>
+      <td class="teorematitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+-->
+      
+      
+      </div>
+      <!-- Fim Principal   -->      
+    </div>
+    <!-- Fim todo   -->
+  </body>
+</html> 
+

@@ -1,0 +1,584 @@
+\documentclass[12pt,brazil]{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{movie15}
+\usepackage{graphicx}
+\setbeamercovered{transparent}
+\usetheme{Boadilla}
+\usepackage{times}
+\usefonttheme{structurebold}
+\usepackage{pgf}
+\beamertemplatetransparentcovereddynamic
+%\usepackage{multimedia}
+\usepackage{babel}
+
+
+\title{Competição em diferenstes sistemas físicos}
+\subtitle{Defesa de produção inteletual}
+\author{Evy A. Salcedo Torres}
+\date{27 junho de 2009}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%  SLIDE 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+\section{Introdução}
+
+%%%%%%%%%%%%%%%%  SLIDE 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{Nanoatrito}
+  \begin{figure}
+    \includegraphics[width=7cm]{figuras/coloso2}
+  \end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{Nanomagnetismo}
+  \begin{figure}
+    \includegraphics[width=7cm]{figuras/hd}
+  \end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 4 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{Agua}
+  \begin{figure}
+    \includegraphics[width=7cm]{figuras/pesca1}
+  \end{figure}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%  SLIDE 5 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{Competição, o ingrediente comum}
+  É interesante como sistemas físicos aparentemente disconexos entre
+  eles apresentam um ingrediente físico fundamental responsavel pelos
+  seus comportamentos particulares. A competição de grandezas físicas
+  específicas.
+\end{frame}
+
+
+
+\section{Pesquisas Realizadas}
+\subsection{Atrito em nanoescala}
+
+
+%%%%%%%%%%%%%%%%  SLIDE 6 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+
+   \begin{center}
+     \Huge \bf{Nanoatrito}
+   \end{center}   
+
+  \end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 7 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{Motivação: A Microbalaça de quartzo}
+    \begin{columns}[c]
+
+      \column{5cm}
+      \begin{figure}
+	\centering \includegraphics[width=4cm]{figuras/QuarzoBalanza}
+      \end{figure}
+
+      \column{5cm}
+      \begin{itemize}
+      \item Adaptada por A. Windom e J. Krim [PRE 49, 4154, 1994] para medir o atrito cinético
+      em escala átomica.
+      \item O atrito entre sólidos em nivel nanoscópico é viscoso, i.e. $F \propto v$
+      \end{itemize}
+    \end{columns}
+  \end{frame}
+
+
+%%%%%%%%%%%%%%%%  SLIDE 8 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{Motivação: a microbalança de quartzo, resultados}
+    \begin{columns}[c]
+
+      \column{5cm}
+      \begin{figure}
+	\centering \includegraphics[width=5cm]{figuras/electronica3}
+      \end{figure}
+
+      \column{5cm}
+        Origem do atrito nanoscópico:
+        \begin{enumerate}
+          \item eletrônica, $\eta_e$,
+          \item fonônica, $\eta_{ph}$
+        \end{enumerate}
+
+        \[ \eta=\eta_{e}+c\, u_{0}^{2} \]
+        
+    \end{columns}
+  \end{frame}
+
+
+%%%%%%%%%%%%%%%%  SLIDE 9 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{Nanoatrito}
+
+    \begin{block}{Objetivo}
+       Caraterizar o atrito nanoscópico unidimensional
+       \begin{itemize}
+          \item Dependencias
+          \item Causas
+        \end{itemize}
+    \end{block}
+
+  \end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 10 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{Modelo}
+  \begin{figure}
+    \centering \includegraphics[width=5cm]{figuras/f1d_model}
+  \end{figure}
+    \[ m\frac{d²x_{i}}{dt²}=-m\eta_{e}\frac{dx_{i}}{dt}-\sum_{j}\frac{\partial
+      V\left(\left|x_{i}-x_{j}\right|\right)}{\partial x_{i}}-\frac{\partial
+      U\left(x_{i}\right)}{\partial x_{i}}+f_{i}+F_{ext},  \]
+
+    \[ V\left(x\right)=\varepsilon_{0}\left[\left(\frac{r_{0}}{x}\right)^{12} -
+      2\left(\frac{r_{0}}{x}\right)^{6}\right],  \qquad U(x)=u_{0}\sin(\frac{2\pi}{a}x), \]
+
+    \[ \left\langle \mathbf{f}_{i}(t)\right\rangle  = 0, \qquad \left\langle
+    \mathbf{f}_{i}(t),\mathbf{f}_{j}(t')\right\rangle =2\eta_e k_{B}T\delta(t-t')\delta(i,j)/m \]
+    
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%  SLIDE 11 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \frametitle{Medidas}
+    \begin{minipage}[t]{0.4\columnwidth}
+
+      Comensuração:
+
+      \[ \zeta = a / b \]
+
+      Coeficiente de atrito:
+
+      \[ \eta_{t}=\frac{F_{ext}}{v_{cm}} \]
+
+    \end{minipage} 
+    \hfill{}
+    \begin{minipage}[t]{0.4\columnwidth}
+
+       \begin{itemize}
+        \item $\eta_t \left ( \zeta  \right )$
+        \item $S \left ( k,t  \right )$
+        \item $D(\omega)$
+       \end{itemize}
+    \end{minipage}
+    
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 12 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \begin{frame}
+    \frametitle{Resultado: $c(\zeta)$, $\eta_{ph}=c\, u_{0}^{2}$}
+      \begin{figure}
+	\centering \includegraphics[width=6cm]{figuras/f1d_cxzeta_a}
+      \end{figure}
+  \end{frame}
+
+
+%%%%%%%%%%%%%%%%  SLIDE 13 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{Resultado: $D(\omega)$}
+    \begin{columns}[c]
+
+      \column{5cm}
+      \begin{figure}
+	\centering
+	\includegraphics[width=5cm]{figuras/espectro_sin_r1m2599_u005_t005f00018.png}
+      \end{figure}
+    \centerline{$\zeta=0.961$, $T=0.05$}
+      \column{5cm}
+      \begin{figure}
+	\centering
+	\includegraphics[width=5cm]{figuras/densi_m3333.png}
+      \end{figure}
+    \centerline{$\zeta=0.75$, $T=0.05$}
+    \end{columns}
+  \end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 14 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{Deformações da rede $\zeta=2/3$, o par
+    \emph{kink}-\hyperlink{antikink}{antikink}\hypertarget{voltar}{}}
+    \begin{columns}[c]
+
+      \column{5cm}
+      \begin{figure}
+	\centering \includegraphics[width=5cm]{figuras/kink_sf_m3752.png}
+      \end{figure}
+      \centerline{Sem força aplicada}
+      \column{5cm}
+      \begin{figure}
+	\centering \includegraphics[width=5cm]{figuras/kink.png}
+      \end{figure}
+      \centerline{Com força aplicada}
+    \end{columns}
+  \end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 15 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   \begin{frame}
+    \frametitle{Conclusões}
+     \begin{itemize}
+       \item O atrito fonônico é diretamente proporcional ao quadrado da
+       amplitude de corrugação do substrato.
+       \item As estruturas inibem certos modos de vibração que são excitados ao se aplicar a força sobre a cadeia de adatomos, ativando assim novos
+       canais para a dissipação da energia de translação da cadeia.
+       \item Quando há formação de kinks clássicos ($\zeta = 2/3$) na cadeia de adatomos do atrito total é muito alto (efeito transiente).
+       \item O potencial de interação desempenha um papel fundamental no atrito experimentado pelas partículas ({\bf FK} $\Rightarrow$ $\eta_{ph} \approx 0$).
+     \end{itemize}
+  \end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 16 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   \begin{frame}
+    \frametitle{Publicação}
+     \begin{itemize}
+       \item Salcedo E. S., Gonçalves S., Scherrer C. e Kiwi M.  Nanoscale sliding friction versus commensuration ration:
+             Molecular dynamics simulation. Physical Review B, v 73, p. 035434, 2006.
+     \end{itemize}
+  \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%  SLIDE 17 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{NanoMagnetismo}
+
+
+  \begin{frame}
+
+   \begin{center}
+     \Huge \bf{Nanomagnetismo}
+   \end{center}   
+
+  \end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 18 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{Motivação: Gravação Magnética}
+    \begin{columns}[c]
+
+      \column{5cm}
+      \begin{figure}
+	\centering \includegraphics[width=5cm]{figuras/medio_convencional}
+      \end{figure}
+
+      \column{5cm}
+      \begin{itemize}
+      \item \footnotesize{Constituida por grão individuais que se comportam como magnetos independentes.}
+      \item \footnotesize{Aumentar a capacidade de armazenamento implica em diminuir os grão.}
+      \item \footnotesize{O límite superparamagnético permite atingir gãos de $\approx 10\,nm$, com estabilida témica de $10$ anos.}
+      \end{itemize}
+    \end{columns}
+  \end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 19 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{Motivação: Gravação Magnética}
+    \begin{columns}[c]
+
+      \column{5cm}
+
+      \begin{figure}
+	\centering \includegraphics[width=3cm]{figuras/medio_discreto3}
+      \end{figure}
+
+      \begin{itemize}
+      \item \scriptsize{Arranjos ordenados com anisotropia uniaxial.}
+      \item \scriptsize{Escolha da orientação do eixo fácil.}
+      \item \scriptsize{Aumento da capacidade de armazenamento em até $100$ vezes.}
+      \end{itemize}
+
+      \begin{figure}
+	\centering \includegraphics[width=5cm]{figuras/medio_discreto2}
+      \end{figure}
+
+      \column{5cm}
+      \begin{figure}
+	\centering \includegraphics[width=5cm]{figuras/medio_discreto}
+      \end{figure}
+
+    \end{columns}
+
+  \end{frame}
+
+
+%%%%%%%%%%%%%%%%  SLIDE 19 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{Nanomagnetismo}
+
+    \begin{block}{Objetivo}
+       Caraterizar as propriedades físicas destes sistemas:
+       \begin{itemize}
+          \item Estrutura magnética interna
+          \item Mecanismos de reversão
+        \end{itemize}
+    \end{block}
+
+  \end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 20 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{Modelo}
+
+      \begin{itemize}
+       \item Arranjos de atomos fomando estrutura cilindrica ou tubular
+       \item Considera-se a interação dipolar (longo alcance) e de ``Exhange'' (curto alcance)
+       \item Utiliza-se a técnica de ``scaling'' a fim de reduzir o número de partículas ($10^9 \rightarrow 10^3 $)
+       \item Utiliza-se simulações de Monte Carlo para estudar a dinâmica
+      \end{itemize}
+
+  \end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 22 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{Modelo}
+
+    A energia do sistema está dada por
+
+      \[ E=\sum_{i}\sum_{j>i}E_{ij}-J_{ij}\vec{m}_{i}{\cdot\vec{m}}_{j}+E_{a} \]
+
+   onde $E_{ij}$ é a energia dipolar
+
+      \[ E_{ij}=((\vec{m}_{i}\cdot\vec{m}_{j})-3(\vec{m}_{i}\cdot\hat{n}_{ij})(\vec{m}_{j}\cdot\hat{n}_{ij}))/r_{ij}^{3} \]
+
+   com  $r_{ij}$ a separação entre as partículas com momentos magnéticos $\vec{m}_{i}$ e $\vec{m}_{j}$.
+
+   $J_{ij}=J$ é o  constante de ``exchange'' entre partículas vizinhas.
+
+  $E_{a}=-\sum_{i}\vec{m}_{i}\cdot\vec{H}_{a}$ é a contribuição do campo magnético externo
+
+  \end{frame}
+
+
+%%%%%%%%%%%%%%%%  SLIDE 23 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{``Scaling''}
+
+      \begin{figure}
+	\centering \includegraphics[width=5cm]{figuras/scaling3}
+      \end{figure}
+
+      No método do scaling as dimensões físicas $d$, as interações $h$ 
+      e a constante de ``exchange'' $J$, são reescaladas segundo [PRL 88, 237202, 2002]:
+
+      \begin{eqnarray*}
+         d' & = & d\, \chi^\eta \\
+         h' & = & h\, \chi^\eta \\
+         J' & = & J \, \chi
+      \end{eqnarray*}
+    
+
+  \end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 23 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{\normalsize Resultados: Modos de Reversão em nanofios de $Ni$}
+
+   \begin{columns}[c]
+
+      \column{5cm}
+
+      \begin{figure}
+	\centering \includegraphics[width=3cm]{figuras/wire}
+      \end{figure}
+
+      \column{5cm}
+
+      Para $\theta_B = 0$
+
+      \begin{itemize}
+      \item \scriptsize{Para $B < B_{min}$ é necessario um pulso intenso para nuclear a parede de dominio.}
+      \item \scriptsize{Para $B_{max} > B > B_{min}$ A parede de dominio se desloca com velocidade constante.}
+      \item \scriptsize{Para $B > B_{max}$ Se entra num regimem caotico onde se nucleam multiples paredes de dominio.}
+      \end{itemize}
+
+    \end{columns}
+
+
+  \end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 24 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{\normalsize Resultados: Modos de Reversão em nanofios de $Ni$}
+
+   \begin{columns}[c]
+
+      \column{5cm}
+
+      Para $\theta_B \neq 0$
+
+      \begin{itemize}
+      \item \scriptsize{O tempo de nucleação da parede muda devido à varaição da anisotropia de forma.}
+      \item \scriptsize{Para $5^\circ > \theta_B > 0^\circ$ a reversão acontece via o modo do tipo tira-rolha.}
+      \item \scriptsize{Para $15^\circ > \theta_B > 5^\circ$ a reversão acontece via o modo do tipo transversal.}
+      \item \scriptsize{Para $20^\circ > \theta_B > 15^\circ$ a reversão acontece via o modo do tipo transversal em ambos extremos.}
+      \item \scriptsize{Para $65^\circ > \theta_B > 20^\circ$ regimem caôtico, nucleação de multiplas paredes de dominio.}
+      \end{itemize}
+
+      \column{5cm}
+
+      \begin{figure}
+	\centering \includegraphics[width=5cm]{figuras/efeito_angulo}
+      \end{figure}
+
+    \end{columns}
+
+  \end{frame}
+
+
+%%%%%%%%%%%%%%%%  SLIDE 25 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{\normalsize Resultados: Modos de Reversão em nanotubos de $Ni$}
+
+   \begin{columns}[c]
+
+      \column{5cm}
+
+      \begin{figure}
+	\centering \includegraphics[width=5cm]{figuras/efeito_angulo_tubo}
+      \end{figure}
+
+      \column{5cm}
+
+      Para $\theta_B = 0$
+
+      \begin{itemize}
+      \item \scriptsize{Se $\beta = R_{int} / R_{ext} \leq 1/3$ o modo de reversão é do tipo transversal.}
+      \item \scriptsize{Se $\beta = R_{int} / R_{ext} \geq 1/3$ o modo de reversão é do tipo vortice.}
+      \end{itemize}
+
+    \end{columns}
+
+
+  \end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 26 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{\normalsize Resultados: Modos de Reversão em nanotubos de $Ni$}
+
+      \begin{figure}
+	\centering \includegraphics[width=10cm]{figuras/coercividade_angulo_tubo}
+      \end{figure}
+
+      \begin{itemize}
+        \item \scriptsize{A coercividade é maior no caso de tubos revertindo via modo transversal.}
+        \item \scriptsize{O tipo de modo de reversão depende do raio $R_{ext}$}
+      \end{itemize}
+
+  \end{frame}
+
+
+%%%%%%%%%%%%%%%%  SLIDE 27 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   \begin{frame}
+    \frametitle{Conclusões}
+     \begin{itemize}
+       \item Diferentes tipos de modos de reversão podem ser encontrados em nanofios e nanotubos.
+       \item O tempo de reversão dimiue sensivelmente se o angulo $\theta_B \approx 45^\circ$.
+       \item Nanotubos apresenta, um tempo de reversão muito pequeno ao igual que o tempo de nucleação.
+       \item O modo de reversão influencia no valor da coercividade dos nanotubos.
+     \end{itemize}
+  \end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 28 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   \begin{frame}
+    \frametitle{Publicações}
+     \begin{itemize}
+       \item P. Landeros, S, Allende, J. Escrig,  E. Salcedo, D. Altbir. E. E. Vogel. Reversal modes in magnetic nanotube.
+             Applied Physics Letter, v. 90, pg. 102501, 2007
+       \item S, Allende, J. Escrig, D. Altbir, E. Salcedo, M. Bahiana.Angular dependence
+             of the transverse and vortex modes in magnetic nanotube. The European physical Journal B, V 66, pg 37, 2008.
+       \item S. Allende, D. Altbir, E. Salcedo, M. Bahiana, J. P. Sinnecker. Propagation of tranversal domain walls in
+             homogeneous magnetic nanowires. Journal Applied Physics. v. 104, p. 013907, 2008.
+       \item \emph{S. Allende, J. Escrig, D. Altbir, E. Salcedo, M. Bahiana. Magnetic bias in multiolayer nanowires, Submetido}
+     \end{itemize}
+  \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%  SLIDE 29 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Agua}
+
+
+  \begin{frame}
+
+   \begin{center}
+     \Huge \bf{Agua}
+   \end{center}   
+
+  \end{frame}
+
+%%%%%%%%%%%%%%%%  SLIDE 30 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \begin{frame}
+    \frametitle{Motivação: Anomalias na agua}
+
+    \begin{columns}[c]
+
+      \column{5cm}
+
+      \begin{figure}
+	\centering \includegraphics[width=4cm]{figuras/octaeq}
+      \end{figure}
+
+      \begin{figure}
+	\centering \includegraphics[width=4cm]{figuras/energy}
+      \end{figure}
+
+      \column{5cm}
+
+      \begin{itemize}
+        \item \scriptsize{Agua é o líquido mais importante da Terra.}
+        \item \scriptsize{Agua apresenta anomalia termodinâmica, dinâmica e estrutural}
+      \end{itemize}       
+
+    \end{columns}
+
+  \end{frame}
+
+
+\end{document}

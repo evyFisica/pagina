@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />   
+    <link type="text/css" rel="stylesheet" href="../../../css_e_js/local.css" />
+
+    <link href='../../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';https://tex.stackexchange.com/questions/58141/equations-inside-enumerate-aligned-on-items-number
+      SyntaxHighlighter.all();
+    </script>
+
+     <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\\(', '\\)']],
+           macros: {
+              bra: ["{\\left\\langle #1 \\right\\rvert}",1],
+              ket: ["{\\left\\lvert #1 \\right\\rangle}",1],
+              braket:["{\\left\\langle #1 \\vert #2 \\right\\rangle}",2],
+              opProj:["{\\left\\lvert #1 \\right\\rangle\\left\\langle #1 \\right\\rvert}",1],
+              opUni:["{\\left\\lvert #1 \\right\\rangle\\left\\langle #1 \\right\\rvert \+ \\left\\lvert #2 \\right\\rangle\\left\\langle #2 \\right\\rvert}",2],
+              arcsec: "{\\operatorname{arcsec}}",
+              arccot: "{\\operatorname{arccot}}",
+              arccsc: "{\\operatorname{arcsc}}",
+              sech: "{\\operatorname{sech}}",
+              csch: "{\\operatorname{csch}}",
+              argsinh: "{\\operatorname{arg sinh}}",
+              argcosh: "{\\operatorname{arg cosh}}",
+              argtanh: "{\\operatorname{arg tanh}}",
+              argcoth: "{\\operatorname{arg coth}}",
+              argsech: "{\\operatorname{arg sech}}",
+              argcsch: "{\\operatorname{arg csch}}",
+              dbar: "{\\mathscr'26\\mkern-12mu \\mathrm{d}}"
+          }
+         }
+       };
+     </script>    
+
+<!--     <script src="../../../../../comunHtml/mathjax_new_v3.x/tex-chtml.js" id="MathJax-script" async></script> -->
+<!-- <script src="../../../../../comunHtml/mathjax_3.2/es5/tex-chtml.js" id="MathJax-script" async></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    
+    <script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+    
+<!-- <script src="../../../../../comunHtml/node_modules/jquery/dist/jquery.min.js"></script> -->
+<script src="../../../../../comunHtml/jquery/dist/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(".expand").click(function(){
+        target_num = $(this).attr("id").split("-")[1];
+        content_id = "#expandable-".concat(target_num);
+        $(content_id).slideToggle('fast');
+      });
+    });
+    </script>
+
+    <style>
+      .expand {
+        font-style: italic;
+        font-size: 12px;
+        cursor: pointer;
+        color: blue;
+      }
+        .expandable {
+        display:none;
+        margin-left: 3%;
+        margin-right: 3%;
+        color: #3e3e3e;
+/*         text-align: justify; */
+      }
+    </style>
+    
+    <style>
+      ol.alpha_list {
+        counter-reset: item;
+        list-style: none;
+      }
+      ol.alpha_list li:before {
+        content: counter(item,  lower-latin) ")  ";
+        counter-increment: item;
+        margin-left: -30px;
+      }
+    </style>
+    
+     <!-- Internal css -->
+    <style type="text/css">
+        ul.listaDiferente {
+          list-style: none;
+        }
+        ul.listaDiferente li:before {
+          color: green;
+          content: "\00BB";
+/*          content: "";
+          height: 0;
+          width: 0;
+          border-color: transparent #fcb400;
+            border-style: solid;
+          border-width: 0.5em 0 0.5em 0.5em;
+          position: relative;
+          display: block;
+          left: -1em;
+          top: 1.25em;*/
+        }
+    </style>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Física Contemporânea</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h2>A teoria da Relatividade de Einstein</h2>
+      <h3>O problema da Eletrodinâmica de Clássica</h2>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/problema_de_faraday.png', 'Zoom', '1650')">
+          <img src="figuras/problema_de_faraday.png" width="900" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01: Experimento de Faraday.
+          </p>
+      </div>
+      
+      <p>
+        A eletrodinâmica tinha um problema fundamental, ela viola o principio de relatividade de Galileo de forma espantosa. É por isso que os cientistas do seculo $XVII$ precisaram tanto da ideia do éter, pois a través dele podiam invalidar o principio de relatividade e manter a ideia de um sistema de referencia absoluto (tal e qual Newton admitia).
+      </p>
+
+      <p>
+        Para ver de forma clara o problema da eletrodinâmica pensemos no experimento de Faraday. Segundo Faraday quando a variação do fluxo magnético a traves de um circuito induze uma f.e.m. neste, isto é
+
+        \[
+        \oint\overrightarrow{E}_{ind}\cdot d\overrightarrow{s}=- \dfrac{d}{dt}\iint\overrightarrow{B}\cdot d\overrightarrow{a}
+        \]
+        Como sabemos, os resultados físicos de esta eq. podem ser explicados de forma simples considerando as forças de Lorentz
+
+        \[
+        \overrightarrow{F}=q\overrightarrow{E}+q\left(\overrightarrow{v}\times\overrightarrow{B}\right)
+        \]
+        que atuam sobre as partículas que formam o circuito. Assim, observando a figura 1 vemos que se colocamos nossa espira em repouso (em relação a nos) e movemos o ima (com velocidade constante) na direção da espira um observador na espira imediatamente observara que as cargas na espira se movem e explica este fenômeno usando a lei de Faraday: se induze uma campo elétrico dentro desta o que faz que as cargas livres dentro da espira se movimentem. Porém
+        um observador em repouso no imã explica o movimento das cargas diz que as experimentam forças porque estas (as cargas) estão se movendo em direção ao ima de forma que sobre elas atua uma força dada por $q\left(\overrightarrow{v}\times\overrightarrow{B}\right)$. A pergunta é quem tem a razão. Se se pudesse determinar sem duvida alguma qual dos dois sistemas esta em repouso e qual esta em movimento poderíamos dizer qual tem a razão, para isso necessitamos um sistema absoluto que me permita definir o repouso, dai a necessidade do Eter!!!! Mas
+        A. Einstein diz, não Galileo tem razão e ambos observadores estão observando o mesmo experimento, por tanto deve existir uma transformação que me leve de uma observação a outra.
+      </p>
+      
+      <h3>Postulados da relatividade de Einstein</h3>
+      
+      <p>
+        A fim de salvar a relatividade de Galileo Einstein postula o seguinte:
+      </p>
+
+      <table class="tabela_de_lista2">      
+      <tr>
+      <td class="definicaotitulo">
+        Principio da relatividade
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Todas as leis físicas devem ter a mesma forma em todos os sistemas de referencia inerciais. Ou, dito de forma mais elegante, as leis da física  covariantes.
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        Com esse postulado simples, Einstein derruba a hipóteses Newtoniana de sistema de referencia absoluto e da igualdade de condições a observadores em sistemas de referência inerciais, a está afirmação se lhe conhece como principio de equivalência dos sistemas inerciais. Note, contudo, que esse postulado é mais geral do que o postulado Galileano, ele estende para toda à física o postulado de Galileo que era válido apenas para a mecânica.
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/IIpostulado1.png', 'Zoom', '1650')">
+          <img src="figuras/IIpostulado1.png" width="900" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 02: II postulado
+          </p>
+      </div>
+      
+      <p>
+        Além do postulado anterior, Einstein introduz um outro postulado:
+      </p>
+
+      <table class="tabela_de_lista2">      
+      <tr>
+      <td class="definicaotitulo">
+        Principio de constância da velocidade da luz
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        A velocidade da luz no vácuo sempre tem o mesmo valor $c$, independentemente do movimento da fonte ou do sistema de referencia do observador.
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        Esse postulado é contra intuitivo, mas foi necessário introduzir ele. Observe que este postulado resulta do experimento de Michelson e Morley. Mesmo a Terra estar se movendo, a velocidade da Luz independe desse fato.
+      </p>
+      
+      <h4>Simultaneidade nas medidas</h4>
+      
+      <p>
+        Uma das primeira coisas que intrigou o Einstein foi o que entendemos por simultaneidade. A simultaneidade é a base da medição em física, por exemplo, quando medimos o comprimento de um objeto na verdade estamos comparando os limites do objeto com o tamanho de um padrão definindo, mas essa comparação envolve em olhar simultaneamente, o dito de outra forma, ao mesmo tempo, o limite do corpo e o padrão de medida. Um exemplo mais evidente disto é por exemplo quando se diz que o ônibus sai do terminal às $7:00$, Einstein diz que isso significa que são eventos simultâneos: os ponteiros do relógio da empresa apontaram às $7:00$ e a partida do ônibus. Mas veja que o importante é que tanto o relógio e o ônibus devem estar no mesmo lugar a fim de checar essa simultaneidade, quando os eventos acontecem em lugares diferentes já não podemos dizer, de forma simples, que eles são simultâneos. Com tudo temos uma forma simples de checar se dois eventos, que acontecem em lugares diferentes do espaço são simultâneos. Basta em colocar um dispositivo que fique a meio caminho e avise no momento 
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/HendrikDilatacao.png', 'Zoom', '1650')">
+          <img src="figuras/HendrikDilatacao.png" width="900" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 03: Ponto de Vista do Hendrik sobre a propagação da OEM. Observe que segundo Hendrik a OEM sempre é centrada em ele e atinge o detetor direito de Albert primeiro
+          </p>
+      </div>
+      
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/AlbertSimultaneidade.png', 'Zoom', '1650')">
+          <img src="figuras/AlbertSimultaneidade.png" width="900" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 04: Ponto de Vista do Albert sobre a propagação da OEM. Observe que segundo Albert a OEM sempre é centrada em ele e atinge o detetor esquerdo de Hendrik Hendrik
+          </p>
+      </div>
+      
+      <p>
+        Suponhamos o seguinte experimento mental. Uma observador de pê sobre um carro, que chamaremos de Hendrik, e um outro observador que chamaremos de Albert que esta em pê não chão, observam um mesmo fenômeno físico, a emissão de um pulso de OEM. Ambos observadores estão em sistemas inerciais, porém existe uma velocidade relativa entre eles. Segundo Albert, Hendrik se move para a direita, em relação a ele. Segundo o Hendrik, Albert se move para a esquerda em relação a ele. A emissão do pulso de OEM se da no preciso instante em que Albert está cara a cara com Herdrik. O problema é que ambos afirma que estão no meio de uma casca esférica formada pelo pulso de OEM. A fim de dirimir a duvida cada um de eles coloca detetores equidistantes do se ponto de observação. Quando eles estão novamente cara a cara é emitido o pulso de luz e cada um mede (através do detetor) o pulso que foi emitido.
+      </p>
+      
+      <ul class="listaDiferente">
+          <li>
+            <i>Ponto de vista do Hendrik</i>: O Hendrik afirma que o pulso chega simultaneamente aos seus detetores mas, observa que primeiro chega no detetor direito de Albert e depois no esquerdo.
+          </li>
+          <li>
+            <i>Ponto de vista do Albert</i>: O Albert afirma que o pulso chega simultaneamente aos seus detetores mas, observa que primeiro chega no detetor esquerdo do Hendrik e depois no direito. A única coisa em que eles concordam é no valor da velocidade da OEM.
+          </li>
+      </ul>
+      
+      <p>
+        Este experimento mental simples nos coloca de face com o problema da simultaneidade, como resolver o empasse? Historicamente o segundo postulado de Einstein foi introduzido por Hendrik Lorentz mas, o problema é que Lorentz fundamente esse resultado no fato da contração dos comprimentos. Para Lorentz, na verdade a a luz viaje à mesma velocidade para todos os observadores, o que acontece é que as distância (réguas) se encurtam e isso leva à que a velocidade seja a mesma. Aqui é onde entra o grande Genio, Henry Poincaré, ele percebe a necessidade da mudança na dinâmica que descreve o movimento.
+      </p>
+      
+      <h3>Dilatação do tempo e contração dos comprimentos</h3>
+      
+      <p>
+        Como foi dito já o Hendrik Lorentz introduz a ideia de contração dos comprimentos utilizando a sua teoria de eletrodinâmica de partículas carregadas. No desenvolvimento da sua teoria Lorentz prevê a contração do braso do interferômetro e é com esse fenômeno que ele tenta manter viva a ideia do éter. Lamor, considerando uma serie de transformações encontrou que o tempo também seria afetado pelo movimento, posteriormente Lorentz encontra um resultado similar
+      </p>
+      
+      <h4>Dilatação do tempo</h4>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/EinsteinDilatacaoTempo.png', 'Zoom', '1650')">
+          <img src="figuras/EinsteinDilatacaoTempo.png" width="800" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 05: Dilatação do Tempo
+          </p>
+      </div>
+      
+      <p>
+        A fim de entender a origem física da dilatação do tempo vamos explorar o seguinte experimento mental: Albert propõe usar um relógio, constroem dois relógio de luz, isto é colocam dois espelhos um de frente para o outro e dentro dele colocam um "foton". Albert da um dos relógio a  Hendrik que novamente sobe no carro, e passa na frente de Albert com velocidade $v$ em relação a Albert.  Hendrik observa seu relógio e nota que a partícula de luz se move de acima para baixo e vice-versa, mas Albert diz que na verdade o movimento da partícula é ao longo de uma diagonal (como mostrado na figura), no único que eles estão em acordo é que a velocidade da partícula de luz é $c$, de forma que podem utilizar equações matemáticas para compreender o que acontece. Segundo Albert, o fóton percorre uma distância de $cT$, mas na visão de  Hendrik o fóton percorre a distância $cT'$, da figura 5 vemos que essas duas observações, junto o comprimento percorrido pelo carro em que se move  Hendrik verificam o teorema de Pitágoras
+
+        \[
+        \left(cT\right)^{2}=\left(v\Delta t\right)^{2}+\left(cT'\right)^{2}
+        \]
+        disso vemos que o intervalo de tempo medido por Albert se relaciona com o intervalo de tempo medido por  Hendrik a traves da equação
+
+        \[
+        T= \dfrac{1}{\sqrt{1-v^{2}/c^{2}}}T'
+        \]
+        
+        <i>Acostuma-se chamar de tempo próprio, $T_{0}$, ao tempo medido por um observador em repouso em relação ao evento</i>, no caso do experimento mental de  Hendrik e Albert, o tempo próprio é o tempo medido por  Hendrik já o relógio que ele usa para medir o tempo não muda de posição enquanto que Albert mede o tempo olhando para o relogio de  Hendrik que está mudando de posição pois esta em movimento. Usando essa convenção a equação anterior se escreve como
+        
+        \[
+        T= \dfrac{T_{0}}{\sqrt{1-v^{2}/c^{2}}}
+        \]
+      </p>
+      
+      <h4>Contração dos comprimentos</h4>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/contracaoComprimento.png', 'Zoom', '1650')">
+          <img src="figuras/contracaoComprimento.png" width="800" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 06: Experimento mental que mostra as diferentes medidas de comprimento realizada por observadores inerciais em movimento relativo. Nessa figura estão representados três momentos diferentes da visão de Albert da régua que se move com Henry
+          </p>
+      </div>
+      
+      <p>
+        A fim de analisar o efeito que a velocidade produz nos comprimento ao longo da direção de movimento, vamos considerar o seguinte experimento mental. Hery se desloca com a velocidade constante $V$ medida por Albert. Para Albert o comprimento da régua de Henry está dado pelo tempo total transcorrido entre o primeiro contato com a régua (primeiro slide da figura 6) e o último contato com a régua (II slide), se esse tempo é $T$, então
+        \[
+          L=\left|V\right|T
+        \]
+        Segundo Henry, $T'$ é o tempo desde que a Albert demora em percorre o comprimento da regra de Henry, $L'$, isto é
+        \[
+          L'=\left|V\right|T
+        \]
+        Como eles concordam em relação ao módulo relativo das velocidade, temos que
+
+        \begin{eqnarray*}
+         \dfrac{L}{T} & = &  \dfrac{L'}{T'}\\
+          L & = &  \dfrac{T}{T'}L'
+        \end{eqnarray*}
+
+        de onde
+
+        \[
+        L=\sqrt{1- \dfrac{v^{2}}{c^{2}}}L_{0}
+        \]
+      </p>
+      
+      <h6><a href="exemplos/exemploGiancoli4ed_e36.01.html" target="_blank">Exemplo 01</a></h6><!--p36.3 Giancoli digital-->
+      <p>
+        Um passageiro de uma espaço nave lê uma revista enquanto viaja entre a Terra e Jupiter, com uma velocidade constante de $0.75\, c$. Se o passageiro demora determina que demorou$10\, min$ folhando a revista. (a) Quanto tempo um observador na Terra julga que o passageiro levou em ler? (b) Quão longe está a espaço nave quando o passageiro terminou de ler a revista, segundo o observado da Terra.
+      </p>
+      
+      <h6><a href="exemplos/exemploGiancoli4ed_e36.04.html" target="_blank">Exemplo 02</a></h6><!--p36.4 Giancoli digital-->
+      <p>
+        Os satélites de GPS se deslocam a quase $4km/s$. Mostre quanto deve ser a correção relativista dos bons aparelhos de GPS a fim de ter resultados comparáveis aos relógios atômicos que é de $1$ parte por $10^{13}$
+      </p>
+      
+      <h6><a href="exemplos/exemploGiancoli4ed_e36.06.html" target="_blank">Exemplo 03</a></h6>
+      <p>
+        Um trem ultra rápido de $500\, m$ de comprimento próprio está passando por um túnel de $200$ metros. Suponhamos que a velocidade do trem seja suficientemente alta a ponto de que um observador na Terra afirme que o trem ocupa perfeitamente o espaço do túnel, isto é, a frente do trem sai do túnel no mesmo momento que a parte de atrás entra no túnel. (a) Qual é a velocidade do trem. (b) Qual é o comprimento do túnel, visto pelo maquinista do trem. Se há inconsistência, explique.
+      </p>
+      
+      <h6><a href="exemplos/exemploMckelvey27.4.3.html" target="_blank">Exemplo 04</a></h6>
+      
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/cavaloEstabuo.png', 'Zoom', '1650')">
+          <img src="figuras/cavaloEstabuo.png" width="500" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Cavalo e estábulo em repouso um em relação ao outro
+        </p>
+      </div>
+      
+      <p>
+      No próximo exemplo apresentamos um aparente paradoxo, envolvendo um cavalo, o qual pode viajar a velocidades escalares relativísticas, e um estábulo. Quando o cavalo (comprimento $L_0$) está em repouso, ele pode caber no estábulo, o qual também tem um comprimento de repouso $L_0$. O estábulo está equipado com portas à frente e atrás as quais podem ser ativadas concomitantemente pelo guardador do estábulo, como está ilustrado na Fig. acima. Vamos agora considerar o paradoxo. As portas do estábulo são abertas e o cavalo vem numa velocidade escalar tremenda, tal que $(v/c)^2 = 0,99$. No instante em que a traseira do cavalo passa para dentro do estábulo, as portas são fechadas. Nós suporemos que elas podem ser fechadas sem atraso de tempo. De acordo com a Teoria da Relatividade, o guardador diria que o cavalo ultra-rápido é menor em comprimento do que o estábulo e, por tanto, fechando a porta ele pega o cavalo. Considere o ponto de vista do cavalo. Ele raciocina (temos um cavalo experto!) que estábulo está é menor do que $L_0$. Portanto, ele conclui que possivelmente ele não pode caber no estábulo. Quem está certo, o cavalo ou o guardador?
+      </p>
+      
+      <h6><a href="exemplos/exemploMckelvey27.4.2.html" target="_blank">Exemplo 05</a></h6>
+      
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/HerbertGretchen.png', 'Zoom', '1650')">
+          <img src="figuras/HerbertGretchen.png" width="500" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Refeição de Herbert e Gretchen, observada pelos psicólogos do espaço. O sistema em repouso de Gretchen e Herbert é o sistema K', enquanto que os psicólogos estão no sistema K o qual se move em relação a K com uma velocidade próxima à velocidade escalar da luz.
+        </p>
+      </div>
+      
+      <p>
+        Herbert e Gretchen vivem numa estacão espacial longe da Terra. Eles comem comidas exóticas, dormem durante nossas horas da luz do dia, e trabalham toda noite. Eles sentam nas extremidades opostas de uma mesa de 6 m de comprimento e sempre acabam a sua sobremesa exatamente ao mesmo tempo, 5:00 da manhã (veja a figura acima). Alguns psicólogos espaciais, capazes de levar a efeito medidas muito precisas, querem observar Herbert e Gretchen de sua espaçonave em rápido movimento (v = 0,9999999999c em relação à estação espacial). Eles não podem entender por que Herbert é tão indelicado, pois ele parece sempre terminar a sobremesa abruptamente antes de Gretchen. Ache a diferença de tempo na qual as sobremesas são terminadas e também o comprimento da mesa, medido pelos psicólogos.
+      </p>
+      
+      <h6>Exemplo 03</h6><!--p14.3 e 14.4 Eisberg-->
+      <p>
+        (a) Calcule o tempo dilatado que um múon vive antes do decaimento quando se desloca com velocidade igual a $0,999c$ se o tempo próprio em que ele vive é $2,2\times10^{-6}s$. Depois compare-o ao tempo requerido para percorrer $10000\, m$ movendo-se com aquela velocidade. (b) Calcule o comprimento contraído da atmosfera, visto pelo múon, depois mostre que o múon consegue precorrer esse trajeto.
+      </p>
+      
+      
+            <!--<div style="width:100%;margin-left: auto;margin-right: auto;">
+        <div style="display: flex; padding-bottom: 0px;">
+        
+          <div style="flex: 30%; padding-right: 30px">
+            <a href="javascript:newWin('figuras/figCone02_a.png', 'Zoom', '1650')">
+              <img src="figuras/figCone02_a.png" style="width:100%">
+            </a>
+            <p style="text-align: center; font-size:80%">
+              <b>a)</b> Gráfico de $\displaystyle f(x,y)=\sqrt{x^2+y^2}$
+            </p>
+          </div>
+          
+          <div style="flex: 30%; padding-left: 30px;">
+            <a href="javascript:newWin('figuras/figCone02_b1.png', 'Zoom', '1650')">
+              <img src="figuras/figCone02_b1.png" style="width:100%">
+            </a>
+            <p style="text-align: center; font-size:80%">
+              <b>b)</b> Interseções de planos com cone
+            </p>
+          </div>
+          
+          <div style="flex: 30%; padding-left: 30px;">
+            <a href="javascript:newWin('figuras/figCone02_b2.png', 'Zoom', '1650')">
+              <img src="figuras/figCone02_b2.png" style="width:100%">
+            </a>
+            <p style="text-align: center; font-size:80%">
+              <b>c)</b> Analise do gráfico do cone $\displaystyle f(x,y)=\sqrt{x^2+y^2}$
+            </p>
+          </div>
+          
+        </div>
+      </div>
+      
+
+      
+      <figure style="margin-top:-30px">
+        <div class = "ggbContainer"> 
+          <a href="https://www.geogebra.org/material/iframe/id/dhppzd7w/width/836/height/502/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" width="836px" height="502px" style="border:0px;" width="836px" height="502px" style="border:0px;">
+            Abrir com o<br>GeoGebra
+          </a>
+          <img src="figuras/curvasDeNivelGeo.png" width="836px" height="502px" alt="polar_coordinates" class="border" >
+          <iframe src="figuras/curvasDeNivelGeo.png" allowfullscreen width="836px" height="502px" class="hiddenIframe"></iframe>
+        </div>       
+      </figure>
+      -->
+      
+<!--
+
+
+
+
+    <h6><a href="exemplos/exemplo1.4.23.html" target="_blank">Exemplo Q1.4.23</a></h6>
+        Encontre a área do refletor parabólico cuja forma se obtém ao rotar o arco parabólico $y=x^2$, $9\leq x \leq 1$ ao redor do eixo $y$
+      <p>-->
+      
+    <!--  
+      <h6><a href="exemplos/exemplo1.4.22.html" target="_blank">Exemplo Q1.4.22</a></h6>
+      
+      <p>
+        
+      </p>    <h6><a href="exemplos/exemplo1.4.2.html" target="_blank">Exemplo Q1.4.3</a></h6>
+      
+      <p>
+        
+      </p>-->
+      
+     
+      
+<!--      <h5>Exemplo 3</h5>
+      <p>
+        Escreva a identidade de Parseval correspondente ao problema \ref{ex1.3.2}.\ref{ex397}
+      </p>-->
+<!--
+      \left( \right)   \left|\, z \,\right|  
+      
+      \left[ \right]   \left\{ \righ\}
+        
+        \begin{align*}
+        \end{align*}
+       
+      <ol>
+        <li>
+          
+        </li>
+        <li>
+          
+        </li>
+      </ol>
+        
+        \[
+          \begin{bmatrix}
+          \end{bmatrix}
+        \]
+      
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig01.png', 'Zoom', '1650')">
+          <img src="figuras/fig01.png" width="400" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01:  Sistema massa mola.
+          </p>
+      </div>
+      
+      
+      
+      <div style='padding: 15px; width: 425px;float:right;'>
+          <img src="figuras/Bessel32.gif" width="400" align="right">
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01:  Uma solução do problema da membrana vibrante a qual é dada em termos da funções de Bessel.
+          </p>
+      </div>
+      
+      <h5>Exemplo 03</h5>
+      
+      <p>
+        
+        <img src="figuras/linha_b.png">
+      </p>
+         
+      <table class="tabela_de_lista2">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <table class="tabela_de_lista2">      
+      <tr>
+      <td class="teorematitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+-->
+      
+      
+      </div>
+      <!-- Fim Principal   -->      
+    </div>
+    <!-- Fim todo   -->
+  </body>
+</html> 
+

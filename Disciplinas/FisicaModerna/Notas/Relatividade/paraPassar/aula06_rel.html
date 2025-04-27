@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />   
+    <link type="text/css" rel="stylesheet" href="../../../css_e_js/local.css" />
+
+    <link href='../../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';https://tex.stackexchange.com/questions/58141/equations-inside-enumerate-aligned-on-items-number
+      SyntaxHighlighter.all();
+    </script>
+
+     <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\\(', '\\)']],
+           macros: {
+              bra: ["{\\left\\langle #1 \\right\\rvert}",1],
+              ket: ["{\\left\\lvert #1 \\right\\rangle}",1],
+              braket:["{\\left\\langle #1 \\vert #2 \\right\\rangle}",2],
+              opProj:["{\\left\\lvert #1 \\right\\rangle\\left\\langle #1 \\right\\rvert}",1],
+              opUni:["{\\left\\lvert #1 \\right\\rangle\\left\\langle #1 \\right\\rvert \+ \\left\\lvert #2 \\right\\rangle\\left\\langle #2 \\right\\rvert}",2],
+              arcsec: "{\\operatorname{arcsec}}",
+              arccot: "{\\operatorname{arccot}}",
+              arccsc: "{\\operatorname{arcsc}}",
+              sech: "{\\operatorname{sech}}",
+              csch: "{\\operatorname{csch}}",
+              argsinh: "{\\operatorname{arg sinh}}",
+              argcosh: "{\\operatorname{arg cosh}}",
+              argtanh: "{\\operatorname{arg tanh}}",
+              argcoth: "{\\operatorname{arg coth}}",
+              argsech: "{\\operatorname{arg sech}}",
+              argcsch: "{\\operatorname{arg csch}}",
+              dbar: "{\\mathscr'26\\mkern-12mu \\mathrm{d}}"
+          }
+         }
+       };
+     </script>    
+
+<!-- <script src="../../../../../comunHtml/mathjax_new_v3.x/tex-chtml.js" id="MathJax-script" async></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    
+    <script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+    
+<!-- <script src="../../../../../comunHtml/node_modules/jquery/dist/jquery.min.js"></script> -->
+<script src="../../../../../comunHtml/jquery/dist/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(".expand").click(function(){
+        target_num = $(this).attr("id").split("-")[1];
+        content_id = "#expandable-".concat(target_num);
+        $(content_id).slideToggle('fast');
+      });
+    });
+    </script>
+
+    <style>
+      .expand {
+        font-style: italic;
+        font-size: 12px;
+        cursor: pointer;
+        color: blue;
+      }
+        .expandable {
+        display:none;
+        margin-left: 3%;
+        margin-right: 3%;
+        color: #3e3e3e;
+/*         text-align: justify; */
+      }
+    </style>
+    
+    <style>
+      ol.alpha_list {
+        counter-reset: item;
+        list-style: none;
+      }
+      ol.alpha_list li:before {
+        content: counter(item,  lower-latin) ")  ";
+        counter-increment: item;
+        margin-left: -30px;
+      }
+    </style>
+    
+     <!-- Internal css -->
+    <style type="text/css">
+        ul.listaDiferente {
+          list-style: none;
+        }
+        ul.listaDiferente li:before {
+          color: green;
+          content: "\00BB";
+/*          content: "";
+          height: 0;
+          width: 0;
+          border-color: transparent #fcb400;
+            border-style: solid;
+          border-width: 0.5em 0 0.5em 0.5em;
+          position: relative;
+          display: block;
+          left: -1em;
+          top: 1.25em;*/
+        }
+    </style>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Física Contemporânea</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h2>Transformadas de Lorentz - Dinâmica</h2>
+      
+      <h3>Momento Relativístico</h3>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/momento1.png', 'Zoom', '1650')">
+          <img src="figuras/momento1.png" width="500" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01: (a) Colisão como vista pelo observador no sistema $S'$ e (b) colisão como vista pelo observador em $S'$
+          </p>
+      </div>
+      
+      <p>
+        Vamos analisar o problema de conservação do momento em termos da relatividade de Einstein. Para isso consideremos o experimento ilustrado na figura 01. Nessa figura temos 2 bolas, $A$ e $B$, lançadas por observadores desde o sistema $S$ e $S'$, respectivamente. O sistema $S'$ se move com velocidade $v$ enquanto que desde o ponto de vista de $S'$ o sistema $S$ se move com velocidade $-v$.
+      </p>
+      
+      <p>
+        Antes da colisão ambos dos observadores, $S$ e $S'$, afirmam que suas bolas foram lançadas com velocidades $u$ e $-u$, respectivamente, porém notam que a velocidade das bolas dos observadores opostos  se movem em diagonal, dessa forma a velocidades solução
+        
+        \begin{align*}
+          v^{A/S}_{xi} &= 0\\
+          v^{A/S}_{yi} &= u\\
+          v^{B/S'}_{xi} &= 0\\
+          v^{B/S'}_{yi} &= -u\\
+          v^{S'/S}_{xi} &= v
+        \end{align*}
+        
+        Para determinar da bola de um sistema em relação ao outro sistema vamos aplicar as transformadas de Lorentz
+        <br>
+        <br>
+        <i>Em relação ao sistema $S$, antes da colisão</i>
+        </br>
+        
+        \begin{array}{rlcrl}
+          v^{B/S}_{xi} &= \dfrac{v^{B/S'}_x + v^{S'/S}_x}{1+ \dfrac{v^{S'/S}_xv^{B/S'}_x}{c^{2}}} &\qquad& v^{B/S}_{yi} &= \dfrac{\sqrt{1 - \left(\dfrac{v^{S'/S}}{c}\right)^2}}{1+ \dfrac{v^{S'/S}_xv^{B/S'}_x}{c^{2}}}v^{B/S'}_y\\
+          &=\dfrac{0+v}{1+\dfrac{(v)(0)}{c^2}} & & &=\dfrac{\sqrt{1-\left(\dfrac{v}{c}\right)^2}}{1+\dfrac{(v)(0)}{c^2}}\, (-u)\\
+          &=v && &=-\sqrt{1-\left(\dfrac{v}{c}\right)^2}\,u
+        \end{array}
+          
+          
+        <i>Em relação ao sistema $S'$, antes da colisão</i>
+        </br>
+        </br>
+        
+        \begin{array}{rlcrl}
+          v^{A/S'}_{xi} &= \dfrac{v^{A/S}_x + v^{S/S'}_x}{1 - \dfrac{v^{S/S'}_xv^{B/S}_x}{c^{2}}} &\qquad& v^{A/S'}_{yi} &= \dfrac{\sqrt{1 - \left(\dfrac{v^{S/S'}}{c}\right)^2}}{1+ \dfrac{v^{S/S'}_xv^{A/S}_x}{c^{2}}}v^{A/S}_y\\
+          &=\dfrac{0-v}{1+\dfrac{0\cdot v}{c^2}} & & &=\dfrac{\sqrt{1-\left(\dfrac{-v}{c}\right)^2}}{1+\dfrac{(-v)(0)}{c^2}}\, (u)\\
+          &=-v && &=\sqrt{1-\left(\dfrac{v}{c}\right)^2}\,u
+        \end{array}
+        
+        Vamos considerar que a colisão é elástica pelo que, para o observador em $S$ e em $S'$ a suas bolas, $A$ e $B$ respectivamente,retornam com velocidades         
+        
+        \begin{align*}
+          v^{A/S}_{xf} &= 0\\
+          v^{A/S}_{yf} &= -u\\
+          v^{B/S'}_{xf} &= 0\\
+          v^{B/S'}_{yf} &= u\\
+          v^{S'/S}_{xf} &= v
+        \end{align*}
+        
+        a partir disso podemos calcular as medidas que um observador em um sistema faz de um evento que acontece no outro sistema
+        <br>
+        <br>
+        <i>Em relação ao sistema $S$, depois da colisão</i>
+        </br>
+        
+        \begin{array}{rlcrl}
+          v^{B/S}_{xf} &= \dfrac{v^{B/S'}_x + v^{S'/S}_x}{1+ \dfrac{v^{S'/S}_xv^{B/S'}_x}{c^{2}}} &\qquad& v^{B/S}_{yf} &= \dfrac{\sqrt{1 - \left(\dfrac{v^{S'/S}}{c}\right)^2}}{1+ \dfrac{v^{S'/S}_xv^{B/S'}_x}{c^{2}}}v^{B/S'}_y\\
+          &=\dfrac{0+v}{1+\dfrac{(v)(0)}{c^2}} & & &=\dfrac{\sqrt{1-\left(\dfrac{v}{c}\right)^2}}{1+\dfrac{(v)(0)}{c^2}}\, (u)\\
+          &=v && &=\sqrt{1-\left(\dfrac{v}{c}\right)^2}\,u
+        \end{array}
+          
+          
+        <i>Em relação ao sistema $S'$, depois da colisão</i>
+        </br>
+        </br>
+        
+        \begin{array}{rlcrl}
+          v^{A/S'}_{xf} &= \dfrac{v^{A/S}_x + v^{S/S'}_x}{1 - \dfrac{v^{S/S'}_xv^{B/S}_x}{c^{2}}} &\qquad& v^{A/S'}_{yf} &= \dfrac{\sqrt{1 - \left(\dfrac{v^{S/S'}}{c}\right)^2}}{1+ \dfrac{v^{S/S'}_xv^{A/S}_x}{c^{2}}}v^{A/S}_y\\
+          &=\dfrac{0-v}{1+\dfrac{0\cdot v}{c^2}} & & &=\dfrac{\sqrt{1-\left(\dfrac{-v}{c}\right)^2}}{1+\dfrac{(-v)(0)}{c^2}}\, (-u)\\
+          &=-v && &=-\sqrt{1-\left(\dfrac{v}{c}\right)^2}\,u
+        \end{array}
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/resumoVel.png', 'Zoom', '1650')">
+          <img src="figuras/resumoVel.png" width="800" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 02: Resumo, velocidades vista por cada um dos observadores.
+          </p>
+      </div>
+      
+      <p>        
+        Agora vamos aplicar a lei de conservação da energia em cada um dos sistemas
+        <i>Em relação ao sistema $S$, depois da colisão</i>
+        </br>
+        
+        \begin{array}{rclcrcl}
+          p^{A/S}_{xi} &+& p^{B/S}_{xi} &=&  p^{A/S}_{xf} &+& p^{B/S}_{xf}\\
+          m (0) &+& mv &=& 0 &+& mv\\
+          && && \\
+          p^{A/S}_{yi} &+& p^{B/S}_{yi} &=&  p^{A/S}_{yf} &+& p^{B/S}_{yf}\\
+          mu &-& m\sqrt{1-\left(\dfrac{v}{c}\right)^2}\,u &=& -mu &+& m \sqrt{1-\left(\dfrac{v}{c}\right)^2}\,u
+        \end{array}
+        de onde vemos que o momento em $y$ não se conserva.
+        <br>
+        <i>Em relação ao sistema $S'$, depois da colisão</i>
+        </br>
+        
+        \begin{array}{rclcrcl}
+          p^{A/S'}_{xi} &+& p^{B/S'}_{xi} &=&  p^{A/S'}_{xf} &+& p^{B/S'}_{xf}\\
+          m (-v) &+& m (0) &=& m(-v) &+& m(0)\\
+          && && &&\\
+          p^{A/S'}_{yi} &+& p^{B/S'}_{yi} &=&  p^{A/S'}_{yf} &+& p^{B/S'}_{yf}\\
+          m\sqrt{1-\left(\dfrac{v}{c}\right)^2}\,u &+& m (-u) &=& -m\sqrt{1-\left(\dfrac{v}{c}\right)^2}u &+& m u
+        \end{array}
+        e, novamente, o momento em $y$ não se conserva.
+      </p>
+      
+      <p>
+        A fim de resolver essa aparente violação do principio de conservação do momento linear somos obrigados a admitir a possibilidade de variação da massa do corpo com o movimento, isto é, suponha que a massa no sistema que enxerga a bola com deslocamento ao longo de $x$ é diferente da massa que não observa esse moviemtno (e que é aquele desde onde a massa foi lançada), por simplicidade vamos supor que essa massa é uma função da velocidade, m(v), dessa forma teremos
+        
+        
+        \begin{align*}
+          m(v)\sqrt{1-\left(\dfrac{v}{c}\right)^2}\,u - mu =& -m(v)\sqrt{1-\left(\dfrac{v}{c}\right)^2}u + m u\\
+          m(v) &= \dfrac{m}{\sqrt{1-\left(\dfrac{v}{c}\right)^2}}
+        \end{align*}        
+      </p>
+      
+      <h3>Energia relativista</h3>
+      
+      <p>
+        Seja uma partícula de massa $m$ movendo-se sobre o eixo $x$ , desde $x_{0}=0$ até $x$. Sobre essa partícula atua uma forca $F$ que impulsiona a partícula desde uma velocidade inicial nula até uma velocidade $v$. Sabe-se, de acordo com a segunda lei de Newton, 
+        \[
+        F=\dfrac{dp}{dt}
+        \]
+        onde $p$ é o momento linear. Por outro lado, a energia cinética da partícula varia de $0$ até $K$. De acordo com o teorema do trabalho e a energia, o trabalho realizado pela força é $W=\Delta K=K$, assim
+
+        \begin{eqnarray*}
+        W & = & \int_{0}^{x}Fdx\\
+        & = & \int_{0}^{x}\dfrac{dp}{dt}\, dx\\
+        & = & \int_{0}^{x}\dfrac{dx}{dt}\, dp\\
+        & = & \int_{0}^{p}v\, dp
+        \end{eqnarray*}
+        no entanto, o momento linear relativista é dado por
+        \[
+        p=\dfrac{mv}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}}
+        \]
+        onde $m$ é a massa de repouso. Então, usando $vdp=d(vp)-pdv$ então
+        \begin{eqnarray*}
+        W & = & \int_{0}^{v}\left[d(vp)-pdv\right]\\
+        & = & \left.\dfrac{mv^{2}}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}}\right|_{0}^{v}-m\int_{0}^{v}\dfrac{v\, dv}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}}
+        \end{eqnarray*}
+        usando que
+        \[
+        \int\dfrac{vdv}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}}=-c^{2}\sqrt{1-\dfrac{v^{2}}{c^{2}}}
+        \]
+        obtemos que
+        \[
+        W=\left.\dfrac{mv^{2}}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}}\right|_{0}^{v}+\left.mc^{2}\sqrt{1-\dfrac{v^{2}}{c^{2}}}\right|_{0}^{v}=mc^{2}\left.\dfrac{1}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}}\right|_{0}^{v}
+        \]
+        de onde, finalmente
+
+        \[
+        W=\dfrac{mc^{2}}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}}-mc^{2}
+        \]
+        portanto
+        \[
+        K=\dfrac{mc^{2}}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}}-mc^{2}
+        \]
+        Vamos interpretar esse resultado, como $K$ é energia, necessariamente
+        os outros dois termos dessa equação também são energia, mas observe
+        que o primeiro termo à direita somente existe se a partícula está
+        em repouso enquanto que o segundo termo é uma energia intrínseca,
+        existe pelo simples fato da massa, se reordenamos essa equação da
+        seguinte forma 
+        \[
+        K+mc^{2}=\dfrac{mc^{2}}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}}
+        \]
+        vemos que essa energia associada ao movimento é a soma da energia cinética mais a energia da massa em repouso, por isso vamos chamar de energia total do sistema
+        \begin{equation}
+        E=\dfrac{mc^{2}}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}}\label{eq_massaRela}
+        \end{equation}
+        enquanto que 
+        \begin{equation}
+        E_{o}=mc^{2}\label{eq_emc2}
+        \end{equation}
+        é a energia em repouso da massa. Da equação \ref{eq_massaRela} vemos que nenhuma partícula com massa pode viajar à velocidade da luz pois sua energia iria para o infinito a medida que $v$ se aproxima de $c$.
+      </p>
+
+      <p>
+        O conceito de energia em repouso é bastante profundo por exemplo, quando temos um sistema de partículas ligado essa energia de ligação contribui à energia de repouso do sistema, um outro exemplo é a energia de agitação térmica, essa energia também é parte da energia de repouso, de fato qualquer outra energia interna de um sistema contribui à energia de repouso, dito isso podemos generalizar a lei de conservação da energia mecânica relativista:
+        \[
+          \left(\left[mc^{2}\right]_{total}+K_{total}\right)_{inicial}=\left(\left[mc^{2}\right]_{total}+K_{total}\right)_{final}
+        \]
+        ou seja, num sistema isolado a soma da energia total de repouso e da energia cinética relativística total é conservada, quando medida em qualquer sistema inercial de referência dado. Essa expressão é equivalente a
+        \[
+          \left(\dfrac{mc^{2}}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}}\right)_{\textrm{total inicial}}=\left(\dfrac{mc^{2}}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}}\right)_{\textrm{total inicial}}
+        \]
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/trianguloDeEnergia.png', 'Zoom', '1650')">
+          <img src="figuras/trianguloDeEnergia.png" width="500" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 03: Um triângulo retângulo e arco de círculo que forma uma figura útil para lembrar $\ref{eq_ene1}$, $\ref{eq_ene2}$ e $\ref{eq_ene3}$
+          </p>
+      </div>
+      
+      <p>
+        A fim de relacionar a energia relativística total com a massa em repouso e o modulo do momento linear relativista, calculamos
+        \begin{eqnarray*}
+        \dfrac{m^{2}c^{2}}{1-\dfrac{v^{2}}{c^{2}}}-m^{2}c^{4} & = & m^{2}c^{4}\left(\dfrac{1}{1-\dfrac{v^{2}}{c^{2}}}-1\right)\\
+        & = & m^{2}c^{4}\left(\dfrac{\dfrac{v^{2}}{c^{2}}}{1-\dfrac{v^{2}}{c^{2}}}\right)\\
+        & = & \left(\dfrac{m^{2}v^{2}}{1-\dfrac{v^{2}}{c^{2}}}\right)c^{2}\\
+        & = & c^{2}p^{2}
+        \end{eqnarray*}
+        ou seja
+        \begin{equation}
+        E^{2}=\left(c\, p\right)^{2}+\left(mc^{2}\right)^{2}\label{eq_ene1}
+        \end{equation}
+        usando
+        \begin{equation}
+        E=K+mc^{2}\label{eq_ene2}
+        \end{equation}
+        temos que
+        \begin{equation}
+        K=\sqrt{\left(c\, p\right)^{2}+\left(mc^{2}\right)^{2}}-mc^{2}\label{eq_ene3}
+        \end{equation}
+
+        Para finalizar gostaria de fazer um comentário sobre as equação \ref{eq_massaRela} e \ref{eq_ene1}, ainda que \ref{eq_massaRela} informe se uma partícula viaja à velocidade da luz ela não pode ter massa, segundo a equação \ref{eq_ene1} mesmo que uma partícula não tenha massa ela terá momento associado e será igual à energia dividido pela velocidade da luz,
+        $p=E/c$.
+      </p>
+      
+      <h6><a href="exemplos/exemplo01.html" target="_blank">Exemplo 01</a></h6> <!--Tipler 5ed exemplo 39-10-->
+      
+      <p>
+        Um elétron (energia de repouso de $0,5\, MeV$) se move com rapidez de $u=0,8c$  (a) Qual é sua energia total, (b) sua energia cinética, (c) a intensidade do seu momentum
+      </p>
+      
+      <h6><a href="exemplos/exemplo02.html" target="_blank">Exemplo 02</a></h6> <!--Halliday 10ed example 37.06-->
+      
+      <p>
+        O próton mais energético já detetado em um raio cósmico que chegou à Terra desde o espaço tinha a incrível energia cinética de $3,0\times 10^{30} eV$ (suficiente para aquecer uma colher de agua em alguns graus) (a) Qual é o fator de Lorentz e a velocidade do prótons relativos aos detetores em Terra? (b) Suponha que o próton viaja ao longo do diâmetro da galaxia ($9,8\times 10^4\,anos-luz$), quanto tempo leva para ele atravessar essa comprimento, desde a perspectiva de um observado em repouso em relação à Terra/Galaxia?
+      </p>
+      
+      <p>
+        (a) Um elétron tem momento linear de módulo $p=5,0\times10^{22}$. Calcule sua energia cinética relativista $K$. A massa em repouso do elétron é $m=9,11\times10^{-31}kg$ (b) A título de comparação, use a mecânica Newtoniana para calcular a energia do elétron.
+      </p>
+      
+      
+      
+      <h6><a href="exemplos/exemplo03.html" target="_blank">Exemplo 03</a></h6> <!--Eisberg Física exemplo 15.5 pg 288 port-->
+      
+      <p>
+        Um múon de raios cósmicos é formado pelo decaimento de uma partícula chamada píon. No decaimento é também formado um neutrino. O processo pode ser expresso simbolicamente como  \[ \pi\rightarrow\mu+\nu \] onde os símbolos são cada uma das partículas. Os valores medidos das massas de repouso destas partículas são $m_{\pi}=2,49\times10^{-28}kg$, $m_{\mu}=1,89\times10^{-28}kg$ e $m_{\nu}=0$ (ou seja, $274$, $207$ e $0$ massas do elétron). Preveja a energia cinética do múon, conforme medida em um sistema de referencia que se move junto com o píon antes de que ele decaia.
+      </p>
+      
+      <h6><a href="exemplos/exemplo04.html" target="_blank">Exemplo 04</a></h6> <!--Eisberg Física exemplo 15.6 pg 292 port-->
+      
+      <p>
+        Determine a diferencia entre a massa de repouso combinada de um átomo de $Na$ e de um átomo de $Cl$ e a massa de repouso de uma molécula de $NaCl$. A energia de ligação é $E_{b}=-5,8\times10^{-19}J$. A massa en repouso do $m_{Na}=23\, uma$ e do $m_{Cl}=35\, uma$ ($1\, uma=1,661\times10^{-27}kg$).        
+      </p>
+      
+      
+      <h6><a href="exemplos/exemplo05.html" target="_blank">Exemplo 05</a></h6> <!--Eisberg Física exemplo 15.6 pg 292 port-->
+      
+      <p>
+        Calcule o decréscimo $\Delta m$ na massa de repouso total de um sistema consistente inicialmente em um núcleo de unânio-235 mais um nêutron de energia cinética desprezível que está prestes a atingi-lo. e que consiste finalmente em dois fragmentos amplamente separados que ainda não emitiram nêutrons.
+      </p>
+      
+            <!--<div style="width:100%;margin-left: auto;margin-right: auto;">
+        <div style="display: flex; padding-bottom: 0px;">
+        
+          <div style="flex: 30%; padding-right: 30px">
+            <a href="javascript:newWin('figuras/figCone02_a.png', 'Zoom', '1650')">
+              <img src="figuras/figCone02_a.png" style="width:100%">
+            </a>
+            <p style="text-align: center; font-size:80%">
+              <b>a)</b> Gráfico de $\displaystyle f(x,y)=\sqrt{x^2+y^2}$
+            </p>
+          </div>
+          
+          <div style="flex: 30%; padding-left: 30px;">
+            <a href="javascript:newWin('figuras/figCone02_b1.png', 'Zoom', '1650')">
+              <img src="figuras/figCone02_b1.png" style="width:100%">
+            </a>
+            <p style="text-align: center; font-size:80%">
+              <b>b)</b> Interseções de planos com cone
+            </p>
+          </div>
+          
+          <div style="flex: 30%; padding-left: 30px;">
+            <a href="javascript:newWin('figuras/figCone02_b2.png', 'Zoom', '1650')">
+              <img src="figuras/figCone02_b2.png" style="width:100%">
+            </a>
+            <p style="text-align: center; font-size:80%">
+              <b>c)</b> Analise do gráfico do cone $\displaystyle f(x,y)=\sqrt{x^2+y^2}$
+            </p>
+          </div>
+          
+        </div>
+      </div>
+      
+
+      
+      <figure style="margin-top:-30px">
+        <div class = "ggbContainer"> 
+          <a href="https://www.geogebra.org/material/iframe/id/dhppzd7w/width/836/height/502/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" width="836px" height="502px" style="border:0px;" width="836px" height="502px" style="border:0px;">
+            Abrir com o<br>GeoGebra
+          </a>
+          <img src="figuras/curvasDeNivelGeo.png" width="836px" height="502px" alt="polar_coordinates" class="border" >
+          <iframe src="figuras/curvasDeNivelGeo.png" allowfullscreen width="836px" height="502px" class="hiddenIframe"></iframe>
+        </div>       
+      </figure>
+      -->
+      
+<!--
+
+
+
+
+    <h6><a href="exemplos/exemplo1.4.23.html" target="_blank">Exemplo Q1.4.23</a></h6>
+        Encontre a área do refletor parabólico cuja forma se obtém ao rotar o arco parabólico $y=x^2$, $9\leq x \leq 1$ ao redor do eixo $y$
+      <p>-->
+      
+    <!--  
+      <h6><a href="exemplos/exemplo1.4.22.html" target="_blank">Exemplo Q1.4.22</a></h6>
+      
+      <p>
+        
+      </p>    <h6><a href="exemplos/exemplo1.4.2.html" target="_blank">Exemplo Q1.4.3</a></h6>
+      
+      <p>
+        
+      </p>-->
+      
+     
+      
+<!--      <h5>Exemplo 3</h5>
+      <p>
+        Escreva a identidade de Parseval correspondente ao problema \ref{ex1.3.2}.\ref{ex397}
+      </p>-->
+<!--
+      \left( \right)   \left|\, z \,\right|  
+      
+      \left[ \right]   \left\{ \righ\}
+        
+        \begin{align*}
+        \end{align*}
+       
+      <ol>
+        <li>
+          
+        </li>
+        <li>
+          
+        </li>
+      </ol>
+        
+        \[
+          \begin{bmatrix}
+          \end{bmatrix}
+        \]
+      
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig01.png', 'Zoom', '1650')">
+          <img src="figuras/fig01.png" width="400" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01:  Sistema massa mola.
+          </p>
+      </div>
+      
+      
+      
+      <div style='padding: 15px; width: 425px;float:right;'>
+          <img src="figuras/Bessel32.gif" width="400" align="right">
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01:  Uma solução do problema da membrana vibrante a qual é dada em termos da funções de Bessel.
+          </p>
+      </div>
+      
+      <h5>Exemplo 03</h5>
+      
+      <p>
+        
+        <img src="figuras/linha_b.png">
+      </p>
+         
+      <table class="tabela_de_lista2">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <table class="tabela_de_lista2">      
+      <tr>
+      <td class="teorematitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+-->
+      
+      
+      </div>
+      <!-- Fim Principal   -->      
+    </div>
+    <!-- Fim todo   -->
+  </body>
+</html> 
+

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    
+    <link type="text/css" rel="stylesheet" href="../../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script src='../../../../../../comunHtml/syntaxhighlighter/scripts/main.js' type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';https://tex.stackexchange.com/questions/58141/equations-inside-enumerate-aligned-on-items-number
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../../comunHtml/mathjax_new/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="../../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+    
+<!-- <script src="../../../../../../comunHtml/node_modules/jquery/dist/jquery.min.js"></script> -->
+<script src="../../../../../../comunHtml/jquery/dist/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(".expand").click(function(){
+        target_num = $(this).attr("id").split("-")[1];
+        content_id = "#expandable-".concat(target_num);
+        $(content_id).slideToggle('fast');
+      });
+    });
+    </script>
+
+    <style>
+      .expand {
+        font-style: italic;
+        font-size: 12px;
+        cursor: pointer;
+        color: blue;
+      }
+        .expandable {
+        display:none;
+        margin-left: 3%;
+        margin-right: 3%;
+        color: #3e3e3e;
+/*         text-align: justify; */
+      }
+    </style>
+    
+    <style>
+      ol.alpha_list {
+        counter-reset: item;
+        list-style: none;
+      }
+      ol.alpha_list li:before {
+        content: counter(item,  lower-latin) ")  ";
+        counter-increment: item;
+        margin-left: -30px;
+      }
+    </style>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Física C</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h2>Relatividade especial</h2>
+      <h5>Exemplo</h5>
+      
+      <p>
+        Um múon de raios cósmicos é formado pelo decaimento de uma partícula chamada píon. No decaimento é também formado um neutrino. O processo pode ser expresso simbolicamente como  \[ \pi\rightarrow\mu+\nu \] onde os símbolos são cada uma das partículas. Os valores medidos das massas de repouso destas partículas são $m_{\pi}=2,49\times10^{-28}kg$, $m_{\mu}=1,89\times10^{-28}kg$ e $m_{\nu}=0$ (ou seja, $274$, $207$ e $0$ massas do elétron). Preveja a energia cinética do múon, conforme medida em um sistema de referencia que se move junto com o píon antes de que ele decaia.
+      </p>
+      </br>
+      <b>Sol.</b>
+      </br>
+      </br>
+      
+        <b>(a)</b>Como o píon está em repouso no sistema de referência que se move junto dele podemos afirma que o momento em relação a esse sistema é zero, dessa forma a conservação do momento estipulará
+        
+        \begin{align*}
+          p_\pi &= p_\mu + p_\nu\\
+          0 &= p_\mu + p_\nu\\
+          p_\mu &= -p_\nu
+        \end{align*}
+        
+        o sinal negativo nos diz que o movimento das partículas deve ser em sentido o posto, mas o módulo do momento é o mesmo.
+      </p>
+      
+      <p>
+        Já a conservação da energia exige que
+        \begin{align*}
+          E_\pi &= E_\mu + E_\nu\\
+          m_{0\pi}c^2 + \cancelto{0}{K_\pi} &=  \sqrt{p_\mu^2c^2+m_{0\mu}^2c^4} + \sqrt{p_\nu^2c^2+\cancelto{0}{m_{0\nu}^2c^4}}\\
+          m_{0\pi}c^2 &= cp_\nu + \sqrt{p_\mu^2c^2+m_{0\mu}^2c^4}
+        \end{align*}
+        
+        substituindo a equação do momento $p_\nu=p_\mu$
+        
+        \begin{align*}
+          m_{0\pi}c^2 &= cp_\mu + \sqrt{p_\mu^2c^2+m_{0\mu}c^4}\\
+          m_{0\pi}c^2 - cp_\mu &= \sqrt{p_\mu^2c^2+m_{0\mu}^2c^4}\\
+          \left(m_{0\pi}c^2 - cp_\mu\right)^2 &= p_\mu^2c^2+m_{0\mu}^2c^4\\
+          m_{0\pi}^2c^4 -2\left(m_{0\pi}c^2\right)\left(cp_\mu\right)  + \cancel{p_\mu^2c^2} &= \cancel{p_\mu^2c^2}+m_{0\mu}^2c^4\\
+          cp_\mu &= \dfrac{m_{0\pi}^2c^4 - m_{0\mu}^2c^4}{2m_{0\pi}c^2}
+        \end{align*}
+        
+        Para continuar, em lugar de expressar a conservação de energia da forma que fizemos acima, vamos utilizar outra expressão
+        \begin{align*}
+          E_\pi &= E_\mu + E_\nu\\
+          m_{0\pi}c^2 + \cancelto{0}{K_\pi} &=  K_mu + E_{0\mu} + \sqrt{p_\nu^2c^2+\cancelto{0}{m_{0\nu}^2c^4}}\\
+          m_{0\pi}c^2 &= cp_\nu + K_\mu + m_{0\mu}c^2\\
+          m_{0\pi}c^2 &= cp_\mu + K_\mu + m_{0\mu}c^2\\
+        \end{align*}
+        
+        substituindo o valor de $cp_\mu$ que tínhamos calculado previamente
+        
+        \begin{align*}
+          m_{0\pi}c^2 &=\dfrac{m_{0\pi}^2c^4 - m_{0\mu}^2c^4}{2m_{0\pi}c^2} + K_\mu + m_{0\mu}c^2\\
+          k_\mu &= \dfrac{2\left( m_{0\pi}c^2\right)^2 - \left( m_{0\pi}c^2\right)^2 + \left(m_{0\mu}c^2\right)^2 - 2\left(m_{0\mu}c^2 \right)\left(  m_{0\pi}c^2\right)}{m_{0\pi}c^2}\\
+          k_\mu &= \dfrac{\left( m_{0\pi}c^2\right)^2 + \left(m_{0\mu}c^2\right)^2 - 2\left(m_{0\mu}c^2 \right)\left(  m_{0\pi}c^2\right)}{m_{0\pi}c^2}\\
+          k_\mu &= \dfrac{\left[\left( m_{0\pi}c^2\right) + \left(m_{0\mu}c^2\right) \right]^2}{m_{0\pi}c^2}\\
+          k_\mu &= \dfrac{\left( m_{0\pi} - m_{0\mu}\right)^2c^2}{m_{0\pi}}
+        \end{align*}
+        
+        substituindo os valores
+        
+        \begin{align*}
+          k_\mu &= \dfrac{\left(2,49\times10^{-28}kg - 1,89\times10^{-28}kg\right)^2\left( 3,0\times 10^8\right)}{2,49\times10^{-28}kg}\\
+          &= 6,51\times 10^{-13}J
+        \end{align*}
+        
+        Este valor está inteiramente e acordo com as experiências  que medem a energia cinética do múon num sistema de referência em que o píon está em repouso quando ele decai. Nestas experiências os píos são produzidos em colisões entre prótons, emitidos de um acelerados de partículas de alta energia, e núcleos num alvo. Os píons são inteiramente parados por um absorvedor de modo que eles decaem enquanto em repouso.
+      </p>
+      
+<!--
+      
+      \left( \right)   \left|\,  \,\right|  
+      
+      \left[ \right]   \left\{ \right\}
+        
+        \begin{align*}
+        \end{align*}
+        
+       \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k}
+       
+      <p>
+        
+      </p>
+       
+      <ol>
+        <li>
+          
+        </li>
+        <li>
+          
+        </li>
+      </ol>
+        
+        \[
+          \begin{bmatrix}
+          \end{bmatrix}
+        \]
+      
+      \mathbb{R}
+      
+     
+      
+      <img src="figuras/linha_b.png">
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig01.png', 'Zoom', '1650')">
+          <img src="figuras/fig01.png" width="400" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01:  Sistema massa mola.
+          </p>
+      </div>
+      
+      
+      
+      <div style='padding: 15px; width: 425px;float:right;'>
+          <img src="figuras/Bessel32.gif" width="400" align="right">
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01:  Uma solução do problema da membrana vibrante a qual é dada em termos da funções de Bessel.
+          </p>
+      </div>
+      
+      <h5>Exemplo 03</h5>
+      
+      <p>
+      
+      </br>
+      <b>Sol.</b>
+      </br>
+      </br>
+        
+        <img src="figuras/linha_b.png">
+      </p>
+         
+      <table class="tabela_de_lista2">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <table class="tabela_de_lista2">      
+      <tr>
+      <td class="teorematitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+-->
+      
+      
+      </div>
+      <!-- Fim Principal   -->      
+    </div>
+    <!-- Fim todo   -->
+  </body>
+</html>
+ 

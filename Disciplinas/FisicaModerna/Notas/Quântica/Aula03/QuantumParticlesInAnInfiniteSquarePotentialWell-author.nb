@@ -1,0 +1,1163 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     46018,       1154]
+NotebookOptionsPosition[     41638,       1016]
+NotebookOutlinePosition[     43260,       1067]
+CellTagsIndexPosition[     42932,       1055]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Quantum Particles in an Infinite Square Potential Well", "DemoTitle",
+ CellChangeTimes->{
+  3.35258739317188*^9, {3.35509281955563*^9, 3.35509283168063*^9}, {
+   3.35621246759375*^9, 3.35621246870313*^9}},
+ CellID->700863240],
+
+Cell["", "InitializationSection"],
+
+Cell[CellGroupData[{
+
+Cell["", "ManipulateSection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"filllower", ">", "fillupper"}], ",", 
+      RowBox[{"filllower", "=", "fillupper"}]}], "]"}], ";", 
+    RowBox[{"Grid", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Show", "[", 
+         RowBox[{
+          RowBox[{"Plot", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"Sqrt", "[", "2", "]"}], " ", 
+               RowBox[{"Sin", "[", 
+                RowBox[{"n", " ", "\[Pi]", " ", "x"}], "]"}]}], ")"}], "^", 
+             "2"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", 
+            RowBox[{"PlotRange", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", "1"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "2"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"filllower", "\[Equal]", "fillupper"}], ",", 
+            RowBox[{"Plot", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"Sqrt", "[", "2", "]"}], " ", 
+                 RowBox[{"Sin", "[", 
+                  RowBox[{"n", " ", "\[Pi]", " ", "x"}], "]"}]}], ")"}], "^", 
+               "2"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", 
+              RowBox[{"PlotRange", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "1"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "2"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+            RowBox[{"Plot", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"Sqrt", "[", "2", "]"}], " ", 
+                 RowBox[{"Sin", "[", 
+                  RowBox[{"n", " ", "\[Pi]", " ", "x"}], "]"}]}], ")"}], "^", 
+               "2"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"x", ",", "filllower", ",", "fillupper"}], "}"}], ",", 
+              RowBox[{"Filling", "\[Rule]", "0"}], ",", 
+              RowBox[{"PlotRange", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "1"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "2"}], "}"}]}], "}"}]}]}], "]"}]}], "]"}],
+           ",", 
+          RowBox[{"AxesLabel", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<x\>\"", ",", "\"\<probability density\>\""}], 
+            "}"}]}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", "500"}], ",", 
+          RowBox[{"AspectRatio", "\[Rule]", ".25"}], ",", 
+          RowBox[{"PlotLabel", "\[Rule]", 
+           RowBox[{"Grid", "[", 
+            RowBox[{"{", 
+             RowBox[{"{", 
+              RowBox[{"Row", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                   RowBox[{"\"\<probability = \>\"", "<>", 
+                    RowBox[{"ToString", "[", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"Abs", "[", 
+                    RowBox[{"Integrate", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Sqrt", "[", "2", "]"}], " ", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"n", " ", "\[Pi]", " ", "x"}], "]"}]}], ")"}], 
+                    "^", "2"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x", ",", "filllower", ",", "fillupper"}], 
+                    "}"}]}], "]"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"4", ",", "3"}], "}"}], ",", 
+                    RowBox[{"NumberPadding", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<\>\"", ",", "\"\<0\>\""}], "}"}]}], ",", 
+                    RowBox[{"ExponentFunction", "\[Rule]", 
+                    RowBox[{"(", 
+                    RowBox[{"Null", "&"}], ")"}]}]}], "]"}], "]"}]}], ",", 
+                   "\"\<Label\>\""}], "]"}], ",", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{"\"\<  |  \>\"", ",", 
+                   RowBox[{"GrayLevel", "[", ".5", "]"}]}], "]"}], ",", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                   RowBox[{"\"\<quantum number = \>\"", "<>", 
+                    RowBox[{"ToString", "[", "n", "]"}]}], ",", 
+                   "\"\<Label\>\""}], "]"}]}], "}"}], "]"}], "}"}], "}"}], 
+            "]"}]}], ",", 
+          RowBox[{"ImagePadding", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"50", ",", "50"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"30", ",", "50"}], "}"}]}], "}"}]}]}], "]"}], "}"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"Plot", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Sqrt", "[", "2", "]"}], " ", 
+            RowBox[{"Sin", "[", 
+             RowBox[{"n", " ", "\[Pi]", " ", "x"}], "]"}]}], ")"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", 
+          RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", "500"}], ",", 
+          RowBox[{"PlotRange", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"Sqrt", "[", "2", "]"}]}], ",", 
+             RowBox[{"Sqrt", "[", "2", "]"}]}], "}"}]}], ",", 
+          RowBox[{"PlotLabel", "\[Rule]", 
+           RowBox[{"Style", "[", 
+            RowBox[{
+            "\"\<wave function of the electron\>\"", ",", "\"\<Label\>\""}], 
+            "]"}]}], ",", 
+          RowBox[{"AspectRatio", "\[Rule]", ".3"}], ",", 
+          RowBox[{"ImagePadding", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"50", ",", "50"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"50", ",", "30"}], "}"}]}], "}"}]}]}], "]"}], "}"}]}], 
+      "}"}], "]"}]}], ",", 
+   RowBox[{"\"\<X3\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "\"\<quantum number\>\""}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", 
+        "8", ",", "9", ",", "10"}], "}"}], ",", 
+      RowBox[{"ControlType", "\[Rule]", "SetterBar"}]}], "}"}]}], ",", 
+   RowBox[{"\"\<X\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"filllower", ",", "0", ",", "\"\<lower limit\>\""}], "}"}], 
+      ",", "0", ",", "1", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<Y\>\"", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"fillupper", ",", "1", ",", "\"\<upper limit\>\""}], "}"}], 
+      ",", "0", ",", "1", ",", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{
+  3.35258741989063*^9, {3.35272140950783*^9, 3.35272141377343*^9}, {
+   3.35272149625727*^9, 3.35272150563221*^9}, {3.35523011591085*^9, 
+   3.35523012605147*^9}, {3.35523019642647*^9, 3.35523023992647*^9}, {
+   3.35523162433272*^9, 3.35523169409835*^9}, {3.35523621242647*^9, 
+   3.35523621297335*^9}, {3.35523689542647*^9, 3.3552369177546*^9}, {
+   3.35523838952022*^9, 3.3552384137546*^9}, {3.35697368857118*^9, 
+   3.35697369280558*^9}, {3.35697376661856*^9, 3.35697378983746*^9}, {
+   3.35732236296799*^9, 3.35732238038785*^9}, {3.35732292744983*^9, 
+   3.35732302895376*^9}, {3.3582001931875*^9, 3.35820020998438*^9}, {
+   3.35836947634375*^9, 3.3583694766875*^9}, {3.35923333432813*^9, 
+   3.35923333453125*^9}, {3.35938757727372*^9, 3.35938759374047*^9}, {
+   3.36069675490642*^9, 3.36069678981311*^9}, {3.36412671502076*^9, 
+   3.36412674371415*^9}, {3.36412677789005*^9, 3.36412682667038*^9}, {
+   3.36486024492188*^9, 3.3648602505625*^9}, {3.3648602811875*^9, 
+   3.36486029489063*^9}, {3.36486033046875*^9, 3.36486034871875*^9}, {
+   3.36486048115625*^9, 3.36486062442188*^9}, {3.36898503734169*^9, 
+   3.36898506573213*^9}, {3.382958852049975*^9, 3.382958879081225*^9}, {
+   3.5061287181365714`*^9, 3.506128722112969*^9}, {3.5061288456093173`*^9, 
+   3.506128861998956*^9}},
+ CellID->1496021318],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`filllower$$ = 0, $CellContext`fillupper$$ = 
+    1, $CellContext`n$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`n$$], 1, "quantum number"}, {1, 2, 3, 4, 5, 6, 7, 8, 
+      9, 10}}, {{
+       Hold[$CellContext`filllower$$], 0, "lower limit"}, 0, 1}, {{
+       Hold[$CellContext`fillupper$$], 1, "upper limit"}, 0, 1}}, 
+    Typeset`size$$ = {500., {203.5, 208.5}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, $CellContext`n$4798$$ =
+     0, $CellContext`filllower$4799$$ = 0, $CellContext`fillupper$4800$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`filllower$$ = 0, $CellContext`fillupper$$ = 
+        1, $CellContext`n$$ = 1}, "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$4798$$, 0], 
+        Hold[$CellContext`filllower$$, $CellContext`filllower$4799$$, 0], 
+        Hold[$CellContext`fillupper$$, $CellContext`fillupper$4800$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> (
+       If[$CellContext`filllower$$ > $CellContext`fillupper$$, \
+$CellContext`filllower$$ = $CellContext`fillupper$$]; Grid[{{
+           Show[
+            
+            Plot[(Sqrt[2] 
+              Sin[$CellContext`n$$ Pi $CellContext`x])^2, {$CellContext`x, 0, 
+              1}, PlotRange -> {{0, 1}, {0, 2}}], 
+            If[$CellContext`filllower$$ == $CellContext`fillupper$$, 
+             
+             Plot[(Sqrt[2] 
+               Sin[$CellContext`n$$ Pi $CellContext`x])^2, {$CellContext`x, 0,
+                1}, PlotRange -> {{0, 1}, {0, 2}}], 
+             Plot[(Sqrt[2] 
+               Sin[$CellContext`n$$ 
+                 Pi $CellContext`x])^2, {$CellContext`x, \
+$CellContext`filllower$$, $CellContext`fillupper$$}, Filling -> 0, 
+              PlotRange -> {{0, 1}, {0, 2}}]], 
+            AxesLabel -> {"x", "probability density"}, ImageSize -> 500, 
+            AspectRatio -> 0.25, PlotLabel -> Grid[{{
+                Row[{
+                  Style[
+                   StringJoin["probability = ", 
+                    ToString[
+                    NumberForm[
+                    Abs[
+                    
+                    Integrate[(Sqrt[2] 
+                    Sin[$CellContext`n$$ 
+                    Pi $CellContext`x])^2, {$CellContext`x, \
+$CellContext`filllower$$, $CellContext`fillupper$$}]], {4, 3}, 
+                    NumberPadding -> {"", "0"}, 
+                    ExponentFunction -> (Null& )]]], "Label"], 
+                  Style["  |  ", 
+                   GrayLevel[0.5]], 
+                  Style[
+                   StringJoin["quantum number = ", 
+                    ToString[$CellContext`n$$]], "Label"]}]}}], 
+            ImagePadding -> {{50, 50}, {30, 50}}]}, {
+           Plot[
+           Sqrt[2] Sin[$CellContext`n$$ Pi $CellContext`x], {$CellContext`x, 
+             0, 1}, Frame -> True, ImageSize -> 500, PlotRange -> {-Sqrt[2], 
+              Sqrt[2]}, PlotLabel -> 
+            Style["wave function of the electron", "Label"], AspectRatio -> 
+            0.3, ImagePadding -> {{50, 50}, {50, 30}}]}}]), 
+      "Specifications" :> {
+       "X3" -> {{$CellContext`n$$, 1, "quantum number"}, {1, 2, 3, 4, 5, 6, 7,
+           8, 9, 10}, ControlType -> SetterBar}, 
+        "X" -> {{$CellContext`filllower$$, 0, "lower limit"}, 0, 1, 
+          Appearance -> "Labeled"}, 
+        "Y" -> {{$CellContext`fillupper$$, 1, "upper limit"}, 0, 1, 
+          Appearance -> "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{549., {275., 280.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.35696210375764*^9, 3.5061288755913153`*^9},
+ CellID->248529312]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "ManipulateCaptionSection"],
+
+Cell["\<\
+This Demonstration shows the probability of finding an electron in an \
+infinite square potential well (top graphic) and also shows the wave function \
+of the electron (bottom graphic).\
+\>", "ManipulateCaption",
+ CellChangeTimes->{
+  3.35258754246875*^9, {3.35938768982253*^9, 3.35938773337974*^9}, {
+   3.35938777459347*^9, 3.35938778151451*^9}, 3.3829364592195115`*^9},
+ CellID->1044312921]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "ThumbnailSection"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`filllower$$ = 
+    0.298, $CellContext`fillupper$$ = 0.748, $CellContext`n$$ = 5, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`n$$], 5, "quantum number"}, {1, 2, 3, 4, 5, 6, 7, 8, 
+      9, 10}}, {{
+       Hold[$CellContext`filllower$$], 0.298, "lower limit"}, 0, 1}, {{
+       Hold[$CellContext`fillupper$$], 0.748, "upper limit"}, 0, 1}}, 
+    Typeset`size$$ = {500., {203.5, 208.5}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, $CellContext`n$4233$$ =
+     0, $CellContext`filllower$4234$$ = 0, $CellContext`fillupper$4235$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`filllower$$ = 
+        0.298, $CellContext`fillupper$$ = 0.748, $CellContext`n$$ = 5}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$4233$$, 0], 
+        Hold[$CellContext`filllower$$, $CellContext`filllower$4234$$, 0], 
+        Hold[$CellContext`fillupper$$, $CellContext`fillupper$4235$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> (
+       If[$CellContext`filllower$$ > $CellContext`fillupper$$, \
+$CellContext`filllower$$ = $CellContext`fillupper$$]; Grid[{{
+           Show[
+            
+            Plot[(Sqrt[2] 
+              Sin[$CellContext`n$$ Pi $CellContext`x])^2, {$CellContext`x, 0, 
+              1}, PlotRange -> {{0, 1}, {0, 2}}], 
+            If[$CellContext`filllower$$ == $CellContext`fillupper$$, 
+             
+             Plot[(Sqrt[2] 
+               Sin[$CellContext`n$$ Pi $CellContext`x])^2, {$CellContext`x, 0,
+                1}, PlotRange -> {{0, 1}, {0, 2}}], 
+             Plot[(Sqrt[2] 
+               Sin[$CellContext`n$$ 
+                 Pi $CellContext`x])^2, {$CellContext`x, \
+$CellContext`filllower$$, $CellContext`fillupper$$}, Filling -> 0, 
+              PlotRange -> {{0, 1}, {0, 2}}]], 
+            AxesLabel -> {"x", "probability density"}, ImageSize -> 500, 
+            AspectRatio -> 0.25, PlotLabel -> Grid[{{
+                Row[{
+                  Style[
+                   StringJoin["probability = ", 
+                    ToString[
+                    NumberForm[
+                    Abs[
+                    
+                    Integrate[(Sqrt[2] 
+                    Sin[$CellContext`n$$ 
+                    Pi $CellContext`x])^2, {$CellContext`x, \
+$CellContext`filllower$$, $CellContext`fillupper$$}]], {4, 3}, 
+                    NumberPadding -> {"", "0"}, 
+                    ExponentFunction -> (Null& )]]], "Label"], 
+                  Style["  |  ", 
+                   GrayLevel[0.5]], 
+                  Style[
+                   StringJoin["quantum number = ", 
+                    ToString[$CellContext`n$$]], "Label"]}]}}], 
+            ImagePadding -> {{50, 50}, {30, 50}}]}, {
+           Plot[
+           Sqrt[2] Sin[$CellContext`n$$ Pi $CellContext`x], {$CellContext`x, 
+             0, 1}, Frame -> True, ImageSize -> 500, PlotRange -> {-Sqrt[2], 
+              Sqrt[2]}, PlotLabel -> 
+            Style["wave function of the electron", "Label"], AspectRatio -> 
+            0.3, ImagePadding -> {{50, 50}, {50, 30}}]}}]), 
+      "Specifications" :> {
+       "X3" -> {{$CellContext`n$$, 5, "quantum number"}, {1, 2, 3, 4, 5, 6, 7,
+           8, 9, 10}, ControlType -> SetterBar}, 
+        "X" -> {{$CellContext`filllower$$, 0.298, "lower limit"}, 0, 1, 
+          Appearance -> "Labeled"}, 
+        "Y" -> {{$CellContext`fillupper$$, 0.748, "upper limit"}, 0, 1, 
+          Appearance -> "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{549., {275., 280.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->298133883]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SnapshotsSection"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`filllower$$ = 0, $CellContext`fillupper$$ = 
+    1, $CellContext`n$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`n$$], 1, "quantum number"}, {1, 2, 3, 4, 5, 6, 7, 8, 
+      9, 10}}, {{
+       Hold[$CellContext`filllower$$], 0, "lower limit"}, 0, 1}, {{
+       Hold[$CellContext`fillupper$$], 1, "upper limit"}, 0, 1}}, 
+    Typeset`size$$ = Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`n$4295$$ = 
+    0, $CellContext`filllower$4296$$ = 0, $CellContext`fillupper$4297$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`filllower$$ = 0, $CellContext`fillupper$$ = 
+        1, $CellContext`n$$ = 1}, "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$4295$$, 0], 
+        Hold[$CellContext`filllower$$, $CellContext`filllower$4296$$, 0], 
+        Hold[$CellContext`fillupper$$, $CellContext`fillupper$4297$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> (
+       If[$CellContext`filllower$$ > $CellContext`fillupper$$, \
+$CellContext`filllower$$ = $CellContext`fillupper$$]; Grid[{{
+           Show[
+            
+            Plot[(Sqrt[2] 
+              Sin[$CellContext`n$$ Pi $CellContext`x])^2, {$CellContext`x, 0, 
+              1}, PlotRange -> {{0, 1}, {0, 2}}], 
+            If[$CellContext`filllower$$ == $CellContext`fillupper$$, 
+             
+             Plot[(Sqrt[2] 
+               Sin[$CellContext`n$$ Pi $CellContext`x])^2, {$CellContext`x, 0,
+                1}, PlotRange -> {{0, 1}, {0, 2}}], 
+             Plot[(Sqrt[2] 
+               Sin[$CellContext`n$$ 
+                 Pi $CellContext`x])^2, {$CellContext`x, \
+$CellContext`filllower$$, $CellContext`fillupper$$}, Filling -> 0, 
+              PlotRange -> {{0, 1}, {0, 2}}]], 
+            AxesLabel -> {"x", "probability density"}, ImageSize -> 500, 
+            AspectRatio -> 0.25, PlotLabel -> Grid[{{
+                Row[{
+                  Style[
+                   StringJoin["probability = ", 
+                    ToString[
+                    NumberForm[
+                    Abs[
+                    
+                    Integrate[(Sqrt[2] 
+                    Sin[$CellContext`n$$ 
+                    Pi $CellContext`x])^2, {$CellContext`x, \
+$CellContext`filllower$$, $CellContext`fillupper$$}]], {4, 3}, 
+                    NumberPadding -> {"", "0"}, 
+                    ExponentFunction -> (Null& )]]], "Label"], 
+                  Style["  |  ", 
+                   GrayLevel[0.5]], 
+                  Style[
+                   StringJoin["quantum number = ", 
+                    ToString[$CellContext`n$$]], "Label"]}]}}], 
+            ImagePadding -> {{50, 50}, {30, 50}}]}, {
+           Plot[
+           Sqrt[2] Sin[$CellContext`n$$ Pi $CellContext`x], {$CellContext`x, 
+             0, 1}, Frame -> True, ImageSize -> 500, PlotRange -> {-Sqrt[2], 
+              Sqrt[2]}, PlotLabel -> 
+            Style["wave function of the electron", "Label"], AspectRatio -> 
+            0.3, ImagePadding -> {{50, 50}, {50, 30}}]}}]), 
+      "Specifications" :> {
+       "X3" -> {{$CellContext`n$$, 1, "quantum number"}, {1, 2, 3, 4, 5, 6, 7,
+           8, 9, 10}, ControlType -> SetterBar}, 
+        "X" -> {{$CellContext`filllower$$, 0, "lower limit"}, 0, 1, 
+          Appearance -> "Labeled"}, 
+        "Y" -> {{$CellContext`fillupper$$, 1, "upper limit"}, 0, 1, 
+          Appearance -> "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->25083596],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`filllower$$ = 
+    0.198, $CellContext`fillupper$$ = 0.801, $CellContext`n$$ = 3, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`n$$], 3, "quantum number"}, {1, 2, 3, 4, 5, 6, 7, 8, 
+      9, 10}}, {{
+       Hold[$CellContext`filllower$$], 0.198, "lower limit"}, 0, 1}, {{
+       Hold[$CellContext`fillupper$$], 0.801, "upper limit"}, 0, 1}}, 
+    Typeset`size$$ = Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`n$4357$$ = 
+    0, $CellContext`filllower$4358$$ = 0, $CellContext`fillupper$4359$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`filllower$$ = 
+        0.198, $CellContext`fillupper$$ = 0.801, $CellContext`n$$ = 3}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$4357$$, 0], 
+        Hold[$CellContext`filllower$$, $CellContext`filllower$4358$$, 0], 
+        Hold[$CellContext`fillupper$$, $CellContext`fillupper$4359$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> (
+       If[$CellContext`filllower$$ > $CellContext`fillupper$$, \
+$CellContext`filllower$$ = $CellContext`fillupper$$]; Grid[{{
+           Show[
+            
+            Plot[(Sqrt[2] 
+              Sin[$CellContext`n$$ Pi $CellContext`x])^2, {$CellContext`x, 0, 
+              1}, PlotRange -> {{0, 1}, {0, 2}}], 
+            If[$CellContext`filllower$$ == $CellContext`fillupper$$, 
+             
+             Plot[(Sqrt[2] 
+               Sin[$CellContext`n$$ Pi $CellContext`x])^2, {$CellContext`x, 0,
+                1}, PlotRange -> {{0, 1}, {0, 2}}], 
+             Plot[(Sqrt[2] 
+               Sin[$CellContext`n$$ 
+                 Pi $CellContext`x])^2, {$CellContext`x, \
+$CellContext`filllower$$, $CellContext`fillupper$$}, Filling -> 0, 
+              PlotRange -> {{0, 1}, {0, 2}}]], 
+            AxesLabel -> {"x", "probability density"}, ImageSize -> 500, 
+            AspectRatio -> 0.25, PlotLabel -> Grid[{{
+                Row[{
+                  Style[
+                   StringJoin["probability = ", 
+                    ToString[
+                    NumberForm[
+                    Abs[
+                    
+                    Integrate[(Sqrt[2] 
+                    Sin[$CellContext`n$$ 
+                    Pi $CellContext`x])^2, {$CellContext`x, \
+$CellContext`filllower$$, $CellContext`fillupper$$}]], {4, 3}, 
+                    NumberPadding -> {"", "0"}, 
+                    ExponentFunction -> (Null& )]]], "Label"], 
+                  Style["  |  ", 
+                   GrayLevel[0.5]], 
+                  Style[
+                   StringJoin["quantum number = ", 
+                    ToString[$CellContext`n$$]], "Label"]}]}}], 
+            ImagePadding -> {{50, 50}, {30, 50}}]}, {
+           Plot[
+           Sqrt[2] Sin[$CellContext`n$$ Pi $CellContext`x], {$CellContext`x, 
+             0, 1}, Frame -> True, ImageSize -> 500, PlotRange -> {-Sqrt[2], 
+              Sqrt[2]}, PlotLabel -> 
+            Style["wave function of the electron", "Label"], AspectRatio -> 
+            0.3, ImagePadding -> {{50, 50}, {50, 30}}]}}]), 
+      "Specifications" :> {
+       "X3" -> {{$CellContext`n$$, 3, "quantum number"}, {1, 2, 3, 4, 5, 6, 7,
+           8, 9, 10}, ControlType -> SetterBar}, 
+        "X" -> {{$CellContext`filllower$$, 0.198, "lower limit"}, 0, 1, 
+          Appearance -> "Labeled"}, 
+        "Y" -> {{$CellContext`fillupper$$, 0.801, "upper limit"}, 0, 1, 
+          Appearance -> "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->143313871],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`filllower$$ = 
+    0.262, $CellContext`fillupper$$ = 0.764, $CellContext`n$$ = 4, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`n$$], 4, "quantum number"}, {1, 2, 3, 4, 5, 6, 7, 8, 
+      9, 10}}, {{
+       Hold[$CellContext`filllower$$], 0.262, "lower limit"}, 0, 1}, {{
+       Hold[$CellContext`fillupper$$], 0.764, "upper limit"}, 0, 1}}, 
+    Typeset`size$$ = Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`n$4419$$ = 
+    0, $CellContext`filllower$4420$$ = 0, $CellContext`fillupper$4421$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`filllower$$ = 
+        0.262, $CellContext`fillupper$$ = 0.764, $CellContext`n$$ = 4}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$4419$$, 0], 
+        Hold[$CellContext`filllower$$, $CellContext`filllower$4420$$, 0], 
+        Hold[$CellContext`fillupper$$, $CellContext`fillupper$4421$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> (
+       If[$CellContext`filllower$$ > $CellContext`fillupper$$, \
+$CellContext`filllower$$ = $CellContext`fillupper$$]; Grid[{{
+           Show[
+            
+            Plot[(Sqrt[2] 
+              Sin[$CellContext`n$$ Pi $CellContext`x])^2, {$CellContext`x, 0, 
+              1}, PlotRange -> {{0, 1}, {0, 2}}], 
+            If[$CellContext`filllower$$ == $CellContext`fillupper$$, 
+             
+             Plot[(Sqrt[2] 
+               Sin[$CellContext`n$$ Pi $CellContext`x])^2, {$CellContext`x, 0,
+                1}, PlotRange -> {{0, 1}, {0, 2}}], 
+             Plot[(Sqrt[2] 
+               Sin[$CellContext`n$$ 
+                 Pi $CellContext`x])^2, {$CellContext`x, \
+$CellContext`filllower$$, $CellContext`fillupper$$}, Filling -> 0, 
+              PlotRange -> {{0, 1}, {0, 2}}]], 
+            AxesLabel -> {"x", "probability density"}, ImageSize -> 500, 
+            AspectRatio -> 0.25, PlotLabel -> Grid[{{
+                Row[{
+                  Style[
+                   StringJoin["probability = ", 
+                    ToString[
+                    NumberForm[
+                    Abs[
+                    
+                    Integrate[(Sqrt[2] 
+                    Sin[$CellContext`n$$ 
+                    Pi $CellContext`x])^2, {$CellContext`x, \
+$CellContext`filllower$$, $CellContext`fillupper$$}]], {4, 3}, 
+                    NumberPadding -> {"", "0"}, 
+                    ExponentFunction -> (Null& )]]], "Label"], 
+                  Style["  |  ", 
+                   GrayLevel[0.5]], 
+                  Style[
+                   StringJoin["quantum number = ", 
+                    ToString[$CellContext`n$$]], "Label"]}]}}], 
+            ImagePadding -> {{50, 50}, {30, 50}}]}, {
+           Plot[
+           Sqrt[2] Sin[$CellContext`n$$ Pi $CellContext`x], {$CellContext`x, 
+             0, 1}, Frame -> True, ImageSize -> 500, PlotRange -> {-Sqrt[2], 
+              Sqrt[2]}, PlotLabel -> 
+            Style["wave function of the electron", "Label"], AspectRatio -> 
+            0.3, ImagePadding -> {{50, 50}, {50, 30}}]}}]), 
+      "Specifications" :> {
+       "X3" -> {{$CellContext`n$$, 4, "quantum number"}, {1, 2, 3, 4, 5, 6, 7,
+           8, 9, 10}, ControlType -> SetterBar}, 
+        "X" -> {{$CellContext`filllower$$, 0.262, "lower limit"}, 0, 1, 
+          Appearance -> "Labeled"}, 
+        "Y" -> {{$CellContext`fillupper$$, 0.764, "upper limit"}, 0, 1, 
+          Appearance -> "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->33282182]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "DetailsSection"],
+
+Cell["\<\
+quantum number \[LongDash] an integer value, one of the discrete quantum \
+states of the electron\
+\>", "DetailNotes",
+ CellID->468575764],
+
+Cell[TextData[{
+ "lower and upper limits \[LongDash] the lowest and highest ",
+ StyleBox["x",
+  FontSlant->"Italic"],
+ " values for the position of the electron"
+}], "DetailNotes",
+ CellID->193878848],
+
+Cell[TextData[{
+ "The one-dimensional solution to Schr\[ODoubleDot]dinger's equation for an \
+electron in an infinite square potential well (normalized to be of width 1) \
+is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SqrtBox["2"], " ", 
+    RowBox[{"sin", "(", 
+     RowBox[{"n", " ", "\[Pi]", " ", "x"}], ")"}]}], TraditionalForm]], 
+  "InlineMath"],
+ ", where ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]], "InlineMath"],
+ " is the quantum number.  The square of this wave function is the \
+probability density function for the electron."
+}], "DetailNotes",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.35820030573438*^9, 3.3582003441875*^9}, {
+   3.35923351001563*^9, 3.35923352725*^9}},
+ CellID->66012725],
+
+Cell["\<\
+The probability of finding the electron somewhere inside the square well is \
+1. (snapshot 1)\
+\>", "DetailNotes",
+ CellChangeTimes->{
+  3.35258755940625*^9, {3.36412693211897*^9, 3.36412693438383*^9}},
+ CellID->242110644],
+
+Cell["\<\
+The probability of finding the electron with a quantum number of 3 between \
+0.2 and 0.8  is approximately 0.54. (snapshot 2)\
+\>", "DetailNotes",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.36412693622695*^9, 3.36412693836685*^9}},
+ CellID->162053035],
+
+Cell["\<\
+The probability of finding the electron with a quantum number of 4 between \
+0.25 and 0.75  is approximately 0.5. (snapshot 3)\
+\>", "DetailNotes",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.36412693986634*^9, 3.36412694195938*^9}},
+ CellID->117561575]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "ControlSuggestionsSection"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[True], Cell[" Resize Images"]}],
+  "\"Click inside an image to reveal its orange resize frame.\\nDrag any of \
+the orange resize handles to resize the image.\"",
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"ResizeImages"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Rotate and Zoom in 3D"]}],
+  RowBox[{
+   "\"Drag a 3D graphic to rotate it. Starting the drag near the center \
+tumbles\\nthe graphic; starting near a corner turns it parallel to the plane \
+of the screen.\\nHold down \"", 
+    FrameBox[
+    "Ctrl", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" (or \"", 
+    FrameBox[
+    "Cmd", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" on Mac) and drag up and down to zoom.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"RotateAndZoomIn3D"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Drag Locators"]}],
+  RowBox[{"\"Drag any locator (\"", 
+    GraphicsBox[
+     LocatorBox[
+      Scaled[{0.5, 0.5}]], ImageSize -> 20], 
+    "\", etc.) to move it around.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"DragLocators"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Create and Delete Locators"]}],
+  RowBox[{"\"Insert a new locator in the graphic by holding down the \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], 
+    "\" key\\nand clicking where you want it to be. Delete a locator by \
+clicking it\\nwhile holding down the \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" key.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"CreateAndDeleteLocators"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Slider Zoom"]}],
+  RowBox[{"\"Hold down the \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], 
+    "\" key while moving a slider to make fine adjustments in the slider \
+value.\\nHold \"", 
+    FrameBox[
+    "Ctrl", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" and/or \"", 
+    FrameBox[
+    "Shift", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" at the same time as \"", 
+    FrameBox[
+    "Alt", Background -> GrayLevel[0.9], FrameMargins -> 2, FrameStyle -> 
+     GrayLevel[0.9]], "\" to make ever finer adjustments.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"SliderZoom"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Gamepad Controls"]}],
+  "\"Control this Demonstration with a gamepad or other\\nhuman interface \
+device connected to your computer.\"",
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"GamepadControls"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Automatic Animation"]}],
+  RowBox[{"\"Animate a slider in this Demonstration by clicking the\"", 
+    AdjustmentBox[
+     Cell[
+      GraphicsData[
+      "CompressedBitmap", 
+       "eJzzTSzJSM1NLMlMTlRwL0osyMhMLlZwyy8CCjEzMjAwcIKwAgOI/R/IhBKc\n\
+/4EAyGAG0f+nTZsGwgysIJIRKsWKLAXGIHFmEpUgLADxWUAkI24jZs+eTaEt\n\
+IG+wQKRmzJgBlYf5lhEA30OqWA=="], "Graphics", ImageSize -> {9, 9}, ImageMargins -> 
+      0], BoxBaselineShift -> 0.1839080459770115, 
+     BoxMargins -> {{0., 0.}, {-0.1839080459770115, 0.1839080459770115}}], 
+    "\"button\\nnext to the slider, and then clicking the play button that \
+appears.\\nAnimate all controls by selecting \"", 
+    StyleBox["Autorun", FontWeight -> "Bold"], "\" from the\"", 
+    AdjustmentBox[
+     Cell[
+      GraphicsData[
+      "CompressedBitmap", 
+       "eJyNULENwyAQfEySIlMwTVJlCGRFsosokeNtqBmDBagoaZjAI1C8/8GUUUC6\n\
+57h7cQ8PvU7Pl17nUav7oj/TPH7V7b2QJAUAXBkKmCPRowxICy64bRvGGNF7\n\
+X8CctGoDSN4xhIDGGDhzFXwUh3/ClBKrDQPmnGXtI6u0OOd+tZBVUqy1xSaH\n\
+UqiK6pPe4XdEdAz6563tx/gejuORGMxJaz8mdpJn7hc="], "Graphics", 
+      ImageSize -> {10, 10}, ImageMargins -> 0], BoxBaselineShift -> 
+     0.1839080459770115, 
+     BoxMargins -> {{0., 0.}, {-0.1839080459770115, 0.1839080459770115}}], 
+    "\"menu.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"AutomaticAnimation"],
+
+Cell[BoxData[
+ TooltipBox[
+  RowBox[{
+   CheckboxBox[False], Cell[" Bookmark Animation"]}],
+  RowBox[{
+   "\"See a prepared animation of this Demonstration by selecting\\n\"", 
+    StyleBox["Animate Bookmarks", FontWeight -> "Bold"], "\" from the\"", 
+    AdjustmentBox[
+     Cell[
+      GraphicsData[
+      "CompressedBitmap", 
+       "eJyNULENwyAQfEySIlMwTVJlCGRFsosokeNtqBmDBagoaZjAI1C8/8GUUUC6\n\
+57h7cQ8PvU7Pl17nUav7oj/TPH7V7b2QJAUAXBkKmCPRowxICy64bRvGGNF7\n\
+X8CctGoDSN4xhIDGGDhzFXwUh3/ClBKrDQPmnGXtI6u0OOd+tZBVUqy1xSaH\n\
+UqiK6pPe4XdEdAz6563tx/gejuORGMxJaz8mdpJn7hc="], "Graphics", 
+      ImageSize -> {10, 10}, ImageMargins -> 0], BoxBaselineShift -> 
+     0.1839080459770115, 
+     BoxMargins -> {{0., 0.}, {-0.1839080459770115, 0.1839080459770115}}], 
+    "\"menu.\""}],
+  TooltipDelay->0.35]], "ControlSuggestions",
+ FontFamily->"Verdana",
+ CellTags->"BookmarkAnimation"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SearchTermsSection"],
+
+Cell["infinite square potential well", "SearchTerms",
+ CellChangeTimes->{{3.35258777417188*^9, 3.35258779182813*^9}},
+ CellID->5593752],
+
+Cell["potential", "SearchTerms",
+ CellChangeTimes->{{3.35258778132813*^9, 3.35258778251563*^9}},
+ CellID->506292953],
+
+Cell["quantum mechanics", "SearchTerms",
+ CellChangeTimes->{{3.35258776910938*^9, 3.352587771875*^9}},
+ CellID->719941939],
+
+Cell["square well", "SearchTerms",
+ CellChangeTimes->{{3.3525877934375*^9, 3.352587795875*^9}},
+ CellID->2637623]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "RelatedLinksSection"],
+
+Cell[TextData[ButtonBox["Infinite Square Potential Well",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["http://scienceworld.wolfram.com/physics/InfiniteSquarePotentialWell.\
+html"], None}]], "RelatedLinks",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.36898511435682*^9, 3.36898513021609*^9}},
+ CellID->130465508],
+
+Cell[TextData[ButtonBox["Schr\[ODoubleDot]dinger Equation",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["http://scienceworld.wolfram.com/physics/SchroedingerEquation.html"], 
+   None}]], "RelatedLinks",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.36898514724723*^9, 3.36898515852841*^9}},
+ CellID->134747422]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "AuthorSection"],
+
+Cell[TextData[{
+ "Contributed by: ",
+ ButtonBox["Jeff Bryant",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/author.html?author=Jeff+Bryant"], 
+    None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/author.html?author=Jeff+Bryant"]
+}], "Author",
+ CellChangeTimes->{{3.35258775396875*^9, 3.35258775528125*^9}, {
+   3.36355964345313*^9, 3.36355964609375*^9}, 3.36898511052872*^9},
+ CellID->358832250]
+}, Open  ]]
+}, Open  ]]
+},
+AutoGeneratedPackage->None,
+WindowSize->{851, 831},
+WindowMargins->{{143, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (November 7, 2010)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Demonstration.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ResizeImages"->{
+  Cell[34402, 804, 311, 8, 22, "ControlSuggestions",
+   CellTags->"ResizeImages"]},
+ "RotateAndZoomIn3D"->{
+  Cell[34716, 814, 678, 16, 22, "ControlSuggestions",
+   CellTags->"RotateAndZoomIn3D"]},
+ "DragLocators"->{
+  Cell[35397, 832, 340, 11, 22, "ControlSuggestions",
+   CellTags->"DragLocators"]},
+ "CreateAndDeleteLocators"->{
+  Cell[35740, 845, 637, 15, 22, "ControlSuggestions",
+   CellTags->"CreateAndDeleteLocators"]},
+ "SliderZoom"->{
+  Cell[36380, 862, 844, 21, 22, "ControlSuggestions",
+   CellTags->"SliderZoom"]},
+ "GamepadControls"->{
+  Cell[37227, 885, 304, 8, 22, "ControlSuggestions",
+   CellTags->"GamepadControls"]},
+ "AutomaticAnimation"->{
+  Cell[37534, 895, 1412, 31, 22, "ControlSuggestions",
+   CellTags->"AutomaticAnimation"]},
+ "BookmarkAnimation"->{
+  Cell[38949, 928, 882, 21, 22, "ControlSuggestions",
+   CellTags->"BookmarkAnimation"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ResizeImages", 42041, 1028},
+ {"RotateAndZoomIn3D", 42149, 1031},
+ {"DragLocators", 42258, 1034},
+ {"CreateAndDeleteLocators", 42373, 1037},
+ {"SliderZoom", 42486, 1040},
+ {"GamepadControls", 42591, 1043},
+ {"AutomaticAnimation", 42703, 1046},
+ {"BookmarkAnimation", 42819, 1049}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 231, 4, 74, "DemoTitle",
+ CellID->700863240],
+Cell[801, 28, 33, 0, 266, "InitializationSection"],
+Cell[CellGroupData[{
+Cell[859, 32, 29, 0, 188, "ManipulateSection"],
+Cell[CellGroupData[{
+Cell[913, 36, 8844, 209, 408, "Input",
+ CellID->1496021318],
+Cell[9760, 247, 4468, 91, 567, "Output",
+ CellID->248529312]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14274, 344, 36, 0, 166, "ManipulateCaptionSection"],
+Cell[14313, 346, 403, 8, 37, "ManipulateCaption",
+ CellID->1044312921]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14753, 359, 28, 0, 168, "ThumbnailSection"],
+Cell[14784, 361, 4442, 91, 567, "Output",
+ CellID->298133883]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19263, 457, 28, 0, 138, "SnapshotsSection"],
+Cell[19294, 459, 4346, 89, 37, "Output",
+ CellID->25083596],
+Cell[23643, 550, 4386, 90, 37, "Output",
+ CellID->143313871],
+Cell[28032, 642, 4385, 90, 37, "Output",
+ CellID->33282182]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32454, 737, 26, 0, 332, "DetailsSection"],
+Cell[32483, 739, 148, 4, 22, "DetailNotes",
+ CellID->468575764],
+Cell[32634, 745, 200, 6, 22, "DetailNotes",
+ CellID->193878848],
+Cell[32837, 753, 718, 20, 56, "DetailNotes",
+ CellID->66012725],
+Cell[33558, 775, 232, 6, 22, "DetailNotes",
+ CellID->242110644],
+Cell[33793, 783, 264, 6, 37, "DetailNotes",
+ CellID->162053035],
+Cell[34060, 791, 265, 6, 37, "DetailNotes",
+ CellID->117561575]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34362, 802, 37, 0, 120, "ControlSuggestionsSection"],
+Cell[34402, 804, 311, 8, 22, "ControlSuggestions",
+ CellTags->"ResizeImages"],
+Cell[34716, 814, 678, 16, 22, "ControlSuggestions",
+ CellTags->"RotateAndZoomIn3D"],
+Cell[35397, 832, 340, 11, 22, "ControlSuggestions",
+ CellTags->"DragLocators"],
+Cell[35740, 845, 637, 15, 22, "ControlSuggestions",
+ CellTags->"CreateAndDeleteLocators"],
+Cell[36380, 862, 844, 21, 22, "ControlSuggestions",
+ CellTags->"SliderZoom"],
+Cell[37227, 885, 304, 8, 22, "ControlSuggestions",
+ CellTags->"GamepadControls"],
+Cell[37534, 895, 1412, 31, 22, "ControlSuggestions",
+ CellTags->"AutomaticAnimation"],
+Cell[38949, 928, 882, 21, 22, "ControlSuggestions",
+ CellTags->"BookmarkAnimation"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39868, 954, 30, 0, 152, "SearchTermsSection"],
+Cell[39901, 956, 135, 2, 22, "SearchTerms",
+ CellID->5593752],
+Cell[40039, 960, 116, 2, 22, "SearchTerms",
+ CellID->506292953],
+Cell[40158, 964, 122, 2, 22, "SearchTerms",
+ CellID->719941939],
+Cell[40283, 968, 113, 2, 22, "SearchTerms",
+ CellID->2637623]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40433, 975, 31, 0, 138, "RelatedLinksSection"],
+Cell[40467, 977, 316, 7, 22, "RelatedLinks",
+ CellID->130465508],
+Cell[40786, 986, 313, 7, 22, "RelatedLinks",
+ CellID->134747422]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41136, 998, 25, 0, 136, "AuthorSection"],
+Cell[41164, 1000, 446, 12, 22, "Author",
+ CellID->358832250]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

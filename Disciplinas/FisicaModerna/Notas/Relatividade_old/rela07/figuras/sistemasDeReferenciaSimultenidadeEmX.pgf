@@ -1,0 +1,113 @@
+﻿\begin{tikzpicture}[>=latex,scale=1, every node/.style={transform shape}]
+
+\pgfmathsetmacro{\br}{0.5};
+\pgfmathsetmacro{\bg}{\br * 180 / pi};  %angulo entre o espaço S e o espaço S'
+\pgfmathsetmacro{\cal}{1.0 / sqrt(1.0-\br^2)};
+
+\pgfmathsetmacro{\wo}{2}; 
+
+
+\draw[thick, ->] (0,0) -- (5.5,0) node[right] {$x$};
+\foreach \x in {1,2,3,4,5} {
+    \draw (\x,0.0) -- (\x,-0.05);
+}
+
+\draw[thick, ->] (0,0) -- (0,5.5) node[above] {$w$};
+\foreach \y in {1,2,3,4,5} {
+    \draw (0, \y) -- (-0.05, \y);
+}
+
+%\fill[black] (90-\bg:1) circle (2pt);
+
+\draw[thick, ->] (0,0) -- (90-\bg:6.5);
+\foreach \x in {1,2,3,4,5,6} {
+	\pgfmathsetmacro{\a}{atan (0.05/(\x*\cal))};
+	\draw[ -] (90-\bg:\x*\cal) -- (90-\bg+\a:\x*\cal);
+}
+
+\draw[thick, ->] (0,0) -- (\bg:6.5);
+\foreach \x in {1,2,3,4,5,6} {
+	\pgfmathsetmacro{\a}{atan (0.05/(\x*\cal))};
+	\draw[ -] (\bg:\x*\cal) -- (\bg-\a:\x*\cal);
+}
+
+\draw[dashed] (3,0) -- (3, 5);
+\draw[dashed] (4,0) -- (4, 5);
+
+
+\pgfmathsetmacro{\n}{3}
+\pgfmathsetmacro{\xo}{\n*\cal * cos(90 - \bg)};
+\pgfmathsetmacro{\yo}{\n*\cal * sin(90 -\bg)};
+
+\pgfmathsetmacro{\a}{\n*\cal *(2 * cos (\bg)-1.0/cos(\bg)};
+\pgfmathsetmacro{\yn}{\a + tan (\bg) * 4};
+\pgfmathsetmacro{\ynb}{\a + tan (\bg) * 3};
+
+\draw[dashed] (\xo,\yo) -- (4, \yn);
+\draw[dashed] (0,\yn) -- (3, \yn);
+\draw[thick, dashed] (3,\yn) -- (4, \yn);
+
+\fill[black] (4,\yn) circle (2pt);
+\fill[black] (3,\ynb) circle (2pt);
+
+\pgfmathsetmacro{\a}{\yn - tan (\bg) * 3};
+\pgfmathsetmacro{\xb}{\a / (tan(90-\bg) - tan(\bg))};
+\pgfmathsetmacro{\yb}{\a + tan(\bg) * \xb};
+\pgfmathsetmacro{\yba}{\a + tan(\bg) * 3};
+\pgfmathsetmacro{\ybb}{\a + tan(\bg) * 4};
+%\fill[black] (\xb,\yb) circle (2pt);
+\fill[black] (3,\yba) circle (2pt);
+\fill[black] (4,\ybb) circle (2pt);
+\draw[dashed] (\xb,\yb) -- (4, \ybb);
+
+
+\draw[thick] (3,0) -- (3, 0.3);
+\draw[thick] (4,0) -- (4, 0.3);
+\draw[line width=0.6, <-, >=stealth] (3,0.15) -- (3.27, 0.15)  node[font = \fontsize{6 pt}{6 pt}]   at (3.5,0.15) {$1,00$};
+\draw[line width=0.6, ->, >=stealth] (3.73,0.15) -- (4, 0.15);
+
+\pgfmathsetmacro{\d}{sqrt((tan (\bg))^2 +1) (4 - 3) / \cal}
+
+
+\node at (5,0.5) {$\beta = \pgfmathprintnumber[precision=2]{\br}$};
+%\node at (3,3) {Valor: \yo};
+
+
+\pgfmathsetmacro{\n}{3}
+\pgfmathsetmacro{\xo}{\n*\cal * cos(\bg)};
+\pgfmathsetmacro{\yo}{\n*\cal * sin(\bg)};
+
+
+\pgfmathsetmacro{\yc}{tan(\bg) * 3};
+\pgfmathsetmacro{\xob}{-0.3 * sin (\bg)};
+\pgfmathsetmacro{\yob}{0.3 * cos (\bg)};
+\pgfmathsetmacro{\rc}{sqrt(9+\yc^2)};
+%\fill[black] ([shift={(\xob,\yob)}] \bg:\rc) circle (2pt);
+\draw[thick] (3,\yc) -- ([shift={(\xob,\yob)}] \bg:\rc);
+
+\pgfmathsetmacro{\yd}{tan(\bg) * 4};
+\pgfmathsetmacro{\xob}{-0.3 * sin (\bg)};
+\pgfmathsetmacro{\yob}{0.3 * cos (\bg)};
+\pgfmathsetmacro{\rd}{sqrt(16+\yd^2)};
+%\fill[black] ([shift={(\xob,\yob)}] \bg:\rc) circle (2pt);
+\draw[thick] (4,\yd) -- ([shift={(\xob,\yob)}] \bg:\rd);
+
+
+\fill[black] (\xob,\yob) circle (2pt);
+\node at (3,4) {Valor: \pgfmathparse{(\rd-\rc)/\cal}\pgfmathresult};
+
+
+\pgfmathsetmacro{\a}{\yb - tan (90-\bg) * 3};
+\pgfmathsetmacro{\xe}{\a / (tan (\bg) - tan (90-\bg))};
+\pgfmathsetmacro{\ye}{\a + tan(90-\bg) *\xe };
+\draw[dashed] (\xe,\ye) -- (3,\yb);
+
+
+\pgfmathsetmacro{\a}{\yba - tan (90-\bg) * 4};
+\pgfmathsetmacro{\xf}{\a / (tan (\bg) - tan (90-\bg))};
+\pgfmathsetmacro{\yf}{\a + tan(90-\bg) *\xf };
+\draw[dashed] (\xf,\yf) -- (4,\yba);
+
+\pgfmathsetmacro{\d}{sqrt(\xf - \xe)^2 + (\yf - \ye)^2)};
+\node at (3,3) {Valor:  \pgfmathparse{\cal}\pgfmathresult};
+\end{tikzpicture}
