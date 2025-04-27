@@ -1,0 +1,133 @@
+﻿\begin{tikzpicture}[>=latex,scale=1, every node/.style={transform shape}]
+
+\pgfmathsetmacro{\beta}{0.5};
+\pgfmathsetmacro{\angulo}{atan(\beta)};%angulo entre o espaço S e o espaço S'
+
+\pgfmathsetmacro{\cal}{1.0 / sqrt(1.0-\beta^2)};
+
+\pgfmathsetmacro{\Px}{3.0};
+ \pgfmathsetmacro{\Pw}{4};
+
+
+
+\pgfmathsetmacro{\gamma}{1.0 / sqrt(1.0 - \beta^2)};
+\pgfmathsetmacro{\wo}{2}; 
+
+
+\draw[thick, ->] (0,0) -- (5.5,0) node[right] {$x$};
+\foreach \x in {1,2,3,4,5} {
+    \draw (\x,0.0) -- (\x,-0.05);
+}
+
+\draw[thick, ->] (0,0) -- (0,5.5) node[above] {$w$};
+\foreach \y in {1,2,3,4,5} {
+    \draw (0, \y) -- (-0.05, \y);
+}
+
+\draw[thick, ->] (0,0) -- (90-\angulo:6.5) node[below, rotate=90-\angulo] {$w'$};
+\foreach \x in {1,2,3,4,5,6} {
+	\pgfmathsetmacro{\a}{atan (0.05/(\x*\cal))};
+	\draw[ -] (90-\angulo:\x*\cal) -- (90-\angulo+\a:\x*\cal);
+}
+
+\draw[thick, ->] (0,0) -- (\angulo:6.5)  node[below, rotate=\angulo] {$x'$};
+\foreach \x in {1,2,3,4,5,6} {
+	\pgfmathsetmacro{\a}{atan (0.05/(\x*\cal))};
+	\draw[ -] (\angulo:\x*\cal) -- (\angulo-\a:\x*\cal);
+}
+
+\coordinate (P) at (\Px, \Pw);
+\coordinate (Px) at (\Px,0);
+\coordinate (Pw) at (0, \Pw);
+
+\fill (P) circle (2pt) ;
+\draw[dashed] (Px) -- (P);
+\draw[dashed] (Pw) -- (P);
+\node[font = {\fontsize{8 pt}{8 pt}\selectfont}, below] at (Px) {\pgfmathprintnumber[precision=2]{\Px}};
+\node[font = {\fontsize{8 pt}{8 pt}\selectfont}, , rotate=0, left] at (Pw) {\pgfmathprintnumber[precision=2]{\Pw}};
+
+%***************************** Outro sistema ***************************
+\pgfmathsetmacro{\Pxl}{\gamma * (\Px - \beta * \Pw)};
+\pgfmathsetmacro{\Pwl}{\gamma * (\Pw - \beta * \Px)};
+
+
+\pgfmathsetmacro{\Pxxl}{\gamma * \Pxl};
+\pgfmathsetmacro{\Pxwl}{\gamma * \beta * \Pxl};
+\coordinate (Pxl) at (\Pxxl, \Pxwl);
+% \node[font = \fontsize{14 pt}{10 pt}] at ( 2,2.5) {\Px};
+\draw[dashed] (Pxl) -- (P);
+\pgfmathsetmacro{\Prxl}{sqrt(\Pxxl^2+\Pxwl^2)};
+\pgfmathsetmacro{\a}{atan (0.05/(\Prxl))};
+\draw[ -] (\angulo:\Prxl) -- (\angulo-\a:\Prxl);
+%\fill (Pxl) circle (1.5pt) ;
+\node[rotate=90 -\angulo, xshift=-11pt, font = {\fontsize{6 pt}{6 pt}\selectfont}] at (Pxl) {\pgfmathprintnumber[precision=2]{\Pxl}};
+
+\pgfmathsetmacro{\Pwxl}{\gamma * \beta * \Pwl};
+\pgfmathsetmacro{\Pwwl}{\gamma * \Pwl};
+%\node[font = \fontsize{14 pt}{10 pt}] at ( 2,2) {\Pwxl};
+\coordinate (Pwl) at (\Pwxl, \Pwwl);
+\draw[dashed] (Pwl) -- (P);
+\pgfmathsetmacro{\Pwxl}{sqrt(\Pwxl^2+\Pwwl^2)};
+\pgfmathsetmacro{\a}{atan (0.05/(\Pwxl))};
+\draw[ -] (90-\angulo:\Pwxl) -- (90-\angulo+\a:\Pwxl);
+%\fill (Pwl) circle (1.5pt) ;
+\node[font = {\fontsize{6 pt}{6 pt}\selectfont}, rotate=90-\angulo, above] at (Pwl) {\pgfmathprintnumber[precision=2]{\Pwl}};
+
+%---------------------------------------------  Ponto B ----------------------------------------------
+
+\pgfmathsetmacro{\PBx}{4.0};
+ \pgfmathsetmacro{\PBw}{4};
+
+
+\coordinate (PB) at (\PBx, \PBw);
+\coordinate (PBx) at (\PBx,0);
+\coordinate (PBw) at (0, \PBw);
+
+\fill (PB) circle (2pt) ;
+\draw[dashed] (PBx) -- (PB);
+\draw[dashed] (PBw) -- (PB);
+\node[font = {\fontsize{8 pt}{8 pt}\selectfont}, below] at (PBx) {\pgfmathprintnumber[precision=2]{\PBx}};
+\node[font = {\fontsize{8 pt}{8 pt}\selectfont}, rotate=0, left] at (PBw) {\pgfmathprintnumber[precision=2]{\PBw}};
+
+%----------- Outro sistema para o ponto B -------
+
+\pgfmathsetmacro{\PBxl}{\gamma * (\PBx - \beta * \PBw)};
+\pgfmathsetmacro{\PBwl}{\gamma * (\PBw - \beta * \PBx)};
+
+\pgfmathsetmacro{\PBxxl}{\gamma * \PBxl};
+\pgfmathsetmacro{\PBxwl}{\gamma * \beta * \PBxl};
+\coordinate (PBxl) at (\PBxxl, \PBxwl);
+% \node[font = \fontsize{14 pt}{10 pt}] at ( 2,2.5) {\PBx};
+\draw[dashed] (PBxl) -- (PB);
+\pgfmathsetmacro{\PBrxl}{sqrt(\PBxxl^2+\PBxwl^2)};
+\pgfmathsetmacro{\a}{atan (0.05/(\PBrxl))};
+\draw[ -] (\angulo:\PBrxl) -- (\angulo-\a:\PBrxl);
+%\fill (PBxl) circle (1.5pt) ;
+\node[rotate=90 -\angulo, xshift=-11pt, font = {\fontsize{6 pt}{6 pt}\selectfont}] at (PBxl) {\pgfmathprintnumber[precision=2]{\PBxl}};
+
+
+\pgfmathsetmacro{\PBwxl}{\gamma * \beta * \PBwl};
+\pgfmathsetmacro{\PBwwl}{\gamma * \PBwl};
+%\node[font = \fontsize{14 pt}{10 pt}] at ( 2,2) {\PBwxl};
+\coordinate (PBwl) at (\PBwxl, \PBwwl);
+\draw[dashed] (PBwl) -- (PB);
+\pgfmathsetmacro{\PBwxl}{sqrt(\PBwxl^2+\PBwwl^2)};
+\pgfmathsetmacro{\a}{atan (0.05/(\PBwxl))};
+\draw[ -] (90-\angulo:\PBwxl) -- (90-\angulo+\a:\PBwxl);
+%\fill (PBwl) circle (1.5pt) ;
+\node[font = {\fontsize{6 pt}{6 pt}\selectfont}, rotate=90-\angulo, above] at (PBwl) {\pgfmathprintnumber[precision=2]{\PBwl}};
+
+%*****************************************
+
+\pgfmathsetmacro{\PEw}{\Pwl / \gamma + \beta * \PBx};
+\pgfmathsetmacro{\PExl}{\PBx / \gamma - \beta * \Pwl};
+
+\pgfmathsetmacro{\PExxl}{\gamma * \PExl};
+\pgfmathsetmacro{\PExwl}{\gamma * \beta * \PExl};
+\node[font = \fontsize{14 pt}{10 pt}] at ( 2,2) {\Pwl};
+
+\fill (4, 4.5) circle (2pt) ;
+\draw[ dashed] (\PExxl, \PExwl) -- (4,4.5);
+\node[rotate=90 -\angulo, xshift=-11pt, font = {\fontsize{6 pt}{6 pt}\selectfont}] at (7.0/3.0, 7.0/6.0) {\pgfmathprintnumber[precision=2]{\PExl}};
+
+\end{tikzpicture}

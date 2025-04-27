@@ -1,0 +1,112 @@
+﻿\begin{tikzpicture}[scale=1]
+
+\pgfmathsetmacro{\bg}{20};  %angulo entre o espaço S e o espaço S'
+\pgfmathsetmacro{\br}{pi * \bg / 180.0};
+\pgfmathsetmacro{\cal}{1.0 / sqrt(1.0-\br^2)};
+
+\pgfmathsetmacro{\wo}{2}; 
+
+
+\draw[thick, ->] (0,0) -- (5.5,0) node[right] {$x$};
+\foreach \x in {1,2,3,4,5} {
+    \draw (\x,0.0) -- (\x,-0.05) node[below, scale=0.7] {\x};
+}
+
+
+\begin{scope}[rotate=\bg]
+    \draw[thick, ->] (0,0) -- (\cal*5.5,0) node[right, rotate=30] {$x'$};
+    \foreach \x in {1,2,3,4,5} {
+        \draw (\x*\cal,0.0) -- (\x*\cal,-0.05) node[below, rotate=\bg, scale=0.5] {\x};
+    }
+\end{scope}
+
+
+\draw[thick, ->] (0,0) -- (0,5.5) node[above] {$w$};
+\foreach \y in {1,2,3,4,5} {
+    \draw (0, \y) -- (-0.05, \y) node[left, scale=0.7] {\y};
+}
+\begin{scope}[rotate=-\bg]
+\draw[thick, ->] (0,0) -- (0,\cal*5.5) node[right, rotate=60] {$w'$};
+\foreach \y in {1,2,3,4,5} {
+    \draw (0, \cal*\y) -- (-0.05, \cal*\y) node[above, scale=0.5, rotate=90-\bg] {\y};
+}
+\end{scope}
+
+%\fill[black] (\cal,1) circle (2pt);
+%\fill[black] (0.88, 1.53) circle (2pt);
+
+%\fill[black] (30:1.414) circle (2pt);
+
+
+% \foreach \n in {1,2,3,4,5} {
+% 	\pgfmathsetmacro{\xo}{\n*\cal * cos(90-\bg)};
+%     \pgfmathsetmacro{\yo}{\n*\cal * sin(90-\bg)};
+%     \draw[variable=\t, domain=0:5.5, samples=10, trig format=rad, smooth, dashed] plot ( \xo + \t ,{\yo + \t * tan(\br)} );
+% }
+
+\pgfmathsetmacro{\xo}{\cal * cos(90-\bg)};
+\pgfmathsetmacro{\yo}{\cal * sin(90-\bg)};
+
+%\fill[black] (\xo, \yo) circle (2pt);
+\pgfmathsetmacro{\to}{(\wo-\yo)/tan \bg};
+
+\pgfmathsetmacro{\a}{tan \bg};
+
+
+\pgfmathsetmacro{\xra}{\xo + \to};
+\fill[black] (\xra, \wo) circle (2pt);
+
+\draw[dashed] (\xo,\yo) -- (\xra, \wo) node[above] {$R_1$};
+\draw[dashed] (0,\wo) -- (\xra, \wo);
+
+
+\pgfmathsetmacro{\xo}{\cal /2 * cos(90-\bg)};
+\pgfmathsetmacro{\yo}{\cal /2 * sin(90-\bg)};
+
+%\fill[black] (\xo, \yo) circle (2pt);
+\pgfmathsetmacro{\to}{(\wo-\yo)/tan \bg};
+
+\pgfmathsetmacro{\a}{tan \bg};
+
+
+\pgfmathsetmacro{\xrb}{\xo + \to};
+\fill[black] (\xrb, \wo) circle (2pt);
+
+\draw[dashed] (\xo,\yo) -- (\xrb, \wo) node[above] {$R_2$};
+\draw[-] (\xra,\wo) -- (\xrb, \wo);
+
+
+\pgfmathsetmacro{\xo}{3 * \cal * cos(90-\bg)};
+\pgfmathsetmacro{\yo}{3 * \cal * sin(90-\bg)};
+%\fill[black] (\xo, \yo) circle (2pt);
+
+\pgfmathsetmacro{\wo}{4}
+\pgfmathsetmacro{\to}{(\wo-\yo)/tan \bg};
+
+\pgfmathsetmacro{\a}{tan \bg};
+
+\pgfmathsetmacro{\xrc}{\xo + \to};
+\fill[black] (\xrc, \wo) circle (2pt);
+\draw[dashed] (\xo,\yo) -- (\xrc, \wo) node[below] {$Q_1$};
+
+\draw[dashed] (0,\wo) -- (\xrc, \wo);
+
+
+\pgfmathsetmacro{\wo}{4.5}
+\pgfmathsetmacro{\to}{(\wo-\yo)/tan \bg};
+
+\pgfmathsetmacro{\a}{tan \bg};
+
+\pgfmathsetmacro{\xrd}{\xo + \to};
+\fill[black] (\xrd, \wo) circle (2pt);
+\draw[-] (\xrc,4) -- (\xrd, \wo) node[below] {$Q_2$};
+
+\draw[dashed] (0,\wo) -- (\xrd, \wo);
+
+% \foreach \n in {1,2,3,4,5} {
+% 	\pgfmathsetmacro{\xo}{\n*\cal * cos(\bg)};
+%     \pgfmathsetmacro{\yo}{\n*\cal * sin(\bg)};
+%     \draw[variable=\t, domain=0:5.5, samples=10, smooth, dashed] plot ( {\xo + \t / tan(90-\bg)} ,\yo + \t );
+%}
+
+\end{tikzpicture}

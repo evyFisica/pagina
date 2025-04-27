@@ -1,0 +1,25 @@
+﻿\begin{tikzpicture}[scale=1]
+
+\pgfmathsetmacro{\bg}{20};  %angulo entre o espaço S e o espaço S'
+\pgfmathsetmacro{\br}{pi * \bg / 180.0};  %\beta em radianos
+\pgfmathsetmacro{\cal}{1.0 / sqrt(1.0-\br^2)}; %calibração, obtida supondo x=1 e aplicando a transformada de 
+                                                                                   % Lorentz para posição: $x' = \gamma \left( x - \beta w\right)$
+
+
+\draw[thick, ->] (0,0) -- (5.5,0) node[right] {$x$};
+\foreach \x in {1,2,3,4,5} {
+    \draw (\x,0.0) -- (\x,-0.05) node[below, scale=0.7] {\x};
+}
+
+\draw[thick, ->] (0,0) -- (0,5.5) node[above] {$w$};
+\foreach \y in {1,2,3,4,5} {
+    \draw (0, \y) -- (-0.05, \y) node[left, scale=0.7] {\y};
+}
+
+\foreach \x in {1,2,3,4,5} {
+	 \draw[dashed] (\x,0.0) -- (\x,5.5);
+	 \draw[dashed] (0.0, \x) -- (5.5, \x);
+%    \draw[variable=\t, domain=0:5.5, samples=10, trig format=rad, smooth, dashed] plot ( \xo + \t ,{\yo + \t * tan(\br)} );
+}
+
+\end{tikzpicture}

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />   
+    <link type="text/css" rel="stylesheet" href="../../../css_e_js/local.css" />
+
+    <link href='../../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';https://tex.stackexchange.com/questions/58141/equations-inside-enumerate-aligned-on-items-number
+      SyntaxHighlighter.all();
+    </script>
+
+     <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\\(', '\\)']],
+           macros: {
+              bra: ["{\\left\\langle #1 \\right\\rvert}",1],
+              ket: ["{\\left\\lvert #1 \\right\\rangle}",1],
+              braket:["{\\left\\langle #1 \\vert #2 \\right\\rangle}",2],
+              opProj:["{\\left\\lvert #1 \\right\\rangle\\left\\langle #1 \\right\\rvert}",1],
+              opUni:["{\\left\\lvert #1 \\right\\rangle\\left\\langle #1 \\right\\rvert \+ \\left\\lvert #2 \\right\\rangle\\left\\langle #2 \\right\\rvert}",2],
+              arcsec: "{\\operatorname{arcsec}}",
+              arccot: "{\\operatorname{arccot}}",
+              arccsc: "{\\operatorname{arcsc}}",
+              sech: "{\\operatorname{sech}}",
+              csch: "{\\operatorname{csch}}",
+              argsinh: "{\\operatorname{arg sinh}}",
+              argcosh: "{\\operatorname{arg cosh}}",
+              argtanh: "{\\operatorname{arg tanh}}",
+              argcoth: "{\\operatorname{arg coth}}",
+              argsech: "{\\operatorname{arg sech}}",
+              argcsch: "{\\operatorname{arg csch}}",
+              dbar: "{\\mathscr'26\\mkern-12mu \\mathrm{d}}"
+          }
+         }
+       };
+     </script>    
+
+<!--     <script src="../../../../../comunHtml/mathjax_new_v3.x/tex-chtml.js" id="MathJax-script" async></script> -->
+<!-- <script src="../../../../../comunHtml/mathjax_3.2/es5/tex-chtml.js" id="MathJax-script" async></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    
+    <script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+    
+<!-- <script src="../../../../../comunHtml/node_modules/jquery/dist/jquery.min.js"></script> -->
+<script src="../../../../../comunHtml/jquery/dist/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(".expand").click(function(){
+        target_num = $(this).attr("id").split("-")[1];
+        content_id = "#expandable-".concat(target_num);
+        $(content_id).slideToggle('fast');
+      });
+    });
+    </script>
+
+    <style>
+      .expand {
+        font-style: italic;
+        font-size: 12px;
+        cursor: pointer;
+        color: blue;
+      }
+        .expandable {
+        display:none;
+        margin-left: 3%;
+        margin-right: 3%;
+        color: #3e3e3e;
+/*         text-align: justify; */
+      }
+    </style>
+    
+    <style>
+      ol.alpha_list {
+        counter-reset: item;
+        list-style: none;
+      }
+      ol.alpha_list li:before {
+        content: counter(item,  lower-latin) ")  ";
+        counter-increment: item;
+        margin-left: -30px;
+      }
+    </style>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Física Contemporânea</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h2>Sobre a propagação da luz</h2>
+      <h3>O Éter</h2>
+      
+      <p>
+        O fundamento da física é a possibilidade de realizar experimentos a fim de aceder ao conhecimento e o fundamento da experimentação é a medição, assim em geral devemos nos perguntar como devemos realizar uma determinada medição. Em especial quando trabalhamos com ondas devemos nos perguntar como medimos a velocidade da onda, o mais precisamente o que é a velocidade da onda. Temos três alternativas plausíveis 1) medir a velocidade em relação ao observador, 2) medir em relação à fonte ou 3) medir em relação ao meio onde se propaga a onda. Perceba que tanto a opção 1 como a 2 tem um problema o observado e a fonte podem estar em movimento e dessa forma a velocidade da onda poderia se ver afetada pelo movimento da fonte e/ou do observador (efeito Doppler). Assim, resulta obvio que o melhor é definir o movimento da onda em relação ao meio por onde ela se propaga. Tendo isto como base, somos capazes de medir a velocidade de diversas ondas, mecânicas, como o movimento de uma onda numa corda, acústica o movimento da onda em relação as moléculas de ar, na água, etc, mas no caso das ondas eletromagnéticas sabemos que são os campo elétricos e magnéticos que oscilam, mas oscilam em relação ao que? Isto é para uma onda eletromagnética qual é o meio de propagação. A fim de responder a essa pergunta os físicos recorreram a uma ideais muito antiga introduzida por Aristóteles. Na antiguidade, a os filósofos lhes resultava muito complicado pensar na existência do vácuo, e a razão disso é simples: se o nada (vácuo) existe, como poderia ser nada?. Assim, da mesma forma que existe o ar na Terra, preenchendo o espaço entre as coisas deveria existir uma sustância preenchendo o espaço entre as estrelas, a essa substancia se lhe chamou de Éter. Assim os físico utilizar esse meio ideal para explicar a propagação da luz. Em especial a esse Éter se lhe denomina éter luminífero. Para os físicos o éter deveria ser um tipo de fluido, incompreensível (que não pode ser comprimido) pois a velocidade da luz é muito alta ($c=3,0\times10^{8}m/s$) e eles sabiam que para que uma onda se propaga-se a velocidade tão elevada deveria ser muito rígido o meio de propagação. O problema é que a terra se desloca dentro do éter assim se o éter fosse viscoso a Terra perderia energia e cairia no Sol. Assim os físicos postularam que o éter luminífero é um fluido perfeitamente movel, sem viscosidade, incompreensível, transparente que enche o espaço.
+      </p>
+      
+      <h3>O experimento de Michelson e Morley</h3>
+      
+      <p>
+        A fim de medir o movimento da Terra em relação ao éter, Michelson idealizou um experimento capaz de realizar medidas muito precisas. Em essência o interferômetro de Michelson consiste em enviar um feixe de luz contra um espelho semitransparente. Quando a luz incide no espelho parte dela se reflete, perpendicularmente à direção original, e parte se transmite, continuando na mesma trajetória. Cada um dos feixes se reflete em espelhos no final de seu trajetos de forma a volver ao ponto onde os foram divididos em 2. Passando pelo espelho semitransparente novamente e construindo um único raio. Se o comprimento de cada um dos percursos dos raios é o mesmo, então a diferença de fase entre estes raios é nula. Por outro lado, se a diferença de caminho ótico é diferente, poderemos ter superposição destrutiva parcial o completa. Para entender isso melhor devemos considerar o interferômetro como sendo uma corrida entre dois feixes de luz se movendo por pistas diferentes, se eles chegam empatados ao detetor, então teremos superposição construtiva (mancha de luz).
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/interferometroDeMichelson.png', 'Zoom', '1650')">
+          <img src="figuras/interferometroDeMichelson.png" width="900" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01: O interferômetro de Michelson e Morley.
+          </p>
+      </div>
+      
+      <p>
+        Se consideremos que o éter existe, então os caminhos óticos percorrido por cada um dos raios será diferente, isto porque uma das pista está em movimento. Para ilustrar isso vamos considerar a figura 1, dois botes realizando uma corrida, o bote 1 ido perpendicular ao rio e o 2 indo ao longo do rio. Se o rio tem velocidade $c$ então na ida o bote 2 tem velocidade de $c+v$ vista por um observador em repouso na margem, enquanto que o bote 1 se move com velocidade $c$ e a fim de chegar ao ponto B ele tem que se deslocar formando um ângulo com o segmento que une o ponto A com o ponto B (ver figura 1 (c)). Assim o tempo que necessário pelo bote 2 para ir e voltar será
+
+        \[
+          t_{2}=\dfrac{l}{c+v}+\dfrac{l}{c-v}=\dfrac{2l}{c(1-v^{2}/c^{2})}
+        \]
+        
+        para o bote 1 temos
+        
+        \[
+          t_{1}=\dfrac{2l}{c\sqrt{1-v^{2}/c^{2}}}
+        \]
+        
+        consequentemente
+        
+        \[
+          \Delta t=t_{2}-t_{1}=\dfrac{2l}{c}\left(\dfrac{1}{1-v^{2}/c^{2}}-\dfrac{1}{\sqrt{1-v^{2}/c^{2}}}\right)
+        \]
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/figuraDeInterferenciaMichelson.png', 'Zoom', '1650')">
+          <img src="figuras/figuraDeInterferenciaMichelson.png" width="400" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 02: Figura de interferência de um interferômetro de Michelson.
+          </p>
+      </div>
+      
+      <p>
+        No caso do experimento de Michelson e Morley a velocidade dos botes seria a velocidade da luz e $v$ seria a velocidade da Terra em relação ao éter. Essa diferencia de tempo entre cada um dos raios deveria produzir uma figura de interferência como a mostrada na figura \ref{fig_interfMichelson-2}. A fim de detetar alguma mudança o Michelson e Morley rotaram o interferômetro em $90^{\circ}$, de forma que obtiveram outra figura similar mas levemente deslocada. Se o interferômetro é rotado teremos que
+        
+        \[
+          t'_{1}=\dfrac{2l}{c(1-v^{2}/c^{2})}
+        \]
+        \[
+          t'_{2}=\dfrac{2l}{c\sqrt{1-v^{2}/c^{2}}}
+        \]
+        
+        de onde
+        
+        \[
+          \Delta t'=t'_{2}-t'_{1}=\dfrac{2l}{c\sqrt{1-v^{2}/c^{2}}}-\dfrac{2l}{c(1-v^{2}/c^{2})}=\dfrac{2l}{c}\left(\dfrac{1}{\sqrt{1-v^{2}/c^{2}}}-\dfrac{1}{1-v^{2}/c^{2}}\right)
+        \]
+        
+        assim a diferença de tempo entre cada uma das configurações será
+        
+        \[
+          \Delta t-\Delta t'=\dfrac{2l}{c}\left(\dfrac{1}{1-v^{2}/c^{2}}-\dfrac{1}{\sqrt{1-v^{2}/c^{2}}}\right)-\dfrac{2l}{c}\left(\dfrac{1}{\sqrt{1-v^{2}/c^{2}}}-\dfrac{1}{1-v^{2}/c^{2}}\right)
+        \]
+        \[
+          \Delta t-\Delta t'=\dfrac{4l}{c}\left(\dfrac{1}{\sqrt{1-v^{2}/c^{2}}}-\dfrac{1}{1-v^{2}/c^{2}}\right)
+        \]
+        
+        Se assumimos que $v\ll c$
+        
+        \[
+          \dfrac{1}{\sqrt{1-v^{2}/c^{2}}}\approx1+\dfrac{1}{2}\dfrac{v^{2}}{c^{2}}
+        \]
+        \[
+          \dfrac{1}{1-v^{2}/c^{2}}\approx1+\dfrac{v^{2}}{c^{2}}
+        \]
+        
+        obteremos que
+        
+        \[
+          \Delta t-\Delta t'\approx\dfrac{4l}{c}\left(1+\dfrac{1}{2}\dfrac{v^{2}}{c^{2}}-1-\dfrac{v^{2}}{c^{2}}\right)
+        \]
+
+        \[
+          \Delta t-\Delta t'\approx\dfrac{2lv^{2}}{c^{3}}
+        \]
+        
+        No caso do experimento de Michelson e Morley temos que $l=22\, m$ e se assumimos que a velocidade da Terra em relação ao éter é a velocidade de traslação da terra em relação ao Sol, então $v\approx3,0\times10^{4}m/s$, de forma que
+        
+        \[
+          \Delta t\approx7,3\times10^{-16}s
+        \]
+        
+        Assim, se a luz utilizada tem comprimento de onda de 
+
+        \[
+          \lambda=5,5\times10^{-7}m
+        \]
+
+        \[
+          \Rightarrow f=\dfrac{c}{\lambda}=5.5\times10^{14}
+        \]
+        \[
+          \Rightarrow T=\dfrac{1}{f}=1.8\times10^{-15}s
+        \]
+
+        \begin{align*}
+          \delta&=\dfrac{\Delta t}{T}\\
+          & =\dfrac{7,3\times10^{-16}s}{1.8\times10^{-15}s}\\
+          &=0.4
+        \end{align*}
+        
+        assim a diferencia de fase é de $0.4$ e no caso do experimento de Michelson seria um deslocamento de $0.4$ franjas. O problema é que não foi detetado nada!!!
+      </p>
+      
+      <h4>Fitzgerald e Lorentz, contração do comprimento</h4>
+      
+      <p>
+        O resultado nulo desse experimento foi um dos maiores problemas da física do inicio do século passado. A fim de dar uma resposta satisfatória a esse resultado, G. F. Fitzgeral e H. A. Lorentz (em 1890) propuseram que o comprimento do braço do interferômetro ao longo da direção do éter se contraia em uma fração de $\sqrt{1-v^{2}/c^{2}}$. De acordo com Lorentz isto se devia ao efeito do éter entre as interações elétricas das substancias. Dessa forma
+
+        \[
+          l_{2}=l\sqrt{1-v^{2}/c^{2}}\qquad e\qquad l_{1}=l
+        \]
+        de forma que
+
+        \[
+          \Delta t=\dfrac{2}{c}\dfrac{1}{\sqrt{1-v^{2}/c^{2}}}\left(l-l\right)
+        \]
+
+
+        \[
+          \Delta t'=\dfrac{2}{c}\dfrac{1}{\sqrt{1-v^{2}/c^{2}}}\left(l-l\right)
+        \]
+
+
+        \[
+          \Delta t=0
+        \]
+      </p>
+      
+      <h4>Poincaré</h4>
+      
+      <p>
+        Em $1889$ o matemático francês Henri Poincare, analisou os resultados de Michelson e Morley. Deu uma explicação geral que chamou de Principio da Relatividade. A ideia básica de Poincare era de que num laboratório nunca se detetaria o movimento absoluto, de forma que tem que surgir um novo tipo de dinâmica. Ele apontou a importância fundamental do problema da simultaneidade na medida física. A grande duvida ao respeito do trabalho de Poincaré é se ele abandona o conceito de éter ou não?
+      </p>
+      
+      
+            <!--<div style="width:100%;margin-left: auto;margin-right: auto;">
+        <div style="display: flex; padding-bottom: 0px;">
+        
+          <div style="flex: 30%; padding-right: 30px">
+            <a href="javascript:newWin('figuras/figCone02_a.png', 'Zoom', '1650')">
+              <img src="figuras/figCone02_a.png" style="width:100%">
+            </a>
+            <p style="text-align: center; font-size:80%">
+              <b>a)</b> Gráfico de $\displaystyle f(x,y)=\sqrt{x^2+y^2}$
+            </p>
+          </div>
+          
+          <div style="flex: 30%; padding-left: 30px;">
+            <a href="javascript:newWin('figuras/figCone02_b1.png', 'Zoom', '1650')">
+              <img src="figuras/figCone02_b1.png" style="width:100%">
+            </a>
+            <p style="text-align: center; font-size:80%">
+              <b>b)</b> Interseções de planos com cone
+            </p>
+          </div>
+          
+          <div style="flex: 30%; padding-left: 30px;">
+            <a href="javascript:newWin('figuras/figCone02_b2.png', 'Zoom', '1650')">
+              <img src="figuras/figCone02_b2.png" style="width:100%">
+            </a>
+            <p style="text-align: center; font-size:80%">
+              <b>c)</b> Analise do gráfico do cone $\displaystyle f(x,y)=\sqrt{x^2+y^2}$
+            </p>
+          </div>
+          
+        </div>
+      </div>
+      
+
+      
+      <figure style="margin-top:-30px">
+        <div class = "ggbContainer"> 
+          <a href="https://www.geogebra.org/material/iframe/id/dhppzd7w/width/836/height/502/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" width="836px" height="502px" style="border:0px;" width="836px" height="502px" style="border:0px;">
+            Abrir com o<br>GeoGebra
+          </a>
+          <img src="figuras/curvasDeNivelGeo.png" width="836px" height="502px" alt="polar_coordinates" class="border" >
+          <iframe src="figuras/curvasDeNivelGeo.png" allowfullscreen width="836px" height="502px" class="hiddenIframe"></iframe>
+        </div>       
+      </figure>
+      -->
+      
+<!--
+
+
+
+
+    <h6><a href="exemplos/exemplo1.4.23.html" target="_blank">Exemplo Q1.4.23</a></h6>
+        Encontre a área do refletor parabólico cuja forma se obtém ao rotar o arco parabólico $y=x^2$, $9\leq x \leq 1$ ao redor do eixo $y$
+      <p>-->
+      
+    <!--  
+      <h6><a href="exemplos/exemplo1.4.22.html" target="_blank">Exemplo Q1.4.22</a></h6>
+      
+      <p>
+        
+      </p>    <h6><a href="exemplos/exemplo1.4.2.html" target="_blank">Exemplo Q1.4.3</a></h6>
+      
+      <p>
+        
+      </p>-->
+      
+     
+      
+<!--      <h5>Exemplo 3</h5>
+      <p>
+        Escreva a identidade de Parseval correspondente ao problema \ref{ex1.3.2}.\ref{ex397}
+      </p>-->
+<!--
+      \left( \right)   \left|\, z \,\right|  
+      
+      \left[ \right]   \left\{ \righ\}
+        
+        \begin{align*}
+        \end{align*}
+       
+      <ol>
+        <li>
+          
+        </li>
+        <li>
+          
+        </li>
+      </ol>
+        
+        \[
+          \begin{bmatrix}
+          \end{bmatrix}
+        \]
+      
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig01.png', 'Zoom', '1650')">
+          <img src="figuras/fig01.png" width="400" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01:  Sistema massa mola.
+          </p>
+      </div>
+      
+      
+      
+      <div style='padding: 15px; width: 425px;float:right;'>
+          <img src="figuras/Bessel32.gif" width="400" align="right">
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01:  Uma solução do problema da membrana vibrante a qual é dada em termos da funções de Bessel.
+          </p>
+      </div>
+      
+      <h5>Exemplo 03</h5>
+      
+      <p>
+        
+        <img src="figuras/linha_b.png">
+      </p>
+         
+      <table class="tabela_de_lista2">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <table class="tabela_de_lista2">      
+      <tr>
+      <td class="teorematitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+-->
+      
+      
+      </div>
+      <!-- Fim Principal   -->      
+    </div>
+    <!-- Fim todo   -->
+  </body>
+</html> 
+

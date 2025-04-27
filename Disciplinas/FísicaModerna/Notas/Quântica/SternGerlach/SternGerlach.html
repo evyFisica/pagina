@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />   
+    <link type="text/css" rel="stylesheet" href="../../../css_e_js/local.css" />
+
+    <link href='../../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';https://tex.stackexchange.com/questions/58141/equations-inside-enumerate-aligned-on-items-number
+      SyntaxHighlighter.all();
+    </script>
+
+     <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\\(', '\\)']],
+           macros: {
+              bra: ["{\\left\\langle #1 \\right\\rvert}",1],
+              ket: ["{\\left\\lvert #1 \\right\\rangle}",1],
+              braket:["{\\left\\langle #1 \\vert #2 \\right\\rangle}",2],
+              opProj:["{\\left\\lvert #1 \\right\\rangle\\left\\langle #1 \\right\\rvert}",1],
+              opUni:["{\\left\\lvert #1 \\right\\rangle\\left\\langle #1 \\right\\rvert \+ \\left\\lvert #2 \\right\\rangle\\left\\langle #2 \\right\\rvert}",2],
+              arcsec: "{\\operatorname{arcsec}}",
+              arccot: "{\\operatorname{arccot}}",
+              arccsc: "{\\operatorname{arcsc}}",
+              sech: "{\\operatorname{sech}}",
+              csch: "{\\operatorname{csch}}",
+              argsinh: "{\\operatorname{arg sinh}}",
+              argcosh: "{\\operatorname{arg cosh}}",
+              argtanh: "{\\operatorname{arg tanh}}",
+              argcoth: "{\\operatorname{arg coth}}",
+              argsech: "{\\operatorname{arg sech}}",
+              argcsch: "{\\operatorname{arg csch}}",
+              dbar: "{\\mathscr'26\\mkern-12mu \\mathrm{d}}"
+          }
+         }
+       };
+     </script>    
+
+    <script src="../../../../../comunHtml/mathjax_new_v3.x/tex-chtml.js" id="MathJax-script" async></script>
+    
+    <script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+    
+    <script src="../../../../../comunHtml/node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(".expand").click(function(){
+        target_num = $(this).attr("id").split("-")[1];
+        content_id = "#expandable-".concat(target_num);
+        $(content_id).slideToggle('fast');
+      });
+    });
+    </script>
+
+    <style>
+      .expand {
+        font-style: italic;
+        font-size: 12px;
+        cursor: pointer;
+        color: blue;
+      }
+        .expandable {
+        display:none;
+        margin-left: 3%;
+        margin-right: 3%;
+        color: #3e3e3e;
+/*         text-align: justify; */
+      }
+    </style>
+    
+    <style>
+      ol.alpha_list {
+        counter-reset: item;
+        list-style: none;
+      }
+      ol.alpha_list li:before {
+        content: counter(item,  lower-latin) ")  ";
+        counter-increment: item;
+        margin-left: -30px;
+      }
+    </style>
+    
+     <!-- Internal css -->
+    <style type="text/css">
+        ul.listaDiferente {
+          list-style: none;
+        }
+        ul.listaDiferente li:before {
+          color: green;
+          content: "\00BB";
+/*          content: "";
+          height: 0;
+          width: 0;
+          border-color: transparent #fcb400;
+            border-style: solid;
+          border-width: 0.5em 0 0.5em 0.5em;
+          position: relative;
+          display: block;
+          left: -1em;
+          top: 1.25em;*/
+        }
+    </style>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Física Contemporânea</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h2>Experimento de Stern-Gerlach</h2>
+      
+      <p>
+        Para o físico clássico, o momento angular é sempre o momento angular orbital, ou seja, $\mathbf{L} = \mathbf{r} \times \mathbf{p}$. Embora se diga que a Terra tem momento angular de spin $I \omega$ devido à sua rotação em torno de seu eixo, bem como momento angular orbital devido à sua revolução em torno do Sol, ambos os tipos de momento angular são apenas formas diferentes de $\mathbf{L}$. O momento angular de spin intrínseco $\mathbf{S}$ de uma partícula microscópica não é do mesmo tipo que o momento angular orbital, mas mesmo assim é um momento angular real.
+      </p>
+      
+      <p>
+        Para termos uma ideia da relação que existe entre o momento angular de uma partícula carregada e o seu momento magnético correspondente, utilizamos primeiro um exemplo clássico e depois apontamos algumas das suas limitações. Considere uma partícula pontual com carga $q$ movendo-se em uma órbita circular de raio $r$ com velocidade $v$. O momento magnético $\mathbf{J}\cdot\mathbf{L}$ é dado por    
+        
+        \begin{align*}
+          \mu &= \dfrac{IA}{c}\\
+          &= \left(\dfrac{q}{T}\right)\dfrac{\pi r^2}{c}\\
+          &=\dfrac{qvr}{2c}\\
+          &=\dfrac{q}{2mc}L
+        \end{align*}
+        
+        onde $A$ é a área do círculo formado pela órbita, a corrente $I$ é a carga $q$ dividida pelo período $T = (2\pi r / v)$ e $L = mvr$ é o momento angular orbital da partícula.  Como o momento magnético e o momento angular orbital são paralelos ou antiparalelos dependendo do sinal da carga $q$, podemos expressar esta relação na forma vetorial
+        
+        \[
+          \boldsymbol{\mu} = \dfrac{q}{2mc}\mathbf{L}
+        \]
+        
+        Esta relação entre $\mathbf{L}$ e $\boldsymbol{\mu}$ revela-se geralmente verdadeira sempre que a massa e a carga coincidem no espaço. Pode-se obter diferentes constantes de proporcionalidade ajustando as distribuições de carga e massa de forma independente. Por exemplo, uma bola esférica sólida de massa $m$ girando em torno de um eixo que passa pelo seu centro com a carga $q$ distribuída uniformemente apenas na superfície da bola tem uma constante de proporcionalidade de $5q/6mc$.
+      </p>
+      
+      <p>
+        Quando chegamos ao spin intrínseco de uma partícula, escrevemos
+        
+        \begin{equation}
+          \boldsymbol{\mu} = \dfrac{gq}{2mc}\mathbf{L}
+          \label{eq1.3}
+        \end{equation}
+        
+        onde o valor da constante $g$ é determinado experimentalmente como $g = 2,00$ para um elétron, $g = 5,58$ para um próton, ou mesmo $g = -3,82$ para um nêutron. Poderíamos ficar tentados a presumir que $g$ está nos contando como a carga e a massa são distribuídas para as diferentes partículas e que o momento angular de spin intrínseco é apenas o momento angular orbital da própria partícula enquanto ela gira em torno de seu eixo.Veremos à medida que avançamos que uma imagem clássica tão simples do spin intrínseco é totalmente insustentável e que o momento angular do spin intrínseco que estamos discutindo é, de fato, algo muito diferente. Na verdade, parece que mesmo uma partícula pontual na mecânica quântica pode ter momento angular de spin intrínseco. Embora não existam argumentos clássicos que possamos apresentar para justificar a equação anterior, podemos notar que tal relação entre o momento magnético e o momento angular de spin intrínseco é pelo menos consistente com a análise dimensional. Neste estágio, você pode pensar em $g$ como um fator adimensional que foi inserido para fazer com que as magnitudes e as unidades fiquem corretas.
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig01.png', 'Zoom', '1650')">
+          <img src="figuras/fig01.png" width="700" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01: (a) Um diagrama esquemático do experimento de Stern-Gerlach, (b) Uma vista em corte transversal das peças polares do ímã representando o campo magnético não homogêneo que elas produzem.
+          </p>
+      </div>
+      
+      <p>
+        Voltemos ao próprio experimento Stern-Gerlach. A Figura 1a mostra um diagrama esquemático do aparelho. Um feixe colimado de átomos de prata é produzido evaporando a prata em um forno quente e selecionando os átomos que passam por uma série de fendas estreitas. O feixe é então direcionado entre os pólos de um ímã. Uma das peças polares é plana e a outra tem uma ponta afiada. Tal ímã produz um campo magnético não homogêneo, como mostrado na Figura 1b. Quando um átomo <i>neutro</i> com momento magnético $\boldsymbol{\mu}$ entra no campo magnético $\textbf{B}$, ele experimenta uma força $\textbf{F} = -\boldsymbol{\nabla}\left(-\boldsymbol{\mu}\cdot \textbf{B}\right)$, onde $-\boldsymbol{\mu}\cdot \textbf{B}$ é a energia de interação de um dipolo magnético com um campo magnético externo. Se chamarmos de $z$ à direção na qual o gradiente não homogêneo do campo magnético é mais intenso, veremos que
+        
+        \begin{align*}
+          F_z &= \boldsymbol{\mu} \cdot \dfrac{\partial \textbf{B}}{\partial z}\\
+          &\simeq \mu_z \dfrac{\partial B_z}{\partial z}
+        \end{align*}
+        
+        Observe que consideramos o gradiente do campo magnético $\partial B_z / \partial z$ na figura como negativo, de modo que se $\mu_z$ também for negativo, então $F_z$ é positivo e os átomos são desviados na direção $z$ positiva. Classicamente, $\mu_z = |\boldsymbol{\mu}|\cos \theta$, onde $\theta$ é o ângulo que o momento magnético $\mu$ faz com o eixo $z$. Assim, $\mu_z$ deve assumir um continuum de valores variando de $\mu$ a $-\mu$. Como os átomos que saem do forno não são polarizados com seus momentos magnéticos apontando em uma direção preferencial, deveríamos encontrar um contínuo correspondente de deflexões. No experimento original de Stem-Gerlach, os átomos de prata foram detectados permitindo-lhes formar um depósito visível em uma placa de vidro. A Figura 2 mostra os resultados deste experimento original. O resultado surpreendente é que $\mu_z$ assume apenas dois valores, correspondendo aos valores $\pm \hbar / 2$ para $S_z$. Numericamente, $\hbar = h/2\pi$ = $1,055 \times 10^{-27} erg \cdot s$ = $6,582 \times 10^{16} eV \cdot s$, onde sua constante de Planck.
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig02.png', 'Zoom', '1650')">
+          <img src="figuras/fig02.png" width="400" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 02: Um cartão postal de Walther Gerlach para Niels Bohr, datado de 8 de fevereiro de 1922. Observe que as imagens do cartão postal foram giradas 90° em relação à fig. 1, onde a fenda de colimação é horizontal. A imagem à esquerda do perfil do feixe sem o campo magnético mostra o efeito da largura finita desta fenda de colimação. A imagem da direita mostra o perfil do feixe com o campo magnético. Somente no centro do aparelho a magnitude do gradiente do campo magnético é suficientemente forte para causar divisão. O padrão está manchado devido à faixa de velocidades dos átomos que saem do forno. Tradução da mensagem: "Meu estimado Herr Bohr, em anexo está a continuação de nosso trabalho [vide Zeitschr. f. Phys. 8, 110 (1921) ]: a prova experimental da quantização direcional. Parabenizamos você pela confirmação de sua teoria! Com respeitosas saudações. Sua mais humilde Walther Gerlach."
+          </p>
+      </div>
+      
+      <p>
+        Os átomos de prata são compostos por 47 elétrons e um núcleo. A teoria atômica nos diz que o momento angular orbital total e o momento angular de spin total de 46 dos elétrons é igual a zero, e o elétron de número 47 tem momento angular orbital zero. Além disso, como mostra na eq. $\ref{eq1.3}$, o núcleo dá uma contribuição muito pequena para o momento magnético do átomo porque a massa do núcleo é muito maior que a massa do elétron. Portanto, o momento magnético do átomo de prata é efetivamente devido ao momento magnético de um único elétron. Assim, ao realizar seu experimento, Stern e Gerlach mediram a componente do momento angular de spin intrínseco de um elétron ao longo do eixo $z$ e descobriram que ela assumia apenas dois valores discretos, $+\hbar/2$ e $-\hbar/2$, comumente chamados de "spin para cima" e "spin para baixo", respectivamente. Mais tarde, veremos que estes valores são característicos de uma partícula de spin $\frac{1}{2}$. Aliás, optamos por fazer o polo norte na parte inferior do dispositivo Stem-Gerlach (SG), aquela com ponta afiada por um motivo simples. Com esta configuração, $B_z$ diminui à medida que $z$ aumenta, tornando $d B_z/dz$ negativo. Como observamos anteriormente, os átomos com $\mu_z$ negativo são desviados para cima neste campo. Agora, um elétron tem carga $q = - e$ e da eq. $\ref{eq1.3}$ com $g = 2$, $\mu_z = (—e/m_ec)S_z$. Assim, um átomo de prata com $S_z = \hbar/2$ corresponde a um átomo spin-up e será convenientemente desviado para cima.
+      </p>
+      
+      <h3>Quatro experimentos</h3>
+      
+      <p>
+        Agora que vimos como o experimento Stem-Gerlach foi realizado, vamos voltar nossa atenção para quatro experimentos simples que nos dirão muito sobre a estrutura da mecânica quântica. Se quiser, você pode pensar nesses experimentos como experimentos mentais, de modo que não precisamos nos concentrar em quaisquer dificuldades técnicas que possam ser enfrentadas ao realizá-los.
+      </p>
+      
+      <h4>Experimento 01</h4>
+      
+      <p>
+        Digamos que uma partícula que sai de um dispositivo SG<b>z</b>, com seu campo magnético não homogêneo paralelo ao eixo $z$, com $S_z = +\hbar/2$ está no estado $\ket{+\textbf{z}}$. O símbolo $\ket{+\textbf{z}}$, conhecido como <b>vetor ket</b>, é uma forma conveniente de denotar esse estado. Suponha que um feixe de partículas, cada uma delas neste estado, entre em outro dispositivo SG<b>z</b>. Descobrimos que todas as partículas saem no estado $\ket{+\textbf{z}}$; isto é, a medição de $S_z$ produz o valor $+\hbar/2$ para cada uma das partículas, conforme indicado na Figura 3a.
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig03.png', 'Zoom', '1650')">
+          <img src="figuras/fig03.png" width="800" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 03: Um diagrama de blocos de (a) Experimento 1, (b) Experimento 2 e (c) Experimento 3. $N_0$ é o número de partículas no feixe que sai do primeiro dispositivo SG com $S_z = \hbar/2$.
+          </p>
+      </div>
+      
+      <h4>Experimento 02</h4>
+      
+      <p>
+        Considere um feixe de partículas saindo do dispositivo SG<b>z</b> no estado $\ket{+\textbf{z}}$, como no Experimento 1. Em seguida, enviamos esse feixe para um dispositivo SG<b>x</b>, um com seu campo magnético não homogêneo orientado ao longo do eixo x. Descobrimos que 50 por cento das partículas saem do segundo dispositivo com $S_x = \hbar/2$ e estão, portanto, no estado $\ket{+\textbf{x}}$, enquanto os outros 50 por cento saem com $S_x = -\hbar/2$ e estão, portanto, no estado $\ket{-\textbf{x}}$. (ver Fig.  3b).
+      </p>
+      
+      <h4>Experimento 03</h4>
+      
+      <p>
+        Vamos adicionar um terceiro dispositivo SG ao Experimento 2, mas desta vez com seu campo magnético não homogêneo orientado ao longo do eixo z (ver Fig. 3c). Se enviarmos o feixe de partículas que sai do dispositivo SG<b>x</b> no estado $\ket{+\textbf{x}}$ através do último dispositivo SG<b>z</b>, descobrimos que 50% das partículas saem no estado $\ket{+\textbf{z}}$ e 50% saem no estado $\ket{-\textbf{z}}$. Inicialmente, nenhuma das partículas que entravam no dispositivo SG<b>x</b> estava no estado $\ket{-\textbf{z}}$. Assim, fazer a medição de $S_x$ com o segundo dispositivo modificou o estado do sistema. Não podemos pensar no feixe que entra no último dispositivo SG<b>z</b> como composto de partículas com $S_z = \hbar/2$ e $S_x = \hbar/2$ e como se poderia esperar dos resultados das medições dos dois primeiros dispositivos SG. Isto não pode explicar os 50% do feixe que sai do último dispositivo SG<b>z</b> com $S_z = -\hbar/2$. Veremos em breve que $S_z$ e $S_x$ são observáveis incompatíveis; ou seja, não podemos conhecer ambos simultaneamente. No mundo macroscópico, por outro lado, parece ser fácil criar um estado com duas componentes definidas diferentes de zero do momento angular, como, por exemplo, é o caso de um pião cujo momento angular está orientado a 45° em relação a x e eixos z. Isto é uma indicação de que o mundo quântico é fundamentalmente diferente da nossa experiência macroscópica cotidiana. Veremos isso mais claramente à medida que considerarmos o próximo experimento de Stern-Gerlach.
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig04.png', 'Zoom', '1650')">
+          <img src="figuras/fig04.png" width="700" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 04: (a) Os três ímãs de um dispositivo de Stern-Gerlach modificado; (b) Os caminhos que uma partícula de spin para cima e de spin para baixo seguiria ao atravessar o dispositivo.
+          </p>
+      </div>
+      
+      <h4>Um aparelho de SG modificado</h4>
+      
+      <p>
+        No Experimento 4 usaremos um dispositivo SG modificado, introduzido em experimentos mentais por Richard Feynman. Esse dispositivo SG, mostrado na Figura 4a, é composto por três ímãs de alto gradiente, colocados costas com costas, em vez de um único ímã. O primeiro ímã é um típico ímã de Stern-Gerlach, seguido por um segundo ímã com a mesma seção transversal do primeiro, mas com o dobro do comprimento e com a polaridade oposta à do primeiro ímã. Este segundo ímã empurra uma partícula com momento magnético na direção oposta ao primeiro ímã. Assim, ao percorrer a primeira metade do comprimento deste ímã, a partícula é desacelerada e parada na direção transversal. Ao percorrer a segunda metade, a partícula é acelerada de volta ao eixo. Embora o terceiro ímã seja igual ao primeiro ímã, aqui ele desacelera a partícula de modo que a partícula retorne ao eixo no mesmo estado em que entrou no primeiro ímã. O efeito líquido dos três ímãs é recombinar os feixes de modo que sua condição ao sair do terceiro ímã seja exatamente a mesma que era antes de entrar no primeiro ímã. A Figura 4b indica os caminhos que as partículas de spin para cima e para baixo seguiriam neste dispositivo SG modificado.
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig05.png', 'Zoom', '1650')">
+          <img src="figuras/fig05.png" width="700" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 05: Selecionando um estado de spin-up com um dispositivo Stern-Gerlach modificado bloqueando o estado de spin-down.
+          </p>
+      </div>
+      
+      <p>
+        Você pode pensar que tal dispositivo não serve para nada, mas podemos usar um dispositivo modificado para fazer uma medição e selecionar um estado de rotação específico. Por exemplo, se a direção do campo magnético não homogêneo dos três ímãs estiver ao longo do eixo $x$, podemos selecionar uma partícula no estado de spin $\ket{+\textbf{x}}$ bloqueando o caminho que uma partícula no estado de spin $\ket{-\textbf{x}}$ tomaria, conforme indicado na Fig. 5. Então, todas as partículas que saem do dispositivo SG<b>x</b> de três ímãs modificado estariam no estado $\ket{+\textbf{x}}$. Na verdade, podemos repetir o Experimento 3 com o dispositivo SG<b>x</b> substituído por um dispositivo SG<b>x</b> modificado. Se o estado $\ket{-\textbf{x}}$ for filtrado pela inserção de um bloco no caminho inferior, encontraremos, é claro, exatamente os mesmos resultados do Experimento 3; isto é, quando medimos com o último dispositivo SG<b>z</b>, encontramos 50% das partículas no estado $\ket{+\textbf{z}}$ e 50% no estado $\ket{-\textbf{z}}$. Da mesma forma, se filtrarmos o estado $\ket{+\textbf{x}}$ inserindo um bloco no caminho superior, também encontraremos 50% das partículas saindo do último dispositivo SG<b>z</b> no estado $\ket{+\textbf{z}}$ e 50% no estado $\ket{-\textbf{z}}$.
+      </p>
+      
+      
+      <h4>Experimento 04</h4>
+      
+      <p>
+        Agora estamos prontos para o Experimento 4. Como no Experimento 3, um feixe de partículas no estado $\ket{+\textbf{z}}$ de um dispositivo SG<b>z</b> inicial entra em um dispositivo SG<b>x</b>, mas neste experimento é um dispositivo SG<b>x</b> modificado no qual não bloqueamos um dos os caminhos e, portanto, não faça uma medição de $S_x$. Em seguida, enviamos o feixe deste dispositivo SG<b>x</b> modificado para outro dispositivo SG<b>z</b>. Conforme indicado na Figura 1.6, descobrimos que 100% das partículas saem do último dispositivo SG<b>z</b> no estado $\ket{+\textbf{z}}$, como se o dispositivo SG<b>x</b> modificado estivesse ausente do experimento e estivéssemos repetindo o Experimento 1.
+      </p>
+      
+      <p>
+        Antes de realizar o Experimento 4, pode parecer óbvio que 50% das partículas que passam pelo dispositivo SG<b>x</b> modificado estão no estado$\ket{+\textbf{x}}$ e 50% estão no estado |—x). Mas os resultados da Experiência 4 contradizem esta suposição, uma vez que, se fosse verdade, esperaríamos encontrar 50 por cento das partículas no estado$\ket{+\textbf{z}}$ e 50 por cento das partículas no estado$\ket{-\textbf{z}}$ quando o feixe não filtrado sai do último dispositivo SG<b>z</b>. Nossos resultados são completamente incompatíveis com a hipótese de que as partículas que atravessam o dispositivo SG<b>x</b> modificado têm $S_x = \hbar/2$ ou $S_x = —\hbar/2$.
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig06.png', 'Zoom', '1650')">
+          <img src="figuras/fig06.png" width="700" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 06: Um diagrama de blocos do Experimento 4. Observe que não podemos indicar o caminho seguido através do dispositivo SG<b>x</b> modificado com três ímãs, uma vez que nenhuma medição é realizada para selecionar um estado de spin $\ket{+\textbf{x}}$ ou $\ket{-\textbf{x}}$.
+          </p>
+      </div>
+      
+      <p>
+        Além disso, mesmo que realizemos a experiência com um feixe de intensidade tão baixa que uma partícula de cada vez passe através dos dispositivos SG, ainda assim descobriremos que cada uma das partículas tem $S_z = \hbar/2$ quando sai do último dispositivo SG<b>z</b>. Assim, a questão levantada por esta experiência não pode ser resolvida por algum negócio engraçado envolvendo as interações das partículas nos feixes à medida que passam através do dispositivo SG<b>x</b> modificado.
+      </p>
+      
+      <p>
+        Até agora, fomos capazes de descrever os resultados destas experiências de Stern-Gerlach simplesmente em termos da percentagem de partículas que saem dos dispositivos SG num estado particular porque as experiências foram realizadas num feixe de partículas, digamos, num grande número de partículas. Para uma única partícula, geralmente não é possível prever antecipadamente com certeza o resultado da medição. No Experimento 2, por exemplo, antes de uma medição de $S_x$ em uma partícula no estado $\ket{+\textbf{z}}$, tudo o que podemos dizer é que há uma probabilidade de 50% de obter $S_x = \hbar/2$ e uma probabilidade de 50% de obter $S_x = -\hbar/2$. No entanto, as probabilidades por si só não nos permitem compreender a Experiência 4. Não podemos explicar os resultados desta experiência adicionando as probabilidades de que uma partícula que passa pelo dispositivo SG<b>x</b> modificado esteja no estado $\ket{+\textbf{x}}$ ou no estado $\ket{-\textbf{x}}$, uma vez que isso não leva em conta as diferenças ao comparar os resultados do Experimento 3, em que 50 por cento das partículas no estado $\ket{+\textbf{x}}$ (ou $\ket{-\textbf{x}}$) produzem $S_z = -\hbar/2$ e com os resultados do Experimento 4, em que nenhuma das partículas tem $S_z = -\hbar/2$ ao sair do último dispositivo SG<b>z</b>. De alguma forma, no Experimento 4, devemos eliminar a probabilidade de a partícula estar no estado $\ket{-\textbf{z}}$ quando entra no último dispositivo SG<b>z</b>. O que precisamos é de algum tipo de "interferência" que cancele o estado $\ket{-\textbf{z}}$. Tal interferência é comum na física das ondas, onde duas ondas podem interferir destrutivamente para produzir mínimos, bem como construtivamente para produzir máximos. No caso das ondas eletromagnéticas, por exemplo, não são as intensidades que interferem, mas sim os próprios campos eletromagnéticos. Para ondas eletromagnéticas a intensidade é proporcional ao quadrado da amplitude da onda. Com isso em mente, para nossos experimentos de Stern-Gerlach, introduzimos uma <b>amplitude de probabilidade</b> que iremos "quadrar" para obter a probabilidade. Se não observarmos qual caminho é seguido no dispositivo SG<b>x</b> modificado inserindo um bloco, ou filtro, devemos somar as amplitudes para seguir os dois caminhos diferentes correspondentes aos estados $\ket{+\textbf{x}}$ e $\ket{-\textbf{x}}$. Mesmo uma única partícula pode ter uma amplitude para estar em ambos os estados, para seguir ambos os caminhos; quando somamos, ou sobrepomos, as amplitudes, obtemos uma amplitude para a partícula estar apenas no estado $\ket{+\textbf{z}}$. Em resumo, quando não fazemos uma medição no dispositivo SG modificado, devemos adicionar as amplitudes, não as probabilidades.
+      </p>
+      
+      <h3>Os vetores de estado quânticos</h4>
+      
+      <p>
+        Em nossa descrição do estado de uma partícula na mecânica quântica, usamos uma nova notação na qual estados, como $\ket{+\textbf{z}}$, são denotados por vetores abstratos chamados vetores ket. Tal descrição inclui tanta informação sobre o estado da partícula quanto é permitida na mecânica quântica. Por exemplo, o ket $\ket{+\textbf{x}}$ é apenas uma forma abreviada de dizer que o estado de spin da partícula é tal que se fizéssemos uma medição de $S_x$, o momento angular de spin intrínseco na direção x, obteríamos o valor $\hbar/2$. Existem claramente outros atributos que são necessários para fornecer uma descrição completa da partícula, como a posição ou o momento da partícula. Contudo, por enquanto estamos nos concentrando nos graus de liberdade de spin da partícula. Mais tarde, no Capítulo 6, veremos como introduzir outros graus de liberdade na descrição do estado da partícula.
+      </p>
+      
+      <p>
+        A física clássica usa um tipo diferente de vetor na descrição da natureza. Alguns desses vetores comuns são mais abstratos que outros. Por exemplo, considere o campo elétrico E, que é um vetor útil, mas um tanto abstrato. Se houver um campo elétrico presente, sabemos que uma carga de teste q colocada no campo sofrerá uma força $\mathbf{F} = q\mathbf{E}$. É claro que mesmo a força $\mathbf{F}$ não será observada diretamente. Provavelmente permitiríamos que a partícula fosse acelerada pela força, mediríamos a aceleração e então usaríamos a lei de Newton $\mathbf{F} = m\mathbf{a}$ para determinar $\mathbf{F}$ e daí $\mathbf{E}$.
+      </p>
+      
+      <p>
+        Suponhamos que o campo elétrico no local onde você está lendo este livro tenha um valor constante, que você poderia determinar da maneira que acabamos de descrever. Como você conta aos seus amigos sobre o valor, tanto de magnitude quanto de direção, de $\mathbf{E}$? Você pode simplesmente apontar na direção de $\mathbf{E}$ para mostrar sua direção. Mas e se seus amigos não estiverem presentes e você quiser escrever $\mathbf{E}$ em um pedaço de papel? Você provavelmente configuraria um sistema de coordenadas e escolheria os vetores de base $\hat{\boldsymbol{\imath}}$, $\hat{\boldsymbol{\jmath}}$, $\hat{\boldsymbol{k}}$ cuja direção você poderia comunicar facilmente. Usando este sistema de coordenadas, você denotaria o campo elétrico como $\mathbf{E} = E_x \hat{\boldsymbol{\imath}} + E_y \hat{\boldsymbol{\jmath}} + E_z \hat{\boldsymbol{k}}$. Na verdade, muitas vezes usamos uma notação abreviada na qual suprimimos os vetores unitários e apenas dizemos $\mathbf{E} = (E_x, E_y, E_z)$, embora na notação que usaremos em nossa discussão sobre mecânica quântica, seria melhor denotar isso como $\mathbf{E} \to \left(E_x, E_y, E_z\right)$. Como obtemos o valor de $E_x$, por exemplo? Apenas projetamos o campo elétrico no eixo x. Formalmente, pegamos o produto escalar para encontrar $Ex = \hat{\boldsymbol{\imath}} \cdot \mathbf{E} = |\mathbf{E}| \cos \theta$, onde $\theta$ é o ângulo que o campo elétrico $\mathbf{E}$ faz com o eixo $x$, como mostrado na Fig. 7.
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig07.png', 'Zoom', '1650')">
+          <img src="figuras/fig07.png" width="300" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 07: As componentes $x$ e $y$ de um campo elétrico $\mathbf{E}$ fazendo um ângulo $\theta$ com o eixo $x$ podem ser obtidos tomando o produto escalar de $\mathbf{E}$ com os vetores unitários $\hat{\boldsymbol{\imath}}$ e $\hat{\boldsymbol{\jmath}}$. Para um vetor clássico como $\mathbf{E}$, $E_x$ e $E_y$ também pode ser obtido projetando $\mathbf{E}$ nos eixos $x$ e $y$.
+          </p>
+      </div>
+      
+      <p>
+        Voltemos à nossa discussão sobre vetores de estado quântico. Se enviarmos uma partícula de spin-$\frac{1}{2}$ para um dispositivo SG<b>z</b>, obteremos apenas os valores $\hbar/2$ e $-\hbar/2$, correspondentes à partícula que termina no estado $\ket{+\textbf{z}}$ ou termina no estado $\ket{-\textbf{z}}$, respectivamente. Esses dois estados podem ser considerados vetores que formam a base para nosso espaço vetorial de mecânica quântica abstrata. Se a partícula estiver inicialmente no estado $\ket{+\textbf{z}}$, vimos no Experimento 1 que há amplitude zero para a partícula ser encontrada no estado $\ket{-\textbf{z}}$, que denotamos por $\braket{-\textbf{z}}{+\textbf{z}} = 0$. Podemos pensar nisso como se nos dissesse que os vetores são ortogonais, o análogo de $\hat{\boldsymbol{\imath}}\cdot \hat{\boldsymbol{\jmath}}= 0$ em nosso exemplo de campo elétrico. É claro que se enviarmos uma partícula no estado $\ket{+\textbf{z}}$ para um dispositivo SG<b>z</b>, sempre encontraremos a partícula no estado $\ket{+\textbf{z}}$. Na linguagem das amplitudes da mecânica quântica, isso nos diz claramente que a amplitude $\braket{+\textbf{z}}{+\textbf{z}}$ é diferente de zero. Como veremos em breve, é conveniente exigir que nossos vetores da mecânica quântica sejam vetores unitários e, portanto, satisfaçam $\braket{+\textbf{z}}{+\textbf{z}} = 1$, assim como $\hat{\boldsymbol{\imath}}\cdot \hat{\boldsymbol{\imath}}= 0$. Da mesma forma, exigimos que $\braket{-z}{-z} = 1$ também, assim como $\hat{\boldsymbol{\jmath}}\cdot \hat{\boldsymbol{\jmath}}= 1$.
+      </p>
+      
+      <p>
+        Suponha que a partícula esteja no estado $\ket{+\textbf{x}}$. Do Experimento 3 sabemos que a partícula possui amplitudes diferentes de zero, que podemos chamar de $c_+$ e $c_-$, estando nos estados $\ket{+\textbf{z}}$ e $\ket{-\textbf{z}}$, respectivamente. Podemos expressar este estado como $\ket{+\textbf{x}}$ = c_+$\ket{+\textbf{z}}$ + c_$\ket{-\textbf{z}}$, uma combinação linear dos estados $\ket{+\textbf{z}}$ e $\ket{-\textbf{z}}$. Na verdade, é conveniente neste estágio considerar um estado de spin arbitrário $\ket{\psi}$, que poderia ser criado enviando um feixe de partículas com spin intrínseco-$\frac{1}{2}$ através de um dispositivo SG com seu campo magnético não homogêneo orientado em alguma direção arbitrária e selecionando essas partículas que são desviados, por exemplo, para cima. Em geral, este estado, como $\ket{+\textbf{x}}$, terá amplitudes diferentes de zero para produzir $\hbar/2$ e $-\hbar/2$ se uma medição de $S_z$ for feita. Assim, expressaremos este estado $\ket{\psi}$ como
+        
+        \begin{equation}
+          \ket{\psi} = c_+\ket{+\textbf{z}} + c_-\ket{-\textbf{z}}
+          \label{eq1.5}
+        \end{equation}
+        
+        onde os valores específicos para $c_+$ e $c_-$ dependem da orientação do dispositivo SG. Esse estado arbitrário $\ket{\psi}$ pode ser expresso como uma superposição dos estados $\ket{+\textbf{z}}$ e $\ket{-\textbf{z}}$ significa que esses estados formam um conjunto completo, assim como os vetores unitários $\hat{\boldsymbol{\imath}}$, $\hat{\boldsymbol{\jmath}}$ e $\hat{\boldsymbol{k}}$ formam um conjunto completo para expressar um campo elétrico $\mathbf{E}$ em três dimensões. Embora estejamos descrevendo os estados do momento angular de spin de uma partícula de spin-$\frac{1}{2}$, é claro, em três dimensões, precisamos apenas dos estados de base $\ket{+\textbf{z}}$ e $\ket{-\textbf{z}}$ para abranger esse espaço vetorial bidimensional.
+      </p>
+      
+      <p>
+        Como podemos determinar formalmente os valores de $c_+$ e $c_-$? Para tomar o análogo do produto escalar em nosso exemplo vetorial clássico comum, precisamos introduzir um novo tipo de vetor chamado vetor <b>bra</b>. Para cada ket $\ket{\psi}$ corresponde um bra $\bra{\psi}$. Assim, temos duas maneiras diferentes de denotar um estado com $S_z = \hbar / 2$, com o ket $\ket{+\textbf{z}}$ e o bra $\bra{+\textbf{z}}$. O fato de um bra como $\bra{\phi}$ deve se encontrar com um ket $\ket{\psi}$ para formar uma amplitude, ou produto interno, $\braket{\phi}{\psi}$ na forma de um "bracket" (colchete) daí o nome para bras e kets. A amplitude $\braket{\phi}{\psi}$ é a amplitude de probabilidade de uma partícula no estado $\bra{\phi}$ ser encontrada no estado $\bra{\phi}$. De nossos experimentos anteriores sabemos que $\braket{-\textbf{z}}{+\textbf{z}} = 0$, e similarmente $\braket{+\textbf{z}}{-\textbf{z}} = 0$, já que uma partícula no estado $\ket{-\textbf{z}}$, com $S_z = -\hbar /2$, tem amplitude zero para ser encontrado no estado $\ket{+\textbf{z}}$, com $S_z = h/2$. Assim, de $\ref{eq1.5}$, podemos deduzir que
+        
+        \begin{equation}
+          \begin{array}{ccccc}
+            \braket{+\textbf{z}}{\psi} &=& c_+\braket{+\textbf{z}}{+\textbf{z}} + c_-\braket{+\textbf{z}}{-\textbf{z}} &=& c_+\\
+            \braket{-\textbf{z}}{\psi} &=& c_+\braket{-\textbf{z}}{+\textbf{z}} + c_-\braket{-\textbf{z}}{-\textbf{z}} &=& c_-
+            \label{eq1.6}
+          \end{array}
+        \end{equation}
+
+        ou simplesmente $c_{\pm} = \braket{\pm\textbf{z}}{\psi}$. Isto permite reescrever \ref{eq1.5} na forma
+        
+        \begin{align}
+          \ket{\psi} &= \underbrace{\braket{+\textbf{z}}{\psi}}_{c_+}\ket{+\textbf{z}} + \underbrace{\braket{-\textbf{z}}{\psi}}_{c_-}\ket{-\textbf{z}}\nonumber\\
+          &=\ket{+\textbf{z}}\braket{+\textbf{z}}{\psi} + \ket{-\textbf{z}}\braket{-\textbf{z}}{\psi}\label{eq1.7}
+        \end{align}
+        
+        onde na última etapa posicionamos as amplitudes após os kets de forma sugestiva. Observe que as amplitudes $\braket{+\textbf{z}}{\psi}$ e $\braket{-\textbf{z}}{\psi}$, entre colchetes, são números (complexos) e, portanto, o produto de uma amplitude vezes um vetor ket é ele próprio apenas um vetor ket. Realmente não importa se posicionamos a amplitude antes ou depois do ket. Escrever o vetor ket $\ket{\psi}$ na eq. anterior é análogo a expressar o campo elétrico $\mathbf{E}$ na forma $\mathbf{E} = E_x \hat{\boldsymbol{\imath}} + E_y \hat{\boldsymbol{\jmath}} + E_z \hat{\boldsymbol{k}} = \hat{\boldsymbol{\imath}}\left(\hat{\boldsymbol{\imath}} \cdot \mathbf{E}\right) + \hat{\boldsymbol{\jmath}}\left(\hat{\boldsymbol{\jmath}} \cdot \mathbf{E}\right) + \hat{\boldsymbol{k}}\left(\hat{\boldsymbol{k}} \cdot \mathbf{E}\right)$
+      </p>
+      
+      <p>
+        Como a cada ket lhe corresponde um bra, podemos ser capazes de expressar $\bra{\psi}$ em termos de $\bra{+\textbf{z}}$ e $\bra{-\textbf{z}}$ como
+        
+        \[
+          \bra{\psi} = c_+' \bra{+\textbf{z}} + c_+' \bra{-\textbf{z}}
+        \]
+        
+        utilizando as mesmas técnicas anteriores
+
+        \begin{equation}
+          \begin{array}{ccccc}
+            \braket{\psi}{+\textbf{z}} &=& c_+'\braket{+\textbf{z}}{+\textbf{z}} + c_-'\braket{+\textbf{z}}{-\textbf{z}} &=& c_+'\\
+            \braket{\psi}{-\textbf{z}} &=& c_+'\braket{-\textbf{z}}{+\textbf{z}} + c_-'\braket{-\textbf{z}}{-\textbf{z}} &=& c_-'
+          \end{array}
+          \label{eq1.9}
+        \end{equation}
+        
+        assim o bra correspondente ao ket
+        
+        \begin{equation}
+          \bra{\psi} = \underbrace{\braket{\psi}{+\textbf{z}}}_{c_+'}\bra{+\textbf{z}} + \underbrace{\braket{\psi}{-\textbf{z}}}_{c_-'}\bra{-\textbf{z}}
+          \label{eq1.10}
+        \end{equation}
+        
+        Como as amplitudes $\braket{+\textbf{z}}{\psi}$ e $\braket{\psi}{+\textbf{z}}$ estão relacionadas? Assim como exigimos que $\braket{+\textbf{z}}{+\textbf{z}} = 1$, também exigimos que $\braket{\psi}{\psi} = 1$. Estamos exigindo que todos os vetores físicos em nosso espaço vetorial abstrato da mecânica quântica sejam vetores unitários. Como veremos, esse requisito é crucial para a interpretação probabilística da mecânica quântica. Se usarmos \ref{eq1.7} e \ref{eq1.10} para avaliar $\braket{\psi}{\psi}$, encontraremos
+        
+        \begin{equation}
+          \braket{\psi}{\psi} = \braket{\psi}{+\textbf{z}}\braket{+\textbf{z}}{\psi} + \braket{\psi}{-\textbf{z}} \braket{-\textbf{z}}{\psi} = 1
+          \label{eq1.11}
+        \end{equation}
+        
+        Numa revisão posterior do experimento de Stern-Gerlach veremos que é conveniente que as amplitudes de probabilidade tais como $\braket{+\textbf{z}}{\psi}$ e $\braket{-\textbf{z}}{\psi}$ devem ser em geral números complexos. Uma forma de garantir o resultdo anterior para qualquer valor arbitrarios deve ser verificado
+        
+        \[
+          \braket{\psi}{+\textbf{z}} = \braket{+\textbf{z}}{\psi}^*\quad\text{e}\quad \braket{\psi}{-\textbf{z}} = \braket{-\textbf{z}}{\psi}^*
+        \]
+        
+        de modo que cada um dos termos em \ref{eq1.11} são reais. Esses resultados dizem que a amplitude de uma partícula no estado $\ket{\psi}$ encontrada nos estados $\ket{\pm\textbf{z}}$ é o conjugado complexo da amplitude de uma partícula nos estados $\ket{\pm\textbf{z}}$ encontrada no estado $\ket{\psi}$.
+      </p>
+      
+      <p>
+        Da equação $\ref{eq1.6}$ e $\ref{eq1.9}$, vemos que $c_+' = c_+^*$ e $c_-' = c_-^*$. Por tanto, o bra correspondente ao ket $\ref{eq1.5}$ é
+        
+        \[        
+          \bra{\psi} = c^*_+ \ket{+\textbf{z}} + c^*_- \ket{-\textbf{z}}        
+        \]
+        
+        O vetor bra é gerado a partir do vetor ket alterando todos os kets bases para seus bras correspondentes e alterando todas as amplitudes (números complexos para seus conjugados complexos.
+      </p>
+      
+      <p>
+        A partir da equação 1.11, podemos expressar
+        
+        \begin{equation}
+          \begin{array}{rl}
+            \braket{\psi}{\psi} &= \braket{\psi}{+\textbf{z}}\braket{+\textbf{z}}{\psi} + \braket{\psi}{-\textbf{z}} \braket{-\textbf{z}}{\psi}\\
+            &= c^*_+c_+ + c^*_-c_-\\
+            &=1
+          \end{array}
+          \label{eq1.14}
+        \end{equation}
+        
+        ou
+        
+        \begin{equation}
+          \braket{\psi}{\psi} = \left| \,  \braket{+\textbf{z}}{\psi} \, \right|^2 + \left| \, \braket{-\textbf{z}}{\psi}  \, \right|^2
+          \label{eq1.15}
+        \end{equation}
+        
+        onde $\left| \,  \braket{+\textbf{z}}{\psi} \, \right|^2 \equiv \braket{+\textbf{z}}{\psi}^*\braket{+\textbf{z}}{\psi}$ e $\left| \,  \braket{-\textbf{z}}{\psi} \, \right|^2 \equiv \braket{-\textbf{z}}{\psi}^*\braket{-\textbf{z}}{\psi}$. Interpretamos o termo $\left| \,  \braket{+\textbf{z}}{\psi} \, \right|^2$ como a probabilidade de que a partícula no estado $\ket{\psi}$ deve ser encontrada no estado $\ket{+\textbf{z}}$  se a medida de $S_z$ é realizada com um aparelho de SG<b>z</b> e $\left| \, \braket{-\textbf{z}}{\psi} \, \right|^2$ como a probabilidade de que a partícula seja encontrada no estado $\ket{-\textbf{z}}$.  Como $\ref{eq1.15}$ mostra,  $\braket{\psi}{\psi} = 1$ garante que a probabilidade de encontrar a partícula em um ou outro estados uma vez que somente temos dois resultados possíveis para a medida de $S_z$ para partículas de espin-$\frac{1}{2}$
+      </p>
+      
+      <p>
+        A caraterística principal de $\ref{eq1.7}$ é que quando ambas das amplitudes de probabilidade $\braket{+\textbf{z}}{\psi}$ e $\braket{-\textbf{z}}{\psi}$ são diferentes de zero, então uma partícula no estado $\ket{\psi}$ está realmente em uma <b>superposição</b>  dos estados $\ket{+\textbf{z}}$ e $\ket{-\textbf{z}}$. Existe tanto a probabilidade de se obter $S_z=\hbar/2$, como a probabilidade de se obter $S_z=-\hbar/2$, se uma medida de $S_z$ é realizada. Isto contrata com mecânica clássica onde onde se uma partícula está num estado definido não se espera, por exemplo, obter como resultado de uma medida do momento angular dos valores diferentes, como $\mathbf{r}_1 \times \mathbf{p}_1$ e $\mathbf{r}_2 \times \mathbf{p}_2$
+      </p>
+      
+      <h5>Exemplo 1.1</h5>
+      
+      <p>
+        Uma medida de $S_z$ é realizada a uma partícula que está no estado
+        \[  
+          \ket{\psi} = \dfrac{1}{2}\ket{+\textbf{z}} + \dfrac{i\sqrt{3}}{2}\ket{-\textbf{z}}
+        \]
+        Quais são os possíveis resultados de essa medida e qual é a probabilidade de se obter cada um desse resultados?<br/>
+        <b>SOL</b><br/>
+        
+        Como
+        
+        \[
+          \braket{+\textbf{z}}{\psi} = \dfrac{1}{2} \Rightarrow \left| \, \braket{+\textbf{z}}{\psi} \, \right|^2 = \dfrac{1}{4}
+        \]
+        
+        por tanto temos 25% de probabilidade de se obter $S_z=\hbar/2$, de forma similar
+        
+        \[
+          \braket{-\textbf{z}}{\psi} = \dfrac{i\sqrt{3}}{2} \Rightarrow \left| \, \braket{-\textbf{z}}{\psi} \, \right|^2 = \left( \dfrac{i\sqrt{3}}{2} \right)\left( \dfrac{-i\sqrt{3}}{2}\right) = \dfrac{3}{4}
+        \]
+        que resulta numa probabilidade de 75% de se obter $S_z=-\hbar / 2$. Note que a o estado $\ket{\psi}$ está adequadamente normalizado de forma que
+        
+        \[
+          \braket{\psi}{\psi} = \left| \, \braket{+\textbf{z}}{\psi} \, \right|^2 + \left| \, \braket{-\textbf{z}}{\psi} \, \right|^2 = \dfrac{1}{4} + \dfrac{3}{4} = 1
+        \]
+        estas probabilidades devem somar 1 já que uma medida de $S_z$ para uma partícula com spin-$\frac{1}{2}$ so pode ter um dos seguintes valores $\hbar / 2$  ou $-\hbar / 2$.<br>
+        <img src="figuras/linha_b.png">
+      </p>
+        
+      <h3>Analise do experimento #3</h3>
+      
+      <p>
+        Como observamos anteriormente, o Experimento 3 está nos dizendo que uma partícula no estado $\ket{+\textbf{x}}$ está em uma superposição dos estados $\ket{+\textbf{z}}$ e $\ket{-\textbf{z}}$
+        \[
+          \bra{+\textbf{x}} = c_+ \bra{+\textbf{z}} + c_+ \bra{-\textbf{z}}
+        \]
+        assim como quando fazemos medições de $S_z$ com o último dispositivo SG<b>z</b> do experimento, obtivemos probabilidades de se obter tanto $\hbar / 2$ como $-\hbar / 2$. Devido a que a probabilidade de cada um é 50%, temos
+        
+        \begin{array}{rlcrl}
+          c_+^*c_+ &= \braket{+\textbf{z}}{+\textbf{x}}^*\braket{+\textbf{z}}{+\textbf{x}}&\qquad& c_-^*c_- &= \braket{-\textbf{z}}{+\textbf{x}}^*\braket{-\textbf{z}}{+\textbf{x}}\\
+          &=\left| \, \braket{+\textbf{z}}{+\textbf{x}} \, \right|^2 & & &=\left| \, \braket{-\textbf{z}}{+\textbf{x}} \, \right|^2\\
+          &= \dfrac{1}{2} && &= \dfrac{1}{2}
+        \end{array}
+        
+        Uma possível solução é escolher $c_+$ e $c_-$ como sendo reais, isto é $c_+=1/\sqrt{2}$ e $c_-=1/\sqrt{2}$.  Uma solução mais geral é
+        
+        \[
+          c_+ = \dfrac{e^{i\delta_+}}{\sqrt{2}}\quad \text{e}\quad c_- = \dfrac{e^{i\delta_-}}{\sqrt{2}}
+        \]
+        
+        onde $\delta_+$ e $\delta_-$ são fases reais dão lugar a que $c_+$ e $c_-$ possam ser números complexos, nessa perceptiva
+        
+        \[
+          \bra{+\textbf{x}} = \dfrac{e^{i\delta_+}}{\sqrt{2}} \bra{+\textbf{z}} + \dfrac{e^{i\delta_-}}{\sqrt{2}} \bra{-\textbf{z}}
+        \]
+        
+        observe que a probabilidade em si mesma não nos da informação da fase $\delta_\pm$ uma vez que durante o cálculo dessa probabilidade ela não participa
+        
+        \begin{array}{rlcrl}
+          c_+^*c_+ &=  \left( \dfrac{e^{i\delta_+}}{\sqrt{2}} \right) \left( \dfrac{e^{-i\delta_+}}{\sqrt{2}} \right) &\qquad& c_-^*c_- &= \left( \dfrac{e^{i\delta_-}}{\sqrt{2}} \right) \left( \dfrac{e^{-i\delta_-}}{\sqrt{2}} \right)\\
+          &= \dfrac{1}{2} && &= \dfrac{1}{2}
+        \end{array}
+        
+        Podemos usar essas probabilidades para calcular o valor médio, ou valor esperado, de $S_z$, que é a soma de cada valor obtido por uma medição de $S_z$ multiplicada pela probabilidade de obter esse valor:
+        
+        \begin{align*}
+          \langle  \rangle &= c_+^*c_+\,\left( \dfrac{\hbar}{2} \right) + c_-^*c_-\left( -\dfrac{\hbar}{2} \right)\\
+          &= 0
+        \end{align*}
+      </p>
+      
+      
+      <div style='padding: 15px; width: 425px;float:right;'>
+          <img src="figuras/fig08.png" width="400" align="right">
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 08:  Um conjunto idealizado de dados resultantes de medições de $S_z$ em uma coleção de partículas com $S_x = \hbar/2$.
+          </p>
+      </div>
+        
+      <p>
+        Neste caso particular, o valor esperado não coincide com nenhum dos valores que podem ser obtidos medindo $S_z$. Um conjunto idealizado de dados resultantes de medições de $S_z$ em uma coleção muito grande de partículas, cada uma com $S_x = \hbar/2$, é mostrado na Figura  ao lado. Claramente, existe uma incerteza inerente ao resultado das medições, uma vez que nem todas as medições produzem o mesmo valor. Calculamos essa incerteza calculando o desvio padrão: determinamos o valor médio dos dados, pegamos cada ponto de dados, subtraímos dele o valor médio, quadrado e média, e finalmente calculamos a raiz quadrada. Assim, o quadrado da incerteza é dado por
+
+      </p>
+      <!--
+      
+      \bra{\psi}                  \ket{\psi}
+      \bra{+\textbf{z}}           \ket{+\textbf{z}}
+      \bra{-\textbf{z}}           \ket{-\textbf{z}}
+      \braket{+\textbf{z}}{\psi}  \braket{-\textbf{z}}{\psi}
+      
+      
+            <div style="width:100%;margin-left: auto;margin-right: auto;">
+        <div style="display: flex; padding-bottom: 0px;">
+        
+          <div style="flex: 30%; padding-right: 30px">
+            <a href="javascript:newWin('figuras/figCone02_a.png', 'Zoom', '1650')">
+              <img src="figuras/figCone02_a.png" style="width:100%">
+            </a>
+            <p style="text-align: center; font-size:80%">
+              <b>a)</b> Gráfico de $\displaystyle f(x,y)=\sqrt{x^2+y^2}$
+            </p>
+          </div>
+          
+          <div style="flex: 30%; padding-left: 30px;">
+            <a href="javascript:newWin('figuras/figCone02_b1.png', 'Zoom', '1650')">
+              <img src="figuras/figCone02_b1.png" style="width:100%">
+            </a>
+            <p style="text-align: center; font-size:80%">
+              <b>b)</b> Interseções de planos com cone
+            </p>
+          </div>
+          
+          <div style="flex: 30%; padding-left: 30px;">
+            <a href="javascript:newWin('figuras/figCone02_b2.png', 'Zoom', '1650')">
+              <img src="figuras/figCone02_b2.png" style="width:100%">
+            </a>
+            <p style="text-align: center; font-size:80%">
+              <b>c)</b> Analise do gráfico do cone $\displaystyle f(x,y)=\sqrt{x^2+y^2}$
+            </p>
+          </div>
+          
+        </div>
+      </div>
+      
+
+      
+      <figure style="margin-top:-30px">
+        <div class = "ggbContainer"> 
+          <a href="https://www.geogebra.org/material/iframe/id/dhppzd7w/width/836/height/502/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" width="836px" height="502px" style="border:0px;" width="836px" height="502px" style="border:0px;">
+            Abrir com o<br>GeoGebra
+          </a>
+          <img src="figuras/curvasDeNivelGeo.png" width="836px" height="502px" alt="polar_coordinates" class="border" >
+          <iframe src="figuras/curvasDeNivelGeo.png" allowfullscreen width="836px" height="502px" class="hiddenIframe"></iframe>
+        </div>       
+      </figure>
+      -->
+      
+<!--
+
+
+
+
+    <h6><a href="exemplos/exemplo1.4.23.html" target="_blank">Exemplo Q1.4.23</a></h6>
+        Encontre a área do refletor parabólico cuja forma se obtém ao rotar o arco parabólico $y=x^2$, $9\leq x \leq 1$ ao redor do eixo $y$
+      <p>-->
+      
+    <!--  
+      <h6><a href="exemplos/exemplo1.4.22.html" target="_blank">Exemplo Q1.4.22</a></h6>
+      
+      <p>
+        
+      </p>    <h6><a href="exemplos/exemplo1.4.2.html" target="_blank">Exemplo Q1.4.3</a></h6>
+      
+      <p>
+        
+      </p>-->
+      
+     
+      
+<!--      <h5>Exemplo 3</h5>
+      <p>
+        Escreva a identidade de Parseval correspondente ao problema \ref{ex1.3.2}.\ref{ex397}
+      </p>-->
+<!--
+      \left( \right)   \left|\, z \,\right|  
+      
+      \left[ \right]   \left\{ \righ\}
+        
+        \begin{align*}
+        \end{align*}
+       
+      <ol>
+        <li>
+          
+        </li>
+        <li>
+          
+        </li>
+      </ol>
+        
+        \[
+          \begin{bmatrix}
+          \end{bmatrix}
+        \]
+      
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig01.png', 'Zoom', '1650')">
+          <img src="figuras/fig01.png" width="400" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01:  Sistema massa mola.
+          </p>
+      </div>
+      
+      
+      
+      <div style='padding: 15px; width: 425px;float:right;'>
+          <img src="figuras/Bessel32.gif" width="400" align="right">
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;font-size: 75%;">
+            Figura 01:  Uma solução do problema da membrana vibrante a qual é dada em termos da funções de Bessel.
+          </p>
+      </div>
+      
+      <h5>Exemplo 03</h5>
+      
+      <p>
+        
+        <img src="figuras/linha_b.png">
+      </p>
+         
+      <table class="tabela_de_lista2">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <table class="tabela_de_lista2">      
+      <tr>
+      <td class="teorematitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+-->
+      
+      
+      </div>
+      <!-- Fim Principal   -->      
+    </div>
+    <!-- Fim todo   -->
+  </body>
+</html> 
+
