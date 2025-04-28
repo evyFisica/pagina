@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/main.js' type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+      MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+        extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+        TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+        }
+      });
+    </script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Calculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      
+      <h2>Divergência</h2>
+      
+      <p>
+        Vamos supor que $\mathbf{V}:U\subseteq \mathbb{R}^2 \to \mathbb{R}^2$, $\mathbf{V}= V_x\,\mathbf{i} + V_y \,\mathbf{j}$ é o campo de velocidades de uma corrente de um fluído.  Queremos estimar quanta massa por unidade de tempo está saindo de uma "pequena" região de $U$.  Seja $\mathbf{p}=(x_0,\,y_0)\in U$ e considere o retângulo $R$ com centro em $\mathbf{p}$ dado por
+        \[
+          R=\left\{ \left( x,y\right) |x_{0}-\dfrac{h}{2}\leq x\leq x_{0}+\dfrac{h}{2},\,y_{0}-\dfrac{k}{2}\leq y\leq y_{0}+\dfrac{k}{2} \right\} 
+          \nonumber
+        \]
+        Escolhendo $h$ e $k$ suficientemente pequenos teremos garantia de que $R\subset U$.
+      </p>
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/fluxo.png', 'Zoom', '1650')">
+          <img src="figuras/fluxo.png" width="250" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Suponhamos que o segmento $ad$ representa um dos lado do retângulo $R$, a massa que atravessa esse segmente está dada por $m=\sigma lk$, ($\sigma$ é a densidade de massa superficial) como $l=\left|\mathbf{V}\right|t$ então a massa por unidade de tempo que atravessa será
+        \[
+          \dfrac{m}{t}=\sigma \;k\; \left|\mathbf{V}\right|
+          \nonumber
+        \]
+        de onde vemos que essa grandeza é diretamente proporcional ao produto do  módulo da velocidade e o comprimento do segmento a ser atravessado.
+      </p>
+ 
+      <div align="center">
+        <a href="javascript:newWin('figuras/defDiv.png', 'Zoom', '650')">
+          <img src="figuras/defDiv.png" width="400" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Da figura é obvio que a componente $V_x$ de $\mathbf{V}$ atravessará os lados $ad$, $bc$ de $R$ enquanto que a componente $V_y$ atravessará os lados $cd$ e $ab$. Consideraremos como sendo negativo o fluído que entra pelos lados $ab$ e $bc$ e positivo o fluído que sai pelos lados $cd$ $bc$. As seguintes expressões dão conta do fluído que atravessa o perímetro do retângulo $R$
+        \[
+          \begin{align*}
+            \dfrac{m}{t}\text{ que entra por }ab \approx & h\,V_y(x_0,y_0-k/2)\\
+            \dfrac{m}{t}\text{ que entra por }ad \approx & k\,V_x(x_0-h/2,y_0)\\
+            \dfrac{m}{t}\text{ que sai por }cd \approx & h\,V_y(x_0,y_0+k/2)\\
+            \dfrac{m}{t}\text{ que sai por }bc \approx & k\,V_x(x_0+h/2,y_0)
+          \end{align*}
+        \]
+        Note que $h$ é o comprimento do retângulo entre $ab$ e $bc$ e $2k$ é o comprimento do retângulo entre  $cd$ $bc$.  A expressão $V_y(x_0,y_0-k/2)$ significa o valor de $V_y$ no ponto $(x_0,y_0-k/2)$.
+      </p>       
+      
+      <p>
+        Assim a quantidade de fluído que sai do retângulo é
+        \[
+          \begin{align*}
+            \text{Total $m/t$ que sai de }R =& (bc - ad) + (cd - ab)\\
+            =& k\left[ V_x(x_0+h/2,y_0) - V_x(x_0-h/2,y_0)\right] + h\left[ V_y(x_0,y_0+k/2) - V_y(x_0,y_0-k/2) \right]
+          \end{align*}
+        \]
+        dividindo pela área do retângulo $A=hk$:
+        \[
+          \dfrac{\text{Total $m/t$ que sai de }R}{\text{área}} = \dfrac{V_x(x_0+h/2,y_0) - V_x(x_0-h/2,y_0)}{h} - \dfrac{V_y(x_0,y_0+k/2) - V_y(x_0,y_0-k/2)}{k}
+          \nonumber
+        \]
+        Como queremos saber quanta massa sai do ponto $P=(x_0,\,y_0)$ faremos com que $k\to 0$ e $h \to 0$, isto é
+        \[
+          \begin{align*}
+            \lim_{\,\text{área}\to 0} \dfrac{\text{Total que sai de }R}{\text{área}}=& \lim_{h\to 0}\dfrac{V_x(x_0+h/2,y_0) - V_x(x_0-h/2,y_0)}{h} + \lim_{k\to 0} \dfrac{V_y(x_0,y_0+k/2) - V_y(x_0,y_0-k/2)}{k}\\
+            =& \dfrac{\partial V_x}{\partial x} + \dfrac{\partial V_y}{\partial y}\\
+            =& \left( \dfrac{\partial \;}{\partial x}\,\mathbf{i} + \dfrac{\partial \;}{\partial y}\,\mathbf{j} \right) \cdot \left( V_x\,\mathbf{i} + V_y \,\mathbf{j} \right)\\
+            =& \mathbf{\nabla}\cdot \mathbf{V}
+          \end{align*}
+        \]
+        O resultado obtido define uma nova grandeza e uma nova operação: a densidade de corrente  e a divergência do campo $\mathbf{V}$. A densidade de corrente de massa, $\mathbf{j}$, é a quantidade de massa  que sai de uma região do espaço por unidade de tempo e por unidade de área. A divergência e definida pelo produto $\mathbf{\nabla}\cdot \mathbf{V}$. A continuação definimos formalmente o conceito de divergência
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Seja $\mathbf{F}:U\subseteq \mathbb{R}^3 \to \mathbb{R}^3$ um campo vetorial diferenciável. A divergência de $\mathbf{F}$, denotada por $div\,\mathbf{F}$ ou $\mathbf{\nabla}\cdot \mathbf{F}$ é o campo escalar definido por
+        \[
+          div\,\mathbf{F}=\mathbf{\nabla}\cdot \mathbf{F}= \dfrac{\partial F_x}{\partial x} + \dfrac{\partial F_y}{\partial y} + \dfrac{\partial Fz}{\partial z}
+          \nonumber
+        \]
+        onde $F_x, \, F_y\, F_z$ são as componente cartesianas de $\mathbf{F}$.
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        Junto com o conceito de densidade de corrente podemos entender o porque do nome divergência, em termos de um fenômeno físico podemos dizer que se $\mathbf{F}$ é o campo de velocidades de um gás em expansão, então a divergência em um ponto $P$ é á velocidade com a qual esse gás está se expandindo (divergindo) no ponto $P$.  Dessa forma vemos que se 
+        \[
+          \begin{align*}
+            \mathbf{\nabla}\cdot \mathbf{F} > 0 \Rightarrow & \text{fluído em expansão}\\
+            \mathbf{\nabla}\cdot \mathbf{F} < 0 \Rightarrow & \text{fluído em compressão}\\
+            \mathbf{\nabla}\cdot \mathbf{F} = 0 \Rightarrow & \text{fluído incompressível}\\
+          \end{align*}
+        \]
+        
+      </p>
+      
+      <h5>Exemplo 10</h5>
+      <p>
+        Se $\mathbf{F}= x^2y\,\mathbf{i} + xz \,\mathbf{j} +xyz \,\mathbf{k}$, calcule a divergência do campo.
+       <br><b>SOL.</b><br />
+       \[
+         \begin{align*}
+           \mathbf{\nabla}\cdot \mathbf{F} =& \dfrac{\partial x^2y}{\partial x} + \dfrac{\partial xz}{\partial y} + \dfrac{\partial xyz}{\partial z}\\
+           =& 2xy +xy\\
+           =& 3xy
+         \end{align*}
+       \]
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Propriedades da divergência
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Sejam 
+        \[\mathbf{f}(x,y,z) = f_1(x,y,z) \,\mathbf{i} +f_2(x,y,z) \,\mathbf{j} + f_3(x,y,z) \,\mathbf{k}\;\; e\\
+        \mathbf{g}(x,y,z) = g_1(x,y,z) \,\mathbf{i} +g_2(x,y,z) \,\mathbf{j} + g_3(x,y,z) \,\mathbf{k}
+        \nonumber
+        \]
+        funções vetoriais definidas num domínio  $D$. Suponhamos também que $div\,f$ e $div\,g$ existem, então:
+        <ol type="a">
+          <li>
+            $\mathbf{\nabla}\cdot\left( \mathbf{f} \pm \mathbf{g} \right)= \mathbf{\nabla}\cdot\mathbf{f} \pm \mathbf{\nabla}\cdot\mathbf{g}$
+          </li>
+          <li>
+            $\mathbf{\nabla}\cdot\left( h\mathbf{f} \right) = h\mathbf{\nabla}\cdot\mathbf{f}+\mathbf{f}\cdot \mathbf{\nabla} h$
+          </li>
+        </ol>
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h4>Equação de continuidade</h4>
+      
+      <p>
+        Uma aplicação da divergência é em mecânica dos fluídos onde temos a equação de continuidade de matéria
+        \[
+          \nabla \cdot \mathbf{u} + \dfrac{\partial \rho}{\partial t} = 0
+          \nonumber
+        \]
+        onde $u=\rho \mathbf{v}$, sendo $\rho=\rho(x,y,z,t)$ a densidade do fluído e $\mathbf{v}= \mathbf{v}(x,y,z,t)$ o vetor velocidade.
+      </p>
+      
+      <p>
+        Note que se rescrevemos a equação como
+        \[
+          \dfrac{\partial \rho}{\partial t}  = -\nabla \cdot \mathbf{u}
+          \nonumber
+        \]
+        fica evidente que a divergência é uma medida da variação da densidade do fluído num ponto.  Assim quando a divergência é positiva, a densidade no ponto está diminuindo com o tempo, e por isso que dizemos que nesse ponto o fluído está se expandindo.  Obviamente que também fica claro que os fluídos onde $\rho\neq\rho(t)$ serão chamados de incompressíveis. Os campos que verifiquem $\vec{\nabla}\cdot \mathbf{F}=0$ são chamados de campos solenoidais pois O campo se comporta como o campo magnético gerado por um solenoide (bobina).
+      </p>
+
+      <h3>Equação de Laplace</h3>
+      
+      <p>
+        Até este momento definimos duas novas operações, o gradiente que transforma um campo escalar em um campo vetorial e a divergência que transforma um campo vetorial em um campo escalar. O passo a seguir é misturar ambas operações tomaremos um campo escalar e transformaremos em um campo vetorial e a seguir esse campo será transformado em outro campo escalar.
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Equação de Laplace
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Seja $f$ um campo escalar definido num conjunto aberto definido em $\mathbb{R}^3$, a equação de Laplace é a equação definida pela divergência do gradiente do campo escalar, isto é
+        \[
+          \nabla^2 f= \mathbf{\nabla} \cdot \left( \mathbf{\nabla} f\right) = 0
+          \nonumber
+        \]
+        onde o operador diferencial atuando sobre o campo $\displaystyle \nabla^2$ é conhecido como operador laplaciano e está definido como
+        \[
+          \nabla^2 = \dfrac{\partial^2 \;}{\partial x^2} + \dfrac{\partial^2 \;}{\partial y^2} + \dfrac{\partial^2 \;}{\partial z^2}
+          \nonumber
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        A equação de Laplace é um caso especial da equação de Poisson
+        \[
+          \nabla^2 f= g
+          \nonumber
+        \]
+        onde $g$ também é uma função escalar.
+      </p>
+      
+      <p>
+        Para entender o significado do Laplaciano é bom analisar o significado do operador em uma dimensão $\displaystyle \dfrac{\partial^2 f}{\partial x^2}$. Sabemos do cálculo I que se a II derivada da função é positiva, então $f(x)$ deve ser côncava, caso contrario a função é convexa. Assim $\nabla^2 f(x_0,y_0)$ será positiva se ela o valor de $ f(x_0,y_0)$ for menor na média que o valor de $f(x,x)$ em torno do ponto $P=(x_0,y_0)$.  Por exemplo uma das equação onde este operador aparece é a equação de condução do calor a qual estipula que
+        \[
+          \nabla^2 T = \dfrac{c}{\kappa}\dfrac{\partial T}{\partial t}
+          \nonumber
+        \]
+        onde $T$ é a temperatura, $c$ é o calor específico e $\kappa$ é a condutividade térmica.  Note que $\nabla^2 T$ é positiva então $T$ tem um valor localmente menor que os vizinho em média, por tanto $\dfrac{\partial T}{\partial t}>0$ o que significa que o ponto se devera esquentar.  Se  $\nabla^2 T$ é negativa então $T$ tem um valor localmente maior que os vizinho em média, por tanto $\dfrac{\partial T}{\partial t} < 0$ o que significa que o ponto se devera esfriar (calor fluirá desde o ponto).
+      </p>
+      
+      <p>
+        É por isso que as funções que verificam a equação de Laplace são chamadas de funções harmônicas, pois na média os pontos não estão nem por cima nem por baixo. 
+      </p>
+<!--      
+        <b><font color="#FF9966">Demonstração: </font></b>
+        Se $\mathbf{\nabla} f = \mathbf{0}$, então para qualquer direção (qualquer $\mathbf{\hat{u}}$) temos
+        
+       \[
+          \begin{align*}
+          \end{align*}
+       \]   
+      
+      <h4>Exemplo</h4>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      \left< \right>     \left(  \right)      \left| \right|
+      
+      \mathbb{R}
+      
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k}   \left(  \right) 
+         
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      -->
+      
+      </div>
+      <!-- Fim Principal   -->
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html> 

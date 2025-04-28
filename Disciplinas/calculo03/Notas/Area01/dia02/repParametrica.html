@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/main.js' type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+      MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+        extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+        TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+        }
+      });
+    </script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Calculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h3>Representação paramétrica de algumas curvas</h3>
+      
+      <h4>Parametrização de uma Hélice</h4>
+       
+      <div align="center">
+        <a href="javascript:newWin('figuras/helice.png', 'Zoom', '1250')">
+          <img src="figuras/helice.png" width="650" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        A fim de parametrizar a trajetória helicoidal devemos observar que essa curva projetada em algum plano ($xy$, $yz$ ou $zx$) forma uma circunferência, enquanto que quando projetada nos outros planos obtemos uma figura senoidal por exemplo, para o caso da figura mostrada acima temos que a figura que se forma no plano $xy$ ($z=0$) tem a seguinte equação vetorial $\mathbf{r}(t) =  a \cos t   \,\mathbf{i} +  a \sin t\,\mathbf{j}$, onde $a$ é o raio da circunferência. No caso da projeção no plano $xz$ a equação da curva é a equação de uma função senoidal $\mathbf{r}(t) = a\sin\,t\,\mathbf{i} + m\,t  \,\mathbf{k}$, por tanto, a partir destas equações obtemos que a equação da hélice circular é
+        \[
+          \mathbf{r}(t)  a \cos t   \,\mathbf{i} +  a \sin t\,\mathbf{j} + m\,t  \,\mathbf{k};\;\;\;\; t\in\mathbb{R}
+          \label{helice}
+        \]
+      </p>
+      
+      <h4>Parametrização de uma ciclóide</h4>
+       
+      <div align="center">
+        <a href="javascript:newWin('figuras/cicloide01.gif', 'Zoom', '1250')">
+          <img src="figuras/cicloide01.gif" width="450" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        A ciclóide é a curva descrita por um ponto $P$ da circunferência de um círculo que se move ao longo de uma linha reta (ver figura acima).  O ciclóide está relacionado a um dos problemas mais famosos da Física, o problema da braquistrócona
+      </p>
+       
+      <div align="center">
+        <a href="javascript:newWin('figuras/Brachistochrone.gif', 'Zoom', '1250')">
+          <img src="figuras/Brachistochrone.gif" width="350" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Em 1696, Johann Bernoulli apresento o problema da braquistrócona (), ele se perguntou sobre qual é a trajetória que um objeto deve seguir, sob a ação da gravidade, para que o tempo entre um ponto $A$ e outro ponto $B$ (sobre a curva) seja o mínimo dentro todas as curvas possíveis. O próprio Bernoulli mostrou que a trajetória coincide com a curva cicloide. Newton também aprentou uma solução e quando Bernoulli teve conhecimento exclamou: "conheço o leão pela pata" (figura acima retirada da <a href="http://pt.wikipedia.org/wiki/Braquist%C3%B3crona">Wikipedia</a>).
+      </p>
+       
+      <div align="center">
+        <a href="javascript:newWin('figuras/Tautochrone_curve.gif', 'Zoom', '1250')">
+          <img src="figuras/Tautochrone_curve.gif" width="350" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Christian Huygens mostrou em 1673 que a ciclóide também é a solução ao Problema da Tautócrona: a curva descrita por uma partícula deslizando livremente sob a ação apenas da gravidade, atingindo o ponto de mínimo (o fundo da curva) no mesmo instante independente do ponto de partida na curva (figura acima retirada da <a href="http://pt.wikipedia.org/wiki/Curva_tautocr%C3%B4nica">Wikipedia</a>).
+      </p>
+       
+      <div align="center">
+        <a href="javascript:newWin('figuras/cicloide02.png', 'Zoom', '1250')">
+          <img src="figuras/cicloide02.png" width="450" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Seja $a$ o raio da circunferência da figura acima. Nessa figura vemos que quando a circunferência gira um ângulo $t$, o centro se desloca uma distância $\overline{OT}$, que corresponde ao segmento de arco $\overset{\frown}{TP}$, que por definição é dado pelo produto do raio com ângulo $at$, isto é
+        \[
+          \overline{OT}=\overline{PT}=at
+          \nonumber
+        \]
+        note que
+        \[
+          \begin{align*}
+          x =& \overline{OT} - \overline{PA}\\
+            =& at - a\sin\, t\\
+            =& a\left(t-  \sin\, t\right)
+          \end{align*}
+        \]
+        igualmente
+        \[
+          \begin{align*}
+            y =& \overline{AT} \\
+              =& \overline{TC} - \overline{AC}\\
+              =& at - a\cos\, t\\
+            =& a\left(t-  \cos\, t\right)
+          \end{align*}
+        \]
+        dessa forma o vetor que descreve os pontos sobre o ciclóide está dado por
+        \[
+          \mathbf{r}(t) =  a\left(t-  \sin\, t\right) \,\mathbf{i} + a\left(t-  \cos\, t\right) \,\mathbf{j}
+          \label{cicloide}
+        \]
+      </p>
+      
+      <h4>Parametrização de uma hipociclóide</h4>
+       
+      <div align="center">
+        <a href="javascript:newWin('figuras/Deltoid2.gif', 'Zoom', '1250')">
+          <img src="figuras/Deltoid2.gif" width="350" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Se a trajetória seguida pela circunferência é outra circunferência de a figura resultante é um hipociclóide
+      </p>
+       
+      <div align="center">
+        <a href="javascript:newWin('figuras/hipocicloide.png', 'Zoom', '1250')">
+          <img src="figuras/hipocicloide.png" width="700" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        A partir da figura acima temos
+        \[
+          \begin{align*}
+          x =& \overline{OQ}\\
+            =& \overline{OB} + \overline{QB}\\
+            =& \overline{OB} + \overline{O_2M}
+          \end{align*}
+        \]
+        \[
+          \begin{align*}
+          y =& \overline{OT}\\
+            =& \overline{OD} - \overline{TD}\\
+            =& \overline{OD} - \overline{O_2N}
+          \end{align*}
+        \]
+        visto desde $O$, $O_2$ descreve uma circunferência de raio $b -a$, assim
+        \[
+          \overline{OB} = \left(b-a \right)\cos\, t
+          \nonumber
+        \]
+        
+        \[
+          \overline{OD} = \left(b-a \right)\sin\, t
+          \nonumber
+        \]
+        se $\alpha$ o ângulo entre $\overline{O_2A}$ e $\overline{O_2P}$, temos
+        \[
+          \begin{align*}
+            \widehat {NO_{2}P}&= \pi -\left[ \alpha +\dfrac {\pi } {2}-t\right]\\
+            &=\dfrac {\pi } {2}+\left( t-\alpha \right)
+          \end{align*}       
+        \]
+        Assim, no triangulo rectangulo $PNO_2$:
+        \[
+          \begin{align*}
+             \overline{O_2M} =& b \sin \, \left(\widehat {NO_{2}P} \right)\\
+              =& b\sin \, \left[ \dfrac {\pi } {2}+\left( t-\alpha \right) \right]\\
+              =& b\cos \, \left( t-\alpha \right)
+          \end{align*}       
+        \]        
+        
+        \[
+          \begin{align*}
+             \overline{O_2N} =& b \cos \, \left(\widehat {NO_{2}P} \right)\\
+              =& b\cos \, \left[ \dfrac {\pi } {2}+\left( t-\alpha \right) \right]\\
+              =& b\sin \, \left( t-\alpha \right)
+          \end{align*}       
+        \]
+        Uma relação importante é que o arco descrito por $\alpha$ e $t$ são os mesmos
+        \[
+          \begin{align*}
+            b\alpha =& a\,t
+            \alpha &= \dfrac{a}{b}t
+          \end{align*}       
+        \]
+        Assim
+        \[
+          \widehat {O_{2}M} = b\cos \left[ \dfrac {a-b} {b}t\right]
+          \nonumber
+        \]
+        \[
+          \widehat {O_{2}N} = b\sin \left[ \dfrac {a-b} {b}t\right]
+          \nonumber
+        \]
+        de forma que
+        \[
+          \begin{align*}
+          x =& \overline{OB} + \overline{O_2M}\\
+            =& \left(b-a \right)\cos\, t + b\cos \left[ \dfrac {a-b} {b}t\right]
+          \end{align*} 
+        \]
+        
+        \[
+          \begin{align*}
+          y =& \overline{OD} - \overline{O_2N}\\
+            =& \left(b-a \right)\sin\, t - b\sin \left[ \dfrac {a-b} {b}t\right]
+          \end{align*} 
+        \]
+        de forma que a função vetorial que descreve a hipociclóide está dada por
+        \[
+          \begin{align}
+            \mathbf{r}(t) =&  \left\{ \left(b-a \right)\cos\, t + b\cos \left[ \dfrac {a-b} {b}t\right] \right\} \,\mathbf{i} +\nonumber\\
+            &\left\{ \left(b-a \right)\sin\, t - b\sin \left[ \dfrac {a-b} {b}t\right] \right\} \,\mathbf{j}
+          \label{hipocicloide}
+          \end{align}
+        \]
+      </p>
+      
+      <p>
+        Aos pontos de contato da trajetória com a circunferência externa chamamos de <b>cúpside</b>. Para termos uma cúspide de se verificar
+        \[
+          at = n\,2\pi b\;\;\;\;\;n=0,\, 1,\, 2,\, \ldots
+          \nonumber
+        \]
+        de onde
+        \[
+          t=2\pi n\dfrac {b} {a}
+        \]
+      </p>
+      
+      <p>
+        Um caso particular é a hipociclóide de 4 cúspides, ela acontece quando $t=2\pi$, assim
+        \[
+          \begin{align*}
+            2\pi =& 8\pi \dfrac {b} {a}\\
+            b    = \pi \dfrac {a} {4}            
+          \end{align*}
+        \]
+        para esse caso, a equação $\ref{hipocicloide}$ reduz para
+        \[
+          \begin{align*}
+            x =&  \dfrac {a} {4}\left( 3\cos t+\cos 3t\right)\\
+            y =&  \dfrac {a} {4}\left( 3\sin t-\sin 3t\right)
+          \end{align*}          
+        \]
+        como
+        \[
+          \begin{align*}
+            1 - \cos \theta =& 2\cos^2 \dfrac{\theta}{2}\\
+            1 - \cos 2\theta =& 2\cos^2 \theta\\
+            \left( 1 - \cos 2\theta \right) \cos \theta =& 2\cos^3 \theta\\
+            \cos \theta - \cos 2\theta \cos \theta =& 2\cos^3 \theta
+          \end{align*}
+        \]
+        da mesma forma sabemos
+        \[
+          \cos x\cos y=\dfrac {1} {z}\left[ \cos \left( x-y\right)+ \cos \left( x+y\right) \right]
+          \nonumber
+        \]
+        aplicando este resultado na equação anterior obtemos que ($2\cos ^{2}x=1+\cos 2x$)
+        \[
+          \begin{align*}
+            \cos 2\theta \cos \theta =&\dfrac {1} {2}\left[ \cos \theta +\cos 3\theta \right]\\
+             \left(2\cos ^{2}x - 1 \right) \cos \theta =&\dfrac {1} {2}\left[ \cos \theta +\cos 3\theta \right]\\
+            2\cos \theta +\cos \theta +\cos 3\theta =&4\cos^3 \theta\\
+            3\cos \theta +\cos 3\theta =&4\cos^3 \theta
+          \end{align*}
+        \]
+        como $\theta = \alpha + \dfrac{\pi}{2}$, então
+        \[
+          \begin{align*}
+              \cos \theta =& \cos \left( \alpha +\dfrac {\pi } {2}\right)\\ 
+              &=-\sin \alpha\\
+              \cos 3\theta =& \cos \left( 3\alpha +\dfrac {3\pi } {2}\right)\\
+              =& \sin 3\alpha\\
+              \cos ^{3}\left( x+\dfrac {\pi } {2}\right) =& -\sin ^3\alpha
+          \end{align*}
+        \]
+        de forma que
+        \[
+          -3\sin \alpha +\sin 3\alpha =-4\sin ^{3}\alpha
+          \nonumber
+        \]
+        pelo que podemos escrever        
+        \[
+          \begin{align*}
+            x =& a\cos ^3\,t\\
+            y =& a\sin ^3\,t
+          \end{align*}
+        \]
+        de onde
+        \[
+          \begin{align*}
+            \left( \dfrac {x} {a}\right) ^{1 / 3}=\cos t
+            \left( \dfrac {y} {a}\right) ^{1 / 3}=\sin t
+          \end{align*}
+        \]
+        elevando as equações ao quadrado
+        \[
+          \begin{align*}
+            \left( \dfrac {x} {a}\right) ^{2 / 3}=\cos^2 t
+            \left( \dfrac {y} {a}\right) ^{2 / 3}=\sin^2 t
+          \end{align*}
+        \]
+         e somando, obtemos
+         \[
+          \begin{align*}
+            \left( \dfrac {x} {a}\right) ^{2 / 3} + \left( \dfrac {y} {a}\right) ^{2 / 3} =&1\\
+            x^{2/3} + y^{2/3} = & a^{2/3}
+          \end{align*}
+         \]
+      </p>
+      
+      <h4>Parametrização de outras curvas</h4>
+      
+      <p>
+        Como mencionado no inicio, as funções vetoriais permitem expressar diferentes tipos de curvas, em especial as curvas que resultam de interseções de superfícies, vejamos alguns exemplos de curvas que são parametrizadas utilizando funções vetoriais
+      </p>
+      
+      <h5>exemplo 01</h5>
+      <p>
+        Escreva a equação vetorial para $y=5x+3$ no plano $z=2$.
+      </p>
+      
+      <h5>exemplo 02</h5>
+      <p>
+        A interseção da superfície $z=x^2+y^2$ e $z=2+y$ determina uma curva, encontre a equação vetorial dessa curva.
+      </p>
+      
+      <h5>Exemplo 03</h5>
+      <p>
+        Representar parametricamente a curva dada pela interseção das superfícies $x+y=2$ e $x^2+y^2+z^2=2(x+y)$
+      </p>
+      
+      <h5>Exemplo 04</h5>
+      <p>
+        Esboce a curva obtida pela interseção do semi elipsoide 
+        \[
+          \dfrac {x^{2}} {12}+\dfrac {y^{2}} {24}+\dfrac {z^{2}} {4}=1,\;\;\;\;z\geq 0
+          \nonumber
+        \]
+        e o cilindro parabólico $\displaystyle y=x^2$. Encontre a função vetorial que descreve a curva
+      </p>
+      
+      <h5>Exemplo 05</h5>
+      <p>
+        Parametrize a curva resultante da interseção do plano $x+2y+4z=4$ e o cilindro elítico $x^2 + 4y^2=4$
+      </p>
+      
+      <p>
+        <a href="exemplos_repParametrica.html"><font color="#FFF7F1">Exemplos</font></a>
+      </p>
+            
+      </div>
+      <!-- Fim Principal   -->
+    </div>
+    <!-- Fim todo   -->
+  </body>
+  
+  <!--
+      <h5>Exemplo</h5>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      \mathbb{R}
+      
+      \left< \right>    \left( \right)
+ 
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k} 
+      
+
+      \[
+        \begin{align*}
+        \end{align*}
+      \]
+         
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      
+      <h4>Exemplo</h4>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      -->
+
+</html>

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/main.js' type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+      MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+        extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+        TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+        }
+      });
+    </script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="cabezado">
+        <h1>Calculo III</h1>
+      </div>
+
+      <div>
+        <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+      </div>
+
+      <div>
+        <ul id="indice">
+          <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+          <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+          <li> <a href="../../../../listas.html"> Lista </a></li>
+          <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+          <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+          <li> <a href="../../../../outro.html"> Outros </a> </li>
+          <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+        </ul>
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h3>Derivada direcional</h3>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig35.png', 'Zoom', '650')">
+          <img src="figuras/fig35.png" width="250" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        <b><font color="#FF99FF">Teorema</font></b>
+        <em>
+          Se $f$ é uma função diferenciável de $x$ e $y$, então a derivada direcional de $f$ na direção de $\mathbf{u} =\cos \theta \,\mathbf{i}  + \sin \theta \,\mathbf{j}$ é
+          \[
+            D_{\mathbf{u}} = f_x(x,y) \cos \theta + f_y(x,y) \sin \theta
+            \nonumber
+          \]
+        </em>
+        Dessa definição observamos que a derivada direcional pode ser escrita:
+        \[
+          \begin{align*}
+            D_{\mathbf{u}} =& f_x(x,y) \cos \theta + f_y(x,y) \sin \theta\\
+            =& \left[\cos \theta \,\mathbf{i} +  \sin \theta \,\mathbf{j}  \right] \cdot \left[ f_x(x,y) \,\mathbf{i} + f_y(x,y) \,\mathbf{j} \right]\\
+            =& \mathbf{u} \cdot  \mathbf{\nabla} f
+          \end{align*}
+        \]
+        a partir deste resultado damos a seguente definição
+      </p>
+      <h3>Gradiente</h3>
+      <p>
+        <b><font color="#6666FF">Definição: </font></b>
+        <em>
+          Se $f$ é uma função de 2 variáveis $x$ e $y$ e $f_x(x,y)$ e $f_y(x,y)$ existen, então o gradiente de $f$, denotado por $\mathbf{\nabla} f$ (le-se "del f" ou "grad f") está definido  por
+          \[
+            \mathbf{\nabla} f = \dfrac{\partial f}{\partial x} \,\mathbf{i} + \dfrac{\partial f}{\partial y} \,\mathbf{j}
+            \nonumber
+          \]
+        </em>
+        De posse dessa definição podemos reescrever a derivada direcional como
+        \[
+          D_{\mathbf{u}} = \mathbf{u} \cdot \mathbf{\nabla} f
+          \nonumber
+        \]
+      </p>
+      
+      <h5>Exemplos</h5>
+      <p>
+        \[
+          f(x,y) = \dfrac{x^2}{10} - \dfrac{y^2}{9}
+          \nonumber
+        \]
+        (a) Determine o gradiente de $f$ em $R = (4,3)$. Utilize o gradiente para calcular a derivada direcional de $R$ na direção de $R$ para $Q=(5,6)$
+       <br><b>SOL.</b><br />
+       a)
+       \[
+          \begin{align*}
+            \mathbf{\nabla} f =& f_x \,\mathbf{i} + f_y \,\mathbf{j}\\
+            =& \dfrac{x}{8}\,\mathbf{i} + \dfrac{2y}{9}\,\mathbf{j}
+          \end{align*}
+       \]
+       b) 
+       \[
+          \begin{align*}
+            \mathbf{v} =& (5-4) \,\mathbf{i} + (6-3)\,\mathbf{j}\\
+            =& \,\mathbf{i} + 3\,\mathbf{j}
+             &\\
+            \hat{v} = & \dfrac{\mathbf{v}}{|\mathbf{v}|}\\
+            =& \dfrac{\,\mathbf{i} + 3\,\mathbf{j}}{\sqrt{10}}\\
+            &\\
+            D_{\mathbf{u}}f(x,y) =& \left( \dfrac{1}{\sqrt{10}}\,\mathbf{i} + \dfrac{3}{\sqrt{10}}\,\mathbf{j} \right)\cdot \left( \dfrac{x}{8}\,\mathbf{i} + \dfrac{2y}{9}\,\mathbf{j} \right)\\
+            =& \dfrac{x}{8\sqrt{10}} + \dfrac{2y}{3\sqrt{10}}\\
+            D_{\mathbf{u}}f(4,3) =& \dfrac{1}{2\sqrt{10}} + \dfrac{2}{\sqrt{10}}\\
+            \approx & 0.79
+          \end{align*}
+       \]
+      </p>
+      
+      <h4>Máximo e mínimo da derivada direcional</h4>
+      
+      <p>
+        <b><font color="#FF99FF">Teorema</font></b>
+        <em>
+          Seja $f$ uma função diferenciável no ponto  $(x,y)$.
+          <ol>
+            <li>
+              Se $\mathbf{\nabla} f = \mathbf{0}$, então $D_{\mathbf{u}}f(x,y)=0$, para todo $\mathbf{u}$.
+            </li>
+            <li>
+              A direção do máximo incremento de $f$ é dada por $\mathbf{\nabla} f$. O máximo valor de $D_{\mathbf{u}}f(x,y)$ é $\left| \mathbf{\nabla} f\right|$
+            </li>
+            <li>
+              A direção de mínimo incremento de $f$ está dada por $-\mathbf{\nabla} f$. O mínimo valor de de $D_{\mathbf{u}}f(x,y)$ é $-\left| \mathbf{\nabla} f\right|$
+            </li>
+          </ol>
+          
+          \[
+            D_{\mathbf{u}} = f_x(x,y) \cos \theta + f_y(x,y) \sin \theta
+            \nonumber
+          \]
+        </em>
+      </p>
+      
+      <p>
+        <b><font color="#FF9966">Demonstração: </font></b>
+        Se $\mathbf{\nabla} f = \mathbf{0}$, então para qualquer direção (qualquer $\mathbf{u}$) temos
+       \[
+          \begin{align*}
+            D_{\mathbf{u}}f(x,y) =& \mathbf{\nabla} f(x,y) \cdot \mathbf{u}\\
+            =& \left(0 \,\mathbf{i} +0  \,\mathbf{j}\right) \cdot \left(\cos \theta \,\mathbf{i} +  \sin \theta \,\mathbf{j}  \right)\\
+            \mathbf{0}
+          \end{align*}
+       \]
+      
+       Se $\mathbf{\nabla} f \neq \mathbf{0}$, seja $\phi$ o ângulo entre $\mathbf{\nabla} f(x,y)$ e $\mathbf{u}$, então, por definição
+       \[
+          \begin{align*}
+            D_{\mathbf{u}}f(x,y) =& \mathbf{\nabla} f(x,y) \cdot \mathbf{u}\\
+            =&  \left| \mathbf{\nabla} f(x,y) \right| \cdot \left|  \mathbf{u} \right| \cos \phi\\
+            =&  \left| \mathbf{\nabla} f(x,y) \right|\cos \phi
+          \end{align*}
+       \]
+       <div>
+         <a href="javascript:newWin('figuras/fig51.png', 'Zoom', '750')">
+          <img src="figuras/fig51.png" width="250" align="left"/>
+         </a>
+       </div>
+       disto vemos que o máximo de $D_{\mathbf{u}}f(x,y)$ acontece quando $\cos \phi = 1$, o que implica que $\phi = 0$, dessa forma vemos que o máximo valor da derivada direcional é obtida quando o gradiente tem a mesma direção que $\mathbf{u}$. Disto também vemos que o maior valor assumido pela derivada direcional $D_{\mathbf{u}}f(x,y)$ é precisamente
+       \[
+        \left|\mathbf{\nabla} f(x,y) \right|\cos \phi = \left|\mathbf{\nabla} f(x,y) \right|
+        \nonumber
+       \]
+       Isso pode ser entendido vendo a figura ao lado, note que o valor de $f(x,y)$, visto desde o plano $xy$, aumenta até atingir se máximo valor em $z=0$.
+      </p>
+      
+      <h5>Exemplo</h5>
+      <p>
+        A temperatura na superfície de um metal está dada por (em graus Celsius);
+        \[
+          f(x,y) = 20 - 4x^2 - y^2
+          \nonumber
+        \]
+        onde $x$ e $y$ estão medidos em centímetros. Em que direção no ponto $(2,-3)$ a temperatura aumenta mais rapidamente.  Qual é a taxa de incremento?
+       <br><b>SOL.</b><br />
+       
+       \[
+          \begin{align*}
+            \mathbf{\nabla}\,T(x,y) =& T_x(x,y) \,\mathbf{i} +T_y(x,y) \,\mathbf{j}\\
+            =& -8 x\,\mathbf{i} - 2y \,\mathbf{j}\\
+          \end{align*}
+       \]
+       assim, a direção de máximo incremento a partir do ponto $(2,-3)$ é
+       \[ 
+        \mathbf{\nabla}\,T(2,-3) = -16\,\mathbf{i} +6 \,\mathbf{j}
+        \nonumber
+       \]
+        esse vetor é mostrado na figura embaixo, a esquerda a figura da superfície e à direita as curvas de nível. A taxa de máximo incremento está dada por
+        \[  
+          \left|\mathbf{\nabla}\,T(2,-3) \right| = \sqrt{256 + 36} = \sqrt{292} \approx 17,09^\circ\mbox{ por centímetros}
+        \nonumber
+        \]
+      </p>
+      
+       <p>
+       <div align="center">
+         <a href="javascript:newWin('figuras/fig52.png', 'Zoom', '650')">
+          <img src="figuras/fig52.png" width="250" align="right"/>
+         </a>
+         <a href="javascript:newWin('figuras/fig52b.png', 'Zoom', '650')">
+          <img src="figuras/fig52b.png" width="450" align="left"/>
+         </a>
+       </div>
+       </p>
+       
+       <h5>Exemplo</h5>
+      
+      <p>
+        Uma partícula está localizada no ponto $(2,-3)$ sobre uma superfície metálica aquecida à temperatura dada por
+        \[
+          T(x,y) = 20 - 4x^2 - y^2
+          \nonumber
+        \]
+        Encontre o caminho que a partícula deve seguir a fim de atingir o ponto mais quente da superfície.
+       <br><b>SOL.</b><br />
+       
+       A posição da partícula em qualquer instante está dada pelo vetor
+       \[
+        \mathbf{r}(t) = x(T)\,\mathbf{i} + y(t) \,\mathbf{j}
+        \nonumber
+       \]
+       
+       Fisicamente sabemos que a direção do movimento está determinada pela direção da velocidade (em última instancia, é claro) a qual está dada por
+       
+       \[
+        \mathbf{r}'(t) = \dfrac{x}{dt}\,\mathbf{i} + \dfrac{y}{dt} \,\mathbf{j}
+        \nonumber
+       \]
+       
+       a partícula atingirá seu objetivo no instante em que a velocidade apontar para o ponto mais quente na superfície o qual estará dado pelo gradiente da função
+       \[
+        \mathbf{\nabla}\,T(x,y) =  -8 x\,\mathbf{i} - 2y \,\mathbf{j}
+        \nonumber
+       \]
+       
+       assim basta igualar ambos vetores, com a ressalva de que para poder acoplarlos colocaremos uma constante de proporcionalidade entre eles, a qual pode ser função do tempo:
+       \[
+        -8 x\,\mathbf{i} - 2y \,\mathbf{j} = k \left( \dfrac{x}{dt}\,\mathbf{i} + \dfrac{y}{dt} \,\mathbf{j} \right)
+        \nonumber
+       \]
+       
+       de onde
+       
+       \[
+          \begin{align*}
+            -8x =& k\dfrac{x}{dt}\\
+            2y  =& k\dfrac{y}{dt}
+          \end{align*}        
+       \]
+       
+       dessas duas equações escrevemos
+       
+       \[
+        \dfrac{dx}{-4x} = \dfrac{dy}{y}
+        \nonumber
+       \]
+       
+       integrando obtemos
+       
+       \[
+        x = \dfrac{1}{81} y^4
+        \nonumber
+       \]
+      </p>
+      
+      
+       <div align="right">
+         <a href="javascript:newWin('figuras/fig53.png', 'Zoom', '650')">
+          <img src="figuras/fig53.png" width="250" align="right"/>
+         </a>
+       </div>
+      
+      <h4>Normal</h4>
+      
+      <p>
+        <b><font color="#FF99FF">Teorema</font></b>
+        <em>
+          Se $f$ é uma função diferenciável no ponto  $(x_o, y_o)$ e $\mathbf{\nabla} f \neq \mathbf{0}$, então $\mathbf{\nabla} f(x_o, y_o)$ é normal à curva no ponto $(x_o, y_o)$.
+        </em>
+      </p>
+      
+      <p>
+        <b><font color="#FF9966">Demonstração: </font></b>
+        Vamos supor uma curva $S$ representada pela equação cartesiana $F(x,y)=k$. Seja $P(x_0,y_0)$ um ponto sobre $S$. Suponha que essa curva é parametrizada com o parâmetro $t$ e que o ponto $P(x_0,y_0)$ está determinado pelo vetor $\mathbf{r}(t_0) = x_0\,\mathbf{i} +  y_0\,\mathbf{j}$, isto é
+        \[
+          F\left(x(t),y(t)\right)=k
+          \nonumber
+        \]
+        se $x$ e $y$ são funções diferenciáveis, então é verdade que (regra da cadeia)
+        \[
+          \dfrac{\partial F}{\partial x}\dfrac{dx}{dt} + \dfrac{\partial F}{\partial y}\dfrac{dy}{dt} + \dfrac{\partial F}{\partial z}\dfrac{dz}{dt} = 0
+          \nonumber
+        \]
+        como
+        \[
+          \mathbf{\nabla} F(x,y) = \dfrac{\partial F}{\partial x} \,\mathbf{i} + \dfrac{\partial F}{\partial y} \,\mathbf{j}
+          \nonumber
+        \]
+        e
+        \[
+          \mathbf{r}'(t) = \dfrac{dx}{dt}\,\mathbf{i} +  \dfrac{dy}{dt}\,\mathbf{j}
+          \nonumber
+        \]
+        então
+        \[
+          \mathbf{\nabla} F(x,y) \cdot \mathbf{r}'(t) = 0
+          \nonumber
+        \]
+        particularmente isto é verdade para
+        \[
+          \nonumber
+          \mathbf{\nabla} F(x_0,y_0) \cdot \mathbf{r}'(t_0) = 0
+        \]
+      </p>
+      
+       <div align="right">
+         <a href="javascript:newWin('figuras/fig54.png', 'Zoom', '650')">
+          <img src="figuras/fig54.png" width="250" align="right"/>
+         </a>
+       </div>
+      
+      <h5>Exemplo</h5>
+      <p>
+        Esboce a curva de nível para $c=0$ da função dada por
+        \[
+          f(x,y) = y - \sin x
+          \nonumber
+        \]
+        e encontre os vetores normais em vários pontos da curva
+      
+       <div align="left">
+         <a href="javascript:newWin('figuras/fig55.png', 'Zoom', '650')">
+          <img src="figuras/fig55.png" width="250" align="left"/>
+         </a>
+       </div>
+       <br><b>SOL.</b><br />
+       A curva em $c=0$ está dada por
+       \[
+         \begin{align*}
+           0 =& y - \sin x\\
+           y =& \sin x
+         \end{align*}
+       \]
+       Como mostra a figura à esquerda. O gradiente de $f$ em $(x,y)$ está dado por
+       \[
+         \begin{align*}
+           \mathbf{\nabla} f(x,y) =& f_x(x,y)\,\mathbf{i} + f_y(x,y)  \,\mathbf{j}\\
+            =& -\cos x\,\mathbf{i} + \,\mathbf{j}
+         \end{align*}
+       \]      
+       do teorema anterior sabemos que $\mathbf{\nabla} f(x,y)$ é normal à curva em quamquer ponto $(x,y)$. Alguns valores do gradiente são: 
+       \[
+         \begin{align*}
+           \mathbf{\nabla} f\left(-\pi,0\right) =& \,\mathbf{i} + \,\mathbf{j}\\
+           \mathbf{\nabla} f\left(-\dfrac{2\pi}{3},-\dfrac{\sqrt{3}}{2}\right) =& -\dfrac{1}{2}\,\mathbf{i} + \,\mathbf{j}\\
+           \mathbf{\nabla} f\left(-\dfrac{\pi}{2},-1\right) =&  \,\mathbf{j}\\
+           \mathbf{\nabla} f\left(-\dfrac{\pi}{3},\dfrac{\sqrt{3}}{2}\right) =& -\dfrac{1}{2}\,\mathbf{i} + \,\mathbf{j}\\
+           \mathbf{\nabla} f\left(0,0\right) =& -\,\mathbf{i} + \,\mathbf{j}\\
+           \mathbf{\nabla} f\left(-\dfrac{\pi}{3},\dfrac{\sqrt{3}}{2}\right) =& \,-\dfrac{1}{2}\mathbf{i} + \,\mathbf{j}\\
+           \mathbf{\nabla} f\left(\dfrac{\pi}{2},1\right) =&  \,\mathbf{j}
+         \end{align*}
+       \]
+      </p>
+      
+      <h4>Funções de 3 variáveis</h4>
+      
+      <p>
+        Todo o dito até aqui referente as funções de duas variáveis pode ser estendido de forma natural para funções de 3 ou mais variáveis. O problema maior é que a interpretação da derivada direcional perde o sentido nesses casos, então vamos a fazer a extensão:
+      </p>
+      
+      <p>
+      <em>
+        Sea $f$ uma função de $x$, $y$, $z$, com primeiras derivadas parciais contínuas. A derivada direcional de $f$ na direção do vetor unitário $\mathbf{u} = a\,\mathbf{i}  +b \,\mathbf{j} + c \,\mathbf{k}$ está dada por
+        \[
+          D_\mathbf{u}(x,y,z) =  af_x(x,y,z) + bf_y(x,y,z) + cf_z(x,y,z)
+          \nonumber
+        \]
+        o gradiente de $f$ está definido por
+        \[
+          \mathbf{\nabla} f (x,y,z) =  f_x(x,y,z)\,\mathbf{i} + f_y(x,y,z\,\mathbf{j}) + f_z(x,y,z\,\mathbf{k})
+          \nonumber
+        \]
+        As propriedades do gradiente são as seguintes
+        <ol>
+          <li>
+            $D_\mathbf{u}(x,y,z) = \mathbf{\nabla} f (x,y,z) \cdot \mathbf{u}$
+          </li>
+          <li>
+            $\mathbf{\nabla} f(x,y,z) = \mathbf{0}\;\Rightarrow\;\mathbf{\nabla} f (x,y,z) \cdot \mathbf{u}\;\;\forall \mathbf{u}$
+          </li>
+          <li>
+            A direção do máximo de $f$ está dado por $\mathbf{\nabla} f(x,y,z)$. O máximo valor de $D_\mathbf{u}(x,y,z)$  é $\left| \mathbf{\nabla} f(x,y,z) \right|$.
+          </li>
+          <li>
+            A direção do mínimo de $f$ está dado por $-\mathbf{\nabla} f(x,y,z)$. O mínimo valor de $D_\mathbf{u}(x,y,z)$  é $-\left| \mathbf{\nabla} f(x,y,z) \right|$.
+          </li>
+        </ol>
+      </em>
+      </p>
+      
+      
+       <h4>Calculo da tangente num ponto da curva</h4>
+       <p>
+        a partir do gradiente podemos calcular a tangente num ponto de qualquer curva, para isso analisemos a seguente figura
+       </p>       
+       
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig57.png', 'Zoom', '650')">
+          <img src="figuras/fig58.png" width="350" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Seja o vetor em vermelho o resultante do gradiente da função escalar. Da figura é claro que
+        \[
+          \mathbf{\nabla}\,f(P_0)\cdot\left( \mathbf{r} - \mathbf{r_0} \right) = \mathbf{0}
+          \nonumber
+        \]
+        se $\mathbf{r} - \mathbf{r_0}$ é perpendicular a $\mathbf{\nabla}\,f(P_0)$.
+      </p>
+      
+      <h5>Exemplos</h5>
+      <p>
+        Encontrar a equação da reta tangente à curva $x^2+y^2=4$ no ponto $\left( \sqrt{3}, 1 \right)$, utilizando o gradiente.
+        
+       <br><b>SOL.</b><br />
+       \[
+         \begin{align*}
+           \mathbf{\nabla}f =& 2x\,\mathbf{i}  + 2y\,\mathbf{j} \\
+           \mathbf{\nabla}f(x_0,y_0) \cdot \left( \mathbf{r} - \mathbf{r_0}\right) =&0\\
+           \left[2(\sqrt{3}) \,\mathbf{i} - 2(1)\,\mathbf{j}\right]  \cdot \left[\left( x - \sqrt{3}\right)\,\mathbf{i} + \left(y - 1\right)\,\mathbf{j} \right]=& 0\\
+           \left( 2\sqrt{3}x - 6\right) + 2y - 2 =& 0\\
+         \end{align*}
+       \]
+         de onde
+       \[
+          y = 4 - \sqrt{3}x 
+          \nonumber
+       \]
+      </p>
+       
+       <h4>Interpretação Física do gradiente</h4>
+      
+      <p>
+        Assim o gradiente de um campo escalar é um campo vetorial. Se $\phi$ for um campo escalar e $\mathbf{F}$ o campo vetorial definido por $\mathbf{F}=  \mathbf{\nabla} \phi$, então $\mathbf{F}$ será chamado de campo vetorial gradiente e $\phi$ será denominado função potencial para $\mathbf{F}$. Um campo vetorial gradiente também é chamado de campo conservativo e entenderemos o porque depois.
+      </p>       
+       
+      <div align="right">
+        <a href="javascript:newWin('figuras/fig59.png', 'Zoom', '650')">
+          <img src="figuras/fig59.png" width="250" align="right"/>
+        </a>
+      </div>
+      
+      <h5>Exemplos</h5>
+        Considere uma carga elétrica positiva $Q$, situada na origem de um plano $xy$, conforme a figura conforme a figura. Sabendo que as curvas equipotenciais são descritas por circunferências em torno da carga e tem valor dado por
+        \[
+          V = \dfrac{Q}{r},
+          \nonumber
+        \]
+        calcule o campo vetorial, $\mathbf{E}$, associado ao campo escalar.
+      <p>
+        
+       <br><b>SOL.</b><br />
+       O potencial medido sobre qualquer ponto de uma das linhas equipotenciais está dado por
+       \[
+          \begin{align*}
+            V =& \dfrac{Q}{r}\\
+              =& \dfrac{Q}{\sqrt{x^2 + y^2}}
+          \end{align*}        
+       \]
+       como o campo deriva do potencial, então podemos escrever
+       \[
+         \begin{align*}
+           \mathbf{E} =& \mathbf{\nabla} V(x,y)\\
+           =& V_x(x,y) \,\mathbf{i} + V_y(x,y) \,\mathbf{j}\\
+           =& \dfrac{\partial \;}{\partial x} \left( \dfrac{Q}{\sqrt{x^2 + y^2}} \right) \,\mathbf{i} + \dfrac{\partial \;}{\partial y} \left( \dfrac{Q}{\sqrt{x^2 + y^2}} \right) \,\mathbf{j}\\
+           =& \dfrac{Q}{\left(x^2 + y^2\right)^{3/2}} x\,\mathbf{i} +
+            \dfrac{Q}{\left(x^2 + y^2\right)^{3/2}} y\,\mathbf{j}\\
+           =& \dfrac{Q}{\left(x^2 + y^2\right)} \dfrac{x\,\mathbf{i} + y\,\mathbf{j}}{\sqrt{x^2 + y^2}}\\
+           =& \dfrac{Q}{r^2} \mathbf{\hat{r}}
+         \end{align*}
+       \]
+      </p>
+      
+      <h4>Interpretação geral do gradiente</h4>
+      
+      <p>
+       <div align="center" >
+         <a href="javascript:newWin('figuras/fig56.png', 'Zoom', '750')">
+          <img src="figuras/fig56.png" width="375" align="left"/>
+         </a>
+         <a href="javascript:newWin('figuras/fig57.png', 'Zoom', '750')">
+          <img src="figuras/fig57.png" width="330" align="right"/>
+         </a>
+       </div>
+       <br />
+      </p>
+      
+      <p>
+        Quando trabalhamos com funções de duas variáveis, o gradiente sempre vai indicar a direção do máximo (ou mínimo), assim se nos traçamos uma projeção da figura no plano poderemos indicar em que direção as linhas de contorno aumentam, como mostrado nas figuras acima
+      </p>
+      
+      <h3>Divergência</h3>
+      
+      <p>
+        Seja $\mathbf{F}:X\subseteq \mathbb{R}^3 \to \mathbb{R}^3$ um campo vetorial diferenciável. A divergência de $\mathbf{F}$, denotada por $div\,\mathbf{F}$ ou $\mathbf{\nabla}\cdot \mathbf{F}$ é o campo escalar definido por
+        \[
+          div\,\mathbf{F}=\mathbf{\nabla}\cdot \mathbf{F}= \dfrac{\partial F_x}{\partial x} + \dfrac{\partial F_y}{\partial y} + \dfrac{\partial Fz}{\partial z}
+          \nonumber
+        \]
+        onde $F_x, \, F_y\, F_z$ são as componente cartesianas de $\mathbf{F}$.
+      </p>
+      
+      <h5>Exemplo</h5>
+      <p>
+        Se $\mathbf{F}= x^2y\,\mathbf{i} + xz \,\mathbf{j} +xyz \,\mathbf{k}$, calcule a divergência do campo.
+       <br><b>SOL.</b><br />
+       \[
+         \begin{align*}
+           \mathbf{\nabla}\cdot \mathbf{F} =& \dfrac{\partial x^2y}{\partial x} + \dfrac{\partial xz}{\partial y} + \dfrac{\partial xyz}{\partial z}\\
+           =& 2xy +xy\\
+           =& 3xy
+         \end{align*}
+       \]
+      </p>
+      
+      <h4>Propriedades da divergência</h4>
+      <p>
+        Sejam 
+        \[\mathbf{f}(x,y,z) = f_1(x,y,z) \,\mathbf{i} +f_2(x,y,z) \,\mathbf{j} + f_3(x,y,z) \,\mathbf{k}\;\; e\\
+        \mathbf{g}(x,y,z) = g_1(x,y,z) \,\mathbf{i} +g_2(x,y,z) \,\mathbf{j} + g_3(x,y,z) \,\mathbf{k}
+        \nonumber
+        \]
+        funções vetoriais definidas num domínio  $D$. Suponhamos também que $div\,f$ e $div\,g$ existem, então:
+        <ol type="a">
+          <li>
+            $\mathbf{\nabla}\cdot\left( \mathbf{f} \pm \mathbf{g} \right)= \mathbf{\nabla}\cdot\mathbf{f} \pm \mathbf{\nabla}\cdot\mathbf{g}$
+          </li>
+          <li>
+            $\mathbf{\nabla}\cdot\left( h\mathbf{f} \right) = h\mathbf{\nabla}\cdot\mathbf{f}+\mathbf{f}\cdot \mathbf{\nabla} h$
+          </li>
+        </ol>
+      </p>
+<!--      
+        <b><font color="#FF9966">Demonstração: </font></b>
+        Se $\mathbf{\nabla} f = \mathbf{0}$, então para qualquer direção (qualquer $\mathbf{u}$) temos
+        
+       \[
+          \begin{align*}
+          \end{align*}
+       \]   
+      
+      <h4>Exemplo</h4>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      \left< \right>     \left(  \right)      \left| \right|
+      
+      \mathbb{R}
+      
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k} -->
+
+       <!--   
+      diva - 224
+      Larson - 964
+      thomas - 788
+      leithold - 1011
+      steward - 916
+      -->
+      
+      </div>
+      <!-- Fim Principal   -->
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html>
+

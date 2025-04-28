@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/main.js' type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+      MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+        extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+        TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+        }
+      });
+    </script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Calculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      
+      <h2>Exemplos sobre Divergência</h2>
+      
+      <h4>Exemplo 01</h4>
+      <p>
+        Os seguintes campos vetoriais representam a velocidade de fluxo de um gás no plano $xy$. Encontre a divergência de cada campo vetorial e interprete seu significado físico.
+      </p>
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/exemplo01.png', 'Zoom', '1650')">
+          <img src="figuras/exemplo01.png" width="550" align="center"/>
+        </a>
+      </div>
+      <p>        
+        <ul type="(a)">
+          <li>
+            Expansão uniforme ou compressão: $\displaystyle \mathbf{F}(x,y)  =cx\,\mathbf{i} + cy \,\mathbf{j}$
+          </li>
+          <li>
+            Rotação Uniforme: $\displaystyle \mathbf{F}(x,y) = -cy\,\mathbf{i} + cx \,\mathbf{j}$
+          </li>
+          <li>
+            escoamento em cisalhamento: $\displaystyle \mathbf{F}(x,y)=  y\,\mathbf{i}$
+          </li>
+          <li>
+            Efeito redemoinho: $\displaystyle \mathbf{F}(x,y) = \dfrac{-y}{x^2+y^2}\,\mathbf{i} + \dfrac{x}{x^2+y^2} \,\mathbf{j}$
+          </li>
+        </ul>
+      <br><b>SOL.</b><br />    
+        <ul type="(a)">
+          <li>
+            $\displaystyle \vec{\nabla}\;\mathbf{F}(x,y) = \dfrac{\partial (cx)}{\partial\,x} \,\mathbf{i} + \dfrac{\partial (cy)}{\partial\,y} \,\mathbf{j} = 2c$; Se $c>0$, o gás está realizando uma expansão uniforme, se $c<0$ o gás está realizando uma compressão.  
+          </li>
+          
+          <li>
+            $\displaystyle \vec{\nabla}\;\mathbf{F}(x,y) = \dfrac{\partial \;\;}{\partial\,x} \left( -cy \right)  \,\mathbf{i} + \dfrac{\partial \;\;}{\partial\,y} \left( cx \right) \,\mathbf{j}=0$. O gás nem se expande nem se comprime. Assim o gás é um fluído incompressível.
+          </li>
+          
+          <li>
+            $\displaystyle \vec{\nabla}\;\mathbf{F}(x,y) = \dfrac{\partial\;\; }{\partial\,x} \left( y \right) \,\mathbf{i} = 0$. O gás nem se expande nem se comprime. Assim o gás é um fluído incompressível.
+          </li>
+          
+          <li>
+            $\displaystyle \vec{\nabla}\;\mathbf{F}(x,y) = \dfrac{\partial \;}{\partial\,x} \left( \dfrac{x}{x^2+y^2} \right)\,\mathbf{i} + \dfrac{\partial \;}{\partial\,y} \left( \dfrac{-y}{x^2+y^2} \right)\,\mathbf{j} = \dfrac{2xy}{x^2+y^2}-\dfrac{2xy}{x^2+y^2}=0$. Novamente, a divergência é zero em todos o domínio do campo de velocidades o que implica que o gás nem se expande nem se comprime. Assim o gás é um fluído incompressível.
+          </li>
+        </ul>
+      </p>
+      
+      <h4>Exemplo 02</h4>
+      <p>
+        Desenhe e calcule a divergência do campo $\mathbf{F}(x,y) = x \,\mathbf{i} -y \,\mathbf{j}$
+       <br><b>SOL.</b><br />
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/exemplo02.png', 'Zoom', '1650')">
+          <img src="figuras/exemplo02.png" width="350" align="center"/>
+        </a>
+      </div>
+        
+      \[
+        \vec{\nabla}\;\mathbf{F}(x,y) = \dfrac{\partial \;\; }{\partial\,x} \left( x \right)\,\mathbf{i} + \dfrac{\partial \;\; }{\partial\,y} \left( -y \right)\,\mathbf{j} =0
+        \nonumber
+      \]
+      
+        Neste problema é interessante que os vetores tem o mesmo módulo que aqueles descritos pela equação do item 1.b., $\sqrt{x^2+y^2}$        
+      </p>
+      
+      
+      <h4>Exemplo 03</h4>
+        Se $\displaystyle \mathbf{F} = x^2y \,\mathbf{i} + xz \,\mathbf{j} +  xyz \,\mathbf{k}$, calcule a divergência.
+      <p>
+       <br><b>SOL.</b><br />
+        \[
+          \begin{array}{rcl}
+            \vec{\nabla} \cdot \mathbf{F} &=& \left( \dfrac{\partial\;\;}{\partial\,x} \,\mathbf{i} + \dfrac{\partial\;\;}{\partial\,y} \,\mathbf{j} +\dfrac{\partial\;\;}{\partial\,z} \,\mathbf{k} \right) \cdot \left( x^2y \,\mathbf{i} + xz \,\mathbf{j} +  xyz \,\mathbf{k} \right)\\
+            &=& \dfrac{\partial\;\;}{\partial\,x} \left( x^2y \right) + \dfrac{\partial\;\;}{\partial\,y} \left( xz \right) + \dfrac{\partial\;\;}{\partial\,z} \left( xyz \right)\\
+            &=& 2xy + xy\\
+            &=& 3xy
+          \end{array}
+          \nonumber
+        \]
+      </p>
+      
+      <h4>Exemplo 04</h4>
+      <p>
+        Um campo de escoamento compressível é dado por
+        \[
+          u = \rho\,\mathbf{v} = 2xe^{-t}\,\mathbf{i} -xye^{-t} \,\mathbf{j}
+          \nonumber
+        \]
+        onde $x$ e $y$ são medidas em metros, $t$ em segundos, $\rho$ e $\mathbf{v}$ estão em $kg/m^3$ e $m/s$, respetivamente. Calcular a taxa de variação da densidade no ponto $P=(3,2,2)$ para $t=0$.
+       <br><b>SOL.</b><br />
+        \[
+          \begin{array}{rcl}
+            \vec{\nabla} \cdot \mathbf{u} + \dfrac{\partial \rho}{\partial t} &=& 0\\
+            \dfrac{\partial \rho}{\partial t} &=& - \nabla \cdot \mathbf{u}\\
+            \dfrac{\partial \rho}{\partial t} &=& \left( \dfrac{\partial\;\;}{\partial\,x} \,\mathbf{i} + \dfrac{\partial\;\;}{\partial\,y} \,\mathbf{j} \right) \cdot \left( 2xe^{-t}\,\mathbf{i} -xye^{-t} \,\mathbf{j} \right)\\
+            &=& \dfrac{\partial\;\;}{\partial\,x} \left(  2xe^{-t} \right) - \dfrac{\partial\;\;}{\partial\,y} \left( xye^{-t} \right) \\
+            &=& 2e^{-t}-xe^{-t}\\
+          \end{array}
+          \nonumber
+        \]
+        Por tanto, a taxa de variação da densidade no ponto para o ponto $P=(3,2,2)$ em $t=0$
+        \[
+          \dfrac{\partial \rho}{\partial t} = 2-3=-1\dfrac{kg}{m^3\,s}
+          \nonumber
+        \]
+      </p>
+      
+      
+      <h4>Exemplo 05</h4>
+      <p>
+        Para um escoamento no plano $xy$, a componente $y$ da velocidade é dado por $v_y = y^2-2x+2y$, determine uma possível componente em $x$ para um escoamento incompressível
+      <br><b>SOL.</b><br />
+      
+        Sabemos que para que um escoamento seja incompressível é necessário
+        que a divergência do campo seja nula, assim
+        
+        \[
+          \begin{align*}
+            \vec{\nabla}\cdot\vec{v}= & \left(\dfrac{\partial\;}{\partial x}\,\mathbf{i}+\dfrac{\partial\;}{\partial y}\,\mathbf{j}\right)\cdot\left[v_{x}\,\mathbf{i}+\left(y^{2}-2x+2y\right)\,\mathbf{j}\right]\\
+            0= & \dfrac{\partial\;}{\partial x}v_{x}+\dfrac{\partial\;}{\partial y}\left(y^{2}-2x+2y\right)\\
+            0= & \dfrac{\partial v_{x}}{\partial x}+2y+2\\
+            \dfrac{\partial v_{x}}{\partial x}= & -2y-2
+          \end{align*}
+        \]
+        pelo I teorema fundamental do cálculo
+        
+        \[
+          \begin{align*}
+            v_{x}= & \int\left(-2y-2\right)\, dx\\
+            = & -2yx-2x+C_{1}(y)
+          \end{align*}
+        \]
+        
+        onde $C_{1}(y)$ é uma contante que pode depender de $y$ (é constante em relação à $x$), note que se derivamos a última expressão em relação a $x$ reobtemos a expressão original. 
+      </p>
+      
+      <h4>Exemplo 06</h4>
+      <p>
+        Verificar que as seguintes equações são harmônicas
+        \[
+          \begin{align*}
+            f(x,y,z) =& x^2y+e^y-z\\
+            g(x,y,z) =& 2xy + yz
+          \end{align*}
+        \]
+       <br><b>SOL.</b><br />
+       Primeiro calculamos o gradiente do campo escalar
+        \[
+          \begin{align*}
+            \vec{\nabla}\;f =& \left( \dfrac{\partial\;\;}{\partial\,x} \,\mathbf{i} + \dfrac{\partial\;\;}{\partial\,y} \,\mathbf{j} + \dfrac{\partial\;\;}{\partial\,z} \,\mathbf{k} \right) f(x,y,z)\\
+            =& \dfrac{\partial f}{\partial\,x} \,\mathbf{i} + \dfrac{\partial f}{\partial\,y} \,\mathbf{j} +\dfrac{\partial f}{\partial\,z} \,\mathbf{k}\\
+            =& 2xy\,\mathbf{i} +  \left( x^2 + e^y \right) \,\mathbf{j} - \,\mathbf{k}
+          \end{align*}
+        \]
+        e a continuação a divergência desse gradiente
+        \[
+          \begin{align*}
+          \nabla ^2\,f=& \vec{\nabla} \cdot \vec{\nabla}\;f\\
+           =& \left( \dfrac{\partial\;\;}{\partial\,x} \,\mathbf{i} + \dfrac{\partial\;\;}{\partial\,y} \,\mathbf{j} + \dfrac{\partial\;\;}{\partial\,z} \,\mathbf{k} \right) \cdot \left( 2xy\,\mathbf{i} +  \left( x^2 + e^y \right) \,\mathbf{j} - \,\mathbf{k} \right)\\
+           =&\dfrac{\partial\;\;}{\partial\,x} \left( 2xy \right)+ \dfrac{\partial\;\;}{\partial\,y} \left( x^2 + e^y \right)+ \dfrac{\partial\;\;}{\partial\,z}\left( -1 \right)\\
+           =& 2y+e^y \neq 0
+          \end{align*}
+        \]
+        por tanto o campo não é harmônico.  Similarmente para o caso do outro campo calculamos o gradiente
+        \[
+          \begin{align*}
+            \vec{\nabla}\;g =& \left( \dfrac{\partial\;\;}{\partial\,x} \,\mathbf{i} + \dfrac{\partial\;\;}{\partial\,y} \,\mathbf{j} + \dfrac{\partial\;\;}{\partial\,z} \,\mathbf{k} \right) g(x,y,z)\\
+            =& \dfrac{\partial g}{\partial\,x} \,\mathbf{i} + \dfrac{\partial g}{\partial\,y} \,\mathbf{j} +\dfrac{\partial g}{\partial\,z} \,\mathbf{k}\\
+            =& 2y\,\mathbf{i} +  \left( 2x+z \right) \,\mathbf{j} +y \,\mathbf{k}
+          \end{align*}
+        \]
+        e a continuação a divergência desse gradiente
+        \[
+          \begin{align*}
+          \nabla ^2\,g=& \vec{\nabla} \cdot \vec{\nabla}\;g\\
+           =& \left( \dfrac{\partial\;\;}{\partial\,x} \,\mathbf{i} + \dfrac{\partial\;\;}{\partial\,y} \,\mathbf{j} + \dfrac{\partial\;\;}{\partial\,z} \,\mathbf{k} \right) \cdot \left( 2y\,\mathbf{i} +  \left( 2x+z \right) \,\mathbf{j} +y \,\mathbf{k} \right)\\
+           =&\dfrac{\partial\;\;}{\partial\,x} \left( 2y \right)+ \dfrac{\partial\;\;}{\partial\,y} \left( 2x+z \right)+ \dfrac{\partial\;\;}{\partial\,z}\left( y \right)\\
+           =& 0
+          \end{align*}
+        \]
+        o qual significa que o campo é harmônico.
+      </p>
+
+<!--      
+        <b><font color="#FF9966">Demonstração: </font></b>
+        Se $\mathbf{\nabla} f = \mathbf{0}$, então para qualquer direção (qualquer $\mathbf{\hat{u}}$) temos
+        
+       \[
+          \begin{align*}
+          \end{align*}
+       \]   
+      
+      <h4>Exemplo</h4>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      \left< \right>     \left(  \right)      \left| \right|
+      
+      \mathbb{R}
+      
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k}   \left(  \right) 
+         
+      \vec{\nabla}\;\mathbf{F}(x,y) = \dfrac{\partial\;\;}{\partial\,x} \,\mathbf{i} + \dfrac{\partial\;\;}{\partial\,y} \,\mathbf{j}
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      -->
+      
+      </div>
+      <!-- Fim Principal   -->
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html> 
+ 

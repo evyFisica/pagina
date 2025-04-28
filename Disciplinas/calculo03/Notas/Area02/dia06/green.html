@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/main.js' type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax_new/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Calculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h2>O teorema de Green</h2>
+      
+      <p>
+        Este teorema é o primeiro de três teoremas (relacionados) que amaram o cálculo vetorial diferencia e o cálculo vetorial integral. Além da sua importância intrínseca à matemática, especificamente à topologia, eles são teoremas fundamentais a serem utilizados em aplicações física, por exemplo, o teorema de Green, descoberto em 1828, aparece na  teoria de potenciais (aqui se incluí os potenciais gravitacionais e elétricos); o teorema de Gauss-Ostrogradsky (ou teorema da divergência), aparece no estudo de capilaridade; o teorema de Stokes aparece na dinâmica dos fluídos e eletromagnetismo.
+      </p>
+      
+      <p>
+        Antes de entrar nas especifidades do teorema devo mencionar que este teorema é uma generalização do II teorema fundamental do cálculo.  O II teorema fundamental do cálculo afirma
+        \[
+          \int_a^b \dfrac{\;}{dx}\,f(x)\,dx = f(b) - f(a)
+          \nonumber
+        \]
+        que a integral da derivada de uma função de uma variável, calculada num intervalo $[a,\,b]$, está dada pela diferença dos valores que a função assume na fronteira do intervalo de integração.
+      </p>
+      
+      <p>
+        Similarmente vimos que a <a href="../../Area01/dia09/intlinhavec.html#ilcconserva">integral de linha de um campo vetorial, para o caso de um campo conservativo</a>, também é uma outra expressão similar ao teorema fundamental do cálculo, para esses casos se obtém que
+        \[
+          \int_C \mathbf{F}\cdot d\mathbf{s} = f(B) - f(A)
+          \nonumber
+        \]
+        onde
+        \[
+          \mathbf{F} = \vec{\nabla}\,f
+          \nonumber
+        \]
+        desde que $\mathbf{F}$ seja um campo conservativo.
+      </p>
+      
+      <p>
+        Da mesma forma o teorema de Green é uma releitura do II teorema fundamental do cálculo para o caso de duas dimensões, se consideramos uma função $\mathbf{F}=\mathbf{F}(x,y)$, o teorema de Green relaciona a $\mathbf{k}-$essima componente do rotacional de $\mathbf{F}$ (que é uma derivada que envolve ambas coordenadas), com a integral de linha da componente tangencial de $\mathbf{F}$ ao longo da curva $C$, percorrida em sentido positivo, que limita a região $R$, isto é 
+        \[
+          \begin{array}{rcl}
+            \iint_R \left( \vec{\nabla}\times\mathbf{F} \right) \cdot \mathbf{k} & = & \oint_C \mathbf{F} \cdot d\mathbf{s}\\
+            \iint_R \left( \dfrac{\partial F_1}{\partial x} - \dfrac{\partial F_2}{\partial y} \right) dxdy &=& \oint_C F_1(x,y)dx+F_2(x,y)dy
+          \end{array}
+          \nonumber
+       \]
+       Note que $C$ é a curva que limita a região $R$ (assim como $a$ e $b$ são os limites do intervalo no caso em que avaliamos a integral tradicional).
+      </p>
+      
+<!--      <p>
+        A fim de entender melhor esse conceito consideremos as seguintes regiões definidas na figura
+      </p>
+ 
+      <div align="center">
+        <a href="javascript:newWin('figuras/circulacao.png', 'Zoom', '1650')">
+          <img src="figuras/lemas.png" width="750" align="right"/>
+        </a>
+      </div>
+      
+      <p>
+        Em todas as figuras vemos que existe uma área limitada pela curvas (retas), agora vamos proceder a calcular a integral de linha em torno desses caminhos, para isso vamos nos concentrar na figura (a), dessa forma
+        \[
+          \int_C
+        \]
+      </p>
+      -->
+      
+      <p>
+        Antes de mostrar como o teorema de Green é uma outra forma do teorema fundamental do Cálculo, vamos dar a definição formal do teorema e dar uma demostração desse teorema para um caso bem específico.
+      </p>  
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Teorema de Green-Ostrogradsky
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Seja $D$ uma região fechada definida em $\mathbb{R}^2$ com fronteira $C=\delta D$ a qual é formada por um número finito de curvas simples fechadas seccionalmente continuas, com orientação da curva $C$  definida de forma a ter $D$ sempre à direita enquanto $C$ é percorrida. Seja $\mathbf{F}(x,y) = M(x,y)\,\mathbf{i} + N(x,y) \,\mathbf{j}$ um campo vetorial de classe $C^1$ definido em todo $D$. Então
+        \[
+          \oint_C Mdx + Ndy = \iint_D \left( \dfrac{\partial N}{\partial x} - \dfrac{\partial M}{\partial y}
+          \right)\,dxdy
+          \nonumber
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        Nessa definição temos algum pontos que devem se ter em conta na hora de aplicar. O primeiro ponto é que nossa superfície pode conter uma quantidade finita de buracos
+      </p>
+ 
+      <div align="center">
+        <a href="javascript:newWin('figuras/buraco.png', 'Zoom', '1650')">
+          <img src="figuras/buraco.png" width="750" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Como se mostra na figura acima (figura b), redefinindo o caminho de integração transformamos nossa região de integração em duas regiões, $D_1$, $D_2$, $D_3$, e $D_2$, que somadas dão a região original, $D$.  O outro ponto a ser considerado é o fato de que a orientação da curva fonteira, $\delta D$, é tal que ao percorrer a curva a região que ela delimita fica sempre à direita, como mostra a figura
+      </p>
+ 
+      <div align="center">
+        <a href="javascript:newWin('figuras/orientacao.png', 'Zoom', '1650')">
+          <img src="figuras/orientacao.png" width="550" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Um fato histórico curioso é que esse teorema foi proposto pelo matemático auto didata Inglês George Green, Green publicou um livro que posteriormente foi divulgado por Lord Kelvin. Simultaneamente o matemático Russo Mihail Ostrogradsky apresento este teorema.
+      </p>
+      
+      <p>
+        Vamos apresentar uma verificação da validade do teorema para o caso de superfícies simples, vamos considerar para isso a superfícies definidas na figura embaixo, primeiro consideremos a superfície à esquerda.
+      </p>
+ 
+      <div align="center">
+        <a href="javascript:newWin('figuras/prova.png', 'Zoom', '1650')">
+          <img src="figuras/prova.png" width="750" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Para figura verificamos que a curva $C = \delta R$ resulta da união de duas outras curvas, a curva $C_1$ (parte inferior) e a curva $C_2$ (parte superior), onde
+        \[
+          C_1: y=f_1(x),\;\;\;a \leq x \leq b,\;\;\;\;\;\;\;\;\;C_2: y=f_2(x),\;\;\;b \geq x \geq a
+          \nonumber
+        \]
+        Consideremos uma função $M$ definida em $R\in \mathbb{R}^2$, derivável. Para essa função (e qualquer outra função similar) se verifica 
+        \[
+          M\left(x,\,f(x)\right) - M\left(x,\,f(x)\right) = \int_{f_1(x)}^{f_2(x)}\,\dfrac{\partial M}{\partial y}\,dy
+          \nonumber
+        \]
+        Essa expressão pode ser integrada em relação a $x$ e  entre os limites $a$ e $b$,
+        \[
+          \begin{align*}
+            \int_a^b \int_{f(x)}^{f(x)}\,\dfrac{\partial f}{\partial y}\,dy\,dx& = \int_a^b \left[ M\left(x,\,f(x)\right) - M\left(x,\,f(x)\right) \right] \,dx\\
+            &= -\int_b^a M\left(x,\,f(x)\right)\,dx - \int_a^bM\left(x,\,f(x)\right)\,dx
+          \end{align*}          
+        \]
+        Observe que podemos pensar a expressão $\displaystyle  \int_a^b M\left(x,\,f(x)\right)\,dx$ como sendo a integral de linha do campo escalar $M$ ao longo da cuva parametrizada como $y = f(x)$, sendo $x$ o parâmetro; desde que $\left| \mathbf{v}\right|=1$ (dessa forma parametrizado em termos do comprimento de arco). Uma analise similar pode ser realizada para o termo $\displaystyle \int_b^a M\left(x,\,f(x)\right)\,dx$, de forma que
+        \[
+          \begin{align*}
+            \int_a^b \int_{f_1(x)}^{f_2(x)}\,\dfrac{\partial M}{\partial y}\,dy\,dx& = -\oint_C M\left(x,\,f(x)\right)\,dx\\
+            \iint_R\dfrac{\partial M}{\partial y}\,dy\,dx& = -\oint_{\delta R} M\left(x,\,y\right)\,dx
+          \end{align*}
+       \]
+      </p>
+      
+      <p>
+        Da figura à direita verificamos que a curva $C' = \delta R$ resulta da união de duas outras curvas, a curva $C_1'$ (lado esquerdo) e a curva $C_2'$ (lado direito), onde
+        \[
+          C_1': x=g_1(y),\;\;\;c \leq y \leq d,\;\;\;\;\;\;\;\;\;C_2: x=g_2(x),\;\;\;d \geq x \geq c
+          \nonumber
+        \]
+        Agora considere a função $N$ definida em $R\in \mathbb{R}^2$, derivável. Para essa função (e qualquer outra função similar) se verifica 
+        \[
+          N\left(g(y),\,y\right) - N\left(g(y),\,y\right) = \int_{g_1(y)}^{g_2(y)}\,\dfrac{\partial N}{\partial x}\,dx
+          \nonumber
+        \]
+        seguindo a metodologia proposta previamente,
+        \[
+          \begin{align*}
+            \int_c^d \int_{g_1(y)}^{g_2(y)}\,\dfrac{\partial N}{\partial x}\,dx\,dy& = \int_c^d \left[ N\left(g_2(y),\,y\right) - N\left(g_1(y),\,y\right) \right] \,dy\\
+            & = \int_c^d  N\left(g_2(y),\,y\right)\,dy + \int_d^c N\left(g_1(y),\,y\right)  \,dy\\
+            &= \oint_{C'} N\left(x,\,y\right)\,dy
+          \end{align*}
+        \]
+        de forma que
+        \[
+          \iint_R\dfrac{\partial N}{\partial x}\,dx\,dy = \oint_{\delta R} N\left(x,\,y\right)\,dy
+          \nonumber
+        \]
+        somando ambos resultados obtemos
+        \[
+          \iint_R \left( \dfrac{\partial N}{\partial x} - \dfrac{\partial M}{\partial y} \right)\,dx\,dy = \oint_{\delta R} N\left(x,\,y\right)\,dy + M\left(x,\,y\right)\,dx
+          \nonumber
+        \]
+      </p>
+      
+      <h5>Exemplos</h5>
+      <p>
+        <ol>
+          
+        </ol>
+        <ol>
+          
+        </ol>
+        <ol>
+          
+        </ol>
+      </p>
+      
+<!--
+       \[
+          \begin{align*}
+          \end{align*}
+       \]   
+      
+      <h5>Exemplo</h5>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      \left< \right>     \left(  \right)      \left| \,   \, \right|
+      
+      \mathbb{R}
+      
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k} 
+         
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      -->
+      
+      </div>
+      <!-- Fim Principal   -->
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html>
+

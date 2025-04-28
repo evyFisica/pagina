@@ -1,0 +1,774 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\argsinh}{arg\, sinh}
+\DeclareMathOperator{\argcosh}{arg\, cosh}
+\DeclareMathOperator{\argtanh}{arg\, tanh}
+\DeclareMathOperator{\argcoth}{arg\, coth}
+\DeclareMathOperator{\argsech}{arg\, sech}
+\DeclareMathOperator{\argcsch}{arg\, csch}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding latin9
+\fontencoding 
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Exemplo 01
+\end_layout
+
+\begin_layout Standard
+Calcule o fluxo do campo vetorial
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{F}(x,y,z)=x\,\mathbf{i}+y\,\mathbf{j}+z\,\mathbf{k}
+\]
+
+\end_inset
+
+através da superfície de uma esfera de raio 
+\begin_inset Formula $a$
+\end_inset
+
+ utilize coordenadas esférica para representar a superfície (parametrizando
+ em coordenadas esféricas)
+\end_layout
+
+\begin_layout Subsection*
+Sol
+\end_layout
+
+\begin_layout Standard
+Por definição a integral de fluxo
+\begin_inset Formula 
+\[
+\Phi_{S}=\iint_{R}\mathbf{F}\cdot d\vec{\sigma}
+\]
+
+\end_inset
+
+onde
+\begin_inset Formula 
+\[
+d\vec{\sigma}=\mathbf{n}\, dudv
+\]
+
+\end_inset
+
+com 
+\begin_inset Formula 
+\[
+\mathbf{n}=\mathbf{T}_{u}\times\mathbf{T}_{v}
+\]
+
+\end_inset
+
+e
+\begin_inset Formula 
+\[
+\mathbf{T}_{u}=\dfrac{\partial\mathbf{r}}{\partial u}\qquad\text{e}\qquad\mathbf{T}_{v}=\dfrac{\partial\mathbf{r}}{\partial v}
+\]
+
+\end_inset
+
+Uma outra alternativa a essa abordagem é utilizar o Jacobiano
+\begin_inset Formula 
+\[
+\mathbf{n}=\dfrac{\partial\left(y,z\right)}{\partial\left(u,v\right)}\,\mathbf{i}+\dfrac{\partial\left(z,x\right)}{\partial\left(u,v\right)}\,\mathbf{j}+\dfrac{\partial\left(x,y\right)}{\partial\left(u,v\right)}\,\mathbf{k}
+\]
+
+\end_inset
+
+sendo que 
+\begin_inset Formula $x,\, y,\, z$
+\end_inset
+
+ são as coordenadas do vetor 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+ que é a parametrização da superfície por onde o campo vai fluir, que para
+ o caso da esfera, em coordenadas esféricas, é
+\begin_inset Formula 
+\[
+\mathbf{r}(u,v)=a\,\sin v\,\cos u\,\mathbf{i}+a\,\sin v\,\sin u\,\mathbf{j}+a\cos v\,\mathbf{k},\qquad0\leq u\leq2\pi,\:0\leq v\leq\pi
+\]
+
+\end_inset
+
+de forma que
+\begin_inset Formula 
+\begin{align*}
+\mathbf{n}= & \left[\dfrac{\partial y}{\partial u}\dfrac{\partial z}{\partial v}-\dfrac{\partial z}{\partial u}\dfrac{\partial y}{\partial v}\right]\,\mathbf{i}+\left[\dfrac{\partial z}{\partial u}\dfrac{\partial x}{\partial v}-\dfrac{\partial x}{\partial u}\dfrac{\partial z}{\partial v}\right]\,\mathbf{j}+\left[\dfrac{\partial x}{\partial u}\dfrac{\partial y}{\partial v}-\dfrac{\partial y}{\partial u}\dfrac{\partial x}{\partial v}\right]\,\mathbf{k}\\
+= & \left[\left(a\sin v\cos u\right)\left(-a\sin v\right)-\left(0\right)\left(a\cos v\sin u\right)\right]\,\mathbf{i}+\\
+ & \left[\left(0\right)\left(a\cos v\right)-\left(-a\sin v\sin u\right)\left(-a\sin v\right)\right]\,\mathbf{j}+\\
+ & \left[\left(-a\sin v\sin u\right)\left(a\cos v\sin u\right)-\left(a\sin v\cos u\right)\left(a\cos v\cos u\right)\right]\,\mathbf{k}\\
+= & -\left(a^{2}\sin^{2}v\cos u\right)\,\mathbf{i}-\left(a^{2}\sin^{2}v\sin u\right)\,\mathbf{j}-\\
+ & \left(a^{2}\sin v\cos v\sin^{2}u+a\sin v\cos v\cos^{2}u\right)\,\mathbf{k}\\
+= & -\left(a^{2}\sin^{2}v\cos u\right)\,\mathbf{i}-\left(a^{2}\sin^{2}v\sin u\right)\,\mathbf{j}-\\
+ & a^{2}\sin v\cos v\left(\sin^{2}u+\cos^{2}u\right)\,\mathbf{k}\\
+= & -\left(a^{2}\sin^{2}v\cos u\right)\,\mathbf{i}-\left(a^{2}\sin^{2}v\sin u\right)\,\mathbf{j}-a^{2}\sin v\cos v\,\mathbf{k}\\
+= & -a\sin v\left[a\,\sin v\,\cos u\,\mathbf{i}+a\,\sin v\,\sin u\,\mathbf{j}+a\cos v\,\mathbf{k}\right]\\
+= & -a\sin v\,\mathbf{r}
+\end{align*}
+
+\end_inset
+
+Note que o vetor 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ aponta para dentro da esfera já que 
+\begin_inset Formula $\sin v\geq0$
+\end_inset
+
+ no intervalo 
+\begin_inset Formula $0\leq v\leq\dfrac{\pi}{2}$
+\end_inset
+
+ o qual representa o hemisfério superior, e 
+\begin_inset Formula $\sin v\leq0$
+\end_inset
+
+ no intervalo 
+\begin_inset Formula $\dfrac{\pi}{2}<v\leq\pi$
+\end_inset
+
+, o qual representa o hemisfério inferior.
+ Devido a que desejamos trabalhar com a orientação positiva redefinimos
+ nosso vetor normal para
+\begin_inset Formula 
+\[
+\mathbf{n}=a\sin v\,\mathbf{r}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Escrevendo o campo 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ em termos de 
+\begin_inset Formula $(u,v)$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\mathbf{F}(u,v)= & a\,\sin v\,\cos u\,\mathbf{i}+a\,\sin v\,\sin u\,\mathbf{j}+a\cos v\,\mathbf{k}\\
+= & \mathbf{r}
+\end{align*}
+
+\end_inset
+
+de onde o elemento de fluxo está dado por
+\begin_inset Formula 
+\begin{align*}
+\mathbf{F}\cdot\mathbf{n}= & \left(a\sin v\,\mathbf{r}\right)\cdot\mathbf{r}\\
+= & a\sin v
+\end{align*}
+
+\end_inset
+
+dessa forma a integral de superfície do campo vetorial será
+\begin_inset Formula 
+\begin{align*}
+\Phi_{S}= & \iint_{R}\mathbf{F}\cdot d\vec{\sigma}\\
+= & \int_{0}^{\pi}\int_{0}^{2\pi}a\sin v\, du\, dv\\
+= & 2\pi a\int_{0}^{\pi}\sin v\, dv\\
+= & -2\pi a\left(\cos\pi-\cos0\right)\\
+= & 4\pi a
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Exemplo 05
+\end_layout
+
+\begin_layout Standard
+Calcule o fluxo do campo 
+\begin_inset Formula 
+\[
+\mathbf{F}(x,y,z)=y\,\mathbf{i}+x\,\mathbf{j}+z\,\mathbf{k}
+\]
+
+\end_inset
+
+e 
+\begin_inset Formula $S$
+\end_inset
+
+ é a superfície externa da região sólida 
+\begin_inset Formula $E$
+\end_inset
+
+ delimitada pelo paraboloide 
+\begin_inset Formula $z=1-x^{2}-y^{2}$
+\end_inset
+
+ e o plano 
+\begin_inset Formula $z=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Sol
+\end_layout
+
+\begin_layout Standard
+A interseção do paraboloide 
+\begin_inset Formula $z=1-x^{2}-y^{2}$
+\end_inset
+
+ com o plano 
+\begin_inset Formula $z=0$
+\end_inset
+
+ está dado por
+\begin_inset Formula 
+\begin{align*}
+1-x^{2}-y^{2} & =z\\
+1-x^{2}-y^{2} & =0\\
+x^{2}+y^{2} & =1
+\end{align*}
+
+\end_inset
+
+uma circunferência de raio 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ Por tanto a nossa superfície é formada na realidade por duas superfícies,
+ o paraboloide acima de z=0 e o círculo de raio 1 no plano 
+\begin_inset Formula $xy$
+\end_inset
+
+, isto é
+\begin_inset Formula 
+\[
+\Phi=\iint_{S_{1}}\mathbf{F}\cdot d\vec{\sigma}+\iint_{S_{2}}\mathbf{F}\cdot d\vec{\sigma}
+\]
+
+\end_inset
+
+Em ambos casos podemos pensar as superfícies definidas de forma implícita.
+ Analisemos primeiramente a superfície o fluxo através da superfície 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+f= & x^{2}+y^{2}+z-1\\
+\vec{\nabla f}= & 2x\,\mathbf{i}+2y\,\mathbf{j}+\mathbf{k}\\
+\vec{\nabla f}\cdot\mathbf{k}= & 1
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\mathbf{n}{}_{1}= & \pm\dfrac{\vec{\nabla f}}{\vec{\nabla f}\cdot\mathbf{k}}\\
+= & 2x\,\mathbf{i}+2y\,\mathbf{j}+\mathbf{k}
+\end{align*}
+
+\end_inset
+
+onde foi escolhido o sinal positivo já que o fluxo será calculado saindo
+ da superfície.
+ Escrevendo o campo em termos de 
+\begin_inset Formula $x,\, y$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\mathbf{F}(x,y)= & y\,\mathbf{i}+x\,\mathbf{j}+\left(1-x^{2}-y^{2}\right)\,\mathbf{k}\\
+\mathbf{F}\cdot\mathbf{n}= & 2xy+2xy+1-x^{2}-y^{2}\\
+= & 1+4xy-x^{2}-y^{2}
+\end{align*}
+
+\end_inset
+
+Levando em consideração que a superfícies está projetada no plano 
+\begin_inset Formula $xy$
+\end_inset
+
+ numa região definida por 
+\begin_inset Formula $0\leq x^{2}+y^{2}\leq1$
+\end_inset
+
+, temos que o fluxo está dado por
+\begin_inset Formula 
+\begin{align*}
+\Phi_{1}= & \iint_{S_{1}}\mathbf{F}\cdot d\vec{\sigma}\\
+= & \iint_{0\leq x^{2}+y^{2}\leq1}\left(1+4xy-x^{2}-y^{2}\right)dx\, dy
+\end{align*}
+
+\end_inset
+
+passando para coordenadas polares e considerando 
+\begin_inset Formula 
+\begin{align*}
+\Phi_{1}= & \int_{0}^{2\pi}\int_{0}^{1}\left(1+4r^{2}\cos\theta\sin\theta-r^{2}\right)r\, dr\, d\theta\\
+= & \int_{0}^{2\pi}\left(\dfrac{1}{2}+\cos\theta\sin\theta-\dfrac{1}{4}\right)d\theta\\
+= & \dfrac{\pi}{2}+\int\sin2\theta\, d\theta\\
+= & \dfrac{\pi}{2}
+\end{align*}
+
+\end_inset
+
+Para o caso da superfície 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+ temos
+\begin_inset Formula 
+\begin{align*}
+f_{2}= & x^{2}+y^{2}\\
+\vec{\nabla f}_{2}= & 2x\,\mathbf{i}+2y\,\mathbf{j}
+\end{align*}
+
+\end_inset
+
+onde, o campo escrito em termos de 
+\begin_inset Formula $x,\, y$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\mathbf{F}(x,y)= & y\,\mathbf{i}+x\,\mathbf{j}\\
+\mathbf{F}\cdot\mathbf{n}= & 2xy+2xy\\
+= & 4xy
+\end{align*}
+
+\end_inset
+
+de onde
+\begin_inset Formula 
+\begin{align*}
+\Phi_{2}= & \int_{0}^{2\pi}\int_{0}^{1}\left(4r^{2}\cos\theta\sin\theta\right)r\, dr\, d\theta\\
+= & \int_{0}^{2\pi}\left(\cos\theta\sin\theta\right)d\theta\\
+= & \int\sin2\theta\, d\theta\\
+= & 0
+\end{align*}
+
+\end_inset
+
+dessa forma
+\begin_inset Formula 
+\[
+\Phi=\Phi_{1}+\Phi_{2}=0+\dfrac{\pi}{2}=\dfrac{\pi}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Exemplo 05
+\end_layout
+
+\begin_layout Standard
+Calcule o fluxo de 
+\begin_inset Formula $\mathbf{F}=x^{2}\,\mathbf{j}$
+\end_inset
+
+ através da superfície 
+\begin_inset Formula $S$
+\end_inset
+
+ definida por 
+\begin_inset Formula $y=1+x^{2}+z^{2}$
+\end_inset
+
+ para 
+\begin_inset Formula $1\leq y\leq5$
+\end_inset
+
+ com 
+\begin_inset Formula $S$
+\end_inset
+
+ orientada apontando na direção negativa de 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Sol
+\end_layout
+
+\begin_layout Standard
+Obviamente esta superfície é uma superfície definida de forma explicita,
+ por tanto o vetor normal está dado pela seguinte equação
+\begin_inset Formula 
+\[
+\mathbf{n}_{1}=-\dfrac{\partial F}{\partial x}\,\mathbf{i}+\mathbf{j}-\dfrac{\partial F}{\partial z}\,\mathbf{k}
+\]
+
+\end_inset
+
+onde
+\begin_inset Formula 
+\[
+y=F(x,z)=1+x^{2}+z^{2}
+\]
+
+\end_inset
+
+de forma que
+\begin_inset Formula 
+\[
+\mathbf{n}_{1}=-2x\,\mathbf{i}+\mathbf{j}+2z\,\mathbf{k}
+\]
+
+\end_inset
+
+Observe que este vetor é o vetor que aponta na direção positiva de 
+\begin_inset Formula $\mathbf{j}$
+\end_inset
+
+, de forma que o vetor norma que devemos utilizar é 
+\begin_inset Formula 
+\begin{align*}
+\mathbf{n}= & -\mathbf{n}_{1}\\
+= & 2x\,\mathbf{i}-\mathbf{j}+2z\,\mathbf{k}
+\end{align*}
+
+\end_inset
+
+Como o campo já está escrito em termos da variável adequada passamos a calcular
+ o produto escalar
+\begin_inset Formula 
+\[
+\mathbf{F}\cdot\mathbf{n}=-x^{2}
+\]
+
+\end_inset
+
+A região de integração está dada por
+\begin_inset Formula 
+\[
+\begin{array}{ccccc}
+1 & \leq & y & \leq & 5\\
+1 & \leq & 1+x^{2}+z^{2} & \leq & 5\\
+0 & \leq & x^{2}+z^{2} & \leq & 4
+\end{array}
+\]
+
+\end_inset
+
+de forma que
+\begin_inset Formula 
+\[
+\Phi=\iint_{0\leq x^{2}+z^{2}\leq4}x^{2}\, dx\, dy
+\]
+
+\end_inset
+
+escrevendo em coordenadas polares
+\begin_inset Formula 
+\begin{align*}
+\Phi= & -\int_{0}^{2\pi}\int_{0}^{2}r^{2}\,\cos^{2}\theta\, r\, dr\, d\theta\\
+= & -\int_{0}^{2\pi}\int_{0}^{2}r^{3}\cos^{2}\theta\, dr\, d\theta\\
+= & -\dfrac{2^{4}}{4}\int_{0}^{2\pi}\cos^{2}\theta\, d\theta\\
+= & -4\int_{0}^{2\pi}\cos^{2}\theta\, d\theta
+\end{align*}
+
+\end_inset
+
+utilizando
+\begin_inset Formula 
+\[
+2\cos^{2}\theta=1+\cos2\theta
+\]
+
+\end_inset
+
+temos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\Phi= & -2\int_{0}^{2\pi}d\theta+2\int_{0}^{2\pi}\cos2\theta\, d\theta\\
+= & -4\pi
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Exemplo 09
+\end_layout
+
+\begin_layout Standard
+Encontre o fluxo de 
+\begin_inset Formula $\mathbf{F}=yz\,\mathbf{i}+x\,\mathbf{j}-z^{2}\,\mathbf{k}$
+\end_inset
+
+ através do cilindro parabólico 
+\begin_inset Formula $y=x^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $0\leq x\leq1$
+\end_inset
+
+, 
+\begin_inset Formula $0\leq z\leq4$
+\end_inset
+
+, na direção indicada na figura
+\end_layout
+
+\begin_layout Subsection*
+Sol
+\end_layout
+
+\begin_layout Standard
+Neste caso a superfície 
+\begin_inset Formula $f=x^{2}$
+\end_inset
+
+ está definida de forma explicita e é projetada no plano 
+\begin_inset Formula $xz$
+\end_inset
+
+ com a normal tendo componente apontando na direção de 
+\begin_inset Formula $-\mathbf{j}$
+\end_inset
+
+, por tanto
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mathbf{n}= & \dfrac{\partial f}{\partial x}\,\mathbf{i}-\mathbf{j}+\dfrac{\partial f}{\partial z}\,\mathbf{k}\\
+= & 2x\,\mathbf{i}-\mathbf{j}\\
+d\vec{\sigma}= & \left(2x\,\mathbf{i}-\mathbf{j}\right)dx\, dz
+\end{align*}
+
+\end_inset
+
+escrevendo o campo em termos de 
+\begin_inset Formula $x,\, z$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\mathbf{F}= & yz\,\mathbf{i}+x\,\mathbf{j}-z^{2}\mathbf{k}\\
+= & x^{2}z\,\mathbf{i}+x\,\mathbf{j}-z^{2}\mathbf{k}
+\end{align*}
+
+\end_inset
+
+dessa forma
+\begin_inset Formula 
+\begin{align*}
+\Phi= & \iint_{\begin{array}{c}
+0\leq x\leq1\\
+0\leq z\leq4
+\end{array}}\left(x^{2}z\,\mathbf{i}+x\,\mathbf{j}-z^{2}\mathbf{k}\right)\left(2x\,\mathbf{i}-\mathbf{j}\right)dx\, dz\\
+= & \int_{0}^{4}\int_{0}^{1}\left(2x^{3}z-x\right)dx\, dz\\
+= & \dfrac{1}{2}\int_{0}^{4}\left(z-1\right)dz\\
+= & 2
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Exemplo 10
+\end_layout
+
+\begin_layout Standard
+Encontre o centro de massa do uma casca fina de densidade 
+\begin_inset Formula $\delta=1/z^{2}$
+\end_inset
+
+ obtida a partir do cone 
+\begin_inset Formula $z=\sqrt{x^{2}+y^{2}}$
+\end_inset
+
+ cortado pelos planos 
+\begin_inset Formula $z=1$
+\end_inset
+
+ e 
+\begin_inset Formula $z=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Sol
+\end_layout
+
+\begin_layout Standard
+A superfície obtida é um cone 
+\begin_inset Formula $z^{2}=x^{2}+y^{2}$
+\end_inset
+
+ com o eixo de rotação ao longo de 
+\begin_inset Formula $z$
+\end_inset
+
+, podemos parametrizar este cone considerando que a projeção no plano 
+\begin_inset Formula $y=0$
+\end_inset
+
+, onde
+\begin_inset Formula 
+\[
+x=z
+\]
+
+\end_inset
+
+por tanto, obteremos o cone a partir da revolução dessa reta
+\begin_inset Formula 
+\[
+\begin{cases}
+x= & v\,\cos u\\
+y= & v\,\sin u\\
+z= & v
+\end{cases}
+\]
+
+\end_inset
+
+onde
+\begin_inset Formula 
+\begin{align*}
+0 & \leq & u & \leq & 2\pi\\
+1 & \leq & v & \leq & 2
+\end{align*}
+
+\end_inset
+
+Outra alternativa é considerar a função definida de forma implícita
+\begin_inset Formula 
+\[
+x^{2}+y^{2}-z^{2}=0
+\]
+
+\end_inset
+
+de onde o vetor normal está dado por
+\begin_inset Formula 
+\begin{align*}
+\mathbf{n}= & \dfrac{\vec{\nabla}f}{\left|\vec{\nabla}f\cdot\mathbf{k}\right|}\\
+= & \dfrac{2x\,\mathbf{i}+2y\,\mathbf{j}-2z\,\mathbf{k}}{2z}\\
+= & \dfrac{x\,\mathbf{i}+y\,\mathbf{j}-z\,\mathbf{k}}{z}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{r}(t)\,\mathbf{i}\,\mathbf{j}\,\mathbf{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

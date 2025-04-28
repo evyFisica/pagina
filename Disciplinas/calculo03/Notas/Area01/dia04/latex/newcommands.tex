@@ -1,0 +1,168 @@
+% PACKAGES
+\usepackage{color}
+\usepackage{a4}
+\def\magyarOptions{mathhucomma=fix,figurecaptions=unchanged,tablecaptions=unchanged,sectiondot=none}
+\usepackage[magyar,portuges]{babel}             %regional settings
+\usepackage{epsfig,graphics,graphicx}    %essential graphics packages
+% \usepackage[utf8]{inputenc}          %accentuation
+\usepackage{hyphenat}                  %Hyphenation
+\usepackage{url} 
+\usepackage{calc}                      %calculator package
+\usepackage{fancyhdr}                  %fancy header
+\usepackage{natbib}                    %bibliography
+\usepackage{geometry}                  %set geometry of the paper
+\usepackage[outercaption]{sidecap}                   %captions ao lado das figuras
+\usepackage{indentfirst}               %indenta primeiro paragrafo duma secao
+\usepackage{setspace}                  %double spacing for text, single for captions,foots
+\usepackage{xspace}                    %special space
+\usepackage{lastpage}
+\usepackage{datetime}
+\usepackage{ulem}  %package provides several styles of simple underlines and strikethroughs
+\usepackage{cancel}  %cancelling terms in equations
+\usepackage{booktabs} % nice tables
+\usepackage{float}
+\usepackage{multicol}
+
+%FONTS & SYMBOLS
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\DeclareMathAlphabet{\mathptm}{OT1}{cmr}{m}{it}
+\DeclareMathAlphabet{\mathsans}{OT1}{cmss}{m}{it}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{amsmath,amssymb,amsfonts}  %AMS symbols,fonts
+\usepackage[varg]{txfonts}  %times font plus varg, vary, varw
+\usepackage{mathrsfs}  %\mathscr
+\usepackage{wasysym}  %mais simbolos
+\usepackage{ifsym} %mais simbolos
+\usepackage{esint}   %alternativa para integrais
+\usepackage{textcomp} %text symbols
+\usepackage{mathcomp} %text symbols
+\usepackage{gensymb}  %text and math symbols
+\usepackage{pifont}  %dingbat symbols
+\usepackage{empheq}  %emphasizing equations
+\usepackage{pst-circ}  %package to draw electric and electronic circuits
+% \usepackage[light,math]{iwona}
+\usepackage{bm}  %boldmath
+
+%COLORS
+\definecolor{mygreen}{rgb}{0,0.4,0.2}
+\definecolor{myblue}{rgb}{0,0.2,0.7}
+\definecolor{blue_caption}{rgb}{0,0.2,0.4}
+\definecolor{myred}{rgb}{0.8,0,0}
+\definecolor{mygray}{rgb}{0.85,0.9,0.9}
+\definecolor{boxnota}{rgb}{0.98,0.98,0.98}
+\definecolor{mygray2}{rgb}{0.1,0.1,0.1}
+\definecolor{mygray3}{rgb}{0.3,0.3,0.3}
+\definecolor{colorcopyright}{rgb}{0.5,0.0,0.0}
+\definecolor{color_solucao}{rgb}{0.6,0,0}
+\definecolor{mathcolor}{rgb}{0.3,0,0}
+
+%CAPTIONS
+\usepackage{caption}
+\DeclareCaptionFont{blue}{\color{blue_caption}}
+\captionsetup{font=small,labelfont={blue,bf,sf},labelsep=endash}
+
+%DATE
+\renewcommand{\dateseparator}{/}
+\newcommand{\todayiso}{\twodigit\day \dateseparator  \twodigit\month \dateseparator \the\year  }
+
+%GEOMETRY, HYPHENIZATION
+\tolerance=50000   % all 3 of these commands make LaTeX less fussy about what
+\hbadness=500000    % is a ``good'' length/width/height of a page
+\hyphenpenalty=1000 % quanto maior menor sera o numero de hifenizacoes
+\raggedbottom
+\setlength{\columnsep}{0.75cm}
+\setlength{\fboxsep}{2mm}
+\geometry{a4paper,left=1.5cm,right=1.5cm,top=2.5cm,bottom=2.5cm}
+
+% \setlength{\columnseprule}{.01in}
+% \everymath{\color{myblue}}
+% \everydisplay{\color{mathcolor}}
+
+% UNITS DEFINITIONS
+\newcommand{\cmcub}{~cm$^{-3}$}
+\newcommand{\ergs}{~erg~s$^{-1}$}
+\newcommand{\ergsa}{~erg~s$^{-1}$~cm$^{-2}$~\AA$^{-1}$}
+\newcommand{\ergcmcubs}{~erg~cm$^{-3}$~s$^{-1}$}
+\newcommand{\phs}{~ph~s$^{-1}$}
+\newcommand{\Msyr}{~M$_{\odot}$~yr^${-1}$}
+\newcommand{\kms}{km~s$^{-1}$}
+
+% ASTRONOMICAL VARIABLES
+\newcommand{\vinf}{$v_{\infty}$\xspace}
+\newcommand{\Zsun}{~Z$_{\odot}$\xspace}
+\newcommand{\Msun}{~${\rm M}_{\odot}$\xspace}
+\newcommand{\Lsun}{~L$_{\odot}$\xspace}
+\newcommand{\Rsun}{~R$_{\odot}$\xspace}
+\newcommand{\Te}{$T_{e}$\xspace}
+\newcommand{\Tstar}{$T_{\star}$\xspace}
+\newcommand{\Lstar}{$L_{\star}$\xspace}
+\newcommand{\Mstar}{$M_{\star}$\xspace}
+\newcommand{\Teff}{$T_{\rm{eff}}$\xspace}
+\newcommand{\Teq}{$T_{\rm{equiv}}$\xspace}
+\newcommand{\Mup}{$M_{\rm{up}}$\xspace}
+\newcommand{\Mlow}{$M_{\rm{low}}$\xspace}
+\newcommand{\Mneb}{$M_{\rm{neb}}$\xspace}
+\newcommand{\Mdot}{$\dot{M}$\xspace}
+\newcommand{\Mi}{$M_{\circ}$\xspace}
+\newcommand{\vexp}{$v_{\rm{exp}}$\xspace}
+\newcommand{\sfg}{Star-forming}
+\newcommand{\agn}{AGN hosts}
+\newcommand{\llagn}{LLAGN hosts}
+\newcommand{\msun}{M$_\odot$}
+\newcommand{\tl}{$\langle\log t_\star\rangle_L$}
+\newcommand{\tm}{$\langle\log t_\star\rangle_M$}
+\newcommand{\zl}{$\log \langle Z_\star\rangle_L$}
+\newcommand{\zm}{$\log \langle Z_\star\rangle_M$}
+\newcommand{\tmn}{$\langle t_\star\rangle_M$}
+
+% EDITING DEFINITIONS
+\newcommand{\comment}[1]{\textcolor{red}{\textit{#1}}}
+\newcommand{\code}[1]{{\small\scshape #1}}
+\newcommand{\refs}{\textcolor{red}{REFS}}
+\newcommand{\X}{\textcolor{red}{XXX}\,}
+
+\newcommand{\arcmin}{$^{\,\prime}$\xspace}
+\newcommand{\arcsec}{$^{\,\prime\prime}$\xspace}
+\newcommand{\aspas}[1]{``{#1}''}
+\def\ga{\gtrsim}
+\def\la{\lesssim}
+\def\ls{\vskip 12.045pt}                            %One Line space%
+\def\sfrac#1#2{\hbox{$\frac{#1}{#2}$}}
+\def\onehalf{\sfrac{1}{2}}
+
+% PHYSICS
+\newcommand{\micro}[1]{\textmu#1}
+\renewcommand{\textohm}{$\ohm$}
+\renewcommand{\ohm}{{\ifmmode \ohm \else $\ohm$ \fi}}
+\newcommand{\q}[1]{{$q_#1$}}
+\newcommand{\fem}{{\ifmmode \mathcal E \else $\mathcal E$ \fi}}
+\newcommand{\vet}[1]{{\vec{\bm{#1}}}}
+\newcommand{\uvet}[1]{{\hat{\bm{#1}}}}
+\renewcommand\sin{\,{\rm sen}\,}
+\newcommand\cossec{\,{\rm cossec}\,}
+\newcommand{\ten}[1]{{\ifmmode \,\times\,10^{#1} \else $\,\times\,10^{#1}$\fi}}
+% \newcommand{\I}{\mathptm I}
+\newcommand{\I}{I}
+
+%BIBLIO & BOOKS
+\newcommand{\serway}{\textcolor{colorcopyright}{©Serway--Jewett}}
+\newcommand{\tipler}{\textcolor{colorcopyright}{©Tipler--Mosca}}
+\newcommand{\tiplermoderna}{\textcolor{colorcopyright}{©Tipler--Llewellyn, Física Moderna, 3ed.}}
+\newcommand{\halliday}{\textcolor{colorcopyright}{©Halliday}}
+\newcommand{\moyses}{\textcolor{colorcopyright}{©Moyses Nussenzveig, Física Básica, Vol.~3}}
+\newcommand{\giancoli}{\textcolor{colorcopyright}{©Giancoli}}
+
+\def\subsectionautorefname{Seção}
+\def\figureautorefname{Figura}
+\def\equationautorefname{Eq.}
+
+\newcommand{\equacao}[1]{\autoref{#1}}
+\newcommand{\figura}[1]{{\autoref{#1}}}
+
+% SPECIFIC COMMANDS
+\newcommand{\mybox}[2]{{\vskip 5pt \fcolorbox{mygray}{boxnota}{\parbox{\columnwidth-2\fboxsep-4em}{{\sffamily\small\bfseries #1 }#2}} \vskip 5pt  }}
+
+\urlstyle{rm}      %url and mail formats
+
+% \graphicspath{{figures/}}

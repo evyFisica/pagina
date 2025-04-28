@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="ISO-8859-15">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15" />
+    <title>Página de Evy Salcedo</title>
+    <link type="text/css" rel="stylesheet" href="../css/aulas.css" />
+
+    <script type="text/javascript" src="../scripts/syntaxhighlighter_2.1.382/scripts/shCore.js"></script>
+    <script type="text/javascript" src="../scripts/syntaxhighlighter_2.1.382/scripts/shBrushCpp.js"></script>
+    <link type="text/css" rel="stylesheet" href="../scripts/syntaxhighlighter_2.1.382/styles/shCoreDefault.css"/>
+    <link type="text/css" rel="stylesheet" href="../scripts/syntaxhighlighter_2.1.382/styles/shCore.css"/>
+    <link type="text/css" rel="stylesheet" href="../scripts/syntaxhighlighter_2.1.382/styles/shThemeDefault.css"/>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../scripts/syntaxhighlighter_2.1.382/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+    <script>
+      MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+        extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+        TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+        }
+      });
+    </script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><!-- <script type="text/javascript" src="../comunHtml/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
+<script src="../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+
+      </head>
+
+  <body>
+    <div id="todo">
+
+      <div id="cabezado">
+        <h1>Cálculo III</h1>
+      </div>
+
+      <div>
+        <img src="../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+      </div>
+
+      <div>
+        <ul id="indice">
+          <li> <a href="./sumula.html"> Súmula </a> </li>
+          <li> <a href="./notasDeAula.html"> Aulas </a> </li>
+          <li> <a href="./listas.html"> Lista </a></li>
+          <li> <a href="./conceitos.html"> Conc. </a> </li>
+          <li> <a href="./frequencia.html"> Freq. </a> </li>
+          <li> <a href="./outro.html"> Outros </a> </li>
+          <li> <a href="./ensino.html"> Ensino </a></li>
+        </ul>
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+
+        <h2>Ementa</h2>
+        <p>
+          Funções vetoriais. Derivadas direcionais e o vetor gradiente. Cálculo vetorial: Integrais de linha, teorema de Green, rotacional e divergente, integrais de superfície, teorema de Stokes e de Gauss. Séries numéricas. Séries de potências. Séries de Taylor.
+          
+          Noções de cálculo vetorial; integrais curvilíneas e de superfície; teorema de Stokes; teorema de divergência de Gauss; equações diferenciais de 1ª ordem; equações diferenciais lineares de ordem n; noções sobre transformada de Laplace.
+        </p>
+
+<!--        <h2>Objetivo</h2>
+        <h3>Gerais</h3>
+        <p>
+          <ul>
+            <li>
+              Tornar o aluno apto a resolver problemas básicos envolvendo cálculo diferencial e integral.
+            </li>
+            <li>
+              Estimular os alunos a utilizar ferramentas de apoio (calculadoras e softwares) na resolução de problemas.
+            </li>
+          </ul>
+        </p>-->
+
+        <h2>Programa</h2>
+<!--        <ol>        
+          <li>
+            Conceito de Função vetorial
+            <ul>
+              <li>Definição de função vetorial</li>
+              <li>Operações com funções vetoriais</li>
+              <li>Curvas e representação paramétrica</li>
+            </ul>
+          </li>
+
+          <li>
+            Operações com derivas com funções em $\mathbb{R}^2$ e $\mathbb{R}^3$
+            <ul>
+              <li>Derivada</li>
+              <li>Curvas suaves</li>
+              <li>Orientação de uma curva</li>
+              <li>Comprimento de arco</li>
+              <li>Funções vetoriais de várias variáveis</li>
+              <li>Derivada direcional de um campo escalar </li>
+              <li>Gradiente de um campo escalar </li>
+              <li>Divergências de um campo vetorial </li>
+              <li>Rotacional de um campo vetorial</li>
+              <li>Campos conservativos</li>
+            </ul>
+          </li>
+        
+          <li>
+             Integral de linha
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </li>
+        </ol>-->
+        
+        <p>
+          Definição de função vetorial; Operações com funções vetoriais; Curvas e representação paramétrica; Derivada; Curvas suaves; Orientação de uma curva; Comprimento de arco; Funções vetoriais de várias variáveis; Campos escalares e vetoriais; Derivada direcional de um campo escalar; Gradiente de um campo escalar; Divergências de um campo vetorial; Rotacional de um campo vetorial; Campos conservativos; Integrais de linha de campos escalares; Integrais de linha de campos vetoriais; Integrais curvilíneas independentes do caminho; Representação de uma superfície; Representação paramétrica de uma superfície; Curvas coordenadas; Plano tangente e reta normal; Superfícies suaves e orientação; Área de uma superfície; Integral de superfície de um campo escalar; Centro de massa e momento de inércia; Integral de superfície de um campo vetorial; Teorema de Stokes; Teorema de Gauss; Equações diferenciais lineares de primeira ordem; Equações separáveis; Aplicações de equações diferenciais lineares de primeira ordem; 
+Métodos de resolução de  equações diferenciais lineares de segunda ordem ordem; Definição de transformada de Laplace; Propriedades da transformada de Laplace; Produto de transformadas e convolução; Obtenção de uma solução particular de uma equação não homogênea.
+        </p>
+
+        <h2>Metodologia</h2>
+        <p>
+        Serão ministradas aulas teóricas em que o professor expõe o assunto ilustrando-o com exemplos e exercícios.
+        </p>
+
+        <h2>Sistema de avaliação</h2>
+        <p>
+          A verificação do rendimento do aluno compreenderá frequência e aproveitamento nos estudos, os quais deverão ser atingidos conjuntamente. <span class="texto_esp1">Será obrigatória a frequência às atividades correspondentes a cada disciplina, no mínimo a 75% das mesmas</span> (Frequência Suficiente - FS), ficando reprovado o aluno com mais de 25% de faltas (Frequência Insuficiente - FI).
+        </p>
+        
+        <p>
+          Serão realizadas três provas escritas sem consulta  e um trabalho sobre o conteúdo da disciplina. A média final (MF) será obtida pela média aritmética das notas obtidas nas três provas.
+            <p class="texto_tab">
+              As datas das provas poderão ser alteradas de acordo com as necessidades do curso e do andamento do cronograma.
+            </p>
+        </p>
+        
+        <p>
+          A nota mínima para aprovação na disciplina será MF>=6,0 (seis) e Frequência Suficiente (FS).  (Art. 69 e 72 da Res. nº 17/CUn/1997).
+        </p>
+        
+        <p>
+          O aluno com Frequência Suficiente (FS) e média das notas de avaliações do semestre MF entre 3,0 e 6,0 terá direito a uma nova avaliação no final do semestre (REC), exceto as atividades constantes no art.70, § 2º. A Nota Final (NF) será calculada por meio da média aritmética entre a média das notas das avaliações parciais (MF) e a nota obtida na nova avaliação (REC). (Art. 70 e 71 da Res. nº 17/CUn/1997).
+          \[
+            NF = \dfrac{MF\,+\,REC}{2}
+            \nonumber
+          \]
+          Ao aluno que não comparecer às avaliações terá atribuída nota 0 (zero) nas mesmas. (Art. 70, § 4º da Res. nº 17/CUn/1997)
+        </p>
+        
+          <h4>Observações</h4>
+        <div class="texto_tab">
+          <p>
+            Pedidos de segunda avaliação somente para casos em que o aluno, por motivo de força maior e plenamente justificado, deixar de realizar avaliações previstas no plano de ensino, e deverá ser formalizado via requerimento de avaliação à Secretaria Acadêmica do Campus Araranguá dentro do prazo de 3 dias úteis apresentando comprovação. 
+          </p>
+          
+          <p>
+            A "segunda avaliação"  será realizada no final do semestre letivo, após a terceira avaliação, em dia a ser combinado
+          </p>
+        </div>
+        
+        <h2>Cronograma provável</h2>
+
+        <table summary="cronograma" class="tabela_de_lista">
+          <thead  class="titulos_de_tabela_de_lista">
+            <tr>
+            <th scope="col">Semana</th>
+            <th scope="col">Datas</th>
+            <th scope="col">Assunto</th>
+            </tr>
+          </thead>
+            <tr class="linhai_de_tabela_de_lista">
+              <td>  1a  </td>
+              <td>  12/08/2013 a 16/08/2013  </td>
+              <td>  A ser recuperada extra classe  </td>
+            </tr>
+    
+            <tr class="linhap_de_tabela_de_lista">
+              <td>  2a  </td>
+              <td>  19/08/2013 a 23/08/2013  </td>
+              <td>  Apresentação do plano de ensino. Definição de função vetorial. Operações com funções vetoriais. Curvas e representação paramétrica. Derivada.  </td>
+            </tr>
+    
+            <tr class="linhai_de_tabela_de_lista">
+              <td>  3a  </td>
+              <td>  26/08/2013 a 30/08/2013  </td>
+              <td>  Curvas suaves. Orientação de uma curva. Comprimento de arco. Funções vetoriais de várias variáveis. Campos escalares e vetoriais.  </td>
+            </tr>
+    
+            <tr class="linhap_de_tabela_de_lista">
+              <td>  4a  </td>
+              <td>  02/09/2013 a 06/09/2013  </td>
+              <td>  Derivada direcional de um campo escalar. Gradiente de um campo escalar. Divergências de um campo vetorial.  </td>
+            </tr>
+    
+            <tr class="linhai_de_tabela_de_lista">
+              <td>  5a  </td>
+              <td>  09/09/2013 a 13/09/2013  </td>
+              <td>  Rotacional de um campo vetorial. Campos conservativos. Integrais de linha de campos escalares.  </td>
+            </tr>
+    
+            <tr class="linhap_de_tabela_de_lista">
+              <td>  6a  </td>
+              <td>  16/09/2013 a 20/09/2013  </td>
+              <td>  Integrais de linha de campos escalares. Integrais de linha de campos vetoriais. Integrais curvilíneas independentes do caminho.  </td>
+            </tr>
+    
+            <tr class="linhai_de_tabela_de_lista">
+              <td>  7a  </td>
+              <td>  23/09/2013 a 27/09/2013  </td>
+              <td>  <b>Prova 1.</b>  </td>
+            </tr>
+    
+            <tr class="linhap_de_tabela_de_lista">
+              <td>  8a  </td>
+              <td>  30/09/2013 a 04/10/2013  </td>
+              <td>  Representação de uma superfície. Representação paramétrica de uma superfície. Representação paramétrica de uma superfície.Curvas coordenadas.  </td>
+            </tr>
+    
+            <tr class="linhai_de_tabela_de_lista">
+              <td>  9a  </td>
+              <td>  07/10/2013 a 11/10/2013  </td>
+              <td>  Plano tangente e reta normal. Superfícies suaves e orientação. Área de uma superfície. Integral de superfície de um campo escalar. Centro de massa e momento de inércia.  </td>
+            </tr>
+    
+            <tr class="linhap_de_tabela_de_lista">
+              <td>  10a  </td>
+              <td>  14/10/2013 a 18/10/2013  </td>
+              <td>  Centro de massa e momento de inércia. Integral de superfície de um campo vetorial. Teorema de Stokes. Teorema de Gauss. Feriado - Dia não letivo  </td>
+            </tr>
+    
+            <tr class="linhai_de_tabela_de_lista">
+              <td>  11a  </td>
+              <td>  21/10/2013 a 25/10/2013  </td>
+              <td>  Teorema de Stokes. Teorema de Gauss. Aula de exercícios.  </td>
+            </tr>
+    
+            <tr class="linhap_de_tabela_de_lista">
+              <td>  12a  </td>
+              <td>  28/10/2013 a 01/11/2013  </td>
+              <td>  <b>Prova 1.</b> Equações diferenciais lineares de primeira ordem. Equações separáveis.  </td>
+            </tr>
+    
+            <tr class="linhai_de_tabela_de_lista">
+              <td>  13a  </td>
+              <td>  04/11/2013 a 08/11/2013  </td>
+              <td>  Aplicações de equações diferenciais lineares de primeira ordem.  </td>
+            </tr>
+    
+            <tr class="linhap_de_tabela_de_lista">
+              <td>  14a  </td>
+              <td>  11/11/2013 a 15/11/2013  </td>
+              <td>  Métodos de resolução de  equações diferenciais lineares de segunda ordem ordem.  </td>
+            </tr>
+    
+            <tr class="linhai_de_tabela_de_lista">
+              <td>  15a  </td>
+              <td>  18/11/2013 a 22/11/2013  </td>
+              <td>  Aula de exercícios. Definição de transformada de Laplace. Propriedades da transformada de Laplace.  </td>
+            </tr>
+    
+            <tr class="linhap_de_tabela_de_lista">
+              <td>  16a  </td>
+              <td>  25/11/2013 a 29/11/2013  </td>
+              <td>  Propriedades da transformada de Laplace.Produto de transformadas e convolução. Obtenção de uma solução particular de uma equação não homogênea. Aplicações da transformada de Laplace.  </td>
+            </tr>
+    
+            <tr class="linhai_de_tabela_de_lista">
+              <td>  17a  </td>
+              <td>  02/12/2013 a 06/12/2013  </td>
+              <td>  <b>Prova 1.</b>  </td>
+            </tr>
+    
+            <tr class="linhap_de_tabela_de_lista">
+              <td>  18a  </td>
+              <td>  09/12/2013 a 13/12/2013  </td>
+              <td>  <b>Prova de Reposição e Nova Avaliação.</b>  </td>
+            </tr>
+  
+          <tbody>
+          </tbody>
+        </table>
+        
+        <h2>Bibliografia</h2>
+        <ol>
+          <li>
+            FLEMMING, Diva Marília; GONÇALVES, Mirian Buss. Cálculo B - Funções, Limite, Derivação e Integração. 6a edição. São Paulo (SP): Pearson, 2007, 448p.
+          </li>
+          <li>
+            LEITHOLD, Louis. O Cálculo com Geometria Analítica. 3a edição. São Paulo (SP): Harbra, 1994, 684p.
+          </li>
+          <li>
+            STEWART, James. Cálculo - Volume 2. 6a edição. São Paulo (SP): Thompson Pioneira, 2009, 688p.
+          </li>
+          <li>
+            ANTON, Howard. Cálculo, um Novo Horizonte - Volume 2. 6a edição. Porto Alegre (RS): Bookman, 2000, 578p.
+          </li>
+          <li>
+            KÜHLKAMP, Nilo. Cálculo 2. 4a edição. Florianópolis (SC): Editora da UFSC, 2009, 372p.
+          </li>
+          <li>
+            SIMMONS, George Finlay. Cálculo com Geometria Analítica - Volume 2. 1a edição. São Paulo (SP): McGraw-Hill, 1987, 829p.
+          </li>
+          <li>
+            THOMAS, George. Cálculo - Volume 2. 11a edição. São Paulo (SP): Pearson, 2009, 784p.
+          </li>
+          <li>
+            GUIDORIZZI, Hamilton Luiz. Um Curso de Cálculo - Volume 2. 5a edição. Rio de Janeiro (RJ): Livros Técnicos e Científicos Editora, 2001, 580p.
+          </li>
+        </ol>
+
+      </div>
+      <!-- Fim Principal   -->
+
+    </div>
+  </body>
+
+</html>

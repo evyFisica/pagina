@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" href="../../../../../css/print.css" rel="stylesheet" media="print">  
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/main.js' type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+      MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+        extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+        TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+        }
+      });
+    </script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script></head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Calculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h2>Curvas Suaves</h2>
+      
+      <h3>Definição</h3>
+      
+      <p>
+        <em>
+        Dizemos que uma curva representada por $\vec{r}(t)$ é uma curva ou função suave de $t$ se  $\vec{r}'(t)$ é continua e  $\vec{r}'(t)\neq 0$ para toda valor de $t$.
+      </em>
+      </p>
+      
+      <h4>Exemplo 1</h4>
+      <div>
+        <img src="figuras/exemplo01.png" align="right"></img>
+      </div>
+      <p>
+        Determine se as seguintes funções são suaves
+        <ul>
+          <li>
+            $\vec{r}(t) = a\cos t\,\hat{i} + a \sin t \,\hat{j} + ct \, \hat{k}\;\;\;\;\;\;  (a>0, c>0)$
+          </li>
+          <li>
+            $\vec{r}(t) = t^2\,\hat{i} + t^3 \,\hat{j}$
+          </li>
+        </ul>
+      </p>
+      <p>
+        <b>Sol.</b><br />
+        a) $\vec{r}'(t) = -a \sin t \,\hat{i}  + a\cos t\,\hat{j}  + c$<br />
+        A função resultante é uma função continua e não existe valor de $t$ que anule o vetor $\vec{r}'(t)$
+      </p>
+      <p>
+        b) $\vec{r}'(t) = 2t\,\hat{i}  + 3t\,\hat{j}$<br />
+        Observe que para $t=0$, $\vec{r}'(t) = 0$. Veja figura ao lado.
+      </p>
+      
+      <h2>Conceito de Integral com funções vetoriais</h2>
+      <h3>Integrais definidas</h3>
+      <p>
+      Se $\vec{r}(t)$ é uma função vetorial que é continua no intervalo $a\leq t \leq b$ podemos definir a <b>integral definida</b> de $\vec{r}(t)$ sobre este intervalo como o limite da somas de Riemann da mesma forma que são definidas para o caso das funções em $\mathbb{R}$. Especificamente se define
+      
+      \[
+        \int_a^b \vec{r}(t)\,dt = \lim_{max\,\Delta t_k \rightarrow 0} \;\sum_{k=1}^{n} \vec{r}(t^*_k)\, \Delta t_k
+        \nonumber
+      \]
+      
+      aplicando essa definição às componente do vetor
+      
+      \[
+        \begin{eqnarray*}
+          \int_a^b \vec{r}(t)\,dt &=& \lim_{max\,\Delta t_l \rightarrow 0} \;\sum_{l=1}^{n} \vec{r}(t^*_l)\, \Delta t_l \nonumber\\
+          &=& \lim_{max\,\Delta t_l \rightarrow 0} 
+          \left[ \left( \sum_{l=1}^{n} f(t^*_l)\, \Delta t_l \right)\,\hat{i} +
+          \left( \sum_{l=1}^{n} g(t^*_l)\, \Delta t_l\right)\,\hat{j} +
+          \left( \sum_{l=1}^{n} h(t^*_l)\, \Delta t_l\right)\,\hat{k} \right]
+        \end{eqnarray*}
+      \]
+      e
+      \[
+        \int_a^b \vec{r}(t)\,dt = \left( \int_a^b f(t)\,dt \right)\,\hat{i}+ \left( \int_a^b g(t)\,dt\right) \,\hat{j} + \left( \int_a^b h(t)\,dt\right) \,\hat{h}
+      \]
+      </p>
+      <h4>Exemplo</h4>
+      <p>
+        Seja $\mathbf{r}(t) = t^2\mathbf{i} + e^t\mathbf{j} - \left( 2\cos \pi t \right)\mathbf{k}$ calcule a integral entre $[0, 1]$<br />
+        
+        <b>SOL.</b><br />
+        
+        \[
+          \begin{eqnarray*}
+            \int_0^1 \mathbf{r}(t)\, dt&=& 
+            \left(\int_0^1 t^2 dt\right) \mathbf{i} +
+            \left( \int_0^1  e^t  dt\right) \mathbf{j} +
+            \left( \int_0^1  2\cos \pi t\;  dt\right) \mathbf{k}\\
+            &=&  \left.\dfrac{t^3}{3} \right|_0^1 \,\mathbf{i}+
+            \left. e^t\right|_0^1 \,\mathbf{j} +
+            \left. \dfrac{2}{\pi} \sin \pi t\right|_0^1 \,\mathbf{k}\\
+            &=& \dfrac{1}{3} \,\mathbf{i} + (e - 1)\,\mathbf{j}            
+          \end{eqnarray*}
+        \]
+      </p>
+      
+      <p>
+        Podemos provar que todas as regras de integração que são válidas para funções em $\mathbb{R}$ se mantem válidas para as funções vetoriais.
+      </p>
+      
+      <h3>Integrais indefinidas</h3>
+      <p>
+        A antiderivada de uma função vetorial $\mathbf{r}(t)$ é uma função vetorial $\mathbf{R}(t)$ tal que
+        \[
+          \mathbf{R}'(t) = \mathbf{r}(t)
+          \nonumber
+        \]
+        isto é
+        
+        \[
+          \int \mathbf{r}(t)\, dt = \mathbf{R}(t) + \mathbf{C}
+        \]
+        onde $\mathbf{C}$ é um vetor constante arbitrário.
+      </p>
+      
+      <h4>Exemplo</h4>
+      <p>
+        Encontre $\mathbf{r}(t)$ sabendo que $\mathbf{r}'(t) = \left< 3, 2t \right>$ e que $\mathbf{r}(1) = \left< 2, 5 \right>$
+        
+        <br><b>SOL.</b><br />
+        
+        \[
+          \begin{eqnarray*}
+            \int \mathbf{r}'(t)\, dt&=& \mathbf{r}(t)\\
+            &=& \int \left(
+            3\,\mathbf{i} +
+            2t\,\mathbf{j} \right) dt\\
+            &=& 3t\,\mathbf{i} + t^2\,\mathbf{j} + \mathbf{C}
+          \end{eqnarray*}
+        \]
+        
+        Como $\mathbf{r}(1) = 2\,\mathbf{i} + 5\,\mathbf{j}$, então
+        
+        \[
+          \begin{eqnarray*}
+          2\,\mathbf{i} + 5\,\mathbf{j} &=&
+          3(1)\,\mathbf{i} + (1)^2\,\mathbf{j} + \mathbf{C}\\
+          \mathbf{C}  &=& -\,\mathbf{i} + 4\,\mathbf{j}
+          \end{eqnarray*}
+        \]
+      </p>
+      
+      <h2>Comprimento do arco do ponto de vista vetorial</h2>
+      
+      <p>
+        Continuando com o estudo da parametrização das curvas em $\mathbb{R}^3$ vamos estudar propriedades das curvas definidas por estas parametrizações tais como comprimento e curvatura. A área da matemática responsável pelo estudo de curvas e superfícies em dimensões superior (em inglés chamados de "manifolds") se denomina de geometria diferencial (muito utilizada no estudo da gravidade pelos Físicos).
+      </p>
+      
+      <div>
+        <img src="figuras/lengarc.png" align="right" width="350"></img>
+      </div>
+      
+      <p>
+        Seja $\mathbf{r}:[a,b] \rightarrow \mathbb{R}^3$ uma curva $C^1$ em $\mathbb{R}^3$. Vamos aproximar o comprimento $L$ de $\mathbf{r}$ da seguinte forma: primeiro, dividimos o intervalo  $[a,b]$ em $n$ subintervalos, ou seja, escolhemos números $t_0, t_1, \ldots, t_n$ tais que $a=t_0 < t_1 < \ldots < t_n = b$. Seja $\Delta s_l$, onde $i=1, \ldots , n$,  a distância entre $\mathbf{r}(t_{l-1})$ e $\mathbf{r}(t_{l})$ ao longo da curva, então podemos afirmar que
+        
+        \[
+          L \approx \sum _{l=1}^{n} \Delta s_l
+          \nonumber
+        \]
+        
+        Se
+        
+        \[
+          \mathbf{r}(t) = x(t)\,\mathbf{i} + y(t)  \,\mathbf{j}  + z(t) \,\mathbf{k}
+          \nonumber
+        \]
+        
+        então, pelo teorema de Pitágoras sabemos
+        
+        \[
+          \Delta s_l = \sqrt{\Delta x^2 + \Delta y^2 + \Delta z^2}
+          \nonumber
+        \]
+        
+        onde $\Delta x = x(t_l) - x(t_{l-1})$, $\Delta y = y(t_l) - y(t_{l-1})$ e $\Delta z = z(t_l) - z(t_{l-1})$. Parece razoável ter a esperança de que a medida que $\Delta t_l = t_l - t_{l-1}$ se aproxime de zero, o valor de $\Delta s_l$ se aproxime mais e mais do valor do comprimento.  Dessa forma definimos o comprimento $L$ de $\mathbf{r}$ como
+        
+        \[
+          L = \lim _{max\; \Delta t_l \rightarrow 0}\sum _{l=1}^{n} \sqrt{\Delta x^2 + \Delta y^2 + \Delta z^2}
+          \nonumber
+        \]
+        
+        Para passar a soma de Rimann para integral temos que aplicar o teorema do valor médio 3 vezes em cada subintervalo $[t_{i-1}, t_i]$ e disso concluímos que
+        <ol>
+          <li>
+            Deve existir um número $t_l^*$ em $[t_{i-1}, t_i]$ tal que
+            \[
+              \Delta x = x'\left( t_l^* \right) \Delta t_l
+              \nonumber
+            \]
+          </li>
+          <li>
+            Deve existir um número $t_l^{**}$ em $[t_{i-1}, t_i]$ tal que
+            \[
+              \Delta y = y'\left( t_l^{**} \right) \Delta t_l
+              \nonumber
+            \]
+          </li>
+          <li>
+            Deve existir um número $t_l^{***}$ em $[t_{i-1}, t_i]$ tal que
+            \[
+              \Delta z = z'\left( t_l^{***} \right) \Delta t_l
+              \nonumber
+            \]
+          </li>
+        </ol>
+        
+        dessa forma teremos que
+        
+        \[
+          L = \lim _{max\; \Delta t_l \rightarrow 0}\sum _{l=1}^{n} \sqrt{x'\left( t_l^* \right)^2 + y'\left( t_l^{**} \right)^2 + z'\left( t_l^{***} \right)^2} \Delta t_l
+          \nonumber
+        \]
+        
+        quando aplicado o limite obtemos
+        
+        \[
+          L = \int_a^b \sqrt{x'\left( t \right)^2 + y'\left( t \right)^2 + z'\left( t \right)^2}\;\; dt
+        \]
+        
+        assim podemos definir
+        
+      </p>
+      
+      <p>
+      <b><font color="#CCFF33" size="5">Definição:</font></b><br />
+      <em>
+        Se $C$ é uma curva suave definida pela função vetorial $\mathbf{r}$ no intervalo $[a,b]$, então o comprimento (arco) de $C$ nesse intervalo está dado por
+        \[
+          L = \int_a^b \left| \dfrac{d\mathbf{r}}{dt} \right|\;\; dt
+        \]
+      </em>
+      </p>
+      
+      <h4>Exemplo</h4>
+      
+      <div>
+        <img src="figuras/exemplo03.png" align="right" width="350"></img>
+      </div>
+      
+      <p>
+        Encontre o comprimento arco da curva dada por $\mathbf{r}(t) = t \,\mathbf{i} + \dfrac{4}{3}t^{3/2}\,\mathbf{j} + \dfrac{1}{2}t^{2}  \,\mathbf{k}$ entre $t=0$ e $t=2$.
+        <br><b>SOL.</b><br />
+        Da definição da função $\mathbf{r}(t)$ identificamos as funções componentes e calculamos suas derivas:
+        \[
+          \begin{eqnarray*}
+            x'(t) &=& 1\\
+            y'(t) &=& 2t^{1/2}\\
+            z'(t) &=& t
+          \end{eqnarray*}
+        \]
+        
+        dessa forma
+        
+        \[
+          \begin{eqnarray*}
+            L &=& \int_0^2 \sqrt{\left( 1 \right)^2 + \left( 2t^{1/2} \right)^2 + \left( t\right)^2}\,\,\,\,dt\\
+            &=& \int_0^2 \sqrt{1 + 4t + t^2}\,\,dt\\
+            &=& \int_0^2 \sqrt{(t+2)^2 -3}\,\,dt\\
+          \end{eqnarray*}
+        \]
+      </p>
+      
+      <div>
+        <img src="figuras/int01.png" align="right" width="250"></img>
+      </div>
+      
+      <p>
+        a solução dessa equação requer utilizar as seguentes substituições:
+        \[
+          \begin{eqnarray*}
+            n  =& t+2\\
+            dn =& dt 
+          \end{eqnarray*}
+        \]
+        vamos solucionar a integral indefinida, assim a integral muda para
+        \[
+          \begin{eqnarray*}
+            I =& \int \sqrt{n^2 - 3} dn\\
+          \end{eqnarray*}
+        \]
+        utilizando substituição trigonométrica, vemos que colocando $u$ na hipotenusa e $\sqrt{3}$ no cateto adjacente, então
+        \[
+          \begin{eqnarray*}
+          \sqrt{n^2 - 3} =& \sqrt{3}\tan \theta\\
+          \dfrac{n}{\sqrt{3}} =&\sec \theta\\
+          dn =& \sqrt{3} \sec \theta \tan \theta d\theta
+          \end{eqnarray*}
+        \]
+        de onde
+        \[
+          \begin{array}{r l}
+          I =& 3\int \sec \theta \tan ^2 \theta d\theta \nonumber\\
+            =&  3\int \sec \theta \left( \sec ^2 \theta - 1\right)d\theta \nonumber\\
+            =&  3\int \sec ^3 \theta d\theta - 3\int \sec \theta d\theta \nonumber
+          \end{array}
+        \]
+        resolvendo cada uma das integrais:
+        \[
+          \begin{array}{r l}
+            I_2 = \int \sec \theta d\theta 
+             =&\int \sec \theta \dfrac{\sec \theta + \tan \theta}{\sec \theta + \tan \theta} d\theta \nonumber\\
+            =& \dfrac{\sec ^2 \theta + \sec \theta \tan \theta}{\sec \theta + \tan \theta} d\theta \nonumber
+          \end{array}
+        \]
+        fazemos
+        \[
+          \begin{array}{r l}
+            u  =& \sec \theta + \tan \theta \nonumber\\
+            du =& \left( \sec \theta  \tan \theta + \sec^2 \theta\right) d\theta \nonumber
+          \end{array}
+        \]
+        assim
+        \[
+          \begin{array}{r l}
+            I_2^* =& \int \dfrac{1}{u}\,du\nonumber\\
+            I_2=& \ln \left| \sec \theta + \tan \theta \right| + C_1\nonumber
+          \end{array}
+        \]
+        A I integral:
+        \[
+          \begin{array}{r l}
+          I_1 =& \sec ^3 \theta d\theta\nonumber\\
+          \end{array}
+        \]
+        integrando por partes:
+        \[
+          \begin{array}{r l c r l}
+          u =& \sec \theta &\;\;\;\;\ & dv =& \sec ^2 \theta d\theta\nonumber\\
+          du =& \sec \theta  \tan \theta d\theta & & v =& \tan \theta \nonumber
+          \end{array}
+        \]
+        assim
+        \[
+          \begin{array}{r l}
+            \sec ^3 \theta d\theta  =& \sec \theta  \tan \theta - \int \left( \sec ^3 \theta - \sec \theta \right)d\theta \nonumber\\
+            2\sec ^3 \theta d\theta  =& \sec \theta  \tan \theta - \int \sec \theta d\theta \nonumber\\
+            \sec ^3 \theta d\theta  =& \dfrac{1}{2}\sec \theta  \tan \theta - \dfrac{1}{2} \ln \left| \sec \theta + \tan \theta \right| + C_2\nonumber
+          \nonumber
+          \end{array}
+        \]
+        assim a integral original fica
+        \[
+          I = \dfrac{1}{2}\sec \theta  \tan \theta + \dfrac{1}{2} \ln \left| \sec \theta + \tan \theta \right| + C\nonumber
+        \]
+        como
+        \[
+          \sec \theta = \dfrac{t+2}{\sqrt{3}}\;\;\;\;\;\; \tan \theta = \dfrac{\sqrt{(t+2)^2 -3}}{\sqrt{3}}\nonumber
+        \]
+        então
+        \[
+          \int \sqrt{(t+2)^2 -3}\,\,dt = \dfrac{\left(t+2 \right)\sqrt{(t+2)^2 -3}}{2} - \frac{3}{2}\left| \dfrac{t+2+\sqrt{(t+2)^2 -3}}{\sqrt{3}} \;\;\;\right|\nonumber
+        \]
+      </p>
+      <h4>Exemplo</h4>
+      
+      <div>
+        <img src="figuras/exemplo04.png" align="right" width="250"></img>
+      </div>
+        Encontre o comprimento do arco de uma hélice depois de completar uma volta inteira, sabendo que a parametrização da curva está dada por
+        $\mathbf{r}(t) = a\cos t \,\mathbf{i} + a \sin t \,\mathbf{j} + \sqrt{1-a^2} t \,\mathbf{k}$
+       <br><b>SOL.</b><br />
+       Derivando a expressão
+       \[
+        \mathbf{r}'(t) = -a\sin t \,\mathbf{i} + a \cos t \,\mathbf{j} + \sqrt{1-a^2} \,\mathbf{k}
+        \nonumber
+       \]
+       uma volta inteira quer dizer que a integral é de $0$ até $2\pi$, assim:
+       \[
+         \begin{eqnarray*}
+           L &=& \int_0^{2\pi} \sqrt{a^2\sin ^2t  + a^2\cos ^2t + (1-a^2)}\,\,\;\;\;dt\\
+             &=& \int_0^{2\pi} dt\\
+             &=& \left. t\right|_0^{2\pi}\\
+             &=& 2\pi
+         \end{eqnarray*}
+       \]
+      </p>
+      
+      <h3>Função de comprimento de arco</h3>
+      
+      <div>
+        <img src="figuras/arcoparametro.png" align="left" width="350"></img>
+      </div>
+      
+      <p>
+        O comprimento do arco também permite reparametrizar as curvas já parametrizadas e a parametrização resultante só depende da geometria da curva e não da forma como ela é traçada.
+      </p>
+      
+      <p>
+        Seja $\mathbf{r}(t)$ qualquer caminho $C^1$ e assuma que a derivada é $\mathbf{r}'(t)$ nunca é zero (então suave). Fixe um ponto $P_o$ no caminho e seja $a$ tal que $\mathbf{r}(a)=P_o$. Definimos uma função $L(t)$ de uma variável que mede o comprimento o comprimento do caminho entre $P_o$ e qualquer outro ponto $P$ (móvel) por
+        
+        \[  
+          L(t) = \int_a^t \left| \dfrac{d\mathbf{r}}{dt} \right|\;\; dt
+        \]
+        Para aplicar está técnica devemos rescrever a equação em termos de $l=L(t)$, invertendo a equação, vejamos alguns exemplos
+      </p>
+      
+      <h4>Exemplo</h4>
+      <p>
+        Para a hélice $\mathbf{r}(t) = a\cos t\,\mathbf{i} + a\sin t \,\mathbf{j} + bt\,\mathbf{k}$, selecionar $P_o = a\,\mathbf{i}$
+        <br><b>SOL.</b><br />
+        Nota que quando $\mathbf{r}(t) = a\,\mathbf{i} = a\cos t\,\mathbf{i} + a\sin t \,\mathbf{j} + bt\,\mathbf{k}$ então necessariamente $t=0$, assim o limite inferior de integração é $0$:
+        \[
+         \begin{eqnarray*}
+            L(t) &=& \int_0^t \sqrt{a^2\sin ^2t  + a^2\cos ^2t + b^2}\;\;\;d\tau\\
+                 &=& \int_0^t \sqrt{a^2 + b^2}\;\;\;d\tau\\
+                 &=& \sqrt{a^2 + b^2}\;\;t
+         \end{eqnarray*}
+        \]
+        agora diremos que esse resultado corresponde à variável $l$ e invertemos
+        \[
+         \begin{eqnarray*}
+         l &=& \sqrt{a^2 + b^2}\;\;t\\
+         t &=& \dfrac{l}{\sqrt{a^2 + b^2}}
+         \end{eqnarray*}
+        \]
+        agora substituímos o $t$ na equação original
+        \[
+          \mathbf{r}(t) = a\cos\left(\dfrac{l}{\sqrt{a^2 + b^2}} \right) \,\mathbf{i} + a\sin\left(\dfrac{l}{\sqrt{a^2 + b^2}} \right) \,\mathbf{j} + \dfrac{bl}{\sqrt{a^2 + b^2}}\,\mathbf{k}
+          \nonumber
+        \]
+      </p>
+      
+      <h4>Exemplo</h4>
+      <p>
+        Dada uma curva $C$ representada por $\left| \mathbf{r}(t) \right|=1$, então o parâmetro $t$ é o parâmetro comprimento de arco de $C$
+       <br><b>SOL.</b><br />
+       Por definição de comprimento de arco:
+       \[
+        \begin{eqnarray*}
+          l = L(t) &=& \int_0^t\left| \mathbf{r}(\tau) \right|\;\;\;d\tau\\
+          &=& \int_0^t1\;d\tau\\
+          &=& t
+         \end{eqnarray*}
+        \nonumber
+       \]
+       
+        Deste exemplo vemos que parametrizando a curva com o arco de comprimento estamos escolhendo um parametrização tal que o módulo da função vetorial é nulo. Podemos ainda ir a frente um pouco mais nesta análise, como
+        \[  
+         \begin{eqnarray}
+            l = L(t) &=& \int_a^t \left| \dfrac{d\mathbf{r}(t)}{dt} \right|\;\; dt\nonumber\\
+            \dfrac{dl}{dt} &=& \left| \dfrac{d\mathbf{r}(t)}{dt} \right|\label{def25}
+         \end{eqnarray}
+        \]
+        vamos aplicar a regra da cadeia:
+        \[  
+          \dfrac{d\mathbf{r}(t)}{dt} = \dfrac{d\mathbf{r}(l)}{dl}\dfrac{dl}{dt}
+          \nonumber
+        \]
+        do $\ref{def35}$, podemos escrever:
+        \[  
+          \dfrac{d\mathbf{r}(t)}{dt} = \dfrac{d\mathbf{r}(l)}{dl}\left|\, \dfrac{d\mathbf{r}(t)}{dt} \right|
+        \]
+        ou, equivalentemente
+        \[
+          \dfrac{d\mathbf{r}(l)}{dl} = \mathbf{r}'(l) = \dfrac{\mathbf{r}'(t)}{\left| \dfrac{d\mathbf{r}(t)}{dt} \right|}
+          \nonumber
+        \]
+        ou, mais claramente
+        \[
+          \mathbf{r}'(l) = \dfrac{\mathbf{r}'(t)}{\left|\mathbf{r}'(t)\right|}
+          \nonumber
+        \]
+        o que significa que a curva parametrizada é um curva vectorial com módulo unitário, como visto no exemplo, mas é aquela cuja taxa de variação em relação a $t$ é um, isto é dito por alguns autores como a rapidez da curva é $1$. 
+      </p>
+      
+      <h4>Exemplo</h4>
+      
+      <p>
+        Calcule a curva parametrizada em $l$ da função vetorial $\mathbf{r}(t) = t \,\mathbf{i} + \dfrac{\sqrt{2}}{2}t^2\,\mathbf{j} + \dfrac{1}{3}t^3\,\mathbf{k}$
+       <br><b>SOL.</b><br />
+       A derivada da função é $\mathbf{r}(t) = \,\mathbf{i} + \sqrt{2t}\,\mathbf{j} + t^2\,\mathbf{k}$
+       \[
+       \begin{eqnarray*}
+          l(t) &=& \int_0^t \sqrt{1+2\tau+\tau^4}\;\;d\tau\\
+          &=& \int_0^t \sqrt{\left( 1+\tau^2\right)^2}\;\;d\tau\\
+          &=& \int_0^t \left( 1+\tau^2\right)\;\;d\tau\\
+          &=& \int_0^t t + \dfrac{1}{3}t^3
+        \end{eqnarray*}
+        \]
+      </p>
+      <div>
+        <img src="figuras/exemplo5.png" align="right" width="350"></img>
+      </div>
+      <p>
+        A parametrização das curvas é um assunto delicado, por exemplo observe a figura do lado, nessa figura plotamos a curva anterior e uma outra curva, dada por $\mathbf{r}(t) = t\,\mathbf{i} + t^2\,\mathbf{j} + t^3\,\mathbf{k}$, que é essencialmente a mesma curva, são suaves e tem o mesmo comportamento porém quando você tenta calcular a parametrização utilizando o comprimento do arco resulta em um desastre:
+        \[
+          \mathbf{r}'(t) = \,\mathbf{i} + 2t\,\mathbf{j} + 3*t^2\,\mathbf{k}
+          \nonumber
+        \]
+        de onde
+        \[
+          l(t) = \int_0^t \sqrt{1 + 4\tau^2 + 9\tau ^4}\;\;d\tau
+          \nonumber
+        \]
+        vemos que essa integral não é simples de ser resolvida.
+      </p>
+      
+      <h3>Funções vetoriais de varias variáveis</h3>
+      
+      <p>
+        Em todas as situações vista ate aqui, cada umas das funções componente da função vetorial são todas definidas em $\mathbb{R}$. Mas similarmente ao que foi feito com as funções o domínio de nossas componentes pode ser $\mathbb{R}^3$, isto é
+        \[
+          \mathbf{r}(x,y,z) = f(x,y,z)\,\mathbf{i} + g(x,y,z) \,\mathbf{j} + h(x,y,z) \,\mathbf{k}
+          \nonumber
+        \]
+        Vejamos um exemplo
+        \[
+          \mathbf{r}(x,y,z) = xz\,\mathbf{i} + xy \,\mathbf{j} + 2\sqrt{z} \,\mathbf{k}
+          \nonumber
+        \]
+        outro
+        \[
+          \mathbf{r}(x,y,z) = x  \,\mathbf{i} + \sqrt{1-x^2-y^2} \,\mathbf{j}
+          \nonumber
+        \]
+      </p>
+      
+<!--   
+Pagina dos livros:
+Diva 2 - 73
+Anton  698
+vector calculus 299
+Larson 894
+Leithold 2 - 232
+Swokowski - 691
+
+-->
+      <!--
+      <h4>Exemplo</h4>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      \mathbb{R}
+      
+      \left< \right>    \left( \right)
+ 
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k} -->
+      
+      
+            
+      </div>
+      <!-- Fim Principal   -->
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html>
+      

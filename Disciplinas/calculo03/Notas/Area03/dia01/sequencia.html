@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/main.js' type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+      MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+        extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+        TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+        }
+      });
+    </script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Calculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h2>Sequências</h2>
+      
+      <p>
+        A ideia corriqueira que temos sobre o termo sequência descreve de forma bastante corretamente o que significa do ponto de vista matemática. Quando narramos algum episodio fortuito do nosso dia expomos de forma cronológica cada um dos eventos que compõem aquele episodio, igualmente utilizamos o conceito de sequência quando analisamos o resultado do brasileirão, colocamos as equipes em alguma ordem, ou descendente ou ascendente.  De forma que vemos que intrinsecamente a palavra sequência implica em um conjunto de coisas que mantêm algum relação de ordem, de fato o conjunto dos números naturais apresenta esta característica, é um conjunto onde os elementos são colocados de forma que somando um ao anterior obtemos o número atual.  Neste último exemplo resulta evidente que existem sequências nas quais é possível estabelecer uma relação "funcional" entre seu elementos, com esto em mente damos uma definição formal ao conceito matemático de sequência:
+      </p>
+
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Uma sequência de números reais é uma função de $\mathrm {n}=\{1,2,3,\ldots\}$ em $\mathbb{R}$ a qual associa a cada número natural $n$ (inteiros positivos) o número real $a_n$ ($a$ índice $n$):
+       \[
+         \begin{array}{clcr}
+           s: & \mathbb{N} & \rightarrow & \mathbb{R}\\
+              & s(n) & = & a_n
+         \end{array}
+         \nonumber
+       \]
+      </em></p>
+      </td></tr>
+      </table>
+
+      <p>
+        Representaremos por $\left( a_n \right)$ a sequência cujo <b>termo geral</b> é $x_n$ (outra notação utilizada é $\{x_n\}$ e $\{x_n\}_{n=inicio}^{fim}$, mas essa mesma notação é utilizada por alguns para indicar o conjunto de elementos da sequência). Progressões aritméticas e geométricas são exemplo de sequências quando estas tiverem uma infinidade de termos.
+      </p>
+
+      <div align="center">
+      <figure>
+        <a href="javascript:newWin('figuras/fig002.png', 'Zoom', '1600')">
+          <img src="figuras/fig002.png" width="350" align="center"/>
+        </a>
+        <figcaption>Fig1. - A analise do problema nos permite determinar o termo da serie.</figcaption>
+      </figure>
+      </div>
+
+      <h5>Exemplo 01</h5>
+      <p>
+        Expresse a seguintes sequências determinando o termo geral
+        <ol type="a">
+          <li>
+            $\displaystyle 4,\;8,\;12,\;16,\;\ldots$
+          </li>
+          <li>
+            $\displaystyle 4,\;7,\;10,\;13,\;\ldots$
+          </li>
+          <li>
+            $\displaystyle 1,\;-1,\;1,\;-1,\;1,\;-1,\;\ldots$
+          </li>
+          <li>
+            $\displaystyle 7,\;7,\;7,\;7,\;\ldots$
+          </li>
+          <li>
+            $\displaystyle  -\dfrac {1} {5},\;-\dfrac {4} {9},\;-\dfrac {7} {13},\;-\dfrac {10} {17},\;\ldots$
+          </li>
+          <li>
+            $\displaystyle 3+\dfrac {1} {2},\;3-\dfrac {1} {4},\;3+\dfrac {1} {8},\;3-\dfrac {1} {16},\;\ldots$
+          </li>
+          <li>
+            $\displaystyle 1,\;8-\dfrac {1} {4},\;\dfrac {1} {3},\;8-\dfrac {1} {8},\;\dfrac {1} {5},\;8-\dfrac {1} {12},\;\ldots$
+          </li>
+        </ol>
+      </p>
+      
+      <p>
+        Em muitas sequências não é possível determinar uma expressão que caraterize o termo geral, por exemplo na sequência cujo $n-\text{ésimo}$ termo é o $n-\text{ésimo}$ algarismo da representação decimal: $  \pi =3,1,4,1,5,9,2,\ldots$, outro exemplo é a sequência de números primos $2,3,5,7,11,\ldots$
+      </p>
+      
+      <h3>Gráficos</h3>
+      
+      <p>
+        Podemos representar os pontos da sequência em gráficos, mas nesses gráficos cada par ordenado não pode ser ligado aos outros pares vizinho por uma linha já que eles não formam um continuo.   A representação gráfica pode ser útil para visualizar o comportamento do $n-\text{ésimo}$ termo $a_n$ quando $n$ cresce indefinidamente.
+      </p>
+      
+      <div align="center">
+      <figure>
+        <a href="javascript:newWin('figuras/fig01.png', 'Zoom', '1600')">
+          <img src="figuras/fig01.png" width="650" align="center"/>
+        </a>
+        <figcaption>Fig2. - (a) Representação gráfica de uma sequência, (b) de uma função.</figcaption>
+      </figure>
+      </div>
+      
+      <h3>sequências definidas recursivamente</h3>
+      
+      <p>
+        Algumas sequências não resultam de uma formula para o termo geral, no lugar disso é dada uma formula ou conjunto de formulas que especificam como gerar cada termo da sequência a partir dos termos que o precedem; dizemos que tais sequências são definidas recursivamente, e chamamos as formulas que as definem de formulas de recursão. Um exemplo deste tipo de sequência é a formula utilizada para aproximar a raiz quadrada de um número $a$:
+        \[
+         x_1=1,\;\;\;\;\;\;\;\;\;\;x_{n+1}=\dfrac {1} {2}\left( x_{n}+\dfrac {a} {x_{n}}\right)
+         \nonumber
+        \]
+      </p>
+      
+      <div align="center">
+      <figure>
+        <a href="javascript:newWin('figuras/furacao.png', 'Zoom', '1600')">
+          <img src="figuras/furacao.png" width="350" align="center"/>
+        </a>
+        <figcaption>Fig3. - sequência de Fibonacci.</figcaption>
+      </figure>
+      </div>
+
+      <p>
+        Um outro exemplo famoso é a sequência de Fibonacci, definida como
+        \[
+           f_1 = 1,\;\;\;\;f_2 = 1, \;\;\;\;f_n = f_{n+1} + f_{n-2}, \;\;\;\; n\geq 3
+           \nonumber
+        \]
+      </p>
+      
+      <h3>Limite de uma sequência</h3>
+      <p>
+        Através do cálculo do limite de uma sequência pretendemos obter informação sobre o comportamento de $a_n$ quando $n\to \infty$. Assim, diremos que uma sequência $\left( x_n \right)$ tende a um limite $L$ se os termos da sequência tornarem-se arbitrariamente próximos  de $L$.
+      </p>
+
+      <div align="center">
+      <figure>
+        <a href="javascript:newWin('figuras/fig02.png', 'Zoom', '1600')">
+          <img src="figuras/fig02.png" width="350" align="center"/>
+        </a>
+        <figcaption>Fig4. - Além de um certo $M$, o resto dos termos da sequência estão afastados em  $\epsilon$ de $L$.</figcaption>
+      </figure>
+      </div>
+      
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        A sequência $\left( a_n \right)$ tem o limite $L$ se para qualquer $\epsilon > 0$ existir um número $M > 0$, tal que se $n$ for um inteiro e
+        \[
+          \text{se } n > M, \text{ então } \left| a_n - L \right| < \epsilon
+          \nonumber
+        \]
+        e escrevemos
+        \[
+          \lim_{n \to +\infty} a_n = L
+          \nonumber
+        \]    
+        ou, simbolicamente    
+        \[
+          \lim_{n\to+\infty}a_{n}=L\Leftrightarrow\forall\epsilon>0,\,\exists M\in\mathbb{N}: n>M\Rightarrow\left|a_{n}-L\right|<\epsilon
+          \nonumber
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+
+      <h5>Exemplo</h5>
+      <p>
+        Utilize a definição anterior para provar que a sequência
+        \[
+         \left(\dfrac{n}{2n+1}\right)
+         \nonumber
+        \]
+        tem limite $1/2$
+        <!-- exemplo: Leithold 3ed vol 2 pg 21 -->
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Seja $L$ um número real. Seja $f$ uma função de uma variável real tal que
+        \[
+          \lim_{x \to +\infty} f(x)= L
+          \nonumber
+        \]
+        Se $\left( a_n \right)$ é uma sequência tal que $f(n)=a_n$ para todo número positivo $n$, então
+        \[
+          \lim_{x \to +\infty} a_n = L
+          \nonumber
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+         Aqui devemos realizar uma observação. Se $L$ é o limite da sequência, implicitamente admitimos que <b>o limite é único</b>.  Esta observação é expressada como um teorema conhecido como teorema da unicidade.
+      </p>
+
+      <h5>Exemplo</h5>
+      <p>
+        Encontre o limite da sequência se o $n-$ésimo termo está dado por
+        \[
+          a_{n}=\left( 1+\dfrac {1} {n}\right) ^{n}
+          \nonumber
+        \]
+<!--         exemplo: Larson 9 ed, pg 621 e2 -->
+      </p>
+
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Se uma sequência $\left( a_n \right)$ tiver um limite, dizemos que ela é <b>convergente</b>, e $\left( a_n \right)$ converge para o limite. Se a sequência não for convergente, ela será <b>divergente</b>.
+      </em></p>
+      </td></tr>
+      </table>
+
+      <h5>Exemplo</h5>
+      <p>
+        Determine se a sequência
+        <ol>
+          <li>
+            $\displaystyle  \left( \dfrac {4n^{2}} {2n^{2}+1} \right)$ <!--exemplo: Leithold 3ed vol 2 pg 23 - e2-->
+          </li>
+          <li>
+            $\displaystyle  \left( r^n \right)$, $\left|r \right| < 1$ <!--exemplo: Leithold 3ed vol 2 pg 23 - e3-->
+          </li>
+          <li>
+            $\displaystyle  \left( ( -1)^{n}+1 \right)$ <!--exemplo: Leithold 3ed vol 2 pg 23 - e4-->
+          </li>
+          <li>
+            $\displaystyle  \left(   n\sin \dfrac {\pi } {n} \right)$ <!--exemplo: Leithold 3ed vol 2 pg 23 - e5-->
+          </li>
+        </ol>
+        é convergente ou divergente.
+      </p>
+
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Se $\left( a_n \right)$ e $\left( b_n \right)$ forem sequência convergentes e $c$  for uma constante, então
+        <ol>
+          <li>
+            a sequência constante $\left( c \right)$ tem $c$ como seu limite;
+          </li>
+          <li>
+            $\displaystyle \lim_{n \to +\infty} \left( c\,a_n\right) =  c\,\lim_{n \to +\infty} a_n$;
+          </li>
+          <li>
+            $\displaystyle \lim_{n \to +\infty} \left( a_n \pm b_n\right) = \lim_{n \to +\infty} a_n \pm \lim_{n \to +\infty} b_n$;
+          </li>
+          <li>
+            $\displaystyle \lim_{n \to +\infty} a_n\, b_n= \left(\lim_{n \to +\infty} a_n\right)\left(\lim_{n \to +\infty} b_n\right)$;
+          </li>
+          <li>
+            $\displaystyle \lim_{n \to +\infty} \dfrac{a_n}{b_n} = \dfrac{\displaystyle \lim_{n \to +\infty} a_n}{\displaystyle \lim_{n \to +\infty} b_n}$ se $\displaystyle \lim_{n \to +\infty} b_n \neq 0$ e todo $b_n \neq 0$
+          </li>
+        </ol>
+      </em></p>
+      </td></tr>
+      </table>
+      
+      
+      <h5>Exemplo</h5>
+      <p>
+        Determine se as sequências
+        <ol>
+          <li>
+            $\displaystyle \left( \dfrac {n^{2}} {2n+1}\sin \dfrac {\pi } {n}\right)$<!--  -->
+          </li>
+          <li>
+             $\displaystyle \left( 3 + (-1)^n \right)$<!-- exemplo: Larson 9ed pg 622 e.43a -->
+          </li>
+          <li>
+            $\displaystyle \left( \dfrac{n}{1-2n} \right)$<!-- exemplo: Larson 9ed pg 622 e.3b -->
+          </li>
+          <li>
+            $\displaystyle \left( \dfrac{2n^2-n-1}{5n^2+n-3} \right)$<!-- exemplo: Essex 6ed pg 492, e6a -->
+          </li>
+            $\displaystyle \left( \sqrt{n^2+2n} -n \right)$<!-- exemplo: Essex 6ed pg 492, e6c -->
+          </li>
+        </ol>
+          são, ou não, convergente e calcule seu limite.
+      </p>
+      
+      <h5>Exemplo</h5>
+      <p>
+        Mostre que as sequências, as quais tem por $n$-ésimo termo
+        <ol>
+          <li>
+            $\displaystyle a_n = \dfrac{n^2}{2^n-1}$<!-- exemplo: Larson 9ed pg 622 e.4 -->
+          </li>
+          <li>
+             $\displaystyle a_n = n\arctan \dfrac{1}{n}$<!-- exemplo: Essex 6ed pg 493, e7 -->
+          </li>
+          <li>
+            $\displaystyle  a_n = \dfrac{n}{e^n}$<!-- exemplo: Anton 10ed pg 602, e5 -->
+          </li>
+          <li>
+            $\displaystyle  a_n = \left(\dfrac{n+1}{n-1}\right)^n$<!--  exemplo: thomas 12ed pg 538, e8-->
+          </li>
+        </ol>
+          convergem
+      </p>
+      
+      
+      <table class="tabela_de_lista">
+      <tr>
+      <td class="definicaotitulo">
+        Teorema do Sanduíche
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Se
+        \[
+          \lim_{x\to \infty} a_n = L = \lim_{x\to \infty} b_n
+          \nonumber
+        \]
+        e existe um inteiro $M$ tal que $\displaystyle a_n \leq c_n \leq b_n$, $\forall \; n > M$, então
+        \[
+         \lim_{x\to \infty} c_n = L
+          \nonumber
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      
+      <h5>Exemplo</h5>
+      <p>
+        Mostre que as sequências
+        <ol>
+          <li>
+            $\displaystyle \left( (-1)^n\dfrac{1}{n!} \right)$<!-- exemplo: Larson 9ed pg 622 e.4 -->
+          </li>
+          <li>
+             $\displaystyle \left( \dfrac{\cos n}{n} \right)$<!--  -->
+          </li>
+          <li>
+            <!-- exemplo: Essex 6ed pg 492, e6b -->
+          </li>
+          <li>
+            <!--  -->
+          </li>
+        </ol>
+      </p>
+       convergem e determine seus limites.
+
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Se 
+         \[
+          \lim_{x\to \infty} \left| a_n  \right| = 0
+          \nonumber
+         \]
+         então
+         \[
+          \lim_{x\to \infty}  a_n  = 0
+          \nonumber
+         \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h4>Limites frequentes</h4>
+      <p>
+        <ol>
+          <li>
+            $\displaystyle \lim_{x \to \infty}\, \dfrac{\ln n}{n}=0$
+          </li>
+          <li>
+             $\displaystyle \lim_{x \to \infty}\, a^{1/n}=1,\;\;\;(a > 0)$
+          </li>
+          <li>
+            $\displaystyle \lim_{x \to \infty}\, \left(1+\dfrac{a}{n}\right)^n=e^x$
+          </li>
+          <li>
+            $\displaystyle \lim_{x \to \infty}\, \sqrt[n]{a}=1$
+          </li>
+          <li>
+            $\displaystyle \lim_{x \to \infty}\, a^n=0,\;\;\;(|a| < 1)$
+          </li>
+          <li>
+            $\displaystyle \lim_{x \to \infty}\, \dfrac{a^n}{n!}=0,\;\;\;(\forall a)$
+          </li>
+        </ol>
+      </p>
+      
+      <h5>Exemplo</h5>
+      <p>
+        Determine o limite
+        <ol>
+          <li>
+            $\displaystyle \lim_{x \to \infty}\,  \dfrac {\ln \left( n^{2}\right) } {n}$<!-- exemplo: Thomas 12 ed, pg539, e9 -->
+          </li>
+          <li>
+             $\displaystyle \lim_{x \to \infty}\,    \left( \dfrac {n-2} {n}\right) ^{n}$<!-- exemplo: Thomas 12 ed, pg539, e9 -->
+          </li>
+        </ol>
+      </p>
+      
+      <h4>sequências monótonas e limitadas</h4>
+      <p>
+        Sequências aparecem em diversas situações física e portanto resulta importante determinar se a mesma converge ou não e isto é possível de se fazer mesmo não sendo possível determinar algum limite como os mencionados anteriormente, assim veremos agora alguns testes que nos permitiram determinar ou não a convergência.
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Dizemos que uma sequência $\left( a_n \right)$ é
+        <ol>
+          <li>
+            <b>crescente</b>, se $a_n \leq a_{n+1},\;\forall\, n<!--  -->
+          </li>
+          <li>
+            <b>decrescente</b>, se $a_n \geq a_{n+1},\;\forall\, n$<!--  -->
+          </li>
+        </ol>
+        Chamaremos de <b>monótona</b> a uma sequência que seja crescente ou decrescente.
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        No caso de $a_n < a_{n+1}$, a sequência é estritamente crescente; se $a_n > a_{n+1}$, a sequência é estritamente decrescente. (Alguns autores chamam de não decrescente ao caso onde $a_n \leq a_{n+1}$ e de não crescente ao caso $a_n \geq a_{n+1}$)
+      </p>
+
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Uma sequência $\left( a_n \right)$ tem uma \textbf{cota superior} se existir um número $M$ tal que
+        \[
+           a_n \leq M\;\;\;\;\;\;\;\;\; \forall\,n \geq 1
+           \nonumber
+        \]
+        Ela tem uma \textbf{cota inferior} se existir um número $m$ tal que
+        \[
+           a_n \geq m\;\;\;\;\;\;\;\;\; \forall\,n \geq 1
+           \nonumber
+        \]
+        Se ela tiver uma cota superior e inferior então $\left( a_n \right)$ é uma <b>sequência limitada</b>
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        O teorema a seguir aponta uma condição necessária e suficiente para a convergência da sequência. 
+      </p>
+
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Uma sequência monótona limitada é convergente
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <br /><br />
+        
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+        Seja $\left( a_n \right)$ uma sequência não decrescente, e suponhamos que $M$ seja a cota superior da sequência. Então, $\left( a_n \right)$ será convergente e 
+        \[
+          \lim_{x \to \infty} a_n \leq M
+          \nonumber
+        \]
+        
+      <br /><br />
+      
+      </em></p>
+      </td></tr>
+      </table>
+
+      <br /><br />
+
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+        Seja $\left( a_n \right)$ uma sequência não crescente, e suponhamos que $m$ seja a cota inferior da sequência. Então, $\left( a_n \right)$ será convergente e 
+        \[
+          \lim_{x \to \infty} a_n \geq M
+          \nonumber
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h5>Exemplo</h5>
+      <p>
+        Seja $a_n$ definido recursivamente por
+        \[
+          a_1 = 1,\;\;\;\;\;\;\;\;a_{n+1}=\sqrt{6+a_n}\;\;\;\;\;\;\;\;(n=1,2,3,\ldots)
+          \nonumber
+        \]
+        mostre que $\displaystyle \lim_{n \to \infty} a_n$ existe e encontre seu valor.
+    <!--exemplo: Essex 6ed pg 494, e8-->
+
+      <p>
+        <a href="exemplos.html"><font color="#FFF7F1">Exemplos</font></a>
+      </p>
+<!--
+       \[
+          \begin{align*}
+          \end{align*}
+       \]   
+      
+      <h5>Exemplo</h5>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      \left< \right>     \left(  \right)      \left| \,   \, \right|
+      
+      \mathbb{R}
+      
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k} 
+         
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      -->
+      
+      </div>
+      <!-- Fim Principal   -->
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html> 
+ 
+ 

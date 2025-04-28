@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/main.js' type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+      MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+        extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+        TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+        }
+      });
+    </script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Calculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h2>Área de uma superfície</h2>
+      
+      <p>
+        Nosso objetivo desta seção é calcular a área de uma superfície suave, utilizando os conceitos estudados até aqui.
+      </p>
+      
+      <p>
+        Como discutido anteriormente, quando escolhemos uma parametrização $\mathbf{r}(u,v)$ para representar uma superfície definida em $\mathbb{R}^3$ estamos na verdade mapeando pontos no espaço $\{u,v\}\in D[\mathbf{r}] \subset \mathbb{R}^2$, em pontos  $\{x,y,z\} \in \mathbb{R}^3$ os quais definem a superfície $S$.
+      </p>
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/sigmauv.png', 'Zoom', '1600')">
+          <img src="figuras/sigmauv.png" width="750" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Agora, consideremos um pequeno elemento de área, $\Delta A$, definido no domínio da parametrização, $D[\mathbf{r}]$, conforme se monstra do lado direito da figura acima.  Observe que as coordenadas dos pontos que definem o paralelepípedo são $\left\{ \left( u_0,\,v_0 \right),\, \left( u_0+\Delta u,\,v_0 \right),\, \left( u_0+\Delta u,\,v_0 + \Delta v\right),\, \left( u_0,\,v_0 + \Delta v \right) \right\}$. Como resultado da aplicação da parametrização sobre $\Delta A$ obteremos uma superfície $\Delta \sigma$ definida em $S$. A área $\Delta \sigma$ é delimitada por duas $u$-curvas
+        \[
+          C_1:\,\mathbf{r}\left( u,\,v_0 \right)\;\;\;\;\;\;\;C_1':\,\mathbf{r}\left( u,\,v_0 +\Delta v\right),
+          \nonumber
+        \]
+        e por duas $v$-curvas: 
+        \[
+          C_2:\,\mathbf{r}\left( u_0,\,v \right)\;\;\;\;\;\;\;C_2':\,\mathbf{r}\left( u_0+\Delta u,\,v_0\right)
+          \nonumber
+        \]
+      </p>
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/bcurva.png', 'Zoom', '1600')">
+          <img src="figuras/bcurva.png" width="300" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Consideremos uma $\beta$-curva (o $\beta$ pode ser $u$ ou $v$), o comprimento dessa $\beta$-curva pode ser aproximado pelo comprimento do vetor o qual por sua vez se aproxima da derivada:
+        \[
+          \begin{align*}
+            \Delta r_\beta =& \mathbf{r}\left( \beta + \Delta \beta \right) - \mathbf{r}\left( \beta \right)\\
+            
+            \dfrac{\Delta r_\beta}{\Delta \beta} =& \dfrac{\left|\mathbf{r}\left( \beta + \Delta \beta \right) - \mathbf{r}\left( \beta \right)\right|}{\Delta \beta}\\
+            
+            \dfrac{\Delta r_\beta}{\Delta \beta} \approx& \left|\, \dfrac{d\mathbf{r}}{d\beta}  \,\right|\\
+            
+            \Delta r_\beta \approx& \left|\, \dfrac{d\mathbf{r}}{d\beta}  \,\right| \, \Delta \beta\\
+            
+            \Delta r_\beta \approx& \left|\, \mathbf{T}_\beta \,\right| \, \Delta \beta\\
+          \end{align*}
+        \]
+        Observe que este resultado sugere que podemos definir um vetor $\Delta \mathbf{r}_\beta$ ao longo da curva $\beta$ se removemos o valor absoluto
+        \[
+          \Delta \mathbf{r}_\beta \approx \, \mathbf{T}_\beta\,\Delta \beta
+          \nonumber
+        \]
+      </p>
+      
+      <p>
+        Lembrando que $\beta$ pode ser $u$ ou $v$, termos expressões similares a essa para $u$ ou $v$
+        \[
+          \Delta \mathbf{r}_u \approx \, \mathbf{T}_u\,\Delta u\;\;\;\;\;\;\;\;\;\Delta \mathbf{r}_v \approx \, \mathbf{T}_v\,\Delta v
+          \nonumber
+        \]
+      </p>
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/sigmaxyz.png', 'Zoom', '1600')">
+          <img src="figuras/sigmaxyz.png" width="750" align="center"/>
+        </a>
+      </div>
+
+      <p>
+          Da figura acima vemos que a área do elemento de área $\Delta \sigma$ se aproxima da área do paralelepípedo formado pelos vetores $\Delta \mathbf{r}_u$ e $\Delta \mathbf{r}_v$
+      </p>
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/prodvect.png', 'Zoom', '1600')">
+          <img src="figuras/prodvect.png" width="350" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        A área do paralelepípedo está dada pelo dobro da área dos dois triângulos formados, isso é
+        \[
+          \begin{align*}
+            \Delta \sigma \approx& \text{base}\,\cdot\, \text{altura}\\
+            \approx& \left|\, \mathbf{T}_u \,\right|\,\Delta u\, \left|\, \mathbf{T}_v \,\right|\,\Delta v \sin \theta\\
+            \approx& \left|\, \mathbf{T}_u  \times \mathbf{T}_v \,\right|\,\Delta u\,\Delta v
+          \end{align*}
+        \]
+        Assim, a área de toda a superfície será a soma de todas as pequenas áreas, no limite em que $\Delta u \to 0$ e $\Delta v \to 0$,
+        \[
+          A = \lim_{\begin{align*}
+            \Delta u \to& 0\\
+            \Delta v \to& 0
+           \end{align*}}
+           \sum_i \Delta \sigma_i
+        \]
+        que é por definição (a soma de Riemman) a integral dupla:
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Integral de superfície de uma função definida vetorialmente
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        A área de uma superfície suave está dada por
+        \[
+          A_S = \iint_D d\sigma
+          \nonumber
+        \]
+        onde
+        \[
+          d\sigma = \left|\, \mathbf{n} \,\right|\, du\,dv = \left|\, \mathbf{T}_u  \times \mathbf{T}_v \,\right|\, du\,dv
+          \nonumber
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h4>Relação com a matriz Jacobiana</h4>
+      <p>
+        Suponha que nossa superfície é parametrizada da seguinte forma
+        \[
+          \begin{align*}
+            x =& x(u,v)\\
+            y =& y(u,v)\\
+            z =& z(u,v)\\
+          \end{align*}
+        \]
+        consequentemente
+        \[
+          \begin{align*}
+            \mathbf{T}_u =& \frac{\partial x}{\partial u}\,\mathbf{i} + \frac{\partial y}{\partial u} \,\mathbf{j} + \frac{\partial z}{\partial u} \,\mathbf{k}\\
+            
+            \mathbf{T}_v =& \frac{\partial x}{\partial v}\,\mathbf{i} + \frac{\partial y}{\partial v} \,\mathbf{j} + \frac{\partial z}{\partial v} \,\mathbf{k}
+          \end{align*}
+        \]
+        de forma que
+        \[
+          \begin{align*}
+            \mathbf{n} =& \begin{vmatrix}
+              \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+              \frac{\partial x}{\partial u} & \frac{\partial y}{\partial u} &  \frac{\partial z}{\partial u}\\
+              \frac{\partial x}{\partial v} & \frac{\partial y}{\partial v} &  \frac{\partial z}{\partial v}
+            \end{vmatrix}\\
+            =& \left(\, \frac{\partial y}{\partial u}\, \frac{\partial z}{\partial v} - \frac{\partial y}{\partial v}\, \frac{\partial z}{\partial u}\, \right)\, \mathbf{i} -
+            \left(\, \frac{\partial x}{\partial u}\, \frac{\partial z}{\partial v} - \frac{\partial x}{\partial v}\, \frac{\partial z}{\partial u} \, \right)\,\mathbf{j}  +
+            \left(\, \frac{\partial x}{\partial u}\, \frac{\partial y}{\partial v} - \frac{\partial x}{\partial v}\, \frac{\partial y}{\partial u}  \, \right)\,\mathbf{k}\\
+            
+            =& \left(\, \frac{\partial y}{\partial u}\, \frac{\partial z}{\partial v} - \frac{\partial y}{\partial v}\, \frac{\partial z}{\partial u}\, \right)\, \mathbf{i} +
+            \left(\, \frac{\partial z}{\partial u}\,\frac{\partial x}{\partial v} - \frac{\partial z}{\partial v}\,\frac{\partial x}{\partial u} \, \right)\,\mathbf{j}  +
+            \left(\, \frac{\partial x}{\partial u}\, \frac{\partial y}{\partial v} - \frac{\partial x}{\partial v}\, \frac{\partial y}{\partial u}  \, \right)\,\mathbf{k}\\
+          
+          \end{align*}
+        \]
+        A continuação introduzimos o determinante Jacobiano como
+        \[
+          \frac{\partial \left(\, x,y\,\right)}{\partial \left(\, u,v\,\right)} = \begin{vmatrix}
+            \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v}\\
+            \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}\\
+          \end{vmatrix}= \frac{\partial x}{\partial u}\, \frac{\partial y}{\partial v} - \frac{\partial x}{\partial v}\, \frac{\partial y}{\partial u}
+          \nonumber
+        \]
+        utilizando essa expressão para escrever o vetor normal, teremos
+        \[
+          \mathbf{n} = \frac{\partial \left(\, y,z\,\right)}{\partial \left(\, u,v\,\right)}\,\mathbf{i} + \frac{\partial \left(\, z,x\,\right)}{\partial \left(\, u,v\,\right)}\,\mathbf{j} + \frac{\partial \left(\, x,y \,\right)}{\partial \left(\, u,v\,\right)}\,\mathbf{k}
+          \nonumber
+        \]
+        Com esta nova notação reescrevemos o diferencial de área como
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        \[
+          d \sigma = \sqrt{\left( \, \frac{\partial \left(\, y,z\,\right)}{\partial \left(\, u,v\,\right)} \, \right)^2 + \left( \, \frac{\partial \left(\, z,x\,\right)}{\partial \left(\, u,v\,\right)} \, \right)^2 + \left( \, \frac{\partial \left(\, x,y \,\right)}{\partial \left(\, u,v\,\right)} \, \right)^2\;\,\,}\,\,\,du\,dv
+          \nonumber
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h3>Superfícies definidas de forma explicita</h3>
+      <p>
+        Se a superfície está definida de forma explicita, isto é 
+        \[
+          z=z(x,y)
+          \nonumber
+        \]
+        então temos que uma parametrização para essa superfície é
+        \[
+          \mathbf{r}(x,y) = x\,\mathbf{i} +y \,\mathbf{j} + z(x,y) \,\mathbf{k} 
+          \nonumber
+        \]
+        disso
+        \[
+          \begin{align*}
+            \mathbf{T}_x =& \dfrac{\partial \mathbf{r}}{\partial x}\\
+            =& \,\mathbf{i} + \dfrac{\partial z}{\partial x}\mathbf{k}\\
+            \mathbf{T}_y =& \dfrac{\partial \mathbf{r}}{\partial y}\\
+            =& \,\mathbf{j} + \dfrac{\partial z}{\partial y}\mathbf{k}\\
+           \mathbf{n} =& \begin{vmatrix}
+            \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+            1 & 0 & \dfrac{\partial z}{\partial x}\\
+            0 & 1 & \dfrac{\partial z}{\partial y}
+           \end{vmatrix}\\
+           =& -\dfrac{\partial z}{\partial x}\,\mathbf{i} - \dfrac{\partial z}{\partial y} \,\mathbf{j} + \mathbf{k}\\
+            \left|\, \mathbf{n} \,\right| =& \sqrt{1 + \left( \dfrac{\partial z}{\partial x} \right)^2  + \left(\dfrac{\partial z}{\partial y}  \right)^2\;}
+          \end{align*}
+        \]
+        o que no leva a expressar
+      </p> 
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Integral de superfície de uma função definida explicitamente
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        A integral de uma função definida explicitamente, isto é $z=z(x,y)$ se obtém a partir de 
+        \[
+          A_S = \iint_D d\sigma
+          \nonumber
+        \]
+        onde
+        \[
+          d\sigma = \sqrt{1 + \left( \dfrac{\partial z}{\partial x} \right)^2  + \left(\dfrac{\partial z}{\partial y}  \right)^2\;}\, dx\,dy
+          \nonumber
+        \]
+        Similarmente,  quando a superfícies é definidas como $y=y(x,z)$ teremos
+        \[
+          d\sigma = \sqrt{1 + \left( \dfrac{\partial y}{\partial x} \right)^2  + \left(\dfrac{\partial y}{\partial z}  \right)^2\;}\, dx\,dz
+          \nonumber
+        \]
+        e quando $x=x(y,z)$,
+        \[
+          d\sigma = \sqrt{1 + \left( \dfrac{\partial x}{\partial y} \right)^2  + \left(\dfrac{\partial x}{\partial z}  \right)^2\;}\, dy\,dz
+          \nonumber
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h3>Área das superfícies definidas de forma implícita</h3>
+      <p>
+        Para o caso em que a superfície é definida como
+        \[
+          F(x,y,z)=c
+          \nonumber
+        \]
+        O teorema da função explicita (tema de calculo avanzado) garante que $F(x,y,z)=c$ é o gráfico de uma função diferenciável $z=z(x,y)$, mesmo que não se conheça dita função, se isso é verdade então uma representação vetorial dessa superfície seria
+        \[
+          \mathbf{r}(x,y) = x\,\mathbf{i} +y \,\mathbf{j} + z(x,y) \,\mathbf{k} 
+          \nonumber
+        \]
+        de onde
+        \[
+          \begin{align*}
+            \mathbf{T}_x =& \dfrac{\partial \mathbf{r}}{\partial x}\\
+            =& \,\mathbf{i} + \dfrac{\partial z}{\partial x}\mathbf{k}\\
+            \mathbf{T}_y =& \dfrac{\partial \mathbf{r}}{\partial y}\\
+            =& \,\mathbf{j} + \dfrac{\partial z}{\partial y}\mathbf{k}
+          \end{align*}
+        \]
+        Antes de continuar, note que a função definida de forma explicita pode ser escrita como
+        \[
+          F\left( x,\, y,\, z(x,y)\right)=0
+          \nonumber
+        \]
+        derivando em relação a $x$ e logo a $y$, e utilizando a regra da cadeia
+        \[
+          \begin{array}{ccrc}
+            \dfrac{\partial F}{\partial x} &=& \dfrac{\partial F}{\partial x}\cancelto{1}{\dfrac{\partial x}{\partial x}} + \dfrac{\partial F}{\partial y}\cancelto{0}{\dfrac{\partial y}{\partial x}} + \dfrac{\partial F}{\partial z}\dfrac{\partial z}{\partial x} &=& 0\\
+            
+            & & \dfrac{\partial F}{\partial x} + \dfrac{\partial F}{\partial z}\dfrac{\partial z}{\partial x} &=& 0\\
+            
+            & &  \dfrac{\partial z}{\partial x} &=& -\dfrac{\dfrac{\partial F}{\partial x}}{\dfrac{\partial F}{\partial z}}\\
+            
+            & &  \dfrac{\partial z}{\partial x} &=& -\dfrac{F_x}{F_z}\\
+            
+            \dfrac{\partial F}{\partial y} &=& \dfrac{\partial F}{\partial x}\dfrac{\partial x}{\partial y} + \dfrac{\partial F}{\partial y}\dfrac{\partial y}{\partial y} + \dfrac{\partial F}{\partial z}\dfrac{\partial z}{\partial y} &=& 0\\
+            
+            & & \dfrac{\partial F}{\partial y} + \dfrac{\partial F}{\partial z}\dfrac{\partial z}{\partial y} &=& 0\\
+            
+            & &  \dfrac{\partial z}{\partial y} &=& -\dfrac{\dfrac{\partial F}{\partial y}}{\dfrac{\partial F}{\partial z}}\\
+            
+            & &  \dfrac{\partial z}{\partial y} &=& -\dfrac{F_y}{F_z}\\
+          \end{array}
+          \nonumber
+        \]
+        dessa forma
+        \[
+          \begin{align*}
+            \mathbf{T}_x =& \,\mathbf{i} - \dfrac{F_x}{F_z}\mathbf{k}\\
+            \mathbf{T}_y =& \,\mathbf{j} - \dfrac{F_y}{F_z}\mathbf{k}
+          \end{align*}
+        \]
+        e
+        \[
+          \begin{align*}
+           \mathbf{n} =& \begin{vmatrix}
+            \mathbf{i} & \mathbf{j} & \mathbf{k}\\
+            1 & 0 & - \dfrac{F_x}{F_z}\\
+            0 & 1 & - \dfrac{F_y}{F_z}
+           \end{vmatrix}\\
+           =& \dfrac{F_x}{F_z}\,\mathbf{i} + \dfrac{F_y}{F_z} \,\mathbf{j} + \mathbf{k}\\
+           =& \dfrac{F_x\,\mathbf{i} + F_y\,\mathbf{j} + F_z\,\mathbf{k}}{F_z}\\
+            \left|\, \mathbf{n} \,\right| =& \dfrac{\sqrt{F_x^2+F_y^2 + F_z^2}}{F_z}
+          \end{align*}
+        \]
+        Como
+        \[
+          \vec{\nabla}\,F = \dfrac{\partial F}{\partial x}\,\mathbf{i} + \dfrac{\partial F}{\partial y} \,\mathbf{j} +\dfrac{\partial F}{\partial z} \,\mathbf{k} = F_x\,\mathbf{i} +F_y \,\mathbf{j} + F_z \,\mathbf{k}
+          \nonumber
+        \]
+        e
+        \[
+          \vec{\nabla}\,F\,\cdot\,\mathbf{k}  = \dfrac{\partial F}{\partial z}  = F_z
+          \nonumber
+        \]
+        de forma que
+        \[
+          \left|\, \mathbf{n} \,\right| = \dfrac{\left|\, \vec{\nabla}F \,\right|}{\left|\, \vec{\nabla}F\cdot \mathbf{k}\,\right|}
+          \nonumber
+        \]
+        Observe que no denominador temos o produto escalar do gradiente da função com $\mathbf{k}$, no entanto, se for feito outra escolha na forma implícita, teríamos resultados diferentes        
+       \[
+        \begin{align*}
+          \text{Se }F\left( x,\, y(x,z),\, z\right)=0 \Rightarrow & \left|\, \mathbf{n} \,\right| = \dfrac{\left|\, \vec{\nabla}F \,\right|}{\vec{\nabla}F\cdot \mathbf{j}}\\
+          
+          \text{Se }F\left(x(y,z),\,  x,\,  z\right)=0 \Rightarrow & \left|\, \mathbf{n} \,\right| = \dfrac{\left|\, \vec{\nabla}F \,\right|}{\vec{\nabla}F\cdot \mathbf{i}}\\
+        \end{align*}
+      \]   
+        Podemos expressar estes resultados da seguinte forma genérica, 
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Integral de superfície de uma função implícita
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Seja a superfície $S$ definida de forma explicita pela função $F(x,y,z)=c$ e seja $R$ a projeção dessa superfície em algum plano o qual é caraterizado pelo vetor normal $\,\mathbf{p}$, a área da superfície $S$ está dada por
+        \[
+          A_S = \iint_D d\sigma
+          \nonumber
+        \]
+        onde
+        \[
+          d\sigma = \dfrac{\left|\, \vec{\nabla}F \,\right|}{\left|\, \vec{\nabla}F\cdot \mathbf{p}\,\right|}\,da
+          \nonumber
+        \]
+        onde $da$ é o elemento de área no plano $R$
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <br />
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/implicita.png', 'Zoom', '1600')">
+          <img src="figuras/implicita.png" width="350" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Observe que está forma de expressar o diferencial de área pode ser utilizada para integral mesmo para o caso em que a superfície está expressada de forma explicita.
+      </p>
+      
+      <h4>Integrais em coordenas polares</h4>
+      <p>
+        Quando integradas superfícies que são expressadas de forma implícita ou explicita muitas vezes resulta adequado transformar a integral para coordenadas polares
+      </p>
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/polares.png', 'Zoom', '1600')">
+          <img src="figuras/polares.png" width="750" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        A transformação de variáveis necessárias para realizar essa mudança de base é a seguinte
+        \[
+          r^2=x^2+y^2\;\;\;\;\;\;x=r\cos\,\theta\;\;\;\;\;\;y=r\sin\,\theta
+          \nonumber
+        \]
+        dessa forma, a integral passa a ser escrita como
+        \[
+          \iint_R f(x,y)da = \int_\alpha^\beta\int_a^b f\left( r\cos\,\theta,\, r\sin\,\theta\right)\,r\,dr\,d\theta
+          \nonumber
+        \]
+      </p>
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/polares2.png', 'Zoom', '1600')">
+          <img src="figuras/polares2.png" width="350" align="center"/>
+        </a>
+      </div>
+      
+      <h5>Exemplo 01</h5>
+      <p>
+        Seja o paraboloide $\displaystyle z=2\left( x^2 + y^2 \right)$, abaixo de $z=8$, calcule sua área.
+      </p>
+      
+      <h5>Exemplo 02</h5>
+      <p>
+        Seja $S$ definida por $\displaystyle  z=\sqrt{a^2-x^2-y^2}$ (semi esfera superior), calcule sua área.
+      </p>
+      
+      <h5>Exemplo 03</h5>
+      <p>
+        Dado enunciado do exemplo 01, considere a função de forma definida explicitamente e calcule sua superfície
+      </p>
+      
+      <h5>Exemplo 04</h5>
+      <p>
+        Encontre a área da esfera $x^2+y^2+z^2=2$ que está delimitada pelo cone $z=\sqrt{x^2+y^2}$
+      </p>
+      
+      <h5>Exemplo 04</h5> <!--Thomas e16.5.6, pg 408, pdf pg 947-->
+      <p>
+        Seja $S$ a superfície de uma bola de futbol americano formada ao gira a curva $x=\cos\,z$, $y=0$, $\pi/2\leq z \leq \pi/2$ ao redor do eixo $z$. Encontre uma parametrização e calcule a área da superfície.
+      </p>
+       
+      
+      <h5>Exemplo 05</h5>
+      <p>
+        Se a parametrização de um helicoide está dada por
+        \[
+          x = u\cos\,v\;\;\;\;\;\;y=u\sin\,v\;\;\;\;\;\;z=v
+          \nonumber
+        \]
+        onde $0 \leq u\leq 1$ e $0\leq v \leq 2\pi$, calcule a área da sua superfície.
+      </p>
+      
+      <h5>Exemplo 06</h5>
+      <p>
+        Encontrar a área de um toro o qual é parametrizada pela equação
+        \[
+          \mathbf{r}(u,v) = \left( 2+\cos u \right) \cos v+ \,\mathbf{i} + \left( 2+\cos u \right) \sin v\,\mathbf{j} +\sin u \,\mathbf{k}
+          \nonumber
+        \]
+        onde $0\leq u \leq 2\pi$ e $0\leq v \leq 2\pi$.
+      </p>
+            
+      <h5>Exemplo 06</h5> <!--Thomas 11ed pdf pg 1398, e 16.5.2-->
+      <p>
+        Calcule a área da cúpula obtida a partir da interseção da esfera $x^2+y^2+z^2=2$ e o cilindro $x^2+y^2=1$.
+      </p>
+      
+      <p>
+        <a href="exemplos.html"><font color="#FFF7F1">Exemplos</font></a>
+      </p>
+      
+      
+<!--
+       \[
+          \begin{align*}
+          \end{align*}
+       \]   
+      
+      <h5>Exemplo</h5>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      \left< \right>     \left(  \right)      \left| \,   \, \right|
+      
+      \mathbb{R}
+      
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k} 
+         
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      -->
+      
+      </div>
+      <!-- Fim Principal   -->
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html> 

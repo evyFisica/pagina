@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax_new/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+    
+    <!--  Scripts basicos das simulacoes do site  http://javalab.org   -->
+<!--    <script src="scripts/javalab.js"></script>
+    <script src="scripts/p5.min.js"></script>-->
+<!--     <script src="scripts/efield.min.js"></script> -->
+
+<!-- <script src="../../../../../comunHtml/node_modules/jquery/dist/jquery.min.js"></script> -->
+<script src="../../../../../comunHtml/jquery/dist/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(".expand").click(function(){
+        target_num = $(this).attr("id").split("-")[1];
+        content_id = "#expandable-".concat(target_num);
+        $(content_id).slideToggle('fast');
+      });
+    });
+    </script>
+
+    <style>
+      .expand {
+        font-style: italic;
+        font-size: 12px;
+        cursor: pointer;
+        color: blue;
+      }
+        .expandable {
+        display:none;
+        margin-left: 3%;
+        margin-right: 3%;
+        color: #3e3e3e;
+/*         text-align: justify; */
+      }
+    </style>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Cálculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+
+      
+      <h2>Testes de convergência para séries com termos positivos</h2>
+      
+      <h3>Teste da divergência</h3>
+      <p>
+        Até aqui vimos 3 exemplos de series, 2 deles convergentes e um divergente.  A continuação vamos apresentar um teorema onde se estabelece uma condição para sabermos se uma série diverge
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Teorema: Teste da divergência
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Se $\displaystyle \lim_{n\to \infty} a_n$ não existe ou $\displaystyle \lim_{n\to \infty} a_n \neq 0$, então a série $\displaystyle \sum_{n=1}^{\infty} a_n$ diverge.
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        Observe que este teorema afirma que a série diverge se $\displaystyle \lim_{n\to \infty} a_n \neq 0$, mas isso não significa que se $\displaystyle \lim_{n\to \infty} a_n = 0$ então a série vai convergir, ela pode ou não convergir, contudo sempre é verdade que toda serie convergente verifica o exposto no seguinte teorema
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Se $\displaystyle \sum_{n=1}^{\infty} a_n$ é convergente então $\displaystyle \lim_{n\to \infty} a_n = 0$.
+      </em></p>
+      </td></tr>
+      </table>
+
+      <h6>Exemplo</h6>
+      <p>
+        Utilizando os teoremas anteriores analise a divergência ou não das seguintes séries
+        <ol>
+          <li>
+            $\displaystyle \sum_{n=1}^{\infty} n^2$ <!--Thomas pg 12ed 548-->
+          </li>
+          <li>
+            $\displaystyle \sum_{n=1}^{\infty} \dfrac {n+1}{n}$ <!--Thomas pg 12ed 548-->
+          </li>
+          <li>
+            $\displaystyle \sum_{n=1}^{\infty} \left( -1\right)^{n+1}$ <!--Thomas pg 12ed 548-->
+          </li>
+          <li>
+            $\displaystyle \sum_{n=1}^{\infty}  \dfrac {-n}{2n+5} $ <!--Thomas pg 12ed 548-->
+          </li>
+          <li>
+            $\displaystyle 1+\underbrace{\dfrac{1}{2}+\dfrac{1}{2}}\underbrace{\dfrac{1}{4}+\dfrac{1}{4}+\dfrac{1}{4}+\dfrac{1}{4}+}\cdots+\underbrace{\dfrac{1}{2^n}+\dfrac{1}{2^n}+\cdots+\dfrac{1}{2^n}+}\cdots$ <!--Thomas pg 12ed 548-->
+          </li>
+          <li>
+            $\displaystyle \sum_{n=1}^{\infty}  \dfrac {n^2}{5n^2+4} $ <!--Steward 7ed pg 709 e9-->
+          </li>
+        </ol>
+      </p>
+      
+      <h3>Visualizando Séries</h3>
+      <p>
+        Antes de explicarmos o que é uma série com termos positivos resulta interessante introduzir um método de gráfico que nos permitira analisar o comportamento das séries. O método consiste em construir um gráfico de barras onde a largura de cada uma das barra é $1$ e a altura é o valor do coeficiente $a_n$, esse método pode ser visualizado na figura a seguir
+      </p>
+      
+      <div align="center">
+      <figure>
+        <a href="javascript:newWin('figuras/fig01.png', 'Zoom', '1600')">
+          <img src="figuras/fig01.png" width="450" align="center"/>
+        </a>
+        <figcaption>Fig01. - Representação gráfica de uma série.</figcaption>
+      </figure>
+      </div>
+      
+      <p>
+        Agora estamos em condição de definir o que é uma série de termos positivos, uma série com termos positivo são aquelas séries, $\displaystyle \sum a_n$, tais que $a_n > 0$, para todos os  valores de $n$. Graficamente significa que todo o diagrama de barras está por cima do eixo, isto é
+      </p>
+      
+      <div align="center">
+      <figure>
+        <a href="javascript:newWin('figuras/fig02.png', 'Zoom', '1600')">
+          <img src="figuras/fig02.png" width="450" align="center"/>
+        </a>
+        <figcaption>Fig02. - Representação gráfica de uma série com termpos positivos.</figcaption>
+      </figure>
+      </div>
+      
+      <p>
+        A partir de uma análise rápida de series de termos positivos podemos afirmar o seguinte teorema
+      </p>
+
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Teorema: Dicotomia para séries positivas
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Se $\displaystyle S = \sum a_n$ é uma série positiva, então ou
+        <ol type="i">
+          <li>
+            A soma $S_N$ é limitada superiormente, nesse caso $S$ converge. Ou
+          </li>
+          <li>
+            A soma $S_N$ não é limitada superiormente e nesse caso $S$ diverge.
+          </li>
+        </ol>
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h3>Critério de comparação</h4>
+      
+      <p>
+        Suponha que $\sum_{n=1}^{\infty} a_n$ é $\sum_{n=1}^{\infty} b_n$ são séries de termos não negativos. Suponhamos que existe um $n_0 \in \mathbb{N}^*$  tal que $a_n \leq b_n$, para todo $n > n_0$. Então
+      </p>
+      
+      <ol>
+        <li>
+           Se $\displaystyle \sum_{n=1}^{\infty} b_n$ converge, então $\displaystyle \sum_{n=1}^{\infty} a_n$ também converge.
+        </li>
+        <li>
+          Se $\displaystyle \sum_{n=1}^{\infty} b_n$ diverge, então $\displaystyle \sum_{n=1}^{\infty} a_n$ também diverge.
+        </li>
+      </ol>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/compseries.png', 'Zoom', '1650')">
+          <img src="figuras/compseries.png" width="350" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;">
+            Figura 02: A série $\sum a_n$ é dominada pela série $b_n$
+          </p>
+      </div>
+      
+      <p>
+        A figura acima mostra claramente este critério, obviamente que se a área de $\displaystyle \sum_{n=1}^{\infty} b_n$ é finita, $\displaystyle \sum_{n=1}^{\infty} a_n$ também é.
+      </p>
+      
+      <h6>Exemplos </h6>
+      <ol>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} \dfrac {1} {\sqrt {n}} $
+          <!-- exemplo: notas de aula evandro aula8 pg 5 -->
+        </li>
+        <li>
+         $\displaystyle \sum_{n=1}^{\infty} \dfrac {1} {\sqrt[3]{n}}$
+         <!--exemplo: notas de aula evandro aula8 pg 5-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty}  \dfrac {5} {3+7^{n}}$
+          <!--exemplo: notas de aula evandro aula8 pg 5-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} \dfrac {1} {n^{n}} $ (série-p)
+          <!--exemplo: notas de aula evandro aula8 pg 5-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} \dfrac {1} {\ln n}$
+          <!--exemplo: notas de aula evandro aula8 pg 6-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty}  \dfrac {1} {5n+19}$
+          <!--exemplo: notas de aula evandro aula8 pg 6-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty}  \dfrac {1} {\sqrt {n^{2}+4n}}$
+          <!--exemplo: notas de aula evandro aula8 pg 6-->
+        </li>
+      </ol>
+      
+      <h3>Critério de comparação com limite</h3>
+      
+      <p>
+        Suponha $\displaystyle  \sum_{n=1}^{\infty} a_n$  e $\displaystyle  \sum_{n=1}^{\infty} b_n$ duas séries de termos positivos. Seja $c$ definido por
+        \[
+        c = \displaystyle \lim_{n\to \infty}\dfrac{a_n}{b_n}
+        \]
+      </p>
+      
+      <ol>
+        <li>
+           Se $c > 0$, então ambas das séries convergem, ou ambas divergem.
+        </li>
+        <li>
+           Se $c = 0$, e se $\displaystyle \sum_{n=1}^{\infty} b_n$ converge, então $\displaystyle  \sum_{n=1}^{\infty} a_n$ converge.
+        </li>
+        <li>
+          Se $c = \infty$  e se $\displaystyle \sum_{n=1}^{\infty} b_n$ diverge, então $\displaystyle \sum_{n=1}^{\infty} a_n$ diverge.
+        </li>
+      </ol>
+      
+      <h6>Exemplos</h6>
+      
+      <p>
+        Utilize o teste da comparação com limite para determinar se as seguintes séries convergem ou divergem
+      </p>
+      
+      <ol>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} \dfrac {n^{2}+5} {n^{3}+n+2}$
+          <!--exemplo: Hughes pg 514 e4a-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} \dfrac {1} {1+\sqrt {n}}$
+          <!--exemplo: Essex pg 507 e4a-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} \dfrac {1+\sin n} {n^{2}}$
+          <!--exemplo: Essex pg 508 e5 %olhar texto acima do exemplo-->
+        </li>
+      </ol>
+      
+      <h3>Critério da integral</h3>
+      
+      <p>
+        Uma série converge se a área total dos retângulos na representação gráfica for finita e a soma da série for a área total dos retângulos, de forma que podemos estabelecer o seguinte teorema (observe que por $f$ ser positiva, implica que os termos da série são positivos)
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="teorematitulo">
+        Teste da integral
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p style="text-align: justify;"><em>
+        Se $f$ é positiva, continua e decrescente para $x\geq 1$ e $a_n = f(n)$, então
+        \[
+          \displaystyle \sum _{n=1}^{\infty } a_n\;\;\;\;\;\text{ e } \;\;\;\;\; \int_1^\infty f(x) dx
+        \]
+        ambas convergem ou ambas divergem.
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h6>Exemplos</h6>
+      <ol>
+        <li>
+          $\displaystyle \sum _{n=1}^{\infty } \dfrac {1} {n^{n}} $
+          <!--exemplo: notas de aula evandro aula9 pg 1-->
+        </li>
+        <li>
+          $\displaystyle \sum _{n=1}^{\infty } ne^n $
+          <!--exemplo: notas de aula evandro aula9 pg 2-->
+        </li>
+        <li>
+          $\displaystyle \sum _{n=1}^{\infty } \dfrac {1} {n\ln n} $
+          <!--exemplo: notas de aula evandro aula9 pg 2-->
+        </li>
+      </ol>
+      
+      <p>
+        O I exemplo desta série no leva a propor o seguinte teorema
+      </p>
+      
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="teorematitulo">
+        Séries $p$
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p style="text-align: justify;"><em>
+        A p-serie
+        \[
+          \displaystyle \sum _{n=1}^{\infty } \dfrac{1}{n^p}=\dfrac{1}{1^p}+\dfrac{1}{2^p}+\dfrac{1}{3^p}+\ldots
+        \]
+      </em></p>
+      <ol style="text-align: justify;">
+        <li>
+          converge se $p > 1$
+        </li>
+        <li>
+          diverge se $0< p \leq 1$
+        </li>
+      </ol>
+      </td></tr>
+      </table>
+      
+      <p>
+        Quando iniciamos o estudo de series nos perguntamos como era possível somar um conjunto infinito de coisas, a resposta parcial a este fato pode ser encontrado através do uso das séries parciais.  Contudo, nem sempre essa técnica pode ser aplicada de forma simples é por isso que estudamos alguns critério que permitam rapidamente determinar se uma série é ou não convergente. Mas suponha que em lugar de calcular somar toda a série só somamos uns  poucos termos da série (uma soma parcial), agora basta saber quão afastados estamos do resultado final, ou seja, quanto vale o resto
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/resto.png', 'Zoom', '1650')">
+          <img src="figuras/resto.png" width="350" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: center;">
+            Figura 03: Aproximação à soma de uma série
+          </p>
+      </div>
+      
+      <p>
+        A partir da integral da função podemos delimitar o valore desse resto. Observe a figura anterior, note que o resto (soma dos $a_n$) é o superestimada ou subestimada pela integral, de forma que podemos escrever que o resto de ordem $R_n$ fica delimitado por
+        
+        \begin{array}{lcccr}
+          \displaystyle \int _{n+1}^{\infty }f\left( x\right) dx &\leq & R_n & \leq & \displaystyle \int _{n}^{\infty }f\left( x\right) dx
+        \end{array}
+        
+        como
+        
+        \[
+          S = s_n + R_n
+        \]
+        
+        onde $s_n$ é a soma parcial que tínhamos avaliado e $S$ é a soma da série, então
+        
+        \begin{array}{lcccr}
+          s_n +\displaystyle \int _{n+1}^{\infty }f\left( x\right) dx &\leq & s_n + R_n & \leq & sn + \displaystyle\int _{n}^{\infty }f\left( x\right) dx\\
+          &&&\\
+          s_n +\displaystyle \int _{n+1}^{\infty }f\left( x\right) dx &\leq & S & \leq & s_n + \displaystyle \int _{n}^{\infty }f\left( x\right) dx\\
+        \end{array}
+      </p>
+      
+      <h6>Exemplo</h6>
+      <ol>
+        <li>
+          Estime a soma da série $\displaystyle \sum \dfrac{1}{n^2}$ usando o teorema anterior e $n=10$
+          <!--exemplo: Thomeas 12e pg 556 e5-->
+        </li>
+        <li>
+          Repita o procedimento para $\displaystyle \sum \dfrac{1}{n^3}$
+          <!--exemplo: Steward 7e pg 719 e6-->
+        </li>
+      </ol>
+      
+      
+<!--  
+
+       \[
+          \begin{align*}
+          \end{align*}
+       \]
+       
+      <ol>
+        <li>
+          
+        </li>
+        <li>
+          
+        </li>
+      </ol>
+      
+      
+      \left|  \right|    \left(  \right)     \left[  \right]
+      
+      $\left\{  \right\}$
+
+      <h4>Exemplo</h4>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      
+      \mathbb{R}
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      \left< \right>    \left( \right)
+ 
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k} 
+      
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      \displaystyle
+      
+      -->
+      
+      </div>
+      <!-- Fim Principal   -->
+
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html>

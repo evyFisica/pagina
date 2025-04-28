@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax_new/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+    
+    <!--  Scripts basicos das simulacoes do site  http://javalab.org   -->
+<!--    <script src="scripts/javalab.js"></script>
+    <script src="scripts/p5.min.js"></script>-->
+<!--     <script src="scripts/efield.min.js"></script> -->
+
+<!-- <script src="../../../../../comunHtml/node_modules/jquery/dist/jquery.min.js"></script> -->
+<script src="../../../../../comunHtml/jquery/dist/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(".expand").click(function(){
+        target_num = $(this).attr("id").split("-")[1];
+        content_id = "#expandable-".concat(target_num);
+        $(content_id).slideToggle('fast');
+      });
+    });
+    </script>
+
+    <style>
+      .expand {
+        font-style: italic;
+        font-size: 12px;
+        cursor: pointer;
+        color: blue;
+      }
+        .expandable {
+        display:none;
+        margin-left: 3%;
+        margin-right: 3%;
+        color: #3e3e3e;
+/*         text-align: justify; */
+      }
+    </style>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Cálculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h2>Teste de convergência para séries com termos não todos positivos</h2>
+      
+      <p>
+        Até este ponto todos os critérios que analisamos dependiam da série ser constituída por termos positivos, agora essa condição sera flexibilizada
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="teorematitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p style="text-align: justify;"><em>
+        Seja $\displaystyle \sum_{n=1}^{\infty} a_n$ uma série qualquer. Se a série $\displaystyle \sum_{n=1}^{\infty} \left|\,a_n\,\right|$  converge, então $\displaystyle \sum_{n=1}^{\infty} a_n$ também converge.
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h3>Critério da razão</h3>
+      
+      <p>
+        Seja $\displaystyle \sum_{n=1}^{\infty} a_n$ uma série para a qual $a_n \neq 0$, e seja
+        \[
+          L = \lim_{x\to \infty} \; \left| \dfrac {a_{n+1}} {a_{n}}\right|
+        \]
+        então:
+      </p>
+       
+      <ol>
+        <li>
+          Se $L < 1$, a série $\displaystyle \sum_{n=1}^{\infty} a_n$ é convergente.
+        </li>
+        <li>
+          Se $L > 1$, ou $L = \infty$, a série $\displaystyle \sum_{n=1}^{\infty} a_n$ é divergente.
+        </li>
+        <li>
+          Se $L = 1$ o critério não pode ser utilizado.
+        </li>
+      </ol>
+      
+      
+      <h6>Exemplo</h6>
+      <ol>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} \dfrac {n} {2^{n}}$
+          <!--exemplo: notas de aula evandro aula9 pg 4-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty}  \dfrac {n!} {2^{n}}$
+          <!--exemplo: notas de aula evandro aula9 pg 4-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} \dfrac {n!} {n^{n}}$
+          <!--exemplo: notas de aula evandro aula9 pg 4-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} \dfrac {2\cdot 5\cdot 8\cdots \left( 3n+1\right) } {5\cdot 9\cdot 13\cdots \left( 4n+1\right) } $
+          <!--exemplo: notas de aula evandro aula9 pg 4-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty}  \dfrac {\left( -2\right) ^{n}\,n!} {\left( 2\,n\right) !} $
+          <!--exemplo: notas de aula evandro aula9 pg 7-->
+        </li>
+        <li>
+          Para quais valores de $x$ a converge a série $\displaystyle  \sum_{n=1}^{\infty}   \dfrac {x^{2n-1}} {2n-1}$          
+        </li>
+      </ol>
+      
+      <h3>Critério da raiz</h6>
+      
+      <p>
+        eja $\sum a_n$ uma série numérica qualquer. Seja $L$ definido por
+        \[
+            \lim _{n\rightarrow \infty }\sqrt [n] {\left| a_{n}\right| }
+        \]
+        Então
+      </p>
+      
+      <ol>
+        <li>
+          Se $L<1$, a série converge.
+        </li>
+        <li>
+          Se $L>1$ ou $L = \infty$, a série diverge.
+        </li>
+        <li>
+          Se $L = 1$, o critério não pode ser utilizado.
+        </li>
+      </ol>
+      
+      <h6>Exemplo</h6>
+      
+      <ol>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} \dfrac {1} {\left( \ln n\right) ^{n}} $
+          <!--exemplo: notas de aula evandro aula10 pg 4-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} n\,a^n \;$ $(a \in \mathbb{R})$
+          <!--exemplo: notas de aula evandro aula10 pg 4-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} \dfrac {n1+n^{2}} {\left( n+1\right) ^{n2}} $
+          <!--exemplo: notas de aula evandro aula10 pg 4-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty}  \dfrac {e^{na}\left( n+1\right) ^{3n}} {n^{3n-2}}\;$ $(a \in \mathbb{R})$
+          <!--exemplo: notas de aula evandro aula10 pg 4-->
+        </li>
+      </ol>
+      
+      <p style="margin-botton: 0">
+        <b>OBSERVAÇÃO:</b>
+      </p>
+      <p>
+        O critério da raiz é  "mais forte" do que o critério da razão, no seguinte sentido: Se existe $\displaystyle \lim _{n\rightarrow \infty } \; \left| \dfrac {a_{n+1}} {a_{n}}\right|$, então também existe o $\displaystyle  \lim _{n\rightarrow \infty }\sqrt [n] {\left| a_{n}\right| }$ e tem o mesmo valor, mas podemos existir $\displaystyle  \lim _{n\rightarrow \infty }\sqrt [n] {\left| a_{n}\right| }$, sem existir $\displaystyle \lim _{n\rightarrow \infty } \; \left| \dfrac {a_{n+1}} {a_{n}}\right|$
+      </p>
+      
+      <h3>Convergência absoluta</h3>
+      <p>
+        Diz-se que $\sum a_n$ é uma série 
+      </p>
+      <ol>
+        <li>
+          <b>absolutamente convergente</b> se ambas $\displaystyle \sum_{n=1}^{\infty} a_n$ e $\displaystyle \sum_{n=1}^{\infty} \left|\,a_n\, \right|$ convergem,
+        </li>
+        <li>
+          <b>condicionalmente convergente</b> se $\displaystyle \sum_{n=1}^{\infty} a_n$ convergem mas $\displaystyle \sum_{n=1}^{\infty} \left|\,a_n\, \right|$ diverge.
+        </li>
+      </ol>
+      
+      <p style="margin-botton: 0">
+        <b>OBSERVAÇÃO:</b>
+      </p>
+      <p>
+        Um exemplo típico de série que é condicionalmente convergente é a série
+        \[
+          \displaystyle \sum_{n=1}^{\infty} \dfrac {\left( -1\right) ^{n+1}} {n}=1-\dfrac {1} {2}+\dfrac {1} {3}-\ldots
+        \]
+        que é uma série-p. Dessa forma uma série pode ser classificada como absolutamente convergente, condicionalmente  convergentes ou divergentes. Obviamente séries positivamente definidas, se convergente, devem ser absolutamente convergentes.  Outro fato interessante é que as séries absolutamente convergentes convergem mas depressa que as condicionalmente convergentes, em geral.
+      </p>
+      
+      <h3>Séries alternantes</h3>
+      
+      <p>
+        Se $a_n>0$ para todos os número inteiros positivos $n$, então a série
+        \[
+          \displaystyle\sum _{n=1}^{\infty }\left( -1\right)^{n+1}
+          a_n=a_{1}-a_{2}+a_{3}-a_4+\ldots + \left( -1\right)^{n+1}a_n+\ldots
+        \]
+        e a série
+        \[
+          \displaystyle\sum _{n=1}^{\infty }\left( -1\right)^{n}
+          a_n=-a_{1}+a_{2}-a_{3}+a_4-\ldots + \left( -1\right)^{n}a_n+\ldots
+        \] 
+        são chamadas de <b>séries alternantes</b>.
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/alternante.png', 'Zoom', '1650')">
+          <img src="figuras/alternante.png" width="350" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;">
+            Figura 04: Uma série alternante com termos decrescentes, $\displaystyle a_n > a_{n+1}$. A soma é a área com sinal, a qual é dominada principalmente por $a_1$.
+          </p>
+      </div>
+      
+      <h4>Critério de Leibniz ou critério das séries alternantes</h4>
+      
+      <p>
+        A série alternante
+        \[
+        \displaystyle\sum _{n=1}^{\infty }\left(-1\right)^{n}a_n
+        \;\;\;\;\;\text{ ou }\;\;\;\;\;
+        \displaystyle\sum _{n=1}^{\infty }\left(-1\right)^{n+1}a_n
+        \]
+        será convergente se as duas condições a seguir forem satisfeitas:
+      </p>
+      
+      <ol>
+        <li>
+          $\displaystyle a_1 \geq a_2 \geq a_3 \geq \ldots \geq a_n \geq a_{n+1} \geq \ldots$
+        </li>
+        <li>
+          $\displaystyle \lim_{n \to \infty} a_n =0$
+        </li>
+      </ol>
+      
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/alternante2.png', 'Zoom', '1650')">
+          <img src="figuras/alternante2.png" width="350" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: justify;">
+            Figura 05: A somas parciais das séries alternantes oscila entorno do limite. As somas parciais impares decrescem e das somas parciais pares incrementa.
+          </p>
+      </div>
+      
+      <h6>Exemplos</h6>
+      
+      <ol>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} \dfrac {\left( -1\right) ^{n+1}} {n} $
+          <!--exemplo: notas de aula evandro aula11 pg 2-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} \dfrac {\left( -1\right) ^{n}} {\sqrt {n}} $
+          <!--exemplo: notas de aula evandro aula11 pg 2-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} \left( -1\right) ^{n}\dfrac {n} {5+2n} $
+          <!--exemplo: notas de aula evandro aula11 pg 3-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty}  \left( -1\right) ^{n}\dfrac {\ln n} {e^{n}} $
+          <!--exemplo: notas de aula evandro aula11 pg 3-->
+        </li>
+        <li>
+          $\displaystyle \sum_{n=1}^{\infty} \left( -1\right) ^{n+1}\dfrac {2n} {4n^{2}-3} $
+          <!--exemplo: notas de aula evandro aula11 pg 3-->
+        </li>
+      </ol>
+      
+      
+<!--  
+
+       \[
+          \begin{align*}
+          \end{align*}
+       \]
+       
+      <ol>
+        <li>
+          
+        </li>
+        <li>
+          
+        </li>
+      </ol>
+      
+      
+      \left|  \right|    \left(  \right)     \left[  \right]
+      
+      $\left\{  \right\}$
+
+      <h4>Exemplo</h4>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      
+      \mathbb{R}
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      \left< \right>    \left( \right)
+ 
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k} 
+      
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      \displaystyle
+      
+      -->
+      
+      </div>
+      <!-- Fim Principal   -->
+
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html>

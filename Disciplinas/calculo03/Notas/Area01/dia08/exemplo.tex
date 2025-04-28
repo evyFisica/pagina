@@ -1,0 +1,340 @@
+%% LyX 2.0.6 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,brazil,a4papper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathdots}
+\usepackage{setspace}
+\usepackage{esint}
+\onehalfspacing
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+\usepackage{babel}
+\usepackage{amsfonts}
+
+
+
+ 
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+\subsection*{Exemplo 01}
+
+Seja $f(x,y)=y-x$ e $C$ a curva definida pela função 
+\[
+\mathbf{r}(t)=\begin{cases}
+\left(2t,\, t\right) & \text{se }0\leq t<1\\
+\left(t+1,\,5-4t\right) & \text{se }1<t\leq3
+\end{cases}
+\]
+
+
+
+\subsubsection*{SOL}
+
+Como $\mathbf{r}(t)$ é uma função vetorial definida por partes de
+classe $C^{1}$; onde cada parte é uma função de classe $C^{1}$,
+temos
+\[
+\int_{\mathbf{r}}\, f\, ds=\int_{\mathbf{r}_{1}}\, f\, ds+\int_{\mathbf{r}_{2}}\, f\, ds
+\]
+onde $\mbox{\ensuremath{\mathbf{r}}}_{1}=\left(2t,\, t\right)$ com
+$0\leq t\leq1$ e $\mbox{\ensuremath{\mathbf{r}}}_{2}=\left(t+1,\,5-4t\right)$
+com $1\leq t\leq3$. Note que
+
+\[
+\mathbf{v}_{1}(t)=2\,\mathbf{i}+1\,\mathbf{j}
+\]
+de onde
+
+\begin{align*}
+\left|\mathbf{v}_{1}(t)\right|= & \sqrt{4+1}\\
+= & \sqrt{5}
+\end{align*}
+Igualmente
+\[
+\mathbf{v}_{1}(t)=1\,\mathbf{i}-4\,\mathbf{j}
+\]
+de onde
+
+\begin{align*}
+\left|\mathbf{v}_{2}(t)\right|= & \sqrt{1+16}\\
+= & \sqrt{17}
+\end{align*}
+de forma que
+\begin{align*}
+\int_{\mathbf{r}}\, f\, ds= & \int_{\mathbf{r}_{1}}\, f\, ds+\int_{\mathbf{r}_{2}}\, f\, ds\\
+= & \int_{\mathbf{r}_{1}}\, f\,\left|\mathbf{v}_{1}(t)\right|\, dt+\int_{\mathbf{r}_{2}}\, f\,\left|\mathbf{v}_{2}(t)\right|\, dt\\
+= & \int_{0}^{1}\left(y-x\right)\,\sqrt{5}\, dt+\int_{1}^{3}\left(y-x\right)\,\sqrt{17}\, dt\\
+= & \int_{0}^{1}\left[\left(t\right)-\left(2t\right)\right]\,\sqrt{5}\, dt+\int_{1}^{3}\left[\left(5-4t\right)-\left(t+1\right)\right]\,\sqrt{17}\, dt\\
+= & -\sqrt{5}\int_{0}^{1}t\, dt+\sqrt{17}\int_{1}^{3}\left[4-5t\right]\, dt\\
+= & -\sqrt{5}\,\left.\dfrac{1}{2}t^{2}\right|_{0}^{1}+\sqrt{17}\left.4t-\dfrac{5}{2}t^{2}\right|_{1}^{3}\\
+= & -\dfrac{\sqrt{5}}{2}+\sqrt{17}\left[8-20\right]\\
+= & -\dfrac{\sqrt{5}}{2}-12\sqrt{17}
+\end{align*}
+
+
+
+\subsection*{Exemplo 02}
+
+Calcule $\int_{C}{\displaystyle 4x\, dy+2y\, dz}$, onde $C$ consiste
+do segmento de linha entre $(0,1,0)$ até $(0,1,1)$, seguido pelo
+segmento $(0,1,1)$ até $(2,1,1)$ e seguido pela linha $(2,1,1)$
+até $(2,4,1)$
+
+
+\subsubsection*{SOL}
+
+Parametrizando o segmento de linha entre $(0,1,0)$ até $(0,1,1)$:
+\begin{align*}
+\mathbf{r}_{a}= & \mathbf{r}_{0}+\mathbf{b}\, t\\
+= & \mathbf{r}_{0}+\mathbf{\left(\mathbf{r}_{0}-\mathbf{r}_{1}\right)}\, t\\
+= & (0,1,0)+\left[(0,1,1)-(0,1,0)\right]\, t\\
+= & (0,1,0)+(0,0,1)\, t\\
+= & \mathbf{j}+t\,\mathbf{k}
+\end{align*}
+de onde
+\[
+\mathbf{v}_{a}=\mathbf{k}
+\]
+para o caso do segmento que vai desde $(0,1,0)$ até $(2,1,1)$:
+
+\begin{align*}
+\mathbf{r}_{b}= & \mathbf{r}_{0}+\mathbf{b}\, t\\
+= & \mathbf{r}_{0}+\mathbf{\left(\mathbf{r}_{0}-\mathbf{r}_{1}\right)}\, t\\
+= & (0,1,1)+\left[(2,1,1)-(0,1,1)\right]\, t\\
+= & (0,1,1)+(2,0,0)\, t\\
+= & 2t\,\mathbf{i}+\mathbf{j}+\mathbf{k}
+\end{align*}
+de onde
+\[
+\mathbf{v}_{b}=2\mathbf{i}
+\]
+finalmente, para o caso do segmento que vai desde $(2,1,1)$ até $(2,4,1)$:
+
+\begin{align*}
+\mathbf{r}_{c}= & \mathbf{r}_{0}+\mathbf{b}\, t\\
+= & \mathbf{r}_{0}+\mathbf{\left(\mathbf{r}_{0}-\mathbf{r}_{1}\right)}\, t\\
+= & (2,1,1)+\left[(2,4,1)-(2,1,1)\right]\, t\\
+= & (2,1,1)+(0,3,0)\, t\\
+= & 2\,\mathbf{i}+3t\,\mathbf{j}+\mathbf{k}
+\end{align*}
+de onde
+\[
+\mathbf{v}_{c}=3\mathbf{j}
+\]
+Para resolvermos as integra $\int_{C}4x\, dy+2y\, dz$ devemos observar
+que
+
+\begin{align*}
+\int_{C}4x\, dy+2y\, dz= & \int_{\mbox{\ensuremath{\mathbf{r}}}_{a}}4x\, dy+2y\, dz+\int_{\mbox{\ensuremath{\mathbf{r}}}_{b}}4x\, dy+2y\, dz+\\
+ & \int_{\mathbf{r}_{c}}4x\, dy+2y\, dz
+\end{align*}
+Para o caso de qualquer uma das curvas temos
+\begin{align*}
+ds= & \left|\mathbf{v}\right|dt\\
+= & \dfrac{dx}{dt}\, dt+\dfrac{dy}{dt}\, dt+\dfrac{dz}{dt}\, dt\\
+= & dx+dy+dz
+\end{align*}
+de forma que para o caso da trajetória $\mathbf{r}_{a}$ temos
+\begin{align*}
+dx= & 0\, dt\\
+dy= & 0\, dt\\
+dz= & 1\, dt
+\end{align*}
+para o caso da trajetória $\mathbf{r}_{b}$ temos
+\begin{align*}
+dx= & 2\, dt\\
+dy= & 0\, dt\\
+dz= & 0\, dt
+\end{align*}
+e para o caso da trajetória $\mathbf{r}_{c}$ temos
+\begin{align*}
+dx= & 0\, dt\\
+dy= & 3\, dt\\
+dz= & 0\, dt
+\end{align*}
+assim então
+\begin{align*}
+\int_{C}4x\, dy+2y\, dz= & \int_{\mathbf{r}_{a}}4x\, dy+2y\, dz+\int_{\mathbf{r}_{b}}4x\, dy+2y\, dz\\
+ & \int_{\mathbf{r}_{c}}4x\, dy+2y\, dz\\
+= & \int_{\mathbf{r}_{a}}4\left(0\right)\left(0\right)\, dt+2(1)\, dt+\int_{\mathbf{r}_{b}}4\left(2\right)(0)\, dt+2(1)(0)\, dt\\
+ & \int_{\mathbf{r}_{c}}4\left(2\right)(3)\, dt+2(1)(0)\, dt\\
+= & 2\int_{\mathbf{r}_{a}}dt+24\int_{\mathbf{r}_{c}}\, dt
+\end{align*}
+A parametrização utilizada para o I e III segmento implica que o percurso
+é percorrido para $0\leq t\leq1$, dessa forma as integrais ficam
+\begin{align*}
+\int_{C}4x\, dy+2y\, dz= & 2\int_{0}^{1}dt+24\int_{0}^{1}\, dt\\
+= & 26
+\end{align*}
+
+
+\[
+\mathbf{v}_{1}=\,\mathbf{i}+\,\mathbf{j}
+\]
+
+
+
+\subsection*{Exemplo 3}
+
+Calcule ${\displaystyle \int_{c}\left(x+y+z\right)ds}$, onde $C$
+é a hélice re raio 1 definido entre $0\leq t\leq\pi$
+
+
+\subsection*{SOL}
+
+Em se tratando de uma hélice a parametrização é
+\[
+\mathbf{r}(t)=\cos\, t\,\mathbf{i}+\sin\, t\,\mathbf{j}+t\,\mathbf{k}
+\]
+de onde
+\begin{align*}
+\mathbf{r}(t)= & -\sin\, t\,\mathbf{i}+\cos\, t\,\mathbf{j}+\mathbf{k}\\
+\left|\mathbf{v}(t)\right|= & \sqrt{\sin^{2}t+\cos^{2}t+1}\\
+= & \sqrt{2}
+\end{align*}
+assim
+\begin{align*}
+\int_{c}\left(x+y+z\right)ds= & \sqrt{2}\int_{0}^{\pi}\left(\cos\, t+\sin\, t+t\right)\, dt\\
+= & \sqrt{2}\left[\sin\, t-\cos\, t+\dfrac{1}{2}t^{2}\right]_{0}^{\pi}\\
+= & \sqrt{2}\left[\left(1-0+\dfrac{\pi^{2}}{2}\right)-\left(0-1\right)\right]\\
+= & \sqrt{2}\left(2+\dfrac{\pi^{2}}{2}\right)
+\end{align*}
+
+
+
+\subsection*{Exemplo 04}
+
+Calcular $\int_{C}xy\, ds$, onde $C$ é a interseção das superfícies
+$x^{2}+y^{2}=4$ e o plano $y+z=8$
+
+
+\subsubsection*{SOL}
+
+A equação paramétrica da interseção se obtém isolando o $z$
+\[
+z=8-y
+\]
+e utilizando a parametrização da circunferência
+\[
+\begin{cases}
+x= & 2\cos t\\
+y= & 2\sin t\\
+z= & 8-2\sin t
+\end{cases}\;\;\;0\leq t\leq2\pi
+\]
+de onde
+\begin{align*}
+\mathbf{v}(t)= & -2\sin\, t\,\mathbf{i}+2\cos\, t\,\mathbf{j}-2\cos\mathbf{k}\\
+\left|\mathbf{v}(t)\right|= & 2\sqrt{\sin^{2}t+\cos^{2}+\cos^{2}t}\\
+= & 2\sqrt{1+\cos^{2}t}\\
+= & \cos\dfrac{t}{2}
+\end{align*}
+assim
+\[
+\int_{C}xy\, ds=\int_{0}^{2\pi}2\cos t\,2\sin t\,2\sqrt{1+\cos^{2}t}\, dt
+\]
+utilizando 
+\begin{align*}
+u= & 1+\cos^{2}t\\
+du= & 2\cos t\,\sin t\, dt
+\end{align*}
+de onde
+\begin{align*}
+\int2\cos t\,2\sin t\,2\sqrt{1+\cos^{2}t}\, dt= & 4\int u^{1/2}dt\\
+= & \dfrac{2}{3u^{3/2}}+C\\
+= & \dfrac{2}{3\left(1+\cos^{2}t\right)^{3/2}}+C
+\end{align*}
+de forma que
+\begin{align*}
+\int_{C}xy\, ds= & \left.\dfrac{2}{3\left(1+\cos^{2}t\right)^{3/2}}\right|_{0}^{2\pi}\\
+= & 0
+\end{align*}
+
+
+
+\subsection*{Exemplo 05}
+
+Avalie a integral $\int_{C}x^{2}y\, ds$, onde $C$ está dada pela
+parametrização $\mathbf{r}(t)=3\cos\, t\,\mathbf{i}+3\sin\, t\,\mathbf{j}$,
+$0\leq t\leq\pi/2$. Seguidamente mostre que se utilizamos a parametrização
+$\mathbf{r}(t)=\sqrt{9-y^{2}}\,\mathbf{i}+y\,\mathbf{j}$, $0\leq y\leq3$,
+obteremos o mesmo resultado.
+
+
+\subsubsection*{SOL}
+
+\begin{align*}
+\mathbf{r}(t)= & 3\cos\, t\,\mathbf{i}+3\sin\, t\,\mathbf{j}\\
+\mathbf{v}(t)= & 3\sin\, t\,\mathbf{i}+3\cos\, t\,\mathbf{j}\\
+\left|\mathbf{v}(t)\right|= & 3
+\end{align*}
+dessa forma
+\begin{align*}
+\int_{C}x^{2}y\, ds= & 81\int_{0}^{\frac{\pi}{2}}\cos^{2}t\,\sin t\, dt\\
+= & -81\int_{1}^{0}u^{2}du\\
+= & \dfrac{81}{3}\,\left.u^{3}\right|_{0}^{1}\\
+= & 27
+\end{align*}
+Utilizando a outra parametrização
+\begin{align*}
+\mathbf{r}(y)= & \sqrt{9-y^{2}}\,\mathbf{i}+y\,\mathbf{j}\\
+\mathbf{v}(y)= & -\dfrac{y}{\sqrt{9-y^{2}}}\,\mathbf{i}+\,\mathbf{j}\\
+\left|\mathbf{v}(y)\right|= & \dfrac{3}{\sqrt{9-y^{2}}}\\
+ds= & \dfrac{3}{\sqrt{9-y^{2}}}dy
+\end{align*}
+assim
+\begin{align*}
+\int_{C}x^{2}y\, ds= & 3\int_{0}^{3}\dfrac{\left(9-y^{2}\right)y}{\sqrt{9-y^{2}}}\, dy\\
+= & 3\int_{0}^{3}y\sqrt{9-y^{2}}\, dy\\
+= & -\dfrac{3}{2}\int_{3}^{0}u^{1/2}du\\
+= & \left.u^{3/2}\right|_{0}^{9}\\
+= & 27
+\end{align*}
+
+
+
+\subsection*{Exemplo 06}
+
+Calcule a área da superfície estendida para cima do círculo $x^{2}+y^{2}=1$
+no plano $xy$ até a parábola cilíndrica $z=1-x^{2}$
+
+
+\subsubsection*{SOL}
+
+A área da superfície é
+\[
+A=\int_{C}\left(1-x^{2}\right)ds
+\]
+onde $C$ é a circunferência, onde
+\[
+\mathbf{r}(t)=\cos\, t\,\mathbf{i}+\sin\, t\,\mathbf{j}+t\,\mathbf{k}
+\]
+de onde
+\begin{align*}
+\mathbf{r}(t)= & -\sin\, t\,\mathbf{i}+\cos\, t\,\mathbf{j}\\
+\left|\mathbf{v}(t)\right|= & \sqrt{\sin^{2}t+\cos^{2}t}\\
+= & 1
+\end{align*}
+assim
+\begin{align*}
+A= & \int_{0}^{2\pi}\left(1-\cos^{2}t\right)dt\\
+= & \int_{0}^{2\pi}\sin^{2}t\, dt
+\end{align*}
+utilizando a identidade $2\sin^{2}t=1-\cos2t$, assim
+\begin{align*}
+A= & \dfrac{1}{2}\int_{0}^{2\pi}\left(1-\cos2t\right)dt\\
+= & \pi
+\end{align*}
+
+\end{document}

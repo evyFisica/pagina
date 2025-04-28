@@ -1,0 +1,337 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\usepackage[brazil]{babel}
+
+
+\usepackage{amsfonts}
+\end_preamble
+\options a4papper
+\use_default_options false
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding utf8x
+\fontencoding T1
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\vec{\nabla}\times\mathbf{F}= & \begin{bmatrix}\mathbf{i} & \mathbf{j} & \mathbf{k}\\
+\dfrac{\partial\;}{\partial x} & \dfrac{\partial\;}{\partial y} & \dfrac{\partial\;}{\partial z}\\
+\dfrac{-x}{\sqrt{x^{2}+y^{2}}} & \dfrac{-y}{\sqrt{x^{2}+y^{2}}} & 0
+\end{bmatrix}\\
+\\
+= & \left[\dfrac{\partial\;}{\partial y}0-\dfrac{\partial\;}{\partial z}\left(\dfrac{-y}{\sqrt{x^{2}+y^{2}}}\right)\right]\;\mathbf{i}-\left[\dfrac{\partial\;}{\partial x}0-\dfrac{\partial\;}{\partial z}\left(\dfrac{-x}{\sqrt{x^{2}+y^{2}}}\right)\right]\;\mathbf{j}+\\
+ & \left[\dfrac{\partial\;}{\partial x}\left(\dfrac{-y}{\sqrt{x^{2}+y^{2}}}\right)-\dfrac{\partial\;}{\partial y}\left(\dfrac{-x}{\sqrt{x^{2}+y^{2}}}\right)\right]\;\mathbf{k}\\
+\\
+= & 0\,\mathbf{i}-0\,\mathbf{j}+\left(\dfrac{-xy\left(x^{2}+y^{2}\right)^{-\frac{1}{2}}}{x^{2}+y^{2}}-\dfrac{-xy\left(x^{2}+y^{2}\right)^{-\frac{1}{2}}}{x^{2}+y^{2}}\right)\,\mathbf{k}\\
+= & 0\,\mathbf{i}-0\,\mathbf{j}+0\,\mathbf{k}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calcule o campo rotacional de 
+\begin_inset Formula $\mathbf{F}=\dfrac{-y\,\mathbf{i}+x\,\mathbf{j}}{\sqrt{x^{2}+y^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\vec{\nabla}\times\mathbf{F}= & \begin{bmatrix}\mathbf{i} & \mathbf{j} & \mathbf{k}\\
+\dfrac{\partial\;}{\partial x} & \dfrac{\partial\;}{\partial y} & \dfrac{\partial\;}{\partial z}\\
+\dfrac{-y}{\sqrt{x^{2}+y^{2}}} & \dfrac{x}{\sqrt{x^{2}+y^{2}}} & 0
+\end{bmatrix}\\
+\\
+= & \left[\dfrac{\partial\;}{\partial y}0-\dfrac{\partial\;}{\partial z}\left(\dfrac{x}{\sqrt{x^{2}+y^{2}}}\right)\right]\;\mathbf{i}-\left[\dfrac{\partial\;}{\partial x}0-\dfrac{\partial\;}{\partial z}\left(\dfrac{-y}{\sqrt{x^{2}+y^{2}}}\right)\right]\;\mathbf{j}+\\
+ & \left[\dfrac{\partial\;}{\partial x}\left(\dfrac{x}{\sqrt{x^{2}+y^{2}}}\right)-\dfrac{\partial\;}{\partial y}\left(\dfrac{-y}{\sqrt{x^{2}+y^{2}}}\right)\right]\;\mathbf{k}\\
+\\
+= & 0\,\mathbf{i}-0\,\mathbf{j}+\left(\dfrac{\left(x^{2}+y^{2}\right)^{\frac{1}{2}}-x^{2}\left(x^{2}+y^{2}\right)^{-\frac{1}{2}}}{x^{2}+y^{2}}+\dfrac{\left(x^{2}+y^{2}\right)^{\frac{1}{2}}-y^{2}\left(x^{2}+y^{2}\right)^{-\frac{1}{2}}}{x^{2}+y^{2}}\right)\,\mathbf{k}\\
+= & 0\,\mathbf{i}-0\,\mathbf{j}-\left[\dfrac{x^{2}+y^{2}-x^{2}+x^{2}+y^{2}-y^{2}}{\left(x^{2}+y^{2}\right)^{3/2}}\right]\,\mathbf{k}\\
+= & 0\,\mathbf{i}-0\,\mathbf{j}-\dfrac{y^{2}+x^{2}}{\left(x^{2}+y^{2}\right)^{3/2}}\,\mathbf{k}\\
+= & 0\,\mathbf{i}-0\,\mathbf{j}-\dfrac{1}{\sqrt{x^{2}+y^{2}}}\,\mathbf{k}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calcule o campo rotacional de 
+\begin_inset Formula $\mathbf{F}=\dfrac{-y\,\mathbf{i}+x\,\mathbf{j}}{x^{2}+y^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\vec{\nabla}\times\mathbf{F}= & \begin{bmatrix}\mathbf{i} & \mathbf{j} & \mathbf{k}\\
+\dfrac{\partial\;}{\partial x} & \dfrac{\partial\;}{\partial y} & \dfrac{\partial\;}{\partial z}\\
+\dfrac{-y}{x^{2}+y^{2}} & \dfrac{x}{x^{2}+y^{2}} & 0
+\end{bmatrix}\\
+\\
+= & \left[\dfrac{\partial\;}{\partial y}0-\dfrac{\partial\;}{\partial z}\left(\dfrac{x}{x^{2}+y^{2}}\right)\right]\;\mathbf{i}-\left[\dfrac{\partial\;}{\partial x}0-\dfrac{\partial\;}{\partial z}\left(\dfrac{-y}{x^{2}+y^{2}}\right)\right]\;\mathbf{j}+\\
+ & \left[\dfrac{\partial\;}{\partial x}\left(\dfrac{x}{x^{2}+y^{2}}\right)-\dfrac{\partial\;}{\partial y}\left(\dfrac{-y}{x^{2}+y^{2}}\right)\right]\;\mathbf{k}\\
+\\
+= & 0\,\mathbf{i}-0\,\mathbf{j}+\left[\dfrac{\left(x^{2}+y^{2}\right)-2x^{2}}{\left(x^{2}+y^{2}\right)^{2}}+\dfrac{\left(x^{2}+y^{2}\right)-2y^{2}}{\left(x^{2}+y^{2}\right)^{2}}\right]\,\mathbf{k}\\
+= & 0\,\mathbf{i}-0\,\mathbf{j}-\left(\dfrac{-x^{2}+y^{2}+x^{2}-y^{2}}{\left(x^{2}+y^{2}\right)^{2}}\right)\,\mathbf{k}\\
+= & 0\,\mathbf{i}-0\,\mathbf{j}-0\,\mathbf{k}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calcule o campo rotacional de 
+\begin_inset Formula $\mathbf{F}=\dfrac{x\,\mathbf{i}+-y\,\mathbf{j}}{\sqrt{x^{2}+y^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\vec{\nabla}\times\mathbf{F}= & \begin{bmatrix}\mathbf{i} & \mathbf{j} & \mathbf{k}\\
+\dfrac{\partial\;}{\partial x} & \dfrac{\partial\;}{\partial y} & \dfrac{\partial\;}{\partial z}\\
+\dfrac{x}{\sqrt{x^{2}+y^{2}}} & \dfrac{-y}{\sqrt{x^{2}+y^{2}}} & 0
+\end{bmatrix}\\
+\\
+= & \left[\dfrac{\partial\;}{\partial y}0-\dfrac{\partial\;}{\partial z}\left(\dfrac{-y}{\sqrt{x^{2}+y^{2}}}\right)\right]\;\mathbf{i}-\left[\dfrac{\partial\;}{\partial x}0-\dfrac{\partial\;}{\partial z}\left(\dfrac{x}{\sqrt{x^{2}+y^{2}}}\right)\right]\;\mathbf{j}+\\
+ & \left[\dfrac{\partial\;}{\partial x}\left(\dfrac{-y}{\sqrt{x^{2}+y^{2}}}\right)-\dfrac{\partial\;}{\partial y}\left(\dfrac{x}{\sqrt{x^{2}+y^{2}}}\right)\right]\;\mathbf{k}\\
+\\
+= & 0\,\mathbf{i}-0\,\mathbf{j}+\left(\dfrac{yx\left(x^{2}+y^{2}\right)^{-\frac{1}{2}}}{x^{2}+y^{2}}-\dfrac{-xy\left(x^{2}+y^{2}\right)^{-\frac{1}{2}}}{x^{2}+y^{2}}\right)\,\mathbf{k}\\
+= & 0\,\mathbf{i}-0\,\mathbf{j}-\left[\dfrac{2xy}{\left(x^{2}+y^{2}\right)^{3/2}}\right]\,\mathbf{k}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um escoamento é representado pelo campo de velocidades 
+\begin_inset Formula ${\displaystyle \mathbf{v}=10x\,\mathbf{i}-10y\,\mathbf{j}+30\,\mathbf{k}}$
+\end_inset
+
+, verifique (a) Se há um escoamento incompressível.
+ (b) Se há um escoamento irrotacional.
+\end_layout
+
+\begin_layout Standard
+Para termos um escoamento incompressível devemos verificar que a divergência
+ do campo seja nula,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\vec{\nabla}\cdot\vec{v}= & \left(\dfrac{\partial\;}{\partial x}\,\mathbf{i}+\dfrac{\partial\;}{\partial y}\,\mathbf{j}+\dfrac{\partial\;}{\partial z}\,\mathbf{k}\right)\cdot\left(10x\,\mathbf{i}-10y\,\mathbf{j}+30\,\mathbf{k}\right)\\
+= & \dfrac{\partial\;}{\partial x}\left(10x\right)+\dfrac{\partial\;}{\partial y}\left(-10y\right)+\dfrac{\partial\;}{\partial z}\left(30\right)\\
+= & 10-10\\
+= & 0
+\end{align*}
+
+\end_inset
+
+por tanto temos um escoamento incompressível.
+\end_layout
+
+\begin_layout Standard
+Agora devemos verificar que o rotacional do campo é nulo,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\vec{\nabla}\times\mathbf{F}= & \begin{bmatrix}\mathbf{i} & \mathbf{j} & \mathbf{k}\\
+\dfrac{\partial\;}{\partial x} & \dfrac{\partial\;}{\partial y} & \dfrac{\partial\;}{\partial z}\\
+10x & -10y & 30
+\end{bmatrix}\\
+= & \left[\dfrac{\partial\;}{\partial y}\left(30\right)-\dfrac{\partial\;}{\partial z}\left(10y\right)\right]\;\mathbf{i}-\left[\dfrac{\partial\;}{\partial x}\left(30\right)-\dfrac{\partial\;}{\partial z}\left(10x\right)\right]\;\mathbf{j}+\\
+= & \left[\dfrac{\partial\;}{\partial x}\left(10y\right)-\dfrac{\partial\;}{\partial z}\left(10x\right)\right]\;\mathbf{k}\\
+= & \vec{0}
+\end{align*}
+
+\end_inset
+
+assim, irrotacional.
+\end_layout
+
+\begin_layout Standard
+Para um escoamento no plano 
+\begin_inset Formula $xy$
+\end_inset
+
+, a componente 
+\begin_inset Formula $y$
+\end_inset
+
+ da velocidade é dado por 
+\begin_inset Formula $v_{y}=y^{2}-2x+2y$
+\end_inset
+
+, determine uma possível componente em 
+\begin_inset Formula $x$
+\end_inset
+
+ para um escoamento incompressível.
+\end_layout
+
+\begin_layout Standard
+Sabemos que para que um escoamento seja incompressível é necessário que
+ a divergência do campo seja nula, assim
+\begin_inset Formula 
+\begin{align*}
+\vec{\nabla}\cdot\vec{v}= & \left(\dfrac{\partial\;}{\partial x}\,\mathbf{i}+\dfrac{\partial\;}{\partial y}\,\mathbf{j}\right)\cdot\left[v_{x}\,\mathbf{i}+\left(y^{2}-2x+2y\right)\,\mathbf{j}\right]\\
+0= & \dfrac{\partial\;}{\partial x}v_{x}+\dfrac{\partial\;}{\partial y}\left(y^{2}-2x+2y\right)\\
+0= & \dfrac{\partial v_{x}}{\partial x}+2y+2\\
+\dfrac{\partial v_{x}}{\partial x}= & -2y-2
+\end{align*}
+
+\end_inset
+
+pelo I teorema fundamental do cálculo
+\begin_inset Formula 
+\begin{align*}
+v_{x}= & \int\left(-2y-2\right)\, dx\\
+= & -2yx-2x+C_{1}(y)
+\end{align*}
+
+\end_inset
+
+onde 
+\begin_inset Formula $C_{1}(y)$
+\end_inset
+
+ é uma contante que pode depender de 
+\begin_inset Formula $y$
+\end_inset
+
+ (é constante em relação à 
+\begin_inset Formula $x$
+\end_inset
+
+), note que se derivamos a última expressão em relação a 
+\begin_inset Formula $x$
+\end_inset
+
+ reobtemos a expressão original.
+\end_layout
+
+\begin_layout Subsection*
+Exemplo 06
+\end_layout
+
+\begin_layout Standard
+O campo eletrostático associado a uma carga positiva $Q$ é dado pela equação
+ 
+\begin_inset Formula $\mathbf{E}=\vec{\nabla}V$
+\end_inset
+
+, onde 
+\begin_inset Formula ${\displaystyle V=\dfrac{Q}{r}}$
+\end_inset
+
+, sendo 
+\begin_inset Formula ${\displaystyle r=\sqrt{x^{2}+y^{2}}}$
+\end_inset
+
+, verificar que o campo 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ é irrotacional.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mathbf{E}= & \vec{-\nabla}\, V\\
+= & -\left(\dfrac{\partial\;}{\partial x}\,\mathbf{i}+\dfrac{\partial\;}{\partial y}\,\mathbf{j}\right)V\\
+= & -\dfrac{\partial V}{\partial x}\,\mathbf{i}-\dfrac{\partial V}{\partial y}\,\mathbf{j}\\
+= & -\dfrac{\partial\;}{\partial x}\left(\dfrac{Q}{\sqrt{x^{2}+y^{2}}}\right)\,\mathbf{i}-\dfrac{\partial\;}{\partial y}\left(\dfrac{Q}{\sqrt{x^{2}+y^{2}}}\right)\,\mathbf{j}\\
+= & \dfrac{\frac{1}{2}Q\left(x^{2}+y^{2}\right)^{-\frac{1}{2}}\left(2x\right)}{x^{2}+y^{2}}\mathbf{\, i}+\dfrac{\frac{1}{2}Q\left(x^{2}+y^{2}\right)^{-\frac{1}{2}}\left(2y\right)}{x^{2}+y^{2}}\mathbf{\, j}\\
+= & \dfrac{Qx}{\left(x^{2}+y^{2}\right)^{\frac{3}{2}}}\mathbf{\, i}+\dfrac{Qy}{\left(x^{2}+y^{2}\right)^{\frac{3}{2}}}\mathbf{\, j}\\
+= & \dfrac{Q}{\left(x^{2}+y^{2}\right)^{\frac{3}{2}}}\left(x\mathbf{\, i}+y\mathbf{\, j}\right)\\
+= & \dfrac{Q}{x^{2}+y^{2}}\left(\dfrac{x\mathbf{\, i}+y\mathbf{\, j}}{\sqrt{x^{2}+y^{2}}}\right)\\
+= & \dfrac{Q}{x^{2}+y^{2}}\hat{r}
+\end{align*}
+
+\end_inset
+
+dessa forma o rotacional está dado por
+\end_layout
+
+\end_body
+\end_document

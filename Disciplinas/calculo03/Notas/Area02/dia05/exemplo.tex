@@ -1,0 +1,305 @@
+%% LyX 2.0.6 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,brazil]{article}
+\usepackage[]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{esint}
+\onehalfspacing
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclareMathOperator{\argsinh}{arg\, sinh}
+\DeclareMathOperator{\argcosh}{arg\, cosh}
+\DeclareMathOperator{\argtanh}{arg\, tanh}
+\DeclareMathOperator{\argcoth}{arg\, coth}
+\DeclareMathOperator{\argsech}{arg\, sech}
+\DeclareMathOperator{\argcsch}{arg\, csch}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+\section*{Exemplo 01}
+
+Calcule o fluxo do campo vetorial
+
+\[
+\mathbf{F}(x,y,z)=x\,\mathbf{i}+y\,\mathbf{j}+z\,\mathbf{k}
+\]
+através da superfície de uma esfera de raio $a$ utilize coordenadas
+esférica para representar a superfície (parametrizando em coordenadas
+esféricas)
+
+
+\subsection*{Sol}
+
+Por definição a integral de fluxo
+\[
+\Phi_{S}=\iint_{R}\mathbf{F}\cdot d\vec{\sigma}
+\]
+onde
+\[
+d\vec{\sigma}=\mathbf{n}\, dudv
+\]
+com 
+\[
+\mathbf{n}=\mathbf{T}_{u}\times\mathbf{T}_{v}
+\]
+e
+\[
+\mathbf{T}_{u}=\dfrac{\partial\mathbf{r}}{\partial u}\qquad\text{e}\qquad\mathbf{T}_{v}=\dfrac{\partial\mathbf{r}}{\partial v}
+\]
+Uma outra alternativa a essa abordagem é utilizar o Jacobiano
+\[
+\mathbf{n}=\dfrac{\partial\left(y,z\right)}{\partial\left(u,v\right)}\,\mathbf{i}+\dfrac{\partial\left(z,x\right)}{\partial\left(u,v\right)}\,\mathbf{j}+\dfrac{\partial\left(x,y\right)}{\partial\left(u,v\right)}\,\mathbf{k}
+\]
+sendo que $x,\, y,\, z$ são as coordenadas do vetor $\mathbf{r}$
+que é a parametrização da superfície por onde o campo vai fluir, que
+para o caso da esfera, em coordenadas esféricas, é
+\[
+\mathbf{r}(u,v)=a\,\sin v\,\cos u\,\mathbf{i}+a\,\sin v\,\sin u\,\mathbf{j}+a\cos v\,\mathbf{k},\qquad0\leq u\leq2\pi,\:0\leq v\leq\pi
+\]
+de forma que
+\begin{align*}
+\mathbf{n}= & \left[\dfrac{\partial y}{\partial u}\dfrac{\partial z}{\partial v}-\dfrac{\partial z}{\partial u}\dfrac{\partial y}{\partial v}\right]\,\mathbf{i}+\left[\dfrac{\partial z}{\partial u}\dfrac{\partial x}{\partial v}-\dfrac{\partial x}{\partial u}\dfrac{\partial z}{\partial v}\right]\,\mathbf{j}+\left[\dfrac{\partial x}{\partial u}\dfrac{\partial y}{\partial v}-\dfrac{\partial y}{\partial u}\dfrac{\partial x}{\partial v}\right]\,\mathbf{k}\\
+= & \left[\left(a\sin v\cos u\right)\left(-a\sin v\right)-\left(0\right)\left(a\cos v\sin u\right)\right]\,\mathbf{i}+\\
+ & \left[\left(0\right)\left(a\cos v\right)-\left(-a\sin v\sin u\right)\left(-a\sin v\right)\right]\,\mathbf{j}+\\
+ & \left[\left(-a\sin v\sin u\right)\left(a\cos v\sin u\right)-\left(a\sin v\cos u\right)\left(a\cos v\cos u\right)\right]\,\mathbf{k}\\
+= & -\left(a^{2}\sin^{2}v\cos u\right)\,\mathbf{i}-\left(a^{2}\sin^{2}v\sin u\right)\,\mathbf{j}-\\
+ & \left(a^{2}\sin v\cos v\sin^{2}u+a\sin v\cos v\cos^{2}u\right)\,\mathbf{k}\\
+= & -\left(a^{2}\sin^{2}v\cos u\right)\,\mathbf{i}-\left(a^{2}\sin^{2}v\sin u\right)\,\mathbf{j}-\\
+ & a^{2}\sin v\cos v\left(\sin^{2}u+\cos^{2}u\right)\,\mathbf{k}\\
+= & -\left(a^{2}\sin^{2}v\cos u\right)\,\mathbf{i}-\left(a^{2}\sin^{2}v\sin u\right)\,\mathbf{j}-a^{2}\sin v\cos v\,\mathbf{k}\\
+= & -a\sin v\left[a\,\sin v\,\cos u\,\mathbf{i}+a\,\sin v\,\sin u\,\mathbf{j}+a\cos v\,\mathbf{k}\right]\\
+= & -a\sin v\,\mathbf{r}
+\end{align*}
+Note que o vetor $\mathbf{n}$ aponta para dentro da esfera já que
+$\sin v\geq0$ no intervalo $0\leq v\leq\dfrac{\pi}{2}$ o qual representa
+o hemisfério superior, e $\sin v\leq0$ no intervalo $\dfrac{\pi}{2}<v\leq\pi$,
+o qual representa o hemisfério inferior. Devido a que desejamos trabalhar
+com a orientação positiva redefinimos nosso vetor normal para
+\[
+\mathbf{n}=a\sin v\,\mathbf{r}
+\]
+
+
+Escrevendo o campo $\mathbf{F}$ em termos de $(u,v)$:
+\begin{align*}
+\mathbf{F}(u,v)= & a\,\sin v\,\cos u\,\mathbf{i}+a\,\sin v\,\sin u\,\mathbf{j}+a\cos v\,\mathbf{k}\\
+= & \mathbf{r}
+\end{align*}
+de onde o elemento de fluxo está dado por
+\begin{align*}
+\mathbf{F}\cdot\mathbf{n}= & \left(a\sin v\,\mathbf{r}\right)\cdot\mathbf{r}\\
+= & a\sin v
+\end{align*}
+dessa forma a integral de superfície do campo vetorial será
+\begin{align*}
+\Phi_{S}= & \iint_{R}\mathbf{F}\cdot d\vec{\sigma}\\
+= & \int_{0}^{\pi}\int_{0}^{2\pi}a\sin v\, du\, dv\\
+= & 2\pi a\int_{0}^{\pi}\sin v\, dv\\
+= & -2\pi a\left(\cos\pi-\cos0\right)\\
+= & 4\pi a
+\end{align*}
+
+
+
+\section*{Exemplo 05}
+
+Calcule o fluxo do campo 
+\[
+\mathbf{F}(x,y,z)=y\,\mathbf{i}+x\,\mathbf{j}+z\,\mathbf{k}
+\]
+e $S$ é a superfície externa da região sólida $E$ delimitada pelo
+paraboloide $z=1-x^{2}-y^{2}$ e o plano $z=0$
+
+
+\subsection*{Sol}
+
+A interseção do paraboloide $z=1-x^{2}-y^{2}$ com o plano $z=0$
+está dado por
+\begin{align*}
+1-x^{2}-y^{2} & =z\\
+1-x^{2}-y^{2} & =0\\
+x^{2}+y^{2} & =1
+\end{align*}
+uma circunferência de raio $1$. Por tanto a nossa superfície é formada
+na realidade por duas superfícies, o paraboloide acima de z=0 e o
+círculo de raio 1 no plano $xy$, isto é
+\[
+\Phi=\iint_{S_{1}}\mathbf{F}\cdot d\vec{\sigma}+\iint_{S_{2}}\mathbf{F}\cdot d\vec{\sigma}
+\]
+Em ambos casos podemos pensar as superfícies definidas de forma implícita.
+Analisemos primeiramente a superfície o fluxo através da superfície
+$S_{1}$:
+\begin{align*}
+f= & x^{2}+y^{2}+z-1\\
+\vec{\nabla f}= & 2x\,\mathbf{i}+2y\,\mathbf{j}+\mathbf{k}\\
+\vec{\nabla f}\cdot\mathbf{k}= & 1
+\end{align*}
+\begin{align*}
+\mathbf{n}{}_{1}= & \pm\dfrac{\vec{\nabla f}}{\vec{\nabla f}\cdot\mathbf{k}}\\
+= & 2x\,\mathbf{i}+2y\,\mathbf{j}+\mathbf{k}
+\end{align*}
+onde foi escolhido o sinal positivo já que o fluxo será calculado
+saindo da superfície. Escrevendo o campo em termos de $x,\, y$
+\begin{align*}
+\mathbf{F}(x,y)= & y\,\mathbf{i}+x\,\mathbf{j}+\left(1-x^{2}-y^{2}\right)\,\mathbf{k}\\
+\mathbf{F}\cdot\mathbf{n}= & 2xy+2xy+1-x^{2}-y^{2}\\
+= & 1+4xy-x^{2}-y^{2}
+\end{align*}
+Levando em consideração que a superfícies está projetada no plano
+$xy$ numa região definida por $0\leq x^{2}+y^{2}\leq1$, temos que
+o fluxo está dado por
+\begin{align*}
+\Phi_{1}= & \iint_{S_{1}}\mathbf{F}\cdot d\vec{\sigma}\\
+= & \iint_{0\leq x^{2}+y^{2}\leq1}\left(1+4xy-x^{2}-y^{2}\right)dx\, dy
+\end{align*}
+passando para coordenadas polares e considerando 
+\begin{align*}
+\Phi_{1}= & \int_{0}^{2\pi}\int_{0}^{1}\left(1+4r^{2}\cos\theta\sin\theta-r^{2}\right)r\, dr\, d\theta\\
+= & \int_{0}^{2\pi}\left(\dfrac{1}{2}+\cos\theta\sin\theta-\dfrac{1}{4}\right)d\theta\\
+= & \dfrac{\pi}{2}+\int\sin2\theta\, d\theta\\
+= & \dfrac{\pi}{2}
+\end{align*}
+Para o caso da superfície $S_{2}$ temos
+\begin{align*}
+f_{2}= & x^{2}+y^{2}\\
+\vec{\nabla f}_{2}= & 2x\,\mathbf{i}+2y\,\mathbf{j}
+\end{align*}
+onde, o campo escrito em termos de $x,\, y$
+\begin{align*}
+\mathbf{F}(x,y)= & y\,\mathbf{i}+x\,\mathbf{j}\\
+\mathbf{F}\cdot\mathbf{n}= & 2xy+2xy\\
+= & 4xy
+\end{align*}
+de onde
+\begin{align*}
+\Phi_{2}= & \int_{0}^{2\pi}\int_{0}^{1}\left(4r^{2}\cos\theta\sin\theta\right)r\, dr\, d\theta\\
+= & \int_{0}^{2\pi}\left(\cos\theta\sin\theta\right)d\theta\\
+= & \int\sin2\theta\, d\theta\\
+= & 0
+\end{align*}
+dessa forma
+\[
+\Phi=\Phi_{1}+\Phi_{2}=0+\dfrac{\pi}{2}=\dfrac{\pi}{2}
+\]
+
+
+
+\section*{Exemplo 05}
+
+Calcule o fluxo de $\mathbf{F}=x^{2}\,\mathbf{j}$ através da superfície
+$S$ definida por $y=1+x^{2}+z^{2}$ para $1\leq y\leq5$ com $S$
+orientada apontando na direção negativa de $y$.
+
+
+\subsection*{Sol}
+
+Obviamente esta superfície é uma superfície definida de forma explicita,
+por tanto o vetor normal está dado pela seguinte equação
+\[
+\mathbf{n}_{1}=-\dfrac{\partial F}{\partial x}\,\mathbf{i}+\mathbf{j}-\dfrac{\partial F}{\partial z}\,\mathbf{k}
+\]
+onde
+\[
+y=F(x,z)=1+x^{2}+z^{2}
+\]
+de forma que
+\[
+\mathbf{n}_{1}=-2x\,\mathbf{i}+\mathbf{j}+2z\,\mathbf{k}
+\]
+Observe que este vetor é o vetor que aponta na direção positiva de
+$\mathbf{j}$, de forma que o vetor norma que devemos utilizar é 
+\begin{align*}
+\mathbf{n}= & -\mathbf{n}_{1}\\
+= & 2x\,\mathbf{i}-\mathbf{j}+2z\,\mathbf{k}
+\end{align*}
+Como o campo já está escrito em termos da variável adequada passamos
+a calcular o produto escalar
+\[
+\mathbf{F}\cdot\mathbf{n}=-x^{2}
+\]
+A região de integração está dada por
+\[
+\begin{array}{ccccc}
+1 & \leq & y & \leq & 5\\
+1 & \leq & 1+x^{2}+z^{2} & \leq & 5\\
+0 & \leq & x^{2}+z^{2} & \leq & 4
+\end{array}
+\]
+de forma que
+\[
+\Phi=\iint_{0\leq x^{2}+z^{2}\leq4}x^{2}\, dx\, dy
+\]
+escrevendo em coordenadas polares
+\begin{align*}
+\Phi= & -\int_{0}^{2\pi}\int_{0}^{2}r^{2}\,\cos^{2}\theta\, r\, dr\, d\theta\\
+= & -\int_{0}^{2\pi}\int_{0}^{2}r^{3}\cos^{2}\theta\, dr\, d\theta\\
+= & -\dfrac{2^{4}}{4}\int_{0}^{2\pi}\cos^{2}\theta\, d\theta\\
+= & -4\int_{0}^{2\pi}\cos^{2}\theta\, d\theta
+\end{align*}
+utilizando
+\[
+2\cos^{2}\theta=1+\cos2\theta
+\]
+temos
+
+\begin{align*}
+\Phi= & -2\int_{0}^{2\pi}d\theta+2\int_{0}^{2\pi}\cos2\theta\, d\theta\\
+= & -4\pi
+\end{align*}
+
+
+
+\section*{Exemplo 09}
+
+Encontre o fluxo de $\mathbf{F}=yz\,\mathbf{i}+x\,\mathbf{j}-z^{2}\,\mathbf{k}$
+através do cilindro parabólico $y=x^{2}$, $0\leq x\leq1$, $0\leq z\leq4$,
+na direção indicada na figura
+
+
+\subsection*{Sol}
+
+Neste caso a superfície $f=x^{2}$ está definida de forma explicita
+e é projetada no plano $xz$ com a normal tendo componente apontando
+na direção de $-\mathbf{j}$, por tanto
+
+\begin{align*}
+\mathbf{n}= & \dfrac{\partial f}{\partial x}\,\mathbf{i}-\mathbf{j}+\dfrac{\partial f}{\partial z}\,\mathbf{k}\\
+= & 2x\,\mathbf{i}-\mathbf{j}\\
+d\vec{\sigma}= & \left(2x\,\mathbf{i}-\mathbf{j}\right)dx\, dz
+\end{align*}
+escrevendo o campo em termos de $x,\, z$
+\begin{align*}
+\mathbf{F}= & yz\,\mathbf{i}+x\,\mathbf{j}-z^{2}\mathbf{k}\\
+= & x^{2}z\,\mathbf{i}+x\,\mathbf{j}-z^{2}\mathbf{k}
+\end{align*}
+dessa forma
+\begin{align*}
+\Phi= & \iint_{\begin{array}{c}
+0\leq x\leq1\\
+0\leq z\leq4
+\end{array}}\left(x^{2}z\,\mathbf{i}+x\,\mathbf{j}-z^{2}\mathbf{k}\right)\left(2x\,\mathbf{i}-\mathbf{j}\right)dx\, dz\\
+= & \int_{0}^{4}\int_{0}^{1}\left(2x^{3}z-x\right)dx\, dz\\
+= & \dfrac{1}{2}\int_{0}^{4}\left(z-1\right)dz\\
+= & 2
+\end{align*}
+
+
+\[
+\mathbf{r}(t)\,\mathbf{i}\,\mathbf{j}\,\mathbf{k}
+\]
+
+\end{document}

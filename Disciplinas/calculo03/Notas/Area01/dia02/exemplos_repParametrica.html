@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/main.js' type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+      MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+        extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+        TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+        }
+      });
+    </script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Calculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h5>exemplo 01</h5>
+      <p>
+        Escreva a equação vetorial para $y=5x+3$ no plano $z=2$
+        <br><b>SOL.</b><br />
+        Seja
+         \[
+          \begin{align*}
+            x(t) =& t\\
+            y(t) =& 5t+3\\
+            z(t) =& 2
+          \end{align*}
+         \]
+         assim
+         \[
+          \mathbf{r}(t) = t \,\mathbf{i} + \left( 5t+3\right) \,\mathbf{j}+ 2 \,\mathbf{k}
+          \nonumber
+         \]
+      </p>
+      
+      <h5>exemplo 02</h5>
+      <p>
+        A interseção da superfície $z=x^2+y^2$ e $z=2+y$ determina uma curva, encontre a equação vetorial dessa curva.
+        <br><b>SOL.</b><br />
+        \[
+          \begin{align*}
+            2+y =& x^2 + y^2\\
+            x^2 + y^2 -y+ \dfrac{1}{4} =& 2 - \dfrac{1}{4}\\
+            x^2 + \left( y-\dfrac{1}{2}\right)^2=& \dfrac{9}{4}
+          \end{align*}
+        \]
+        então obtemos uma circunferência com centro em $\left(0,2\right)$ e raio $3/2$, por tanto a parametrização é
+        \[
+          \begin{align*}
+            x =& \dfrac{3}{2}\cos\,t\\
+            y =& \dfrac{1}{2} + \dfrac{3}{2}\sin\,t\\
+            z =& 2 + y\\
+              =& 2 + \dfrac{1}{2} + \dfrac{3}{2}\sin\,t\\
+              =& \dfrac{5}{2} + \dfrac{3}{2}\sin\,t\\
+          \end{align*}
+        \]
+      </p>
+      
+      <h5>Exemplo 3</h5>
+      <p>
+        Representar parametricamente a curva dada pela interseção das superfícies $x+y=2$ e $x^2+y^2+z^2=2(x+y)$
+       <br><b>SOL.</b><br />
+       Como $x+y=2\Rightarrow x = 2-y$, substituímos na segunda equação
+       \[
+          \begin{align*}
+            x^2+y^2+z^2=& 2(x+y)\\
+            \left(2-y \right)^2 + y^2 + z^2 =& 2\left(2-y +y \right)\\
+            4-4y+y^{2}+y^{2}+z^{2}=&4\\
+            2y^{2}-4y+z^{2}=&0\\
+              y^{2}-2y+1+\dfrac {z^{2}} {2}=&1\\
+              \left( y-1\right) ^{2}+\dfrac {z^{2}} {2}=&1
+          \end{align*}
+        \]
+        onde temos uma elipse no plano yz, assim as componentes estão dadas por
+        \[
+          \begin{align*}
+            y=&1+\cos t\\
+            z=&\sqrt{2}\sin t\\
+            x =& 1-\cos t
+          \end{align*}
+        \]
+      </p>
+      
+      <h5>Exemplo 04</h5>
+      <p>
+        Esboce a curva obtida pela interseção do semi elipsoide 
+        \[
+          \dfrac {x^{2}} {12}+\dfrac {y^{2}} {24}+\dfrac {z^{2}} {4}=1,\;\;\;\;z\geq 0
+          \nonumber
+        \]
+        e o cilindro parabólico $\displaystyle y=x^2$. Encontre a função vetorial que descreve a curva
+      <br><b>SOL.</b><br />
+        A interseção das duas superfícies é mostrada na figura a seguir
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/elipsoideCilindroparb.png', 'Zoom', '1250')">
+          <img src="figuras/elipsoideCilindroparb.png" width="500" align="center"/>
+        </a>
+      </div>
+      
+      
+      <p>
+        A escolha de $t=x$ como parâmetro é uma opção adequada, assim o cilindro parabólico fica $\displaystyle y=t^2$.  Agora vamos isolar $z$ da equação do elipsoide e substituímos $\displaystyle y=t^2$ e $t=x$ dentro dessa equação
+        \[
+          \begin{align*}
+              \dfrac {z^{2}} {4} =& 1-\dfrac {x^{2}} {12}-\dfrac {y^{2}} {24}\\
+              =& 1-\dfrac {t^{2}} {12}-\dfrac {t^{4}} {24}\\
+              =& \dfrac {24-2t^{2}-t^{4}} {24}\\
+              =& \dfrac {\left( 6+t^{2}\right) \left( 4-t^{2}\right) } {24}
+          \end{align*}
+        \]
+        dessa forma as equações paramétricas que descrevem a curva são
+        \[
+          \begin{align*}
+            x =& t\\
+            y =& t^2\\
+            z =& \sqrt{\dfrac {\left( 6+t^{2}\right) \left( 4-t^{2}\right) } {6}}
+          \end{align*}
+        \]
+        observe que escolhemos a solução positiva da raiz quadrada pois uma das condições do problema é que $z>0$.
+      </p>
+      
+      <p>
+        Para saber os limites do parâmetro observamos que quando o elipsoide corta o plano $xy$ o valor de $z=0$, por tanto a figura projetada nesse plano está dada por
+        \[
+          \begin{align*}
+          \dfrac {x^{2}} {12}+\dfrac {y^{2}} {24}=&1\\
+          x^2 =& 12 - \dfrac {y^{2}} {2}
+          \end{align*}
+        \]
+        igualando $x^2=y$ (equação do paraboloide) a fim de determinar a interseção das curvas no plano, teremos
+        \[
+          \begin{align*}
+            y =& 12 - \dfrac {y^{2}} {2}\\
+            y^2 + 2y + 1 =& 25\\
+            (y + 1)^2    =& 25\\
+            y+1          =& \pm 5\\
+      
+            y_1          =& 4\\
+            y_2          =& -6
+          \end{align*}
+        \]
+        Note que a solução $y_2 = -6$ não faz sentido já que a equação do paraboloide limita os valores de $y$ tais que $y>0$.  Como $y = t^2$, então temos que $t=\pm 2$, assim a equação vetorial da curva é
+        \[
+          \mathbf{r}(t)  = t\,\mathbf{i} +t^2 \,\mathbf{j} + \sqrt{\dfrac {\left( 6+t^{2}\right) \left( 4-t^{2}\right) } {6}} \,\mathbf{k}\;\;\;\;-2\leq t \leq 2 
+          \nonumber
+        \]
+      </p>
+      
+      <h5>Exemplo 05</h5>
+      <p>
+        Parametrize a curva resultante da interseção do plano $x+2y+4z=4$ e o cilindro elítico $x^2 + 4y^2=4$
+      <br><b>SOL.</b><br />
+        A interseção das duas superfícies é mostrada na figura a seguir
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/planoeliptico.png', 'Zoom', '1250')">
+          <img src="figuras/planoeliptico.png" width="300" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Similar ao exemplo anterior, a parametrização pode ser realizada de varias forma, com temos um cilindro elítico a parametrização deste é exatamente igual à parametrização da elipse que resulta no plano perpendicular à geratriz, neste caso a elipse está dada por
+        \[
+            \dfrac {x^{2}} {4}+\dfrac {y^{2}} {1}=1
+            \nonumber
+        \]
+        de onde a parametrização é
+        \[
+          \begin{align*}
+            x =& 2\cos\,t\\
+            y =& \sin\,t
+          \end{align*}
+        \]
+        Agora vamos escrever a equação do plano utilizando essa parametrização, isolando $z$
+        \[
+          \begin{align*}
+            z =& \dfrac {1} {4}\left( 4-x-2y\right) \\
+              =&1-\dfrac {1}{2}(\cos t+\sin t)
+          \end{align*}          
+        \]
+        de onde temos as equações paramétricas da curva desejada
+        \[
+          \begin{align*}
+            x =& 2\cos\,t\\
+            y =& \sin\,t\\
+            z =& 1-\dfrac {1}{2}(\cos t+\sin t)
+          \end{align*}
+        \]
+        onde $0\leq t \leq 2\pi$
+      </p>
+      
+      <!--
+       \[
+          \begin{align*}
+          \end{align*}
+       \]   
+      
+      <h5>Exemplo</h5>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      \left< \right>     \left(  \right)      \left| \,   \, \right|
+      
+      \mathbb{R}
+      
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k} 
+         
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      -->
+      
+      </div>
+      <!-- Fim Principal   -->
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html> 

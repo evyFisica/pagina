@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/main.js' type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+      MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+        extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+        TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+        }
+      });
+    </script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Calculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h2>Integral de linha de campos vetoriais</h2>
+      
+      <p>
+        Podemos estender o conceito de integral de linha estudado nas aulas anteriores para o caso em que a função peso é uma função vetorial, para esses casos definimos a integral de linha vetorial como
+      </p>
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Seja $\displaystyle \mathbf{r}:[a,b]\to \mathbb{R}^n$ um campo vetorial de classe $C^1$ ($n$ é $2$ ou $3$ para nosso estudo). Seja $\mathbf{F}$ definido num conjunto $X$ de $\mathbb{R}^n$ tal que $R$ contenha as imagens $\mathbf{r}$, Assuma que $\mathbf{F}$ varia continuamente ao longo de $\mathbf{r}$. A integral de lina de $\mathbf{F}$ ao longo de $\mathbf{r}:[a,b]\to \mathbb{R}^n$, denotada por $\displaystyle \int_{C} \mathbf{F}\cdot d\mathbf{r}$, e dada por
+        \[
+          \int_{C} \mathbf{F}\cdot d\mathbf{r} =
+          \int_{C} \mathbf{F}\left( \mathbf{r}(t) \right)\cdot \mathbf{v}(t)\,dt
+          \nonumber
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        A integral de linha vetorial mantém as mesmas <a href="../dia08/intlinhaesc.html#pintlinhaesc">propriedades que a integral de linha escalar</a> exceto da última propriedade que é modificada:
+      </p>
+         
+      <table class="tabela_de_lista" id="pintlinhaesc">      
+      <tr>
+      <td class="definicaotitulo">
+        Propriedades
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        <ol type="a">
+          <li>
+            Se $k$ é uma constante, então
+            \[
+              \int_C k\,\mathbf{f}(x,y,z)\cdot\,d\mathbf{r} = k\int_C \,\mathbf{f}(x,y,z)\cdot\,d\mathbf{r}
+              \nonumber                                                                                                                                                                   
+            \]
+          </li>
+          <li>
+            $\displaystyle \int_C  \left[\,\mathbf{f}(x,y,z) + \mathbf{g}(x,y,z)\right]\,ds = \int_C \,\mathbf{f}(x,y,z)\cdot\,d\mathbf{r} + \int_C \,\mathbf{g}(x,y,z)\cdot\,d\mathbf{r}$
+          </li>
+          <li>
+            Seja $C$ uma curva orientada que composta por várias curvas componentes: $C=C_1 + C_2 + \ldots + C_k$, então 
+            \[
+              \int_C \,\mathbf{f}(x,y,z)\cdot\,d\mathbf{r} = \int_{C_1} \mathbf{f}(x,y,z)\cdot\,d\mathbf{r} + \int_{C_2} \mathbf{f}(x,y,z)\cdot\,d\mathbf{r} + \ldots +\int_{C_k} \mathbf{f}(x,y,z)\cdot\,d\mathbf{r}
+              \nonumber
+              \]
+          </li>
+          <li>
+            Seja $C^-$ a mesma curva que $C$, mas com orientação oposta, então
+            \[
+              \int_C \,\mathbf{f}(x,y,z)\cdot\,d\mathbf{r} = -\int_{C^-} \,\mathbf{f}(x,y,z)\cdot\,d\mathbf{r}
+              \nonumber
+            \]
+          </li>
+        </ol>
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        Uma forma alternativa de apresentar a integral de linha é a seguinte
+        \[
+          d\mathbf{r} = dx\,\mathbf{i} + dy \,\mathbf{j} + dz \,\mathbf{k}
+          \nonumber
+        \]
+        e
+        \[
+          \mathbf{F}(x,y,z) = f(x,y,z) \,\mathbf{i} + g(x,y,z) \,\mathbf{j} + h(x,y,z) \,\mathbf{k}
+          \nonumber
+        \]
+        então
+      </p>
+        
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        \[
+          \begin{align*}
+            \int_C \,\mathbf{F}(x,y,z)\cdot\,d\mathbf{r} =& \int_C \left(  f(x,y,z) \,\mathbf{i} + g(x,y,z) \,\mathbf{j} + h(x,y,z) \,\mathbf{k}\right) \cdot  \left( dx\,\mathbf{i} + dy \,\mathbf{j} + dz \,\mathbf{k} \right)\\
+            =&\int_C f(x,y,z)\, dx + g(x,y,z)\, dy + h(x,y,z)\, dz
+          \end{align*}
+        \]        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h3>Aplicações</h3>
+      
+      <p>
+        Igualmente podemos recordar que o vetor tangente está definido como
+        \[
+          \begin{align*}
+            \mathbf{\hat{T}} =& \dfrac{\mathbf{v}}{\left|\mathbf{v}\right|}\\
+            =& \dfrac{d\mathbf{r}}{ds}
+          \end{align*}
+        \]
+        (já que $s=\int \left|\mathbf{v}\right|\, dt$) onde $\mathbf{r}$ está parametrizado em termos do comprimento de arco. Com isso em mente
+      </p>
+ 
+      <div align="left">
+        <a href="javascript:newWin('figuras/vtangente01.png', 'Zoom', '1650')">
+          <img src="figuras/vtangente01.png" width="350" align="left"/>
+        </a>
+      </div>
+      
+      <p>
+        \[
+          \begin{align*}
+            \int_{C} \mathbf{F}\cdot d\mathbf{r} =& \int_{C} \mathbf{F}\cdot \mathbf{v}\,dt\\
+            &= \int_{C} \mathbf{F}\cdot \dfrac{\mathbf{v}}{\left|\mathbf{v}\right|}\,\left|\mathbf{v}\right|\, dt\\
+            &= \int_{C} \mathbf{F}\cdot \mathbf{\hat{T}} \,\left|\mathbf{v}\right|\, dt\\
+            &= \int_{C} \mathbf{F}\cdot \mathbf{\hat{T}} \, ds
+          \end{align*}
+        \]
+        Dessa forma, como $\mathbf{F}\cdot \mathbf{\hat{T}}$ é uma grandeza escalar, escrevemos a integral vetorial de linha como uma integral de linha escalar.
+      </p>
+ 
+      <div align="right">
+        <a href="javascript:newWin('figuras/circulacao.png', 'Zoom', '1650')">
+          <img src="figuras/circulacao.png" width="350" align="right"/>
+        </a>
+      </div>
+      
+      <h4>Circulação</h4>
+      
+      <p>
+        Una interpretação da integral de linha acontece quando $\mathbf{r}$ é um caminho fechado (isto é, quando  $\mathbf{r}(a) = \mathbf{r}(b)$). Em esta circunstancia, a quantidade $\int_{C} \mathbf{F}\cdot d\mathbf{r}$ é chamada de <b>circulação</b> de $\mathbf{F}$ ao longo de $\mathbf{r}$. Para entender esta ideia melhor, suponha que  $\mathbf{F}$ representa o campo de velocidades de um fluído.  Considere uma quantidade de fluído que se move tangencialmente ao longo de um caminho $\mathbf{r}$ durante um breve intervalo $\Delta \tau$, como $\mathbf{F}\cdot \mathbf{\hat{T}}$ da a componente tangencial de $\mathbf{F}$, temos que
+      </p>
+      
+      <p>
+        \[
+          \Delta L = \text{quantidade de fluído }\approx \left( \mathbf{F}\left( \mathbf{r}(t)\right)\Delta \tau \cdot \mathbf{\hat{T}}(t) \right) \Delta\, s
+          \nonumber
+        \]
+        de onde
+        \[
+        \dfrac{\Delta L}{\Delta \tau} \approx \left( \mathbf{F}\left( \mathbf{r}(t)\right) \cdot \mathbf{\hat{T}}(t) \right) \Delta\, s
+          \nonumber
+        \]
+        Aplicando o limite em que $\Delta \tau \to 0$ e aplicando a soma de Riemman levando a partição para zero temos que
+        \[
+          \dfrac{d L}{d \tau} = \int_c \left( \mathbf{F} \cdot \mathbf{\hat{T}} \right) ds = \int_c \mathbf{F} \cdot d\mathbf{s}
+          \nonumber
+        \]
+      </p>
+      
+      <h4>Trabalho</h4>
+      
+      <p>
+        Agora vamos ver as aplicações da integral de linha, esse tipo de integrais são bem conhecidas na Física: considere $\mathbf{F}$ como sendo um campo de forças no espaço, a integral $\displaystyle \int_{C} \mathbf{F}\cdot d\mathbf{r}$ representa o trabalho feito por $\mathbf{F}$ sobre a partícula quando se move ao longo $\mathbf{r}$
+      </p>
+         
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        \[
+          W = \int_{C} \mathbf{F}\cdot d\mathbf{r}
+          \nonumber
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/curvas.png', 'Zoom', '1650')">
+          <img src="figuras/curvas.png" width="400" align="center"/>
+        </a>
+      </div>
+      
+      <h3>Independência do caminho de integração</h3>
+      
+      <p>
+        Existem funções que a integral de linha só depende dos pontos extremos do caminho, estas funções são funções que derivam de potenciais gradiente definidos num espaço simplesmente conexo ou seja, são campos conservativos:
+      </p>
+      
+ 
+      <div align="center">
+        <a href="javascript:newWin('figuras/indcam.png', 'Zoom', '1650')">
+          <img src="figuras/indcam.png" width="400" align="center"/>
+        </a>
+      </div>
+
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Um campo vetorial $\mathbf{F}$ tem uma integral de linha independente do caminho se
+        \[
+          \int_{C_1} \mathbf{F} \cdot d\mathbf{s} = \int_{C_2} \mathbf{F} \cdot d\mathbf{s}
+          \nonumber
+        \]
+        para duas curvas orientadas simples, definidas por partes de classe $C^1$,  quaisquer definidas no domínio de $\mathbf{F}$ e que tem o mesmos pontos inicial e final.
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        A partir dessa definição podemos dizer que qualquer campo vetorial, $\mathbf{F}$, contínuo será independente de caminho de integração se e somente se
+        \[
+          \oint \mathbf{F} \cdot d\mathbf{s} = 0
+          \nonumber
+        \]
+        para toda curva simples, fechada e definida por partes de classe $C^1$, definida no domínio de $\mathbf{F}$.
+      </p>
+      
+      <h4 id="ilcconserva">Campos Conservativos</h4>
+      
+      <p>
+        Por definição um <a href="../dia08/intlinhaesc.html#cconserva">campo conservativo</a> é aquele que além de outras propriedades verifica
+        \[
+          \mathbf{F} = \vec{\nabla} f
+          \nonumber
+        \]
+        por tanto
+        \[
+          \begin{align*}
+             \int_{C} \mathbf{F} \cdot d\mathbf{s} =&  \int_a^b \vec{\nabla} f\left( \mathbf{r}(t) \right) \cdot d\mathbf{s}\\
+             =& \int_a^b \vec{\nabla} f\left( \mathbf{r}(t) \right) \cdot \mathbf{v}\,dt\\
+          \end{align*}
+        \]
+        da regra da cadeia sabemos
+        \[
+          \dfrac{d\,}{dt}f\left( \mathbf{r}(t) \right) = \vec{\nabla} f\left( \mathbf{r}(t) \right)\cdot \mathbf{v}(t) 
+          \nonumber
+        \]
+        por tanto
+        \[
+          \begin{align*}
+             \int_{C} \mathbf{F} \cdot d\mathbf{s} =& \int_a^b \vec{\nabla} f\left( \mathbf{r}(t) \right) \cdot \mathbf{v}\,dt\\
+             =& \int_a^b \dfrac{d\,}{dt}f\left( \mathbf{r}(t) \right)\,dt\\
+             =& \left. f\left( \mathbf{r}(t) \right)  \, \right|\,_a^b\\
+             =& f\left( \mathbf{r}(b) \right) - f\left( \mathbf{r}(a) \right) 
+          \end{align*}
+        \]
+        a partir deste resultado apresentamos o seguinte teorema
+      </p> 
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Seja $\mathbf{F}$ definida num conjunto $R$ aberto, continuo e conexo o qual é subconjunto de $\mathbb{R}^n$. Então $\mathbf{F}=\vec{\nabla} f$ (onde $f$ é uma função de classe $C^1$ definida em $R$) se e somente se $\mathbf{F}$ tem a integral de linha independe do caminho sobre curvas definidas em $R$. Além disso, se $C$ é qualquer curva orientada de classe $C^1$ definida por partes, definida em $R$ com o ponto inicial $A$ e i ponto final $B$, então
+        \[
+          \int_C \mathbf{F} \cdot d\mathbf{s} = f(B) - f(A)
+          \nonumber
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+ 
+      <div align="center">
+        <a href="javascript:newWin('figuras/conexo.png', 'Zoom', '1650')">
+          <img src="figuras/conexo.png" width="350" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Só para lembrar que um espaço $R$ é dito conexo se dois pontos quais quer dentro de esse espaço podem ser ligado mediante uma caminho o qual tem a sua imagem definida em $R$
+      </p>
+      
+      <p>
+        Da definição acima vemos que qualquer campo conservativo ($\vec{\nabla} \times \mathbf{F} = 0$ e simplesmente conexo) tem a sua integral de linha independente do caminho de integração.
+      </p>      
+
+      <p>
+        <a href="exemplos.html"><font color="#FFF7F1">Exemplos</font></a>
+      </p>
+<!--         
+       \[
+          \begin{align*}
+          \end{align*}
+       \]   
+      
+      <h4>Exemplo</h4>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      \left< \right>     \left(  \right)      \left| \right|
+      
+      \mathbb{R}
+      
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k} 
+         
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      -->
+      
+      </div>
+      <!-- Fim Principal   -->
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html> 
+

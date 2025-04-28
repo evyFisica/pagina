@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax_new/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+    
+    <!--  Scripts basicos das simulacoes do site  http://javalab.org   -->
+<!--    <script src="scripts/javalab.js"></script>
+    <script src="scripts/p5.min.js"></script>-->
+<!--     <script src="scripts/efield.min.js"></script> -->
+
+<!-- <script src="../../../../../comunHtml/node_modules/jquery/dist/jquery.min.js"></script> -->
+<script src="../../../../../comunHtml/jquery/dist/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(".expand").click(function(){
+        target_num = $(this).attr("id").split("-")[1];
+        content_id = "#expandable-".concat(target_num);
+        $(content_id).slideToggle('fast');
+      });
+    });
+    </script>
+
+    <style>
+      .expand {
+        font-style: italic;
+        font-size: 12px;
+        cursor: pointer;
+        color: blue;
+      }
+        .expandable {
+        display:none;
+        margin-left: 3%;
+        margin-right: 3%;
+        color: #3e3e3e;
+/*         text-align: justify; */
+      }
+    </style>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Cálculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h2>Série de Potências</h2>
+      
+      <p>
+        Chamamos de séries de potencias centrada em $c$, aquelas séries escrita na forma
+
+        \[
+          F\left( x\right) = \displaystyle \sum _{n=0}^{\infty }a_{n}\left( x-c\right) ^{n} =  a_{0}+a_{1}\left( x-c\right) + a_{2}\left( x-c\right) ^{2}+ a_{3}\left( x-c\right) ^{3}+\ldots
+        \]
+
+        Observe que diferentemente das séries já estudadas (tipo a geométrica), os termos dá série não são constante, mas sim uma variável.
+      </p>
+      
+      <h3>Raio de convergência</h3>
+      
+      <p>
+        A convergência deste tipo de série pode ser descrita de forma bastante simples, diremos que $F(x)$ converge absolutamente quando $\left| x-c\right| < R$ e diremos que diverge quando $\left| x-c\right| > R$, dessa forma vemos que para este tipo de séries há um intervalo de convergência
+      </p>
+      
+      <div align="center">
+        <a href="javascript:newWin('figuras/pot01.png', 'Zoom', '1650')">
+          <img src="figuras/pot01.png" width="550" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: center;">
+            Figura 01: Intervalo de convergência para uma série de potencias.
+          </p>
+      </div>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="teorematitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p style="text-align: justify;"><em>
+        Toda série de potencias
+        \[
+          \displaystyle \sum _{n=0}^{\infty }a_{n}\left( x-c\right) ^{n}
+        \]
+        tem raio de convergência $R$, o qual é o um número não negativo $(R > 0)$ ou infinito $(R=\infty)$. Se $R$ é finito, $F(x)$ converge absolutamente quando $|x-c| < R$ e diverge quando $|x-c| > R$. Se $R=\infty$, então $F(x)$ converge absolutamente para todo $x$.
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        Uma forma prática de determinar o raio de convergência de uma série de potencia é utilizando o teste da razão:
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="teorematitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p style="text-align: justify;"><em>
+        Considere a série de potência $\displaystyle \sum_{n=0}^\infty C_n \left( x-a\right)^n$, para determinar o raio de convergência utilizamos o critério da razão onde se chamamos de $a_n = C_n \left( x-a\right)^n$, teremos
+      </em></p>
+      <ol style="text-align: justify;">
+        <li>
+          Se $\displaystyle \lim_{x \to \infty} \dfrac{a_{n+1}}{a_n}$ é infinito, então $R=0$
+        </li><br>
+        <li>
+          Se $\displaystyle \lim_{x \to \infty} \dfrac{a_{n+1}}{a_n} =0$, então $R=\infty$
+        </li><br>
+        <li>
+          Se $\displaystyle \lim_{x \to \infty} \dfrac{a_{n+1}}{a_n}=K\left|x-a\right|$, onde $K$ é finito e não nulo, então $R=\dfrac{1}{K}$
+        </li>
+      </ol>
+      </td></tr>
+      </table>
+      
+      <h6>Exemplo</h6>
+      
+      <ol>
+        <li>
+          $\displaystyle \sum _{n=0}^{\infty }\dfrac {x^{n}} {2^{n}}$
+        </li>
+        <li>
+          $\displaystyle \sum _{n=0}^{\infty } \dfrac {\left( -1\right) ^{n}} {4^{n}n}\left( x-5\right) ^{n}$
+        </li>
+        <li>
+          $\displaystyle \sum _{n=0}^{\infty }  \dfrac {x^{2n}} {\left( 2n\right) !}$
+        </li>
+        <li>
+          $\displaystyle     \dfrac {1} {1-2x}=\sum _{n=0}^{\infty }\left( 2x\right) ^{n}=\sum _{n=0}^{\infty }2^{n}x^{n}$
+        </li>
+      </ol>
+      
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="teorematitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p style="text-align: justify;"><em>
+        Assumindo que 
+        \[
+          F\left( x\right) = \displaystyle \sum _{n=0}^{\infty }a_{n}\left( x-c\right) ^{n}
+        \]
+        tem raio de convergência $R>0$. Então $F(x)$ é diferenciável em $(c-R,c+R)$ (ou para todo $x$ se $R=\infty$). Além disso, podemos integrar e diferenciar termo por termo. Para $x\in(c-R,c+R)$,
+        
+        \[
+          F'\left( x\right) = \displaystyle \sum _{n=0}^{\infty }n\,a_{n}\left( x-c\right) ^{n-1}
+        \]
+        
+        \[
+          \displaystyle \int \left( x\right) \,dx= A + \displaystyle \sum _{n=0}^{\infty }\dfrac{a_{n}}{n+1}\left( x-c\right) ^{n+1}
+        \]
+        Estas séries tem o mesmo raio de convergência  $R$
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h6>Exemplo</h6>
+      <ol>
+        <li>
+          $\displaystyle \dfrac {1} {\left( 1-x\right) ^{2}}=1+2x+3x^{2}+4x^{3}+5x^{4}+\ldots$
+        </li>
+        <li>
+          $\displaystyle  \tan ^{-1}x=\sum _{n=0}^{\infty }\dfrac {\left( -1\right) ^{n}x^{2n+1}} {2n+1}=X-\dfrac {x^{3}} {3}+\dfrac {x^{5}} {5}-\dfrac {x7} {7}+\ldots$
+        </li>
+      </ol>
+      
+      <h3>Série de Taylor</h3>
+      
+      <p>
+        Se $f(x)$ é representado por uma série centrada em $c$ no intervalo $\left| x-c \right| < R$ com $R > 0$, então chamaremos aquela série de <b>série de Taylor</b>
+        \[
+          T\left( x\right) =\sum _{n=0}^{\infty }\dfrac {f^{\left( n\right) }\left( c\right) } {n!}\left( x-c\right) ^{n}
+        \]
+        Um caso especial desta série é quando $c=0$, nesse caso a série se denomina de <b>série de Maclaurin</b>
+        
+          \begin{array}{rcl}
+            f\left( x\right) &=& \displaystyle \sum _{n=0}^{\infty }\dfrac {f^{\left( n\right) }\left( 0\right) } {n!}x^{n}\\
+                            &=& f'\left( 0\right) +f''\left( 0\right) _{x}+\dfrac {1} {2!}f'''\left( 0\right) x^{2}+\\
+                            & &\dfrac {1} {3!}f^{\left( 4\right) }\left( 0\right) x^{3}+\ldots     
+          \end{array}
+        
+        Podemos utilizar a série de Taylor para representar uma função $f(x)$ em termos de série, contudo não temos garantia nenhuma de que esta série seja convergente, de fato somente podemos dizer
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        A série de Taylor converge a $f(x)$ se e somente se
+        \[
+          \lim_{k \to \infty} R_k(x) = 0
+        \]
+        onde, $R_k$ é o resto de ordem $k$, definido como
+        \[
+          R_k(x) = f(x) - T(x)
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        Esse método não é o que é utilizado mas o próximo teorema se aplica em casos importante
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="teorematitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p style="text-align: justify;"><em>
+        Seja $I=(c-R, \,c+R)$, onde $R>0$.  Suponha que existe um $K>0$  tal que todas as derivadas de $f$ sejam limitas por $K$ em $I$:
+        \[
+        \displaystyle  \left| f^{\left( k\right) }\left( x\right) \right| \leq k\;\;\;\;\;\;\forall k>0\wedge x\in I
+        \]
+        Então $f(x)$ é representado por sua série de Taylor em $I$:
+        \[
+        f(x) =\displaystyle \sum _{n=0}^{\infty }\dfrac {f^{\left( n\right) }\left( c\right) } {n!}\left( x-c\right) ^{n}\;\;\;\;\;\;\forall x\in I
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h6>Exemplo de algumas séries de Taylor</h6>
+      
+      <p>
+        \begin{array}{rcl}
+          \sin x &=& \displaystyle \sum _{n=0}^{\infty }\left( -1\right) ^{n}\dfrac {x^{2n+1}} {\left( 2n+1\right) !}\\
+                    &=&\displaystyle  x-\dfrac {x^{3}} {3!}+\dfrac {x^5} {5!}-\dfrac {x^{7}} {7!}+\ldots\\
+          &&\\
+          \cos x &=& \displaystyle \sum _{n=0}^{\infty }\left( -1\right) ^{n}\dfrac {x^{2n}} {\left( 2n\right) !}\\
+              &=& \displaystyle  1-\dfrac {x^{2}} {2!}+\dfrac {x^4} {4!}-\dfrac {x^{6}} {6!}+\ldots\\
+          &&\\
+          e^x &=& \displaystyle \sum _{n=0}^{\infty }\left( -1\right) ^{n}\dfrac {x^{n}} {\left( n\right) !}\\
+          &=& \displaystyle  1+\dfrac {x^{2}} {2!}+\dfrac {x^3} {3!}+\dfrac {x^{4}} {4!}+\ldots\\
+          &&\\
+          \displaystyle\dfrac{1}{1-x} &=& \displaystyle\sum _{n=0}^{\infty }x^n\\
+        \end{array}
+      </p>
+      
+      <h4>Importância do $x_0$ na expansão de Taylor</h4>
+      
+      <p>
+        A Taylor series is an approximation of a function with 'easy' functions, namely polynomials. A major difference between a Taylor series centered at one point vs. another is the domain over which the series converges
+      </p>
+      <p>
+        For example the Taylor series for $\displaystyle f(x) = \frac{1}{1-x}$ centered at $x=0$ is
+        \[
+          T_0(x) = x + x^2 + x^3 + x^4 + ...
+        \]
+        This series converges on the interval $(-1,1)$. In other words, for all $x \in (-1,1),\,\, T_0(x) = f(x)$ However outside that interval, not so. For instance $f(-2)=1/3$ but
+        \[
+          T_0(-2) = -2 + 4 - 8 + 16 + ...
+        \]
+        clearly doesn't converge.
+      </p>
+      <p>
+        We were to write out the Taylor series of $f(x)$ centered at $x=−1$, we would have,
+        \[
+          T_{-1}(x) = \frac{1}{2} + \frac{x+1}{4} + \frac{(x+1)^2}{8} + \frac{(x+1)^3}{16} + ...
+        \]
+        This series, $\displaystyle T_{−1}$, converges instead on the interval $(−3,1)$. The expression for $\displaystyle T_{−1}(−2)$ does converge (check!).
+      </p>
+      
+      <p>
+        Some Taylor series converge everywhere, such as the Taylor series for $e^x$ or $\sin x$.
+      </p>
+      
+      <p>
+        From <a href="https://math.stackexchange.com/questions/1008091/what-does-it-mean-intuitively-for-a-taylor-series-to-be-centered-at-a-specific-p" targer="_blank">Quora</a>
+      </p>
+      
+      <h3>Aproximação de funções mediante polinômios de Taylor</h3>
+      
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="teorematitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p style="text-align: justify;"><em>
+        Se $f$ tem $n$ derivadas em $c$, então o polinômio
+        \[
+          P_n(x) = f(c) + f'(c)(x-c) + \cdots + \dfrac{f^{(n)}(c)}{n!}(x-c)^n
+        \]
+        é chamado de  $n-esimo$ polinômio de Taylor de $f$ em $c$. Se $c=0$, então o polinômio é chamado de $n-esimo$ polinômio de Maclaurin de $f$.
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h3>Série binomial</h3>
+      
+      <p>
+        A série de Taylor gerada por $f(x) = \left( 1+x\right)^m$, quando $m$ é constante é chamada de série binomial. A série binomial converge absolutamente para $|x| < 1$.
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="teorematitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p style="text-align: justify;"><em>
+        Para $-1 < x < 1$ se define a série binomial como
+        \[
+          (1+x)^m = 1 + \sum_{k=1}^{\infty} \left(\begin{array}{c}m\\k\end{array} \right)x^k
+        \]
+        onde definimos
+        \[
+          \left(\begin{array}{c}m\\1\end{array}\right) = m\;\;\;\;\;\;\; \left(\begin{array}{c}m\\2\end{array} \right) = \dfrac{m(m-1)}{2!}
+        \]
+        e
+        \[
+          \left(\begin{array}{c}m\\k\end{array} \right) = \dfrac{m(m-1)(m-2)\cdots (m-k+1)}{k!}, \;\;k\geq 3
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+<!--  
+
+       \[
+          \begin{align*}
+          \end{align*}
+       \]
+       
+      <ol>
+        <li>
+          
+        </li>
+        <li>
+          
+        </li>
+      </ol>
+      
+      
+      \left|  \right|    \left(  \right)     \left[  \right]
+      
+      $\left\{  \right\}$
+
+      <h4>Exemplo</h4>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      
+      \mathbb{R}
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      \left< \right>    \left( \right)
+ 
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k} 
+      
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="teorematitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p style="text-align: justify;"><em>
+      
+      </em></p>
+      </td></tr>
+      </table>
+      
+      \displaystyle
+      
+      -->
+      
+      </div>
+      <!-- Fim Principal   -->
+
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html>
+

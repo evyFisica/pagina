@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/main.js' type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+      MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+        extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+        TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+        }
+      });
+    </script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Calculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h2>Integral de Superfície de um campo escalar</h2>
+      
+      <p>
+        Suponhamos que desejamos calcular a massa de uma superfície, para isso será necessário conhecer o valor da densidade de massa por unidade de área , $G(x,y,z)$, e multiplicar essa densidade de massa por cada elemento diferencial de área, $\Delta \sigma$, algo como
+        \[
+          \Delta \left(m_S\right)_i = G(x_i,y_i,z_i)\, \Delta \sigma_i
+          \nonumber
+        \]
+        Somando todos os elementos de massa teremos que a massa total estará dada por
+        \[
+          m_S = \lim_{n\to \infty} \sum_{i=1}^{n}f(x_i,y_i,z_i)\, \Delta \sigma_i = \iint_D G(x,y,z)\,d\sigma
+          \nonumber
+        \]
+        onde nessa expressão entendemos que
+        \[
+          \Delta \sigma_i \approx \left|\, \mathbf{T}_u  \times \mathbf{T}_v \,\right|\,\Delta u\,\Delta v
+           \nonumber
+        \]
+        e por tanto dizer que $n\to \infty \Rightarrow \Delta\,\sigma \to 0$ o qual se traduz para $\Delta u\to 0$ e $\Delta v\to 0$. Dessa forma podemos expressar esse resultado na seguinte definição a qual é valida para qualquer campo escalar (no lugar da massa poderiamos ter a densidade de carga ou querer calcular o centro de massa, etc)
+      </p>
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Seja $G(x,y,z)$ uma função continua definida sobre uma superfície suave $S$, 
+        <ol>
+          <li>
+            se $S$ é definida de forma vetorial como
+            \[
+              \mathbf{r}(u,v) = f(u,v)\,\mathbf{i} + h(u,v) \,\mathbf{j} + g(u,v) \,\mathbf{k}
+              \nonumber
+            \]
+            a integral de superfície de $G$ sobre $S$ se define como
+            \[
+              \iint_D G(x,y,z)\,d\sigma = \iint_D G(x,y,z)\left|\, \mathbf{T}_u  \times \mathbf{T}_v \,\right|\,du\,dv
+              \nonumber
+            \]
+          </li>
+          
+          <li>
+            se $S$ é definida de forma explicita, isto é
+            \[
+              z = F(x,y)
+              \nonumber
+            \]
+            a integral de superfície de $G$ sobre $S$ se define como
+            \[
+              \iint_D G(x,y,z)\,d\sigma = \iint_R G(x,y,z)\, \sqrt{\left( \dfrac{\partial F}{\partial x} \right)^2 + \left( \dfrac{\partial F}{\partial y} \right)^2 + 1\,\,\,}\,\,dx\,dy
+              \nonumber
+            \]
+            onde $R$ é a superfície projetada no plano $xy$
+          </li>
+          
+          <li>
+            se $S$ é definida de forma implícita, mediante a equação
+            \[
+              F(x,y,z) = c
+              \nonumber
+            \]
+            a integral de superfície de $G$ sobre $S$ se define como
+            \[
+              \iint_D G(x,y,z)\,d\sigma = \iint_R G(x,y,z) \dfrac{\left|\, \vec{\nabla}F \,\right|}{\left|\, \vec{\nabla}F\cdot \mathbf{p} \,\right|}\,da
+              \nonumber
+            \]
+            onde $R$ é a superfície projetada no plano que possui norma $\mathbf{p}$
+          </li>
+        </ol>
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h3>Aplicações</h3>
+      <p>
+        <ol>
+          <li>
+            <b>Massa $m$ de uma lamina</b>
+            \[
+              m = \iint\,\delta\,d\sigma
+              \nonumber
+            \]
+            onde $\delta$ é a densidade de massa por unidade de área.
+          </li>
+
+          <li>
+            <b>Centro de massas</b>
+            \[
+              \begin{align*}
+                \bar{x} =& \dfrac{1}{m}\iint\,x\,\delta\,d\sigma\\
+                \bar{y} =& \dfrac{1}{m}\iint\,y\,\delta\,d\sigma\\
+                \bar{z} =& \dfrac{1}{m}\iint\,z\,\delta\,d\sigma\\
+              \end{align*}
+              \nonumber
+            \]
+          </li>
+
+          <li>
+            <b>Momento de inercia</b>            
+            \[
+              I_L = \iint\,\rho^2\,\delta\,d\sigma
+              \nonumber
+            \]
+            onde $\rho$ é a distância desde o ponto $P$ até o eixo $L$, por exemplo se o eixo é $z\Rightarrow \rho^2=x^2+y^2$
+          </li>
+        </ol>
+      </p>
+
+      <h5>Exemplo 01</h5> <!--diva e10.9.2.2-->
+      <p>
+        Calcular $\displaystyle \iint \left(z-x^2+xy^2-1\right)\,d\sigma$, onde a superfície está definida por
+        \[
+          \mathbf{r}(u,v) = u \,\mathbf{i} + v \,\mathbf{j} (u^2+1) \,\mathbf{k}
+          \nonumber
+        \]
+      </p>
+
+      <h5>Exemplo 02</h5> <!--Anton 10e pfd, pg 1134, e15.5.4.3-->
+      <p>
+        Calcular $\displaystyle \iint y^2z^2\,d\sigma$, onde $S$ é a porção cone $\displaystyle z = \sqrt{x^2+y^2}$ que está entre os planos $z=1$ e $z=2$
+         <div align="center">
+          <a href="javascript:newWin('figuras/e03.png', 'Zoom', '1600')">
+            <img src="figuras/e02.png" width="450" align="center"/>
+          </a>
+        </div>
+      </p>
+
+      <h5>Exemplo 03</h5> <!--Rogawski pg 989, e17.4.6-->
+      <p>
+        Avalie a integral $\iint \left( z-x \right) \,d\sigma$, onde $S$ é a porção do gráfico $z=x^2+y^2$, onde $0\leq x \leq y$, $0\leq y \leq 1$.
+         <div align="center">
+          <a href="javascript:newWin('figuras/e03_2.png', 'Zoom', '1600')">
+            <img src="figuras/e03_2.png" width="350" align="center"/>
+          </a>
+        </div>
+      </p>
+
+      <h5>Exemplo 04</h5> <!--diva e10.9.2.3-->
+      <p>
+        Calcular $\displaystyle \iint 3z \,d\sigma$, onde $S$ é a porção do plano $2z+y+z=2$ localizada no primeiro otante.
+         <div align="center">
+          <a href="javascript:newWin('figuras/e03_3.png', 'Zoom', '1600')">
+            <img src="figuras/e03_3.png" width="750" align="center"/>
+          </a>
+        </div>
+      </p>
+
+      <h5>Exemplo 05</h5> <!--diva e10.9.2.3-->
+      <p>
+        Calcular $\displaystyle \iint \left( x+y+z \right) \,d\sigma$, onde $S=S_1\cup S_2$ é a superfície
+         <div align="center">
+          <a href="javascript:newWin('figuras/e03.png', 'Zoom', '1600')">
+            <img src="figuras/e03.png" width="350" align="center"/>
+          </a>
+        </div>
+      </p>
+
+      <h5>Exemplo 06</h5> <!--diva e10.9.2.4-->
+      <p>
+        Uma lâmina ter a forma de parte do plano $z=y$ recordada pelo cilindro $x^2+\left( y-1 \right) ^2=1$. Determinar a massa dessa lâmina, se a densidade de massa é proporcional à distancia desse ponto ao plano $xy$
+         <div align="center">
+          <a href="javascript:newWin('figuras/e04.png', 'Zoom', '1600')">
+            <img src="figuras/e04.png" width="300" align="center"/>
+          </a>
+        </div>
+      </p>
+
+      <p>
+        <a href="exemplos.html"><font color="#FFF7F1">Exemplos</font></a>
+      </p>
+<!--
+       \[
+          \begin{align*}
+          \end{align*}
+       \]   
+      
+      <h5>Exemplo</h5>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      \left< \right>     \left(  \right)      \left| \,   \, \right|
+      
+      \mathbb{R}
+      
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k} 
+         
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      -->
+      
+      </div>
+      <!-- Fim Principal   -->
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html> 
+

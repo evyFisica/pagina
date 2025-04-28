@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/main.js' type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+      MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+        extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+        TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+        }
+      });
+    </script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Calculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h3>Esferas<h3>
+
+      <h4>Exemplo 01</h4>
+      <p>
+        Parametrize $\displaystyle x^2+y^2+z^2=a^2$, que está no primeiro octante.
+        <br><b>SOL.</b><br />
+        Utilizando coordenadas esféricas:
+        \[
+          \mathbf{r}(u,v) = a \cos \,u\;\sin\, v \,\mathbf{i} + a \sin \,u\;\sin\, v\,\mathbf{j} + a \cos\, v\,\mathbf{k}
+          \nonumber
+        \]
+        A escolha dos limites das variáveis é tal que é desenhada a calota esférica desejada:
+        \[
+          \begin{array}{ccccc}
+            0 & \leq & u &\leq &\dfrac{\pi}{2}\\
+            0 & \leq & v &\leq &\dfrac{\pi}{2}
+          \end{array}
+          \nonumber
+        \]
+        Utilizando a parametrização da Diva
+        \[
+          \mathbf{r}(u,v) = a \cos \,u\;\cos\, v \,\mathbf{i} + a \sin \,u\;\cos\, v\,\mathbf{j} + a \sin\, v\,\mathbf{k}
+          \nonumber
+        \]
+        A escolha dos limites das variáveis é tal que é desenhada a calota esférica desejada:
+        \[
+          \begin{array}{ccccc}
+            0 & \leq & u &\leq &\dfrac{\pi}{2}\\
+            0 & \leq & v &\leq &\dfrac{\pi}{2}
+          \end{array}
+          \nonumber
+        \]
+      </p>
+      <div align="center">
+        <a href="javascript:newWin('figuras/exemplo01.png', 'Zoom', '1600')">
+          <img src="figuras/exemplo01.png" width="350" align="center"/>
+        </a>
+      </div>
+ 
+   
+      
+      <h4>Exemplo 02</h4>
+      <p>
+        Determine a parametrização de $\displaystyle x^2 + y^2+z^2=16$, para $z \geq 2$
+        
+        <br><b>SOL.</b><br />
+        
+        <div align="left">
+          <a href="javascript:newWin('figuras/exemplo02_1.png', 'Zoom', '1600')">
+            <img src="figuras/exemplo02_1.png" width="250" align="left"/>
+          </a>
+        </div>
+        
+        Como o raio da esfera é $r=4$ implica que se escolhemos $z \geq 2$ estaremos restringindo a nossa esfera à uma forma parecida à de um quipá hebraico. Assim devemos identificar quais é o ângulo máximo que a variável $v$ assumirá.  Para isso vamos analisar a $v-$curva que passa pelo plano $y=0$. Da figura ao lado vemos que o máximo ângulo está dado por
+        \[
+          \begin{align*}
+            \cos v_{f} =& \dfrac{2}{4}\\
+            \cos v_{f}  =& \dfrac{1}{2}\\
+            \Rightarrow v_f =& \dfrac{\pi}{3}
+          \end{align*}
+        \]
+        Dessa forma, seguindo a parametrização de coordenadas esféricas, temos
+        \[
+          \mathbf{r}(u,v) = 4 \sin\, v \cos \,u\; \,\mathbf{i} + 4 \sin \,v\;\sin\, u\,\mathbf{j} + 4 \cos\, v\,\mathbf{k}
+          \nonumber
+        \]
+        com
+        \[
+          \begin{array}{ccccc}
+            0 & \leq & u &\leq &2\pi\\
+            0 & \leq & v &\leq &\dfrac{\pi}{3}
+          \end{array}
+          \nonumber
+        \]
+      <div align="center">
+        <a href="javascript:newWin('figuras/exemplo02_2.png', 'Zoom', '1600')">
+          <img src="figuras/exemplo02_2.png" width="400" align="center"/>
+        </a>
+      </div>
+      </p>
+      
+      <h4>Exemplo 03</h4>
+      <p>
+        Seja $\displaystyle x^2-2x+y^2-4y+z^2+1=0$, encontre uma parametrização.
+        <br><b>SOL.</b><br />
+        Neste problema devemos completar o quadrado:
+        \[
+          \begin{align*}
+            x^2-2x+y^2-4y+z^2+1&=0\\
+            x^2-2x+1-1+y^2-4y+4-4+z^2+1&=0\\
+            \left( x-1 \right)^2 + \left( y-2 \right)^2+z^2&=4
+          \end{align*}
+        \]
+        o que implica que estamos frente a equação cartesiana de uma circunferência de raio 2 e origem em $\left( 1,\,2,\,0 \right)$, dessa forma as equações paramétricas são      
+        \[
+          \begin{align*}
+            x =& 1 + 2 \sin\, v \cos \,u\\
+            y =& 2 + 2 \sin \,v\;\sin\, u\\
+            z =& 2\cos v
+          \end{align*}
+        \] 
+        com
+        \[
+          \begin{array}{ccccc}
+            0 & \leq & u &\leq &2\pi\\
+            0 & \leq & v &\leq &\pi
+          \end{array}
+          \nonumber
+        \]
+      <div align="center">
+        <a href="javascript:newWin('figuras/exemplo03.png', 'Zoom', '1600')">
+          <img src="figuras/exemplo03.png" width="350" align="center"/>
+        </a>
+      </div>
+      </p>   
+      
+      <h3>Cilindros</h3>
+      
+      <h4>Exemplo 04</h4>
+      <p>
+        Obter uma parametrização do cilindro $x^2+y^2=25$ entre os planos $z=0$ e $z=10$
+        <br><b>SOL.</b><br />
+        Neste exemplo se observa que a diretriz do cilindro é um circunferência, que no plano $z=0$ tem por equação
+        \[
+          \vec{\beta}(u) =5\cos u \,\mathbf{i} +5\sin u \,\mathbf{j},\;\;\;0\leq u \leq 2\pi
+          \nonumber
+        \]
+        Um dos vetores que fazem parte da geratriz é aquele que vai desde $\left( 5,0,0 \right)$ até $\left( 5,0,10 \right)$, por tanto
+        \[
+          \vec{q} = 10 \,\mathbf{k}
+          \nonumber
+        \]
+        dessa forma a equação do cilindro é
+        \[
+          \begin{align*}
+            \mathbf{r}(u,v) =& \vec{\beta}(u) + v\vec{q}\\
+            =& 5\cos u \,\mathbf{i} +5\sin u \,\mathbf{j} + 10\,v \,\mathbf{k}
+          \end{align*}
+        \]
+        onde
+        \[
+          \begin{array}{ccccc}
+            0 & \leq & u &\leq &2\pi\\
+            0 & \leq & v & < & 1
+          \end{array}
+          \nonumber
+        \]
+        note que a escolha de $v_f=1$ garante que a última circunferência acontece quando $z=10$.
+        <div align="center">
+          <a href="javascript:newWin('figuras/exemplo08.png', 'Zoom', '1600')">
+            <img src="figuras/exemplo08.png" width="350" align="center"/>
+          </a>
+        </div>
+      </p> 
+      
+      <h4>Exemplo 05</h4>
+      <p>
+        Obter uma parametrização do cilindro $4x^2+y^2=16$, que está entre os planos $z=5$ e $z=15$
+        <br><b>SOL.</b><br />
+        A equação cartesiana descreve um cilindro elíptico:
+        \[
+          \begin{align*}
+            4x^2+y^2=&16\\
+            \left( \dfrac{x}{2} \right)^2 + \left( \dfrac{y}{4} \right)^2 =&1
+          \end{align*}
+        \]
+        Essa elipse é a equação cartesiana da diretriz de nosso cilindro o qual, na atura de $z=10$ estará passando por
+        \[
+          \mathbf{r}(u) = 2\cos u \,\mathbf{i} +4\sin u \,\mathbf{j} + 10 \,\mathbf{k}
+          \nonumber
+        \]
+        Um dos possíveis vetores diretriz é aquele que vai desde $\left( 2,0,5 \right)$ até $\left( 2,0,15 \right)$, por tanto
+        \[
+          \vec{q} = 10 \,\mathbf{k}
+          \nonumber
+        \]
+        dessa forma a equação do cilindro é
+        \[
+          \begin{align*}
+            \mathbf{r}(u,v) =& \vec{\beta}(u) + v\vec{q}\\
+            =& 2\cos u \,\mathbf{i} + 4\sin u \,\mathbf{j} + 10(1+v) \,\mathbf{k}
+          \end{align*}
+        \]
+        onde
+        \[
+          \begin{array}{ccccc}
+            0 & \leq & u &\leq &2\pi\\
+            -0.5 & \leq & v & < & 0.5
+          \end{array}
+          \nonumber
+        \]
+        note que a escolha dos limites de $v$ garante que a última circunferência acontece quando $z=15$ e primeira em $z=5$.
+        
+        <div align="center">
+          <a href="javascript:newWin('figuras/exemplo09.png', 'Zoom', '1600')">
+            <img src="figuras/exemplo09.png" width="350" align="center"/>
+          </a>
+        </div>
+      </p>
+      
+      <h4>Exemplo 06</h4>
+      <p>
+        Obter uma parametrização da parte $x^2+y^2=4$, $0\leq z \leq 5$, delimitada pelos semiplanos $y=x$ e $y=\sqrt{3}x$, com $z \geq 0$.
+        
+        <div align="right">
+          <a href="javascript:newWin('figuras/exemplo10.png', 'Zoom', '1600')">
+            <img src="figuras/exemplo10.png" width="250" align="right"/>
+          </a>
+        </div>
+        <br><b>SOL.</b><br />
+        Devido a restrição imposta pelos planos, o cilindro fica delimitado entre um $u_{min}$ e um $u_{max}$.  Para determinar esses ângulos vamos projetar o cilindro no plano $xy$.  Observe que as equações dos planos nos indicam de imediato qual é o ângulo de inclinação de cada plano em relação ao eixo $x$. No caso da equação $y=x$ temos
+        \[
+          \begin{align*}
+            \tan \left( \dfrac{\pi}{2} - u_{max} \right)   =& 1\\
+            u_{max}=&\dfrac{\pi}{2} - \frac{\pi}{4}\\
+            =& \frac{\pi}{4}
+          \end{align*}
+        \] 
+        No caso da equação $y=\sqrt{3}x$ temos
+        \[
+          \begin{align*}
+            \tan \left( \dfrac{\pi}{2} - u_{min} \right) =& \sqrt{3}\\
+            u_{min}=&\dfrac{\pi}{2} - \frac{\pi}{3}\\
+            =& \dfrac{\pi}{6}
+          \end{align*}
+        \]
+        A geratriz de nosso cilindro é
+        \[
+          \vec{\beta}(u) =2\cos u \,\mathbf{i} +2\sin u \,\mathbf{j},\;\;\;0\leq u \leq 2\pi
+          \nonumber
+        \]
+        e uma diretriz será desde $\left( 2,0,0 \right)$ até $\left( 2,0,5 \right)$, por tanto
+        \[
+          \vec{q} = 5 \,\mathbf{k}
+          \nonumber
+        \]
+        dessa forma a equação do cilindro é
+        \[
+          \begin{align*}
+            \mathbf{r}(u,v) =& \vec{\beta}(u) + v\vec{q}\\
+            =& 2\cos u \,\mathbf{i} +2\sin u \,\mathbf{j} + 5\,v \,\mathbf{k}
+          \end{align*}
+        \]
+        onde
+        \[
+          \begin{array}{ccccc}
+           \frac{\pi}{3}  & \leq & u &\leq &\frac{\pi}{4}\\
+            0 & \leq & v & < & 1
+          \end{array}
+          \nonumber
+        \]
+        
+        <div align="center">
+          <a href="javascript:newWin('figuras/exemplo10_2.png', 'Zoom', '1600')">
+            <img src="figuras/exemplo10_2.png" width="350" align="center"/>
+          </a>
+        </div>
+      </p>  
+      
+      <h4>Exemplo 07</h4>
+      <p>
+        Se a diretriz de um cilindro dado é $y=x^2$, obter uma parametrização para o cilindro se $|\,x\,| \leq 2$ e  $0\leq |\,z\,| \leq 8$
+        <br><b>SOL.</b><br />
+        Neste problema a nossa diretriz está dada pela parametrização ($z=0$)
+        \[
+          \begin{cases}
+            x =& u\\
+            y =& u^2
+          \end{cases}
+          \nonumber
+        \]
+        Uma das geratrizes que podemos definir fica entre $(0,0,0)$ e $(0,0,8)$, assim
+        \[
+          \vec{q} = 8 \,\mathbf{k}
+          \nonumber
+        \]
+        dessa forma a equação do cilindro é
+        \[
+          \begin{align*}
+            \mathbf{r}(u,v) =& \vec{\beta}(u) + v\vec{q}\\
+            =& u \,\mathbf{i} +  u^2 \,\mathbf{j} + 8\,v \,\mathbf{k}
+          \end{align*}
+        \]
+        onde
+        \[
+          \begin{array}{ccccc}
+            -2 & \leq & u &\leq &2\\
+            0 & \leq & v & < & 1
+          \end{array}
+          \nonumber
+        \]
+        
+        <div align="center">
+          <a href="javascript:newWin('figuras/exemplo11.png', 'Zoom', '1600')">
+            <img src="figuras/exemplo11.png" width="350" align="center"/>
+          </a>
+        </div>
+      </p>
+      
+      <h3>Cones</h3>
+      
+      <h4>Exemplo 08</h4>
+      <p>
+        Obter uma parametrização do cone gerado pela semi-reta $z=\sqrt{3}y$, $y>0$, quando está gira em torno do eixo positivo $z$
+        <br><b>SOL.</b><br />
+        
+        <div align="right">
+          <a href="javascript:newWin('figuras/exemplo04_1.png', 'Zoom', '1600')">
+            <img src="figuras/exemplo04_1.png" width="250" align="right"/>
+          </a>
+        </div>
+        
+        Para obtermos uma parametrização para esse cone observamos que ao girarmos a reta $z=\sqrt{3}y$, $y>0$, a figura que será desenhada em planos paralelos ao $xy$ é uma circunferência, especificamente, se escolhemos $y=1\Rightarrow z=\sqrt{3}$, por tanto teremos uma circunferência de raio $1$ à altura $z=\sqrt{3}$, essa circunferência é nossa diretriz, que é parametrizada por
+        \[
+          \vec{\beta}(u) =  \sin u \,\mathbf{i} + \cos u \,\mathbf{j} + \,\sqrt{3} \mathbf{k}
+          \nonumber
+        \]
+        como a origem está em $\vec{r}_0=(0,0,0)$, temos que a equação paramétrica do cone será
+        \[
+          \vec{r}(u,v) =  v\sin u \,\mathbf{i} + v\cos u \,\mathbf{j} + \,\sqrt{3} \,v\mathbf{k}
+          \nonumber
+        \]
+        com
+        \[
+          \begin{array}{ccccc}
+            0 & \leq & u &\leq &2\pi\\
+            0 & \leq & v & < & \infty
+          \end{array}
+          \nonumber
+        \]
+      <div align="center">
+        <a href="javascript:newWin('figuras/exemplo04.png', 'Zoom', '1600')">
+          <img src="figuras/exemplo04.png" width="350" align="center"/>
+        </a>
+      </div>
+      </p>  
+      
+      <h4>Exemplo 09</h4>
+      <p>        
+        Obter uma parametrização do cone $z=-\sqrt{x^2+y^2}$ para $-2\leq z \leq 0$
+        <br><b>SOL.</b><br />
+        Essa é a equação cartesiana de um cone, como
+      \[
+        \begin{align*}
+          r^2 =& x^2+y^2\\
+          r =& -z
+        \end{align*}
+      \]
+      assim, quando $z=-2$ o raio da circunferência do cone nessa altura é $r=2$, de forma que a diretriz estará dada por
+        \[
+          \vec{\beta}(u) =  2\sin u \,\mathbf{i} + 2\cos u \,\mathbf{j} -2 \, \mathbf{k}
+          \nonumber
+        \]
+        como a origem está em $\vec{r}_0=(0,0,0)$, temos que a equação paramétrica do cone será
+        \[
+          \vec{r}(u,v) =  2v\sin u \,\mathbf{i} + 2v\cos u \,\mathbf{j} -2 v\,\mathbf{k}
+          \nonumber
+        \]
+        com
+        \[
+          \begin{array}{ccccc}
+            0 & \leq & u &\leq &2\pi\\
+            0 & \leq & v & < & 1
+          \end{array}
+          \nonumber
+        \]
+        <div align="center">
+          <a href="javascript:newWin('figuras/exemplo05.png', 'Zoom', '1600')">
+            <img src="figuras/exemplo05.png" width="350" align="center"/>
+          </a>
+        </div>
+      </p>
+         
+      
+      <h4>Exemplo 10</h4>
+      <p>
+        Obter uma parametrização do cone $4x^2+9z^2=9y^2$
+        <br><b>SOL.</b><br />
+        \[
+          \begin{align*}
+            4x^2+9z^2=&9y^2\\
+            \dfrac{4}{9}x^2+z^2=&y^2\\
+            \left( \dfrac{x}{\frac{3}{2}} \right)^2+z^2=&y^2
+          \end{align*}
+        \]
+        Por tanto a diretriz de nosso cone é uma parábola com semi eixo menor igual a 1 e o semi eixo maior igual a 3/2. Note que quando $x=0, \, y=0 \Rightarrow z=0$ o qual indica que o vértice está em $z=0$. Para determinar uma geratriz escolhemos uma que passe pelo plano $x=0$, onde $z=y$, assim resulta conveniente $z=y=1$, por tanto uma parametrização adequada para esse cone é
+        
+        \[
+          \vec{r}(u,v) =  \dfrac{3}{2}v\cos u \,\mathbf{i} + v \,\mathbf{j} + \cos u \,\mathbf{k}
+          \nonumber
+        \]
+        com
+        \[
+          \begin{array}{ccccc}
+            0 & \leq & u &\leq &2\pi\\
+            -\infty & < & v & < & \infty
+          \end{array}
+          \nonumber
+        \]
+        
+        <div align="center">
+          <a href="javascript:newWin('figuras/exemplo06.png', 'Zoom', '1600')">
+            <img src="figuras/exemplo06.png" width="350" align="center"/>
+          </a>
+        </div>
+      </p>   
+      
+      <h4>Exemplo 11</h4>
+      <p>
+        Determinar as equações paramétricas do cone $C$ com vértice no ponto $V=(-1,1,1)$ e que tem como diretriz a curva  dada por $\displaystyle x^2-4z-4=0$, $y=0$ 
+        <br><b>SOL.</b><br />
+        A nossa diretriz está dada pela equação $\displaystyle z=\dfrac{1}{4}x^2-1$ a qual tem a seguinte parametrização
+        \[
+          \begin{cases}
+            x =& u\\
+            y =& \dfrac{1}{4}u^2-1
+          \end{cases}
+          \nonumber
+        \]
+        Considerando as coordenadas do vértice obtemos a equação para o cone:
+        \[
+          \begin{align*}
+            \mathbf{r}(u,v) =& \left( -1,1,1 \right) + \left\{ \left[ u,\left(\dfrac{1}{4}u^2-1\right),0 \right] -  \left( -1,1,1 \right)\right\} v\\
+            \mathbf{r}(u,v)=& \left[ \left( u+1 \right)v -1 \right]  \,\mathbf{i} + \left(  \dfrac{u^2v}{4}+1\right)\,\mathbf{j} + \left( v+1 \right) \,\mathbf{k}
+          \end{align*}
+        \]
+        
+        <div align="center">
+          <a href="javascript:newWin('figuras/exemplo07.png', 'Zoom', '1600')">
+            <img src="figuras/exemplo07.png" width="350" align="center"/>
+          </a>
+        </div>
+      </p>
+      
+      <h3>Superfícies de revolução</h3>
+      
+      <h4>Exemplo 12</h4>
+      <p>        
+        Determine equações paramétricas para a superfície gerada pela revolução da curva $y=1/x$ em torno do eixo $x$, entre $0< x < 2$
+        <br><b>SOL.</b><br />
+        Como a função já está expressada em termos da variável que define o eixo de rotação, podemos escrever diretamente a parametrização
+        
+        \[
+          \begin{cases}
+            x =& u\\
+            y =& \dfrac{1}{u}\, \cos v\\
+            z =& \dfrac{1}{u}\, \sin v\\
+          \end{cases}
+          \nonumber
+        \]
+        com
+        \[
+          \begin{array}{ccccc}
+            0 & \leq & v &\leq &2\pi\\
+            0 & < & u & \leq & 2
+          \end{array}
+          \nonumber
+        \]
+        
+        <div align="center">
+          <a href="javascript:newWin('figuras/exemplo12.png', 'Zoom', '1600')">
+            <img src="figuras/exemplo12.png" width="350" align="center"/>
+          </a>
+        </div>
+      </p>
+      
+      <h4>Exemplo 13</h4>
+      <p>
+        Determine equações paramétricas para a superfície do cone circular reto $z^2=x^2+y^2$ que está entre os planos $z=1$ e $z=4$
+        <br><b>SOL.</b><br />
+        Para resolver este problema podemos encarar ele de duas formas diferentes, na primeira forma encaramos diretamente a parametrização do cone cuidando dos limites da variável que estende o vetor da geratriz.  Na segunda forma encaramos o problema como o de uma reta definida entre dois pontos e que rota em torno do eixo de $z$.  Observe, no entanto, que no fim ambas metodologias levam à mesma solução.
+      </p>
+      <h5>Parametrizando o cone</h5>
+      <p>
+        Neste caso o cone é um cone circular reto com diretriz paralela ao plano $xy$, que para o caso de $z=4$ está dada por
+        \[
+          \vec{\beta}(u) = 4\cos u \,\mathbf{i} + 4\sin u \,\mathbf{j} + 4\,\mathbf{k}
+          \nonumber
+        \]
+        A origem de nosso cone acontece no ponto $\vec{r}_0 = (0,0,0)$, por tanto
+        \[
+          \vec{r}(u,v) =  4v\cos u \,\mathbf{i} + 4v\sin u \,\mathbf{j} + 4v\,\mathbf{k}
+          \nonumber
+        \]
+        Tipicamente a escolha dos limites para $v$ na parametrização anterior é $0 \leq v \leq 1$, mas isso implica em que nosso cone sera formado por infinitas circunferências de raio desde zero até 4 o qual está em desacordo com a proposição do problema. Nosso raio inicial deve ser aquele que acontece para $z=1=x^2+y^2$ ou seja, $r=1$. Essa diretriz tem por equação
+        \[
+          \vec{\beta}(u) = \cos u \,\mathbf{i} + \sin u \,\mathbf{j} + 1\,\mathbf{k}
+          \nonumber
+        \]
+        o qual implica que $v=\frac{1}{4}$, dessa forma 
+        
+        <div align="right">
+          <a href="javascript:newWin('figuras/exemplo13_01.png', 'Zoom', '1600')">
+            <img src="figuras/exemplo13_01.png" width="250" align="right"/>
+          </a>
+        </div>
+        
+        \[
+          \begin{array}{ccccc}
+            0 & \leq & u &\leq &2\pi\\
+            \dfrac{1}{4} & < & u & \leq & 1
+          \end{array}
+          \nonumber
+        \]
+      </p>
+      <h5>Parametrizando a linha de revolução</h5>
+      <p>
+        Para parametrizar a cone cortado podemos considerar uma linha que este sobre o plano $xz$, nesse caso a equação cartesiana do cone reduz para $x=z$.  Como nosso eixo de rotação será o eixo $z$ escrevemos
+        \[
+          \begin{cases}
+            x =& u\,\cos v\\
+            y =& u\, \sin v\\
+            z =& u\\
+          \end{cases}
+          \nonumber
+        \]
+        com
+        \[
+          \begin{array}{ccccc}
+            0 & \leq & v &\leq &2\pi\\
+            1 & \leq & u & \leq & 4
+          \end{array}
+          \nonumber
+        \]
+        
+        <div align="center">
+          <a href="javascript:newWin('figuras/exemplo13.png', 'Zoom', '1600')">
+            <img src="figuras/exemplo13.png" width="350" align="center"/>
+          </a>
+        </div>
+      </p>
+      
+      <h4>Exemplo 14</h4>
+      <p>
+        Dada a hipérbole
+        \[
+          \left(\dfrac{x}{3}\right)^2 - \left(\dfrac{y}{5}\right)^2=1
+          \nonumber
+        \]
+        expresse de forma paramétrica a superfície resultante da rotação dessa curva em torno eixo $y$.
+        <br><b>SOL.</b><br />
+        A equação dessa hipérbole gera o seguinte gráfico no plano $z=0$
+                
+        <div align="center">
+          <a href="javascript:newWin('figuras/hiperbole.png', 'Zoom', '1600')">
+            <img src="figuras/hiperbole.png" width="350" align="center"/>
+          </a>
+        </div>
+        
+        Escrevendo em termos de $y$
+        \[
+          x = 3\sqrt{1+\left(\dfrac{y}{5}\right)^2\;}
+          \nonumber
+        \]
+        de forma que a parametrização é
+        \[
+          \begin{cases}
+            x =& 3\sqrt{1+\left(\dfrac{u}{5}\right)^2\;}\,\cos v\\
+            y =& u\\
+            z =& 3\sqrt{1+\left(\dfrac{u}{5}\right)^2\;}\, \sin v\\
+          \end{cases}
+          \nonumber
+        \]
+        com
+        \[
+          \begin{array}{ccccc}
+            0 & \leq & v &\leq &2\pi\\
+            0 & < & u & < & \infty
+          \end{array}
+          \nonumber
+        \]
+        
+        <div align="center">
+          <a href="javascript:newWin('figuras/exemplo14.png', 'Zoom', '1600')">
+            <img src="figuras/exemplo14.png" width="350" align="center"/>
+          </a>
+        </div>
+      </p>
+      
+      
+      <h4>Exemplo 15</h4>
+      <p>
+          Parametrize o paraboloide $z=2\left(x^2 + y^2\right)$, abaixo do plano z=8<br />
+          <b>Sol.</b><br />         
+          \[
+            \begin{align*}
+              x =& \sqrt{\dfrac{u}{2}}\cos \,v\\
+              y =& \sqrt{\dfrac{u}{2}}\sin \,v\\
+              z =& u
+            \end{align*}
+          \]
+          onde $0\leq v \leq 2\pi$ e $0\leq u \leq 8$.
+          
+          
+          <div align="center">
+            <a href="javascript:newWin('figuras/para01.png', 'Zoom', '1600')">
+            <img src="figuras/para01.png" width="300" align="center"/>
+            </a>
+          </div>
+          
+          
+          Note que outra parametrização possível (dentre as miles) se obtem redefinindo o $u$ como $u=8u^2$, dessa forma temos a parametrização ao estilo da Diva:
+          \[
+            \begin{align*}
+              x =& 2\,u\cos \,v\\
+              y =& 2\,u\sin \,v\\
+              z =& 8\,u^2
+            \end{align*}
+          \]
+          com $0\leq v \leq 2\pi$ e $0\leq u \leq 1$
+      </p>
+      
+      <h3>Outras parametrizações</h3>
+      
+      <h4>Exemplo 16</h4>
+      <p>
+        <ol>
+          <li>
+            Obter uma parametrização da parte do cone $x^2=y^2+z^2$, que está entre os planos $x=1$ e $x=1$<br />
+            <b>Sol.</b><br />
+            A partir da equação cartesiana escolhemos
+            \[
+              y = u,\;\;\;\;\;\;\; z=v
+              \nonumber
+            \]
+            isso nos leva então para
+            \[
+              x = \sqrt{u^2+v^2}
+              \nonumber
+            \]
+            onde o sinal positivo na raiz indica que escolhemos o cone superior
+          
+            <div align="center">
+              <a href="javascript:newWin('figuras/cone_02.png', 'Zoom', '1600')">
+                <img src="figuras/cone_02.png" width="700" align="center"/>
+              </a>
+            </div>
+
+            Para estabelecer os limites dessa superfície observamos a projeção no plano $yz$, note que os valores são tais que a superfície projeta duas a área entre as circunferências de raio $4$ e $1$, dessa forma a escolha dos dados deve ser tal que
+            \[
+              1 \leq u^2+v^2 \leq 16
+              \nonumber
+            \]
+            <br /><br />
+
+            Se tivéssemos escolhido a parametrização de uma figura de rotação a solução seria bem mais simples:       
+            \[
+              \begin{align*}
+                x =& u\\
+                y =& u\cos \,v\\
+                z =& u\sin \,v
+              \end{align*}
+            \]
+            onde $1\leq u < 4$ e $0\leq v \leq 2\pi$
+          </li>
+        </ol>
+      </p>
+
+      <h4>Exemplo 17</h4>
+      <p>
+        (Problema da Diva 10.3.45) Escreve uma representação paramétrica para a superfície
+        <ol type="a">
+          <li>
+            Do cilindro cortado
+          </li>
+          <li>
+            Do plano inscrito no cilindro
+          </li>
+        </ol>
+        obtida da interseção do cilindro $x^2+y^2=4$ com o plano $y+z=8$
+        <br><b>SOL.</b><br />
+        Da teoria sabemos que a parametrização de um cilindro está dada pela parametrização da diretriz, que no caso é uma circunferência de raio 2 no plano $xy$ e por tanto dada por
+        \[
+          \beta(u) = 2\cos\,u\,\mathbf{i} + 2\sin\,u \,\mathbf{j},
+          \nonumber
+        \]
+        mas a equação das retas geratrizes, que geralmente são da forma $z=v$, contudo, para o caso deste problema sabemos que o cilindro está limitado pelo plano $z=8-y$, que em termos da parametrização da diretriz escrevemos como
+        \[
+          z = 8-y=8-2\cos\,u
+          \nonumber
+        \]
+        A curva desenhada pela interseção dessas superfícies é uma elipse inclinada
+        
+         <div align="center">
+          <a href="javascript:newWin('figuras/curvaPlanoCil.png', 'Zoom', '1600')">
+            <img src="figuras/curvaPlanoCil.png" width="400" align="center"/>
+          </a>
+        </div>
+        
+         tal que quando $u=0 \Rightarrow z=6$ e $u=\pi \Rightarrow z=10$, de fato o cilindro é o resultado da união de vários aneis como esse, os quais vão desde $z=0$ até o anel mostrado na figura acima, assim para variar o alatura do anel Reparametrizamos a coordenada $z$ para $z=\left( 8-2\,\cos\,u \right)\,v$, assim a parametrização do cilindro cortado é
+        \[
+          r(u,v) = 2\cos\,u\,\mathbf{i} + 2\sin\,u \,\mathbf{j} + v\,\left( 8-2\,\cos\,u \right)\,\mathbf{k}
+          \nonumber
+        \]
+        onde $0\leq u \leq 2\pi$ e $0 \leq v \leq 1$.
+        
+         <div align="center">
+          <a href="javascript:newWin('figuras/cilCortado.png', 'Zoom', '1600')">
+            <img src="figuras/cilCortado.png" width="400" align="center"/>
+          </a>
+        </div>
+      </p>
+      
+      <p>
+        Para o caso do plano que fica delimitado pelo cilindro teremos que ele resulta da união de varias curvas de níveis projetadas em $z=8-y$. Cada curva de nível vai ser uma elipse as quais vão variar seu raio, por tanto a equação para cada uma delas será
+        \[
+          r_{cn}(u,v) = v\cos\,u\,\mathbf{i} + v\sin\,u \,\mathbf{j},
+          \nonumber
+        \]
+        como o menor raio possível é $0$ e o maior raio possível é $2$, então $0\leq v \leq 2$. Substituindo o $y$ em  $z$, temos $z=8-v\sin\,u$, por tanto a equação do plano será
+        \[
+          r(u,v) = v\cos\,u\,\mathbf{i} + v\sin\,u \,\mathbf{j}+ \left( 8-v\sin\,u \right)\,\mathbf{k}
+          \nonumber
+        \]
+        
+         <div align="center">
+          <a href="javascript:newWin('figuras/planoCortado.png', 'Zoom', '1600')">
+            <img src="figuras/planoCortado.png" width="400" align="center"/>
+          </a>
+        </div>
+      </p>
+<!--         
+      
+        \[
+          \begin{align*}
+          \end{align*}
+        \]
+        
+        \[  
+          \begin{cases}
+          \end{cases}
+          \nonumber
+        \] 
+      
+      <h4>Exemplo</h4>
+      <p>
+        <br><b>SOL.</b><br />
+      </p>
+      
+  \left< \right>   \left(  \right)   \left[  \right]   \left| \,   \, \right|
+      
+      \mathbb{R}
+      
+      \mathbf{r}(u,v)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k} 
+         
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      -->
+      
+      </div>
+      <!-- Fim Principal   -->
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html> 

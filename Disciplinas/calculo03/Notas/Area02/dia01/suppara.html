@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/main.js' type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+      MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+        extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+        TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+        }
+      });
+    </script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Calculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      <h2>Superfícies paramétricas</h2>
+      
+      <p>
+        Na área anterior utilizamos uma descrição vetorial para definir curvas no espaço $\mathbb{R}^3$. Nesta área vamos tratar de superfícies no espaço, isto é, objetos de dimensão $2$ que habitam $\mathbb{R}^3$
+      </p>
+      
+      <p>
+        Uma definição precisa de superfície é a seguinte
+      </p>
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de  superfície
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Uma superfície $S$ em $\mathbb{R}^3$ pode ser descrita como um conjunto de pontos $\left( x,y,z \right)$ que satisfaz uma equação da forma
+        \[
+          f\left( x,y,z \right) = 0
+          \label{defsup}
+        \]
+        sendo $f$ uma função continua
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        A forma da expressão matemática da equação $\ref{defsup}$ é conhecida como representação implícita da superfície. Se for possível expressar alguma das variáveis em termo das outras variáveis, como em
+        \[
+          z = f(x,y)
+          \nonumber
+        \]
+        chamaremos a esse tipo de representação de forma explicita da superfície.  Veremos mas adiante que é possível localizar os pontos utilizando uma representação vetorial para isso, algo do tipo
+        \[
+          \mathbf{r}(u,v) = f(u,v)\,\mathbf{i} + g(u,v) \,\mathbf{j} + h(u,v) \,\mathbf{k} 
+          \nonumber
+        \]
+        Obviamente podemos ter também uma representação paramétrica constituída pelas componentes do vetor.
+      </p>
+      
+      <p>
+        A representação paramétrica ou vetorial nos permitira expressar de forma simples equações que nem sempre são funções mas que expressam a superfície $S$, lembre que numa função não podemos ter mais de um ponto $f(\vec{r})$ para um dado $\vec{r}$:
+      </p>
+      
+      <h5>Exemplos</h5>
+      <p>
+        <ol>
+          <li>
+            A equação
+            \[
+              x + \dfrac{1}{2}y + \dfrac{1}{3}z = a,\;\;\;a > 0
+              \nonumber
+            \]
+            é uma representação implicita do plano inclinado que corta os eixos coordenados $x$, $y$, $z$, nos pontos $\left( a,\,0,\,0 \right)$,  $\left( 0,\,2a,\,0 \right)$ e $\left( 0,\,0,\,3a \right)$. A partir dessa equação podemos obter uma expressão que seja uma representação explícita desse planos:
+            \[
+              x = a - \dfrac{1}{2}y - \dfrac{1}{3}z\;\;\;\;\;\text{ ou } \;\;\;\;\; y = 2\left( a - x - \dfrac{1}{3}z \right) ;\;\;\;\;\text{ ou } \;\;\;\;\; z = 3\left( a-x-\dfrac{1}{2}y \right)
+              \nonumber
+            \]
+            Vale ressaltar que cada equação representa toda a superfície, por tanto não temos "perda de informação" quando expressamos explicitamente a função.
+          </li>
+          
+          <li>
+            A equação
+            \[
+            \displaystyle x^2 + y^2 + z^2 = a^2
+            \nonumber
+            \]
+            é uma representação implícita da esfera de raio $a$ com centro na origem.  Essa equação não é uma função. A partir dessa equação obtemos duas funções que representam parte da diferentes da esfera,
+            \[
+              z = \sqrt{a^2 - x^2 - y^2}\;\;\;\;\;\text{ e } \;\;\;\;\; z = -\sqrt{a^2 - x^2 - y^2}
+              \nonumber
+            \]
+            Expressões similares podem ser obtidas isolando as outras variáveis.  Note que sempre teremos 2 equações para representar 
+          </li>
+          
+          <li>
+            A equação
+            \[
+              x-z+z^3=0
+              \nonumber
+            \]
+            é uma representação implícita de uma superfície que não pode ser escrita como uma única função, existe até $3$ valores de $z$ para alguns $x$.
+          </li>
+        </ol>
+        Nos exemplos acima vemos que em algumas situações podemos expressar as superfícies de forma funcional, mas em outros não, a pergunta que surge é como representar esses casos de outra forma a fim de ficar simples a construção do gráfico, para isso utilizaremos a representação paramétrica.
+      </P>
+      
+      <h3>Representação paramétrica</h3>
+      
+      <p>
+        Quando estudamos a representação paramétricas das curvas no espaço utilizamos um único parâmetro para isso, dado o fato de que o objeto a ser descrito era em essência unidimensional. No entanto, se queremos parametrizar uma superfície será necessário a utilização de dois parâmetros para identificar cada ponto, já que o objeto a ser descrito é bidimensional.
+      </p>
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Uma parametrização de uma superfície $S \subset \mathbb{R}^3$ é uma função $\displaystyle \mathbf{r}:D\subset \mathbb{R}^2 \to \mathbb{R}^3$, onde $D$ é algum domínio em $\mathbb{R}^2$. A imagem da função $\displaystyle \mathbf{r}$, corresponde à superfície $S$, isto é, $S=Im\left( \mathbf{r} \right)=\mathbf{r}\left( D \right)$. A expressão geral para $\displaystyle \mathbf{r}$ é
+        \[
+          \mathbf{r}(u,v) = x(u,v) \,\mathbf{i} + y(u,v) \,\mathbf{j} +z(u,v) \,\mathbf{k}
+          \nonumber
+        \]
+        Se $\displaystyle \mathbf{r}$ é diferenciável ou de classe $C^1$ (o que significa que $x(u,v)$, $y(u,v)$ e $z(u,v)$ são diferenciáveis ou de classe $C^1$) então diremos que a superfície é diferenciável ou de classe $C^1$
+      </em></p>
+      </td></tr>
+      </table>
+ 
+      <div align="center">
+        <a href="javascript:newWin('figuras/defpara01.png', 'Zoom', '1600')">
+          <img src="figuras/defpara01.png" width="750" align="center"/>
+        </a>
+      </div>
+      
+      <h3>Representação paramétrica de algumas superfícies</h3>
+      <h4>Esfera</h4>
+      <p>
+        A grande maioria dos autores prefere parametrizar a esfera utilizando coordenas esféricas, $\left(\rho, \phi, \right)$, as quais são facilmente obtidas a partir da figura embaixo
+      </p>
+ 
+      <div align="center">
+        <a href="javascript:newWin('figuras/cooresfericas.png', 'Zoom', '1600')">
+          <img src="figuras/cooresfericas.png" width="350" align="center"/>
+        </a>
+      </div>
+      
+      <br />
+      
+      <p>
+      \[
+        \begin{align*}
+          x =& r \cos \,u\;\sin\, v\\
+          y =& r \sin \,u\;\sin\, v\\
+          z =& r \cos\, v
+        \end{align*}
+      \]
+      onde $\displaystyle  0 \leq u \leq 2\pi$  e  $\displaystyle 0 \leq v \leq \pi$
+      </p>
+      
+      <p>
+        No livro da Diva temos uma outra parametrização alternativa à anterior
+      </p>
+ 
+      <div align="center">
+        <a href="javascript:newWin('figuras/cooresfericas_diva.png', 'Zoom', '1600')">
+          <img src="figuras/cooresfericas_diva.png" width="350" align="center"/>
+        </a>
+      </div>
+      
+      <br />
+      
+      <p>
+      \[
+        \begin{align*}
+          x =& r \cos \,u\;\cos\, v\\
+          y =& r \sin \,u\;\cos\, v\\
+          z =& r \sin\, v
+        \end{align*}
+      \]
+      onde $\displaystyle  0 \leq u \leq 2\pi$  e  $\displaystyle -\pi/2 \leq v \leq \pi/2$
+      </p>
+      
+      <h5>Exemplos</h5>
+      <p>
+        <ol>
+          <li>
+            Parametrize $\displaystyle x^2+y^2+z^2=a^2$, que está no primeiro octante.
+          </li>
+          <li>
+            Determine a parametrização de $\displaystyle x^2 + y^2+z^2=16$, para $z \geq 2$
+          </li>
+          <li>
+            Seja $\displaystyle ^2-2x+y^2-4y+z^2+1=0$, encontre uma parametrização.
+          </li>
+        </ol>
+      </p>
+      
+      <h4>Parametrização de um cilindro</h4>
+      <p>
+        Seja $C$ uma curva plana e $L$ é uma reta que não está situada no mesmo plano da curva $C$.  O conjunto de retas paralelas a $L$ que interceptam $C$ é chamado de cilindro.
+      </p>
+      
+      <p>
+        A curva $C$ é chamada de <b>diretriz</b> e a cada reta que passa por $C$ e é paralela a $L$ é chamada de <b>geratriz</b> do cilindro.
+      </p>
+      
+      <p>
+        Para parametrizar um cilindro, parametrizamos a curva $C$ utilizando o parâmetro $u$ e as geratrizes são parametrizadas com o parâmetro $v$.
+      </p>
+ 
+      <div align="center">
+        <a href="javascript:newWin('figuras/cilgen.png', 'Zoom', '1600')">
+          <img src="figuras/cilgen.png" width="350" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Assim, se $\beta$ é a diretriz e $\mathbf{v}$ é a geratriz, então uma equação geral para um cilindro é
+        \[
+          \mathbf{r}(u,v) = \beta(u) + v\mathbf{q}
+          \nonumber
+        \]
+        onde $\beta(u)$ é a parametrização da diretriz.
+      </p>
+      
+      <p>
+        Como exemplo temos o cilindro circular reto, cujas geratrizes são perpendiculares às diretrizes, as quais são círculos. Sabemos que a parametrização do círculo, localizado no plano $xy$, está dada por
+        \[
+           \mathbf{r}(u) = a\cos \,u\,\mathbf{i} + a\sin\, u \,\mathbf{j}
+           \nonumber
+        \]
+        Para a geratriz podemos considerar o vetor $\mathbf{q}$ que está entre os pontos $P_0=(0,0,1)$ e $P_1=(0,0,2)$, por tanto 
+        \[
+          \mathbf{q} = (0,0,2) - (0,0,1)= (0,0,1) = \mathbf{k} 
+          \nonumber
+        \]
+        assim a parametrização do cilindro será
+        \[
+           \mathbf{r}(u,v) = a\cos \,u\,\mathbf{i} + a\sin\, u \, \mathbf{j} + v\,\mathbf{k} 
+           \nonumber
+        \]
+      </p>
+      
+      <h5>Exemplos</h5>
+      <p>
+        <ol>
+          <li>
+            Obter uma parametrização da parte $x^2+y^2=4$, $0\leq z \leq 5$, delimitada pelos semiplanos $y=x$ e $y=2x$, com $z \geq 0$.
+          </li>
+          <li>
+            Obter uma parametrização do cilindro $x^2+y^2=a^2$
+          </li>
+          <li>
+            Indique um conjunto de eqs. paramétricas do cilindro com diretriz dada por uma elipse.
+          </li>
+          <li>
+            Se a diretriz de um cilindro dado é $y=ax^2$, obter uma parametrização para o cilindro.
+          </li>
+          <li>
+            Se $y=a\sin\, x$, parametrize o cilindro resultante.
+          </li>
+        </ol>
+      </p>
+      
+      <h3>Parametrização do Cone generalizado</h3>
+      <p>
+        Um cone (generalizado) é uma união de retas passando por um dado ponto $P_0$ (chamado de vértice do cone) e pelos pontos de uma dada curva $\delta$.  As retas que passam pelo vértice e pela curva $\delta$ são chamadas de diretrizes e a curva $\delta$ é a geratriz.
+      </p>
+ 
+      <div align="center">
+        <a href="javascript:newWin('figuras/conegen.png', 'Zoom', '1600')">
+          <img src="figuras/conegen.png" width="350" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Se a geratriz é definida pela curva $\delta(u)$, e o vértice está localizado no ponto $\mathbf{r}_0=(x_0,y_0,z_0)$, então a equação genérica dos cones generalizados tem a forma
+        \[
+          \mathbf{r}(u,v) = \mathbf{r}_0 + v\, \left( \, \delta(u) - \mathbf{r}_0  \, \right)
+          \nonumber
+        \]
+      </p>
+      
+      <p>
+        O exemplo mais caraterístico dos cone generalizado é o cone simples: suponhamos que o cone tem seu eixo de simetria ao longo do eixo $z$, nessa circunstância a geratriz está dada pela curva descrita pela equação
+        \[
+           \mathbf{r}(u) = a\cos \,u\,\mathbf{i} + a\sin\,  \,\mathbf{j} + z \,\mathbf{k}
+           \nonumber
+        \]
+        e o vértice está colocado no ponto $\mathbf{r}_0=(0,0,0)$, de forma que a equação genérica para o cone é
+        \[
+           \mathbf{r}(u,v) = a\,v\,\cos \,u\,\mathbf{i} + a\,v\,\sin\,  \,\mathbf{j} + z\,v \,\mathbf{k}
+           \nonumber
+        \]
+        Observe a figura embaixo, a partir dela definimos arbitrariamente como podemos escolher o valor do $z$
+      </p>
+ 
+      <div align="center">
+        <a href="javascript:newWin('figuras/cone1.png', 'Zoom', '1600')">
+          <img src="figuras/cone1.png" width="300" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Da trigonometria obtemos
+        \[
+          \sin \alpha = \dfrac{a}{1},\;\;\;\;\;\;\;\;\;\cos \alpha = \dfrac{z}{1}
+           \nonumber
+        \]
+        por tanto, podemos reescreve a equação do cone circular como
+        \[
+           \mathbf{r}(u,v) = v\,\sin \,\alpha\,\cos \,u\,\mathbf{i} + v\,\sin \,\alpha\,\sin\,  \,\mathbf{j} + v\,\cos \,\alpha\, \mathbf{k}
+           \nonumber
+        \]        
+      </p>
+      
+      <p>
+        Vale lembrar que a equação de um cone elíptico está dada por
+        \[
+          \left( \dfrac{x}{a} \right)^2 + \left( \dfrac{y}{b} \right)^2 = \left( \dfrac{z}{c} \right)^2
+          \nonumber
+        \]
+      </p>
+      
+      <h5>Exemplo</h5>
+      <p>
+        <ol>
+          <li>
+            Obter uma parametrização do cone gerado pela semi-reta $z=\sqrt{3}y$, $y>0$, quando está gira em torno do eixo positivo $z$
+          </li>
+          <li>
+            Obter uma parametrização do cone $z=-\sqrt{x^2+y^2}$
+          </li>
+          <li>
+            Obter uma parametrização do cone $4x^2+9z^2=9y^2$ <!--(Thomas 12.6.26 pg 163, sol SolutionMulti/032160072X_ISM_PW.pdf pg 742)-->
+          </li>
+          <li>
+            Determinar as equações paramétricas do cone $C$ com vértice no ponto $V=(-1,1,1)$ e que tem como diretriz a curva  dada por $\displaystyle x^2-4z-4=0$, $y=0$ <!--http://www.sato.prof.ufu.br/GeoAnalitica/Cones_generalizados.html-->
+          </li>
+          <li>
+            Consideremos a curva de Lissajous, parametrizada por
+            \[
+              \delta(u) = \left( 4\sin u, 4 \sin \dfrac{u}{4}, 0 \right)
+              \nonumber
+            \]
+            no plano $z=3$ é a diretriz e o ponto $V=(0,0,0)$ é o vértice do cone, indique uma parametrização para o cone. <!--http://www.sato.prof.ufu.br/GeoAnalitica/Cones_generalizados.html-->           
+ 
+            <div align="center">
+              <a href="javascript:newWin('figuras/lissa01.png', 'Zoom', '1600')">
+                <img src="figuras/lissa01.png" width="400" align="center"/>
+              </a>
+            </div>
+          </li>
+        </ol>
+      </p>
+      
+      <h4>Superfícies de rotação</h4>
+      
+      <p>
+        Uma superfície de rotação (ou revolução) é uma superfície obtida pela rotação de uma curva plana, chamada de geratriz, em torno de uma reta nesse plano, a qual chamamos de eixo de rotação. Exemplo dessas superfícies são a esfera, o toro, o paraboloide, o elipsoide (quando dois de seu eixos são iguais), etc.
+      </p>
+      
+      <p>
+        As circunferências obtidas pela rotação de um ponto fixo da geratriz em torno do eixo de rotação chamam-se paralelos da superfície de rotação e as curvas obtidas pela rotação da geratriz segundo um ângulo fixo chamam-se de meridianos.
+      </p>
+ 
+      <div align="center">
+        <a href="javascript:newWin('figuras/suprev.png', 'Zoom', '1600')">
+          <img src="figuras/suprev.png" width="400" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Cada ponto $p$ da superfície é obtido pela rotação, de ângulo $v$, de algum ponto $q$ da geratriz. Se a geratriz está dada por $y=f(x)$, então a superfície obtida pela revolução da curva em torno do eixo $x$ está dada por
+        \[
+          x = u,\;\;\;\;\;\;\;\;\;\;\ y = f(u)\, \cos\, v,\;\;\;\;\;\;\;\;\;\;\ z = f(u)\,\sin\, v
+          \nonumber
+        \]
+      </p>
+      
+      <h5>Exemplos</h5>
+      <p>
+        <ol>
+          <li> <!--Anton pg 1046 8ed-->
+            Determine equações paramétricas para a superfície gerada pela revolução da curva $y=1/x$ em torno do eixo $x$
+          </li>
+          
+          <li>
+            Determine equações paramétricas para a superfície gerada pela revolução da curva $y=x$ (cone circular reto)
+          </li>
+          
+          <li>
+            Dada a hipérbole
+            \[
+              \left(\dfrac{x}{a}\right)^2 - \left(\dfrac{y}{b}\right)^2=0
+              \nonumber
+            \]
+             expresse de forma paramétrica a superfície resultante da rotação dessa curva em torno eixo $y$.
+          </li>
+        </ol>
+      </p>
+      
+      <h4>Paraboloide</h4>
+      
+      <p> 
+        A equação cartesiana de uma paraboloide elíptico é
+        \[
+          \left(\dfrac{x}{a}\right)^2 + \left(\dfrac{y}{b}\right)^2= \dfrac{z}{c'}
+          \nonumber
+        \]
+      </p>
+      
+      <p>
+        Consideremos o caso especial onde $a=b$ o que resulta em um paraboloide circular        
+        \[
+          z = c\left(x^2 + y^2\right)
+          \nonumber
+        \]
+        Note que se fizermos $y=0$ teremos uma parábola no plano $xz$ dada por $z=cx^2$, similarmente teremos uma parábola no plano $yz$ quando $x=0$, isto é, $z=y^2$.
+      </p>
+ 
+      <div align="center">
+        <a href="javascript:newWin('figuras/paraboloide.png', 'Zoom', '1600')">
+          <img src="figuras/paraboloide.png" width="300" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Mesmo que o paraboloide seja uma superfície de revolução a escolha do eixo de rotação deve ser a adequada. A equação $z=cx^2$ aponta para se escolher $x=u$, similarmente a equação $z=cy^2$ aponta para se escolher $y=u$, contudo nenhuma dessa escolhas é adequada, observe na figura acima, o eixo de rotação é o eixo $z$, por tanto a escolha certa é $z=u$, nesse caso nos não devemos considera as equações anteriores e sim $x = \sqrt{z/c}$ e $y = \sqrt{z/c}$, feita essa escolha nossa seguimos a receita dada para a parametrização de superfícies de revolução
+        \[
+          \begin{align*}
+            x =& \sqrt{\dfrac{u}{c}}\cos \,v\\
+            y =& \sqrt{\dfrac{u}{c}}\sin \,v\\
+            z =& u
+          \end{align*}
+        \]
+        onde $0\leq u < \infty$ e $0\leq v \leq 2\pi$
+      </p>
+      
+      <h3>Parametrização de outras curvas</h3>
+      
+      <p>
+        Quando temos uma superfície definida de forma explica, tipo
+        \[
+          z = f(x,y)
+          \nonumber
+        \]
+        podemos recorrer à parametrização trivial, isto é, definimos $x=u$ e $y=v$, dessa forma obtemos uma curva superfície definida por $z=f(u,v)$.  Um exemplo típico deste fato é o paraboloide o qual está definido de forma explicita
+        \[
+          z = c\left(x^2 + y^2\right)
+          \nonumber          
+        \]
+        e que podemos parametriza como
+        \[
+          \begin{align*}
+            x =& u\\
+            y =& v\\
+            z =& c\left(u^2 + v^2\right)
+          \end{align*}
+        \]
+        neste caso os limites ficam definidos como $u\in \mathbb{R}$ e $v\in \mathbb{R}$.
+      </p>
+      <p>
+        Sendo mais específicos podemos repetir o exemplo 1 do paraboloide como
+        
+        \[
+          \begin{align*}
+            x =& u\\
+            y =& v\\
+            z =& 2\left(u^2 + v^2\right)
+          \end{align*}
+        \]
+        Como $z_{max} = 8\Rightarrow u^2 + v^2 \leq 8$
+      </p>
+
+<!--
+       \[
+          \begin{align*}
+          \end{align*}
+       \]
+
+      <h5>Exemplo</h5>
+      <p>
+        <br><b>SOL.</b><br />
+      </p>
+
+      \left< \right>     \left(  \right)      \left| \,   \, \right|
+
+      \mathbb{R}
+
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k}
+
+-->
+      <p>
+        Além das superfícies aqui apresentadas podemos explorar a <a href="tubo.html">parametrização dos tubos</a>, muito estudada em outras universidades.
+      </p>
+
+      <p>
+        <a href="exemplos.html"><font color="#FFF7F1">Exemplos</font></a>
+      </p>
+      
+      
+<!--         
+       \[
+          \begin{align*}
+          \end{align*}
+       \]   
+      
+      <h4>Exemplo</h4>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      \left< \right>     \left(  \right)      \left| \,   \, \right|
+      
+      \mathbb{R}
+      
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k} 
+         
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      -->
+      
+      </div>
+      <!-- Fim Principal   -->
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html> 
+
+

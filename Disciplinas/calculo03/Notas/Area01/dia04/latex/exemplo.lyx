@@ -1,0 +1,262 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\usepackage[brazil]{babel}
+
+\usepackage{amsfonts}
+\end_preamble
+\options a4papper
+\use_default_options false
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding utf8x
+\fontencoding T1
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Encontre o comprimento arco da curva dada por 
+\begin_inset Formula $\mathbf{r}(t)=t\,\mathbf{i}+\dfrac{4}{3}t^{3/2}\,\mathbf{j}+\dfrac{1}{2}t^{2}\,\mathbf{k}$
+\end_inset
+
+ entre 
+\begin_inset Formula $t=0$
+\end_inset
+
+ e 
+\begin_inset Formula $t=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Da definição da função 
+\begin_inset Formula $\mathbf{r}(t)$
+\end_inset
+
+ identificamos as funções componentes e calculamos suas derivas: 
+\begin_inset Formula 
+\begin{eqnarray*}
+x'(t) & = & 1\\
+y'(t) & = & 2t^{1/2}\\
+z'(t) & = & t
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dessa forma
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+L & = & \int_{0}^{2}\sqrt{\left(1\right)^{2}+\left(2t^{1/2}\right)^{2}+\left(t\right)^{2}}\,\,\,\, dt\\
+ & = & \int_{0}^{2}\sqrt{1+4t+t^{2}}\,\, dt\\
+ & = & \int_{0}^{2}\sqrt{(t+2)^{2}-3}\,\, dt\\
+\end{eqnarray*}
+
+\end_inset
+
+a solução dessa equação requer utilizar as seguentes substituições: 
+\begin_inset Formula 
+\begin{eqnarray*}
+n= & t+2\\
+dn= & dt
+\end{eqnarray*}
+
+\end_inset
+
+vamos solucionar a integral indefinida, assim a integral muda para 
+\begin_inset Formula 
+\begin{eqnarray*}
+I= & \int\sqrt{n^{2}-3}dn\\
+\end{eqnarray*}
+
+\end_inset
+
+utilizando substituição trigonométrica, vemos que colocando 
+\begin_inset Formula $u$
+\end_inset
+
+ na hipotenusa e 
+\begin_inset Formula $\sqrt{3}$
+\end_inset
+
+ no cateto adjacente, então 
+\begin_inset Formula 
+\begin{eqnarray*}
+\sqrt{n^{2}-3}= & \sqrt{3}\tan\theta\\
+\dfrac{n}{\sqrt{3}}= & \sec\theta\\
+dn= & \sqrt{3}\sec\theta\tan\theta d\theta
+\end{eqnarray*}
+
+\end_inset
+
+de onde 
+\begin_inset Formula 
+\[
+\begin{array}{rl}
+I= & 3\int\sec\theta\tan^{2}\theta d\theta\\
+= & 3\int\sec\theta\left(\sec^{2}\theta-1\right)d\theta\\
+= & 3\int\sec^{3}\theta d\theta-3\int\sec\theta d\theta
+\end{array}
+\]
+
+\end_inset
+
+resolvendo cada uma das integrais: 
+\begin_inset Formula 
+\[
+\begin{array}{rl}
+I_{2}=\int\sec\theta d\theta= & \int\sec\theta\dfrac{\sec\theta+\tan\theta}{\sec\theta+\tan\theta}d\theta\\
+= & \dfrac{\sec^{2}\theta+\sec\theta\tan\theta}{\sec\theta+\tan\theta}d\theta
+\end{array}
+\]
+
+\end_inset
+
+fazemos 
+\begin_inset Formula 
+\[
+\begin{array}{rl}
+u= & \sec\theta+\tan\theta\\
+du= & \left(\sec\theta\tan\theta+\sec^{2}\theta\right)d\theta
+\end{array}
+\]
+
+\end_inset
+
+assim 
+\begin_inset Formula 
+\[
+\begin{array}{rl}
+I_{2}^{*}= & \int\dfrac{1}{u}\, du\\
+I_{2}= & \ln\left|\sec\theta+\tan\theta\right|+C_{1}
+\end{array}
+\]
+
+\end_inset
+
+A I integral: 
+\begin_inset Formula 
+\[
+\begin{array}{rl}
+I_{1}= & \sec^{3}\theta d\theta\end{array}
+\]
+
+\end_inset
+
+integrando por partes: 
+\begin_inset Formula 
+\[
+\begin{array}{rlcrl}
+u= & \sec\theta & \;\;\;\;\  & dv= & \sec^{2}\theta d\theta\\
+du= & \sec\theta\tan\theta d\theta &  & v= & \tan\theta
+\end{array}
+\]
+
+\end_inset
+
+assim 
+\begin_inset Formula 
+\[
+\begin{array}{rl}
+\sec^{3}\theta d\theta= & \sec\theta\tan\theta-\int\left(\sec^{3}\theta-\sec\theta\right)d\theta\\
+2\sec^{3}\theta d\theta= & \sec\theta\tan\theta-\int\sec\theta d\theta\\
+\sec^{3}\theta d\theta= & \dfrac{1}{2}\sec\theta\tan\theta-\dfrac{1}{2}\ln\left|\sec\theta+\tan\theta\right|+C_{2}
+\end{array}
+\]
+
+\end_inset
+
+assim a integral original fica 
+\begin_inset Formula 
+\[
+I=\dfrac{1}{2}\sec\theta\tan\theta+\dfrac{1}{2}\ln\left|\sec\theta+\tan\theta\right|+C
+\]
+
+\end_inset
+
+como 
+\begin_inset Formula 
+\[
+\sec\theta=\dfrac{t+2}{\sqrt{3}}\;\;\;\;\;\;\tan\theta=\dfrac{\sqrt{(t+2)^{2}-3}}{\sqrt{3}}
+\]
+
+\end_inset
+
+então 
+\begin_inset Formula 
+\[
+\int\sqrt{(t+2)^{2}-3}\,\, dt=\dfrac{\left(t+2\right)\sqrt{(t+2)^{2}-3}}{2}-\frac{3}{2}\ln\left|\dfrac{t+2+\sqrt{(t+2)^{2}-3}}{\sqrt{3}}\;\;\;\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

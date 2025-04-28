@@ -1,0 +1,824 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+\usepackage{babel}
+\usepackage{amsfonts}
+
+
+
+ 
+\end_preamble
+\options a4papper
+\use_default_options false
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding utf8x
+\fontencoding T1
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 2
+\use_esint 2
+\use_mhchem 0
+\use_mathdots 2
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+Exemplo 01
+\end_layout
+
+\begin_layout Standard
+Seja 
+\begin_inset Formula $f(x,y)=y-x$
+\end_inset
+
+ e 
+\begin_inset Formula $C$
+\end_inset
+
+ a curva definida pela função 
+\begin_inset Formula 
+\[
+\mathbf{r}(t)=\begin{cases}
+\left(2t,\, t\right) & \text{se }0\leq t<1\\
+\left(t+1,\,5-4t\right) & \text{se }1<t\leq3
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+SOL
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $\mathbf{r}(t)$
+\end_inset
+
+ é uma função vetorial definida por partes de classe 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+; onde cada parte é uma função de classe 
+\begin_inset Formula $C^{1}$
+\end_inset
+
+, temos
+\begin_inset Formula 
+\[
+\int_{\mathbf{r}}\, f\, ds=\int_{\mathbf{r}_{1}}\, f\, ds+\int_{\mathbf{r}_{2}}\, f\, ds
+\]
+
+\end_inset
+
+onde 
+\begin_inset Formula $\mbox{\mathbf{r}}_{1}=\left(2t,\, t\right)$
+\end_inset
+
+ com 
+\begin_inset Formula $0\leq t\leq1$
+\end_inset
+
+ e 
+\begin_inset Formula $\mbox{\mathbf{r}}_{2}=\left(t+1,\,5-4t\right)$
+\end_inset
+
+ com 
+\begin_inset Formula $1\leq t\leq3$
+\end_inset
+
+.
+ Note que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{v}_{1}(t)=2\,\mathbf{i}+1\,\mathbf{j}
+\]
+
+\end_inset
+
+de onde
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\left|\mathbf{v}_{1}(t)\right|= & \sqrt{4+1}\\
+= & \sqrt{5}
+\end{align*}
+
+\end_inset
+
+Igualmente
+\begin_inset Formula 
+\[
+\mathbf{v}_{1}(t)=1\,\mathbf{i}-4\,\mathbf{j}
+\]
+
+\end_inset
+
+de onde
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\left|\mathbf{v}_{2}(t)\right|= & \sqrt{1+16}\\
+= & \sqrt{17}
+\end{align*}
+
+\end_inset
+
+de forma que
+\begin_inset Formula 
+\begin{align*}
+\int_{\mathbf{r}}\, f\, ds= & \int_{\mathbf{r}_{1}}\, f\, ds+\int_{\mathbf{r}_{2}}\, f\, ds\\
+= & \int_{\mathbf{r}_{1}}\, f\,\left|\mathbf{v}_{1}(t)\right|\, dt+\int_{\mathbf{r}_{2}}\, f\,\left|\mathbf{v}_{2}(t)\right|\, dt\\
+= & \int_{0}^{1}\left(y-x\right)\,\sqrt{5}\, dt+\int_{1}^{3}\left(y-x\right)\,\sqrt{17}\, dt\\
+= & \int_{0}^{1}\left[\left(t\right)-\left(2t\right)\right]\,\sqrt{5}\, dt+\int_{1}^{3}\left[\left(5-4t\right)-\left(t+1\right)\right]\,\sqrt{17}\, dt\\
+= & -\sqrt{5}\int_{0}^{1}t\, dt+\sqrt{17}\int_{1}^{3}\left[4-5t\right]\, dt\\
+= & -\sqrt{5}\,\left.\dfrac{1}{2}t^{2}\right|_{0}^{1}+\sqrt{17}\left.4t-\dfrac{5}{2}t^{2}\right|_{1}^{3}\\
+= & -\dfrac{\sqrt{5}}{2}+\sqrt{17}\left[8-20\right]\\
+= & -\dfrac{\sqrt{5}}{2}-12\sqrt{17}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Exemplo 02
+\end_layout
+
+\begin_layout Standard
+Calcule 
+\begin_inset Formula $\int_{C}{\displaystyle 4x\, dy+2y\, dz}$
+\end_inset
+
+, onde 
+\begin_inset Formula $C$
+\end_inset
+
+ consiste do segmento de linha entre 
+\begin_inset Formula $(0,1,0)$
+\end_inset
+
+ até 
+\begin_inset Formula $(0,1,1)$
+\end_inset
+
+, seguido pelo segmento 
+\begin_inset Formula $(0,1,1)$
+\end_inset
+
+ até 
+\begin_inset Formula $(2,1,1)$
+\end_inset
+
+ e seguido pela linha 
+\begin_inset Formula $(2,1,1)$
+\end_inset
+
+ até 
+\begin_inset Formula $(2,4,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+SOL
+\end_layout
+
+\begin_layout Standard
+Parametrizando o segmento de linha entre 
+\begin_inset Formula $(0,1,0)$
+\end_inset
+
+ até 
+\begin_inset Formula $(0,1,1)$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+\mathbf{r}_{a}= & \mathbf{r}_{0}+\mathbf{b}\, t\\
+= & \mathbf{r}_{0}+\mathbf{\left(\mathbf{r}_{0}-\mathbf{r}_{1}\right)}\, t\\
+= & (0,1,0)+\left[(0,1,1)-(0,1,0)\right]\, t\\
+= & (0,1,0)+(0,0,1)\, t\\
+= & \mathbf{j}+t\,\mathbf{k}
+\end{align*}
+
+\end_inset
+
+de onde
+\begin_inset Formula 
+\[
+\mathbf{v}_{a}=\mathbf{k}
+\]
+
+\end_inset
+
+para o caso do segmento que vai desde 
+\begin_inset Formula $(0,1,0)$
+\end_inset
+
+ até 
+\begin_inset Formula $(2,1,1)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mathbf{r}_{b}= & \mathbf{r}_{0}+\mathbf{b}\, t\\
+= & \mathbf{r}_{0}+\mathbf{\left(\mathbf{r}_{0}-\mathbf{r}_{1}\right)}\, t\\
+= & (0,1,1)+\left[(2,1,1)-(0,1,1)\right]\, t\\
+= & (0,1,1)+(2,0,0)\, t\\
+= & 2t\,\mathbf{i}+\mathbf{j}+\mathbf{k}
+\end{align*}
+
+\end_inset
+
+de onde
+\begin_inset Formula 
+\[
+\mathbf{v}_{b}=2\mathbf{i}
+\]
+
+\end_inset
+
+finalmente, para o caso do segmento que vai desde 
+\begin_inset Formula $(2,1,1)$
+\end_inset
+
+ até 
+\begin_inset Formula $(2,4,1)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mathbf{r}_{c}= & \mathbf{r}_{0}+\mathbf{b}\, t\\
+= & \mathbf{r}_{0}+\mathbf{\left(\mathbf{r}_{0}-\mathbf{r}_{1}\right)}\, t\\
+= & (2,1,1)+\left[(2,4,1)-(2,1,1)\right]\, t\\
+= & (2,1,1)+(0,3,0)\, t\\
+= & 2\,\mathbf{i}+3t\,\mathbf{j}+\mathbf{k}
+\end{align*}
+
+\end_inset
+
+de onde
+\begin_inset Formula 
+\[
+\mathbf{v}_{c}=3\mathbf{j}
+\]
+
+\end_inset
+
+Para resolvermos as integra 
+\begin_inset Formula $\int_{C}4x\, dy+2y\, dz$
+\end_inset
+
+ devemos observar que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\int_{C}4x\, dy+2y\, dz= & \int_{\mbox{\mathbf{r}}_{a}}4x\, dy+2y\, dz+\int_{\mbox{\mathbf{r}}_{b}}4x\, dy+2y\, dz+\\
+ & \int_{\mathbf{r}_{c}}4x\, dy+2y\, dz
+\end{align*}
+
+\end_inset
+
+Para o caso de qualquer uma das curvas temos
+\begin_inset Formula 
+\begin{align*}
+ds= & \left|\mathbf{v}\right|dt\\
+= & \dfrac{dx}{dt}\, dt+\dfrac{dy}{dt}\, dt+\dfrac{dz}{dt}\, dt\\
+= & dx+dy+dz
+\end{align*}
+
+\end_inset
+
+de forma que para o caso da trajetória 
+\begin_inset Formula $\mathbf{r}_{a}$
+\end_inset
+
+ temos
+\begin_inset Formula 
+\begin{align*}
+dx= & 0\, dt\\
+dy= & 0\, dt\\
+dz= & 1\, dt
+\end{align*}
+
+\end_inset
+
+para o caso da trajetória 
+\begin_inset Formula $\mathbf{r}_{b}$
+\end_inset
+
+ temos
+\begin_inset Formula 
+\begin{align*}
+dx= & 2\, dt\\
+dy= & 0\, dt\\
+dz= & 0\, dt
+\end{align*}
+
+\end_inset
+
+e para o caso da trajetória 
+\begin_inset Formula $\mathbf{r}_{c}$
+\end_inset
+
+ temos
+\begin_inset Formula 
+\begin{align*}
+dx= & 0\, dt\\
+dy= & 3\, dt\\
+dz= & 0\, dt
+\end{align*}
+
+\end_inset
+
+assim então
+\begin_inset Formula 
+\begin{align*}
+\int_{C}4x\, dy+2y\, dz= & \int_{\mathbf{r}_{a}}4x\, dy+2y\, dz+\int_{\mathbf{r}_{b}}4x\, dy+2y\, dz\\
+ & \int_{\mathbf{r}_{c}}4x\, dy+2y\, dz\\
+= & \int_{\mathbf{r}_{a}}4\left(0\right)\left(0\right)\, dt+2(1)\, dt+\int_{\mathbf{r}_{b}}4\left(2\right)(0)\, dt+2(1)(0)\, dt\\
+ & \int_{\mathbf{r}_{c}}4\left(2\right)(3)\, dt+2(1)(0)\, dt\\
+= & 2\int_{\mathbf{r}_{a}}dt+24\int_{\mathbf{r}_{c}}\, dt
+\end{align*}
+
+\end_inset
+
+A parametrização utilizada para o I e III segmento implica que o percurso
+ é percorrido para 
+\begin_inset Formula $0\leq t\leq1$
+\end_inset
+
+, dessa forma as integrais ficam
+\begin_inset Formula 
+\begin{align*}
+\int_{C}4x\, dy+2y\, dz= & 2\int_{0}^{1}dt+24\int_{0}^{1}\, dt\\
+= & 26
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{v}_{1}=\,\mathbf{i}+\,\mathbf{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Exemplo 3
+\end_layout
+
+\begin_layout Standard
+Calcule 
+\begin_inset Formula ${\displaystyle \int_{c}\left(x+y+z\right)ds}$
+\end_inset
+
+, onde 
+\begin_inset Formula $C$
+\end_inset
+
+ é a hélice re raio 1 definido entre 
+\begin_inset Formula $0\leq t\leq\pi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+SOL
+\end_layout
+
+\begin_layout Standard
+Em se tratando de uma hélice a parametrização é
+\begin_inset Formula 
+\[
+\mathbf{r}(t)=\cos\, t\,\mathbf{i}+\sin\, t\,\mathbf{j}+t\,\mathbf{k}
+\]
+
+\end_inset
+
+de onde
+\begin_inset Formula 
+\begin{align*}
+\mathbf{r}(t)= & -\sin\, t\,\mathbf{i}+\cos\, t\,\mathbf{j}+\mathbf{k}\\
+\left|\mathbf{v}(t)\right|= & \sqrt{\sin^{2}t+\cos^{2}t+1}\\
+= & \sqrt{2}
+\end{align*}
+
+\end_inset
+
+assim
+\begin_inset Formula 
+\begin{align*}
+\int_{c}\left(x+y+z\right)ds= & \sqrt{2}\int_{0}^{\pi}\left(\cos\, t+\sin\, t+t\right)\, dt\\
+= & \sqrt{2}\left[\sin\, t-\cos\, t+\dfrac{1}{2}t^{2}\right]_{0}^{\pi}\\
+= & \sqrt{2}\left[\left(1-0+\dfrac{\pi^{2}}{2}\right)-\left(0-1\right)\right]\\
+= & \sqrt{2}\left(2+\dfrac{\pi^{2}}{2}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Exemplo 04
+\end_layout
+
+\begin_layout Standard
+Calcular 
+\begin_inset Formula $\int_{C}xy\, ds$
+\end_inset
+
+, onde 
+\begin_inset Formula $C$
+\end_inset
+
+ é a interseção das superfícies 
+\begin_inset Formula $x^{2}+y^{2}=4$
+\end_inset
+
+ e o plano 
+\begin_inset Formula $y+z=8$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+SOL
+\end_layout
+
+\begin_layout Standard
+A equação paramétrica da interseção se obtém isolando o 
+\begin_inset Formula $z$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+z=8-y
+\]
+
+\end_inset
+
+e utilizando a parametrização da circunferência
+\begin_inset Formula 
+\[
+\begin{cases}
+x= & 2\cos t\\
+y= & 2\sin t\\
+z= & 8-2\sin t
+\end{cases}\;\;\;0\leq t\leq2\pi
+\]
+
+\end_inset
+
+de onde
+\begin_inset Formula 
+\begin{align*}
+\mathbf{v}(t)= & -2\sin\, t\,\mathbf{i}+2\cos\, t\,\mathbf{j}-2\cos\mathbf{k}\\
+\left|\mathbf{v}(t)\right|= & 2\sqrt{\sin^{2}t+\cos^{2}+\cos^{2}t}\\
+= & 2\sqrt{1+\cos^{2}t}\\
+= & \cos\dfrac{t}{2}
+\end{align*}
+
+\end_inset
+
+assim
+\begin_inset Formula 
+\[
+\int_{C}xy\, ds=\int_{0}^{2\pi}2\cos t\,2\sin t\,2\sqrt{1+\cos^{2}t}\, dt
+\]
+
+\end_inset
+
+utilizando 
+\begin_inset Formula 
+\begin{align*}
+u= & 1+\cos^{2}t\\
+du= & 2\cos t\,\sin t\, dt
+\end{align*}
+
+\end_inset
+
+de onde
+\begin_inset Formula 
+\begin{align*}
+\int2\cos t\,2\sin t\,2\sqrt{1+\cos^{2}t}\, dt= & 4\int u^{1/2}dt\\
+= & \dfrac{2}{3u^{3/2}}+C\\
+= & \dfrac{2}{3\left(1+\cos^{2}t\right)^{3/2}}+C
+\end{align*}
+
+\end_inset
+
+de forma que
+\begin_inset Formula 
+\begin{align*}
+\int_{C}xy\, ds= & \left.\dfrac{2}{3\left(1+\cos^{2}t\right)^{3/2}}\right|_{0}^{2\pi}\\
+= & 0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Exemplo 05
+\end_layout
+
+\begin_layout Standard
+Avalie a integral 
+\begin_inset Formula $\int_{C}x^{2}y\, ds$
+\end_inset
+
+, onde 
+\begin_inset Formula $C$
+\end_inset
+
+ está dada pela parametrização 
+\begin_inset Formula $\mathbf{r}(t)=3\cos\, t\,\mathbf{i}+3\sin\, t\,\mathbf{j}$
+\end_inset
+
+, 
+\begin_inset Formula $0\leq t\leq\pi/2$
+\end_inset
+
+.
+ Seguidamente mostre que se utilizamos a parametrização 
+\begin_inset Formula $\mathbf{r}(t)=\sqrt{9-y^{2}}\,\mathbf{i}+y\,\mathbf{j}$
+\end_inset
+
+, 
+\begin_inset Formula $0\leq y\leq3$
+\end_inset
+
+, obteremos o mesmo resultado.
+\end_layout
+
+\begin_layout Subsubsection*
+SOL
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mathbf{r}(t)= & 3\cos\, t\,\mathbf{i}+3\sin\, t\,\mathbf{j}\\
+\mathbf{v}(t)= & 3\sin\, t\,\mathbf{i}+3\cos\, t\,\mathbf{j}\\
+\left|\mathbf{v}(t)\right|= & 3
+\end{align*}
+
+\end_inset
+
+dessa forma
+\begin_inset Formula 
+\begin{align*}
+\int_{C}x^{2}y\, ds= & 81\int_{0}^{\frac{\pi}{2}}\cos^{2}t\,\sin t\, dt\\
+= & -81\int_{1}^{0}u^{2}du\\
+= & \dfrac{81}{3}\,\left.u^{3}\right|_{0}^{1}\\
+= & 27
+\end{align*}
+
+\end_inset
+
+Utilizando a outra parametrização
+\begin_inset Formula 
+\begin{align*}
+\mathbf{r}(y)= & \sqrt{9-y^{2}}\,\mathbf{i}+y\,\mathbf{j}\\
+\mathbf{v}(y)= & -\dfrac{y}{\sqrt{9-y^{2}}}\,\mathbf{i}+\,\mathbf{j}\\
+\left|\mathbf{v}(y)\right|= & \dfrac{3}{\sqrt{9-y^{2}}}\\
+ds= & \dfrac{3}{\sqrt{9-y^{2}}}dy
+\end{align*}
+
+\end_inset
+
+assim
+\begin_inset Formula 
+\begin{align*}
+\int_{C}x^{2}y\, ds= & 3\int_{0}^{3}\dfrac{\left(9-y^{2}\right)y}{\sqrt{9-y^{2}}}\, dy\\
+= & 3\int_{0}^{3}y\sqrt{9-y^{2}}\, dy\\
+= & -\dfrac{3}{2}\int_{3}^{0}u^{1/2}du\\
+= & \left.u^{3/2}\right|_{0}^{9}\\
+= & 27
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Exemplo 06
+\end_layout
+
+\begin_layout Standard
+Calcule a área da superfície estendida para cima do círculo 
+\begin_inset Formula $x^{2}+y^{2}=1$
+\end_inset
+
+ no plano 
+\begin_inset Formula $xy$
+\end_inset
+
+ até a parábola cilíndrica 
+\begin_inset Formula $z=1-x^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+SOL
+\end_layout
+
+\begin_layout Standard
+A área da superfície é
+\begin_inset Formula 
+\[
+A=\int_{C}\left(1-x^{2}\right)ds
+\]
+
+\end_inset
+
+onde 
+\begin_inset Formula $C$
+\end_inset
+
+ é a circunferência, onde
+\begin_inset Formula 
+\[
+\mathbf{r}(t)=\cos\, t\,\mathbf{i}+\sin\, t\,\mathbf{j}+t\,\mathbf{k}
+\]
+
+\end_inset
+
+de onde
+\begin_inset Formula 
+\begin{align*}
+\mathbf{r}(t)= & -\sin\, t\,\mathbf{i}+\cos\, t\,\mathbf{j}\\
+\left|\mathbf{v}(t)\right|= & \sqrt{\sin^{2}t+\cos^{2}t}\\
+= & 1
+\end{align*}
+
+\end_inset
+
+assim
+\begin_inset Formula 
+\begin{align*}
+A= & \int_{0}^{2\pi}\left(1-\cos^{2}t\right)dt\\
+= & \int_{0}^{2\pi}\sin^{2}t\, dt
+\end{align*}
+
+\end_inset
+
+utilizando a identidade 
+\begin_inset Formula $2\sin^{2}t=1-\cos2t$
+\end_inset
+
+, assim
+\begin_inset Formula 
+\begin{align*}
+A= & \dfrac{1}{2}\int_{0}^{2\pi}\left(1-\cos2t\right)dt\\
+= & \pi
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Exemplo 06
+\end_layout
+
+\begin_layout Standard
+Imaginemos um teatro em forma de tetraedro, como aquele formado pelos planos
+ coordenados e o plano 
+\begin_inset Formula $z=\dfrac{b}{a}\left(a-x-y\right)$
+\end_inset
+
+, onde 
+\begin_inset Formula $b>a>0$
+\end_inset
+
+, de modo que sua base é um triangulo isósceles com vértice na origem e
+ os ponto 
+\begin_inset Formula $(a,0,0)$
+\end_inset
+
+ e 
+\begin_inset Formula $(0,a,0)$
+\end_inset
+
+, e sua altura é 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ O palco é circular e ocupa uma região 
+\begin_inset Formula $xy$
+\end_inset
+
+ dada por 
+\begin_inset Formula $\{(x,y)\,|\, x^{2}+y^{2}\leq r^{2},\, x\geq0,y\geq0\}$
+\end_inset
+
+, onde 
+\begin_inset Formula $r<\dfrac{\sqrt{3}a}{2}$
+\end_inset
+
+.
+ Como se quer colocar uma cortina desde o teto até a borda do palco, qual
+ é a quantidade mínima de tecido que deve ser comprado?
+\end_layout
+
+\begin_layout Subsubsection*
+SOL
+\end_layout
+
+\end_body
+\end_document

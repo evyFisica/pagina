@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Página de Evy Salcedo</title>
+    <link type="text/css" rel="stylesheet" href="../../../../../css/aulas.css" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" />
+
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shCore.css' rel='stylesheet' type='text/css' />
+    <link href='../../../../comunHtml/syntaxhighlighter/styles/shThemeDefault.css' rel='stylesheet' type='text/css' />
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shCore.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shAutoloader.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushXml.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushJScript.js' type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/shBrushCss.js' type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPython.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushPhp.js" type='text/javascript'></script>
+    <script src="../../../../../comunHtml/syntaxhighlighter/scripts/shBrushFortran.js" type='text/javascript'></script>
+    <script src='../../../../comunHtml/syntaxhighlighter/scripts/main.js' type='text/javascript'></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = '../../../../comunHtml/syntaxhighlighter/scripts/clipboard.swf';
+      SyntaxHighlighter.all();
+    </script>
+
+<!-- <script type="text/javascript" src="../../../../../comunHtml/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
+<script src="../../../../../comunHtml/mathjax_new/tex-chtml.js" id="MathJax-script" async></script>
+    <script>
+      MathJax.Hub.Config({
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX","input/MathML","output/HTML-CSS","output/NativeMML"],
+        extensions: ["tex2jax.js","mml2jax.js","MathMenu.js","MathZoom.js"],
+        TeX: {
+          extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+        }
+      });
+    </script>
+    <script>
+       window.MathJax = {
+         tex: {
+           tags: 'ams',
+           inlineMath: [['$', '$'], ['\(', '\)']],
+           macros: {
+              bra: ["{\left\langle #1 \right\rvert}",1],
+              ket: ["{\left\lvert #1 \right\rangle}",1],
+              braket:["{\left\langle #1 \vert #2 \right\rangle}",2],
+              opProj:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert}",1],
+              opUni:["{\left\lvert #1 \right\rangle\left\langle #1 \right\rvert \+ \left\lvert #2 \right\rangle\left\langle #2 \right\rvert}",2],
+              arcsec: "{\operatorname{arcsec}}",
+              arccot: "{\operatorname{arccot}}",
+              arccsc: "{\operatorname{arcsc}}",
+              sech: "{\operatorname{sech}}",
+              csch: "{\operatorname{csch}}",
+              argsinh: "{\operatorname{arg sinh}}",
+              argcosh: "{\operatorname{arg cosh}}",
+              argtanh: "{\operatorname{arg tanh}}",
+              argcoth: "{\operatorname{arg coth}}",
+              argsech: "{\operatorname{arg sech}}",
+              argcsch: "{\operatorname{arg csch}}",
+              dbar: "{\mathscr'26\mkern-12mu \mathrm{d}}"
+          }
+         }
+       };
+     </script><script type="text/javascript">
+      function newWin(url, name, width) { 
+      window.open(url,name,'scrollbars=yes,resizable=yes, width=' + width);}
+    </script>
+
+</head>
+
+  <body>
+    <div id="todo">
+
+      <div id="titulo">      
+        <div id="cabezado">
+          <h1>Calculo III</h1>
+        </div>
+
+        <div >
+          <img src="../../../../../figuras/divisorHorizontal.png" alt="só um divisor"></img>
+        </div>
+
+        <div>
+          <ul id="indice">
+            <li> <a href="../../../../sumula.html"> Súmula </a> </li>
+            <li> <a href="../../../../notasDeAula.html"> Aulas </a> </li>
+            <li> <a href="../../../../listas.html"> Lista </a></li>
+            <li> <a href="../../../../conceitos.html"> Conc. </a> </li>
+            <li> <a href="../../../../frequencia.html"> Freq. </a> </li>
+            <li> <a href="../../../../outro.html"> Outros </a> </li>
+            <li> <a href="../../../../../ensino.html"> Ensino </a></li>
+          </ul>
+        </div>      
+      </div>
+
+      <!-- Inicio Principal   -->
+      <div id="principal">
+      
+      
+      
+      <h2>Derivada</h2>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Se $\mathbf{r}(t)$ é uma função vetorial, definimos a derivada de $\mathbf{r}(t)$ em relação a $t$ como uma função vetorial $\mathbf{r}'(t)$ dada por
+        \[
+          \mathbf{r}'(t) =\lim _{h\rightarrow 0} \dfrac{\mathbf{r}(t+h) - \mathbf{r}(t)}{h}
+        \]
+        O domínio da função resultante coincide com o domínio da função original.
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        Se aplicarmos a definição acima a uma função vetorial, obteremos facilmente o próximo teorema
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Teorema
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Se $\mathbf{r}(t)$ é uma função vetorial, então $\mathbf{r}(t)$ é diferenciável em relação a $t$ se e somente se suas componente são diferenciáveis em relação a $t$, de forma que as componente de $\mathbf{r}'(t)$ são as derivadas das componentes de $\mathbf{r}(t)$.
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        Similarmente a como visto em cálculo I, aplicar a definição para realizar o computo da derivada pode ser uma tarefa complexa dependendo da forma funcional da função vetorial, por tanto resulta interessante calcular, a partir da definição, as regras de diferenciação
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Regras de diferenciação
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Se $\mathbf{r}(t)$, $\mathbf{r}_1(t)$ e $\mathbf{r}_2(t)$ 3 funções vetoriais, que podem estar definidas em um espaço 3D ou 2D, e seja $f(t)$ uma função real diferenciável, $m$ um escalar e $\mathbf{c}$ um vetor constante, então as seguintes regras de diferenciação permanecem válidas:
+        <ol type="a">
+          <li>
+            $\displaystyle \dfrac{d\;}{dt}  \left[ \mathbf{c}\right] = 0$
+          </li>
+          
+          <li>
+            $\displaystyle \dfrac{d\;}{dt} \left[ k\mathbf{r}(t) \right] = k\dfrac{d\;}{dt}\mathbf{r}(t)$
+          </li>
+          
+          <li>
+            $\displaystyle \dfrac{d\;}{dt} \left[ \mathbf{r}_1(t) \pm \mathbf{r}_2(t)\right] = \dfrac{d\;}{dt} \left[ \mathbf{r}_1(t) \right] \pm \dfrac{d\;}{dt} \left[\mathbf{r}_2(t)\right]$
+          </li>
+          
+          <li>
+            $\displaystyle \dfrac{d\;}{dt} \left[ f(t) \mathbf{r}(t)\right] = f(t) \dfrac{d\;}{dt} \mathbf{r}(t) + \dfrac{d\;}{dt} \left[ f(t)\right]\,\mathbf{r}(t)$
+          </li>
+          
+          <li>
+            $\displaystyle \dfrac{d\;}{dt} \left[ \mathbf{r}_1(t) \cdot \mathbf{r}_2(t) \right] = \left[ \dfrac{d\;}{dt}\, \mathbf{r}_1(t) \right] \cdot \mathbf{r}_2(t) + \mathbf{r}_1(t)\cdot \left[ \dfrac{d\;}{dt}\, \mathbf{r}_2(t) \right]$
+          </li>
+          
+          <li>
+            $\displaystyle \dfrac{d\;}{dt} \left[ \mathbf{r}_1(t) \times \mathbf{r}_2(t) \right] = \left[ \dfrac{d\;}{dt}\, \mathbf{r}_1(t) \right] \times \mathbf{r}_2(t) + \mathbf{r}_1(t)\times \left[ \dfrac{d\;}{dt}\, \mathbf{r}_2(t) \right]$
+          </li>
+          
+          <li>
+            $\displaystyle \dfrac{d\;}{dt} \left[ \mathbf{r} \left( f(t)\right) \right] = \mathbf{r}'(t)\,f'(t)$
+          </li>
+        </ol>
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h5>Exemplo 01</h5>
+      <p>
+        Cálcule a derivada do vetor $\mathbf{r}(t)=\left< 2+\sin\,t,\, \cos \, t,\, t^2 \right> $
+      </p>
+      
+      <h5>Exemplo 02</h5>
+      <p>
+        Cálcule a derivada do vetor $\mathbf{r}(t)=\left< 2+\sin\,t,\, \cos \, t,\, t^2 \right>$
+      </p>
+      
+      <h5>Interpretação Geométrica da derivada de uma função vetorial</h5>
+      
+      <p>
+        Geometricamente o vetor derivada é um vetor que é tangente à trajetória descrita pelo vetor $\mathbf{r}(t)$, ou seja, tangente à curva.
+      </p>
+       
+      <div align="center">
+        <a href="javascript:newWin('figuras/derivada.png', 'Zoom', '1250')">
+          <img src="figuras/derivada.png" width="700" align="center"/>
+        </a>
+      </div>
+      
+      <p>
+        Isto é evidente quando funções vetoriais são utilizadas por físicos. Um exemplo é utilizar  $\mathbf{r}(t)$ como a posição da partículas em todo instante $t$, a derivada deste vetor nos dá a velocidade $\mathbf{v}(t)$ e a derivada do vetor velocidade nos da a aceleração $\mathbf{a}(t)$, um vetor perpendicular a outro.
+      </p>
+
+      <h5>Exemplo 03</h5>
+      <p>
+        Encontre o vetor velocidade e aceleração de uma partícula que se move ao longo da curva $C$ descrita por $\mathbf{r}(t) = 2\sin \,\dfrac{1}{2}t \,\mathbf{i} + \cos \,\dfrac{1}{2}t \,\mathbf{j}$ 
+      </p>
+
+      <h5>Exemplo 04</h5>
+      <p>
+        O vetor posição de uma partícula em movimento no plano está dado por
+        \[
+          \mathbf{r}(t) = t  \,\mathbf{i} + \dfrac{1}{t+1} \,\mathbf{j},\;\;\;\;\; t \geq 0
+          \nonumber
+        \]
+        (a) Determinar o vetor velocidade e o vetor aceleração, para qualquer $t$<br />
+        (b) Esboçar a trajetória desenhando os vetores velocidade nos tempos $t=0$ e $t=1$.
+      </p>
+      
+      <p>
+        A partir do exemplo anterior vemos que as funções vetoriais também são passiveis de serem derivadas de forma sucessiva, assim a aceleração é a II derivada da posição.
+      </p>
+      
+      <p>
+        Podemos estender este conceito geométrico além, como se mostra na próxima definição
+      </p>
+       
+      <div align="center">
+        <a href="javascript:newWin('figuras/vtangente.png', 'Zoom', '1250')">
+          <img src="figuras/vtangente.png" width="300" align="center"/>
+        </a>
+      </div>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de vetor tangente
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        Seja $P$ um ponto no gráfico de uma função vetorial $\mathbf{r}(t)$ o qual é localizado desde um ponto origem $O$ pelo vetor $\mathbf{r}\left(t_0 \right)$. Se $\mathbf{r}'\left(t_0 \right)$ existe e $\mathbf{r}'\left(t_0 \right) \neq 0$, então chamaremos $\mathbf{r}'\left(t_0 \right)$ um vetor tangente ao gráfico de $\mathbf{r}\left(t \right)$ em $\mathbf{r}\left(t_0 \right)$, e à linha que passa pelo ponto $P$ que é paralela ao vetor tangente chamaremos de linha tangente ao gráfico de $\mathbf{r}\left(t \right)$ em $\mathbf{r}\left(t_0 \right)$.
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h5>Exemplo 05</h5>
+      <p>
+        Encontre a equação paramétrica da linha tangente à hélice circular
+        \[
+          \begin{align*}  
+            x =& \cos t\\
+            y =& \sin t\\
+            z =& t
+          \end{align*}
+        \]
+        onde $t=t_0$. Utilize esse resultado para determinar a equação paramétrica da reta que passa por $t=\pi$
+      </p>
+      
+      <h5>Exemplo 06</h5>
+      <p>
+        Mostre que $\mathbf{r}'(t)$ é ortogonal a $\mathbf{r}(t)$ sempre que $\left| \mathbf{r}(t) \right|$ seja uma constante
+      </p>
+      
+      <h3>Curvas Suaves</h3>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+         Dizemos que uma curva representada por $\mathbf{r}(t)$ é uma curva ou função suave de $t$ se  $\mathbf{r}'(t)$ é continua e  $\mathbf{r}'(t)\neq 0$ para toda valor de $t$.
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        Geometricamente estas curvas se caraterizam por não terem pontos angulosos.  Também definimos o fato de que a curva pode ser suave por partes.
+      </p>
+      
+     <!-- <p>
+        Uma definição mais formal e genérica do que é uma curva suave é a seguinte
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+         Assuma que $X$ é um subconjunto aberto em $\mathbb{R}^n$.  Uma função escalar $f:X\subset \mathbb{R}^n \to \mathbb{R}$ se diz de classe $C^k$ se tem as derivadas parciais contínuas e definidas até a ordem $k$ (incluindo à de ordem $k$). Se $f$ tem todas as derivadas de todas as ordem definidas e contínuas em $X$, então dizemos que a função é de classe $C^\infty$ ou suave.  Uma função vetorial $f:X\subset \mathbb{R}^n \to \mathbb{R}^m$ é de classe $C^k$ (ou de classe $C^\infty$) se e somente se suas funções componentes são de classe $C^k$ (ou de classe $C^\infty$, respectivamente).
+      </em></p>
+      </td></tr>
+      </table>-->
+      
+      <h5>Exemplo 07</h5> 
+      
+      <p>
+        Determine se as seguintes funções são suaves
+        <ol type="a">
+          <li>
+            $\displaystyle \mathbf{r}(t) = a\cos t \,\mathbf{i} + a \sin t \,\mathbf{j} +  ct \,\mathbf{k}\;\;\;\;\;\;  (a>0, c>0)$
+          </li>
+          <li>
+          $\displaystyle \mathbf{r}(t) = t^2  \,\mathbf{i} + t^3 \,\mathbf{j}$
+          </li>
+        </ol>
+      </p>
+      <p>
+      
+      <h3>Curvas orientadas</h3>      
+      
+      <div>
+        <a href="javascript:newWin('figuras/corientada.png', 'Zoom', '1250')">
+          <img src="figuras/corientada.png" width="250" align="left"/>
+        </a>
+      </div>
+      
+      <p>
+        Uma curva orientada é uma curva  onde uma direção consistente é definida ao longo da curva. Definir uma direção em cada ponto significa escolher um dos dois vetores tangente que podem ser definidos em aquele ponto.
+      </p>
+      
+      <p>
+        Mas como a escolha de uma orientação definida como positiva é arbitraria, nos seguiremos a seguinte escolha, consideraremos que a curva  $C$, definida por
+        \[
+          \mathbf{r}^{-}(t) = x(t)\,\mathbf{i} +y(t) \,\mathbf{j} +z(t) \,\mathbf{k}\;\;\;\;t\in[a,b]
+          \nonumber
+        \]
+        positivamente orientada quando o percurso resulta do incremento dos valores do parâmetro.
+      </p>
+      
+      <p>
+        A curva com orientação oposta, $-C$, se define como
+        \[
+          \begin{align*}
+          \mathbf{r}{r}^-(t) =& \mathbf{r}{r}(a+b-t)\\
+                       =&x(a+b-t)\,\mathbf{i} +y(a+b-t) \,\mathbf{j} +z(a+b-t) \,\mathbf{k}\;\;\;\;t\in[a,b]
+          \end{align*} 
+          \nonumber
+        \]
+      </p>
+      
+      <h5>exemplo 08</h2>
+      <p>
+        Parametrizar a circunferência de centro na origem e raio $a$ no sentido anti horário.
+      </p>
+      
+      <h5>exemplo 09</h2>
+      <p>
+        Parametrizar o segmento de reta que passa pelos pontos $A(0,0,1)$ e $B(1,2,3)$.  Repita o procedimento anterior considerando uma orientação oposta.
+      </p>
+      
+      <h2>Conceito de Integral com funções vetoriais</h2>
+      <h3>Integrais definidas</h3>
+      <p>
+      Se $\mathbf{r}(t)$ é uma função vetorial que é continua no intervalo $a\leq t \leq b$ podemos definir a <b>integral definida</b> de $\mathbf{r}(t)$ sobre este intervalo como o limite da somas de Riemann da mesma forma que são definidas para o caso das funções em $\mathbb{R}$. Especificamente se define
+      
+      \[
+        \int_a^b \mathbf{r}(t)\,dt = \lim_{max\,\Delta t_k \rightarrow 0} \;\sum_{k=1}^{n} \mathbf{r}(t^*_k)\, \Delta t_k
+        \nonumber
+      \]
+      
+      aplicando essa definição às componente do vetor
+            
+      \[
+        \begin{eqnarray*}
+          \int_a^b \mathbf{r}(t)\,dt &=& \lim_{max\,\Delta t_l \rightarrow 0} \;\sum_{l=1}^{n} \mathbf{r}(t^*_l)\, \Delta t_l \nonumber\\
+          &=& \lim_{max\,\Delta t_l \rightarrow 0} 
+          \left[ \left( \sum_{l=1}^{n} f(t^*_l)\, \Delta t_l \right)\,\mathbf{i} +
+          \left( \sum_{l=1}^{n} g(t^*_l)\, \Delta t_l\right)\,\mathbf{j} +
+          \left( \sum_{l=1}^{n} h(t^*_l)\, \Delta t_l\right)\,\mathbf{k} \right]
+        \end{eqnarray*}
+      \]
+      e
+      \[
+        \int_a^b \mathbf{r}(t)\,dt = \left( \int_a^b f(t)\,dt \right)\,\mathbf{i}+ \left( \int_a^b g(t)\,dt\right) \,\mathbf{j} + \left( \int_a^b h(t)\,dt\right) \,\mathbf{k}
+      \]
+      </p>
+      <h5>Exemplo 10</h5>
+      <p>
+        Seja $\mathbf{r}(t) = t^2\mathbf{i} + e^t\mathbf{j} - \left( 2\cos \pi t \right)\mathbf{k}$ calcule a integral entre $[0, 1]$<br />
+        
+<!--        <b>SOL.</b><br />
+        
+        \[
+          \begin{eqnarray*}
+            \int_0^1 \mathbf{r}(t)\, dt&=& 
+            \left(\int_0^1 t^2 dt\right) \mathbf{i} +
+            \left( \int_0^1  e^t  dt\right) \mathbf{j} +
+            \left( \int_0^1  2\cos \pi t\;  dt\right) \mathbf{k}\\
+            &=&  \left.\dfrac{t^3}{3} \right|_0^1 \,\mathbf{i}+
+            \left. e^t\right|_0^1 \,\mathbf{j} +
+            \left. \dfrac{2}{\pi} \sin \pi t\right|_0^1 \,\mathbf{k}\\
+            &=& \dfrac{1}{3} \,\mathbf{i} + (e - 1)\,\mathbf{j}            
+          \end{eqnarray*}
+        \]-->
+      </p>
+      
+      <p>
+        Podemos provar que todas as regras de integração que são válidas para funções em $\mathbb{R}$ se mantem válidas para as funções vetoriais.
+      </p>
+      
+      <h3>Integrais indefinidas</h3>
+      <p>
+        A antiderivada de uma função vetorial $\mathbf{r}(t)$ é uma função vetorial $\mathbf{R}(t)$ tal que
+        \[
+          \mathbf{R}'(t) = \mathbf{r}(t)
+          \nonumber
+        \]
+        isto é
+        
+        \[
+          \int \mathbf{r}(t)\, dt = \mathbf{R}(t) + \mathbf{C}
+        \]
+        onde $\mathbf{C}$ é um vetor constante arbitrário.
+      </p>
+      
+      <h5>Exemplo 11</h5>
+      <p>
+        Encontre $\mathbf{r}(t)$ sabendo que $\mathbf{r}'(t) = \left< 3, 2t \right>$ e que $\mathbf{r}(1) = \left< 2, 5 \right>$
+        
+<!--        <br><b>SOL.</b><br />
+        
+        \[
+          \begin{eqnarray*}
+            \int \mathbf{r}'(t)\, dt&=& \mathbf{r}(t)\\
+            &=& \int \left(
+            3\,\mathbf{i} +
+            2t\,\mathbf{j} \right) dt\\
+            &=& 3t\,\mathbf{i} + t^2\,\mathbf{j} + \mathbf{C}
+          \end{eqnarray*}
+        \]
+        
+        Como $\mathbf{r}(1) = 2\,\mathbf{i} + 5\,\mathbf{j}$, então
+        
+        \[
+          \begin{eqnarray*}
+          2\,\mathbf{i} + 5\,\mathbf{j} &=&
+          3(1)\,\mathbf{i} + (1)^2\,\mathbf{j} + \mathbf{C}\\
+          \mathbf{C}  &=& -\,\mathbf{i} + 4\,\mathbf{j}
+          \end{eqnarray*}
+        \]-->
+      </p>
+  <!--
+      <h5>Exemplo</h5>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      \mathbb{R}
+      
+      \left< \right>    \left( \right)
+ 
+      \mathbf{r}(t)  \,\mathbf{i}  \,\mathbf{j}  \,\mathbf{k} 
+      
+
+      \[
+        \begin{align*}
+        \end{align*}
+      \]
+         
+         
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="definicaotitulo">
+        Definição de função vetorial
+      </td>
+      </tr>
+      <tr>
+      <td class="definicao">
+      <p><em>
+        
+      </em></p>
+      </td></tr>
+      </table>
+      
+      
+      <h5>Exemplo</h5>
+      <p>
+       <br><b>SOL.</b><br />
+      </p>
+      
+      -->
+      
+            
+      </div>
+      <!-- Fim Principal   -->
+    </div>
+    <!-- Fim todo   -->
+  </body>
+
+</html>
+      
