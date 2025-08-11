@@ -28,7 +28,8 @@
        window.MathJax = {
          tex: {
            tags: 'ams',
-           inlineMath: [['$', '$'], ['\(', '\)']],
+           // inlineMath: [['$', '$'], ['\(', '\)']],
+           inlineMath: [['$', '$']],
            macros: {
               bra: ["{\left\langle #1 \right\rvert}",1],
               ket: ["{\left\lvert #1 \right\rangle}",1],
@@ -204,11 +205,52 @@
         <li>
           $\displaystyle \sum _{n=0}^{\infty }  \dfrac {x^{2n}} {\left( 2n\right) !}$
         </li>
-        <li>
+        <!--<li>
           $\displaystyle     \dfrac {1} {1-2x}=\sum _{n=0}^{\infty }\left( 2x\right) ^{n}=\sum _{n=0}^{\infty }2^{n}x^{n}$
+        </li>-->
+      </ol>
+      
+      <p>
+        Uma série de potencia com a qual já trabalhamos é a série geométrica, basta pensar no $x$ como representando um conjunto de valores e não um único número, ou seja
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="teorematitulo">
+        A série geométrica como uma série de potencias
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p style="text-align: justify;"><em>
+        \[
+          \dfrac{1}{1-x}=\sum_{n=0}^{\infty}\left(x\right)^{n},\qquad |x| < 1
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h6>Exemplo</h6>
+      
+      <ol>
+        <li>
+          Determine a convergência (ou não) da série
+          \[
+            \sum_{n=0}^{\infty}2^{n}x^{n}
+          \]
+        </li>
+        <li>
+          Encontre uma série de potencia centrada em $c=0$ para
+          \[
+            f(x)=\dfrac{1}{2+x^{2}}
+          \]
+          e determine seu intervalo de convergência
         </li>
       </ol>
       
+      <p>
+        Podemos entender as séries de potencia como sendo um polinômio, de fato, podemos integrar e derivar termo a termo e dessa forma obter a derivada e a integral da série
+      </p>
       
       <table class="tabela_de_lista">      
       <tr>
@@ -247,149 +289,484 @@
         </li>
       </ol>
       
+      <h3>Polinômios de Taylor</h3>
+      
+      <p>
+        Por definição, a derivada de uma função em um ponto $y=f(a)$ é dada por
+        \[
+          f'(a) = \lim_{x\to a}\dfrac{y-f(a)}{x-a}
+        \]
+        a partir dessa definição é introduzida a ideia de aproximação linear no ponto $a$, onde 
+        \[
+          y = f(a) + f'(a)\left( x-a \right)
+        \]
+        como a aproximação linear é um polinômio de grau $1$, podemos escrever
+        \[
+          p_1(x) = f(a) + f'(a)\left( x-a \right)
+        \]
+        esse polinômio tem a propriedade de seu valor coincide com o da função $f$ no ponto $a$, além da sua inclinação, ou seja
+        \[
+          p_1(a) = f(a)\quad\text{e}\quad p'_1(a) = f'(a)
+        \]
+      </p>
+
+      <div align="center">
+        <a href="javascript:newWin('figuras/fig_seriePotencia02.png', 'Zoom', '1650')">
+          <img src="figuras/fig_seriePotencia02.png" width="750" align="center">
+        </a>
+          <p style="padding-left: 50px; padding-right: 50px; text-align: center;">
+            Figura 08: À esquerda a aproximação linear de uma função e à direita a aproximação quadrática.
+          </p>
+      </div>
+      
+      <p>
+        Agora suponha que você deseje um polinômio que tenha ainda mais caraterísticas da função original, suponhamos que além das anteriores a concavidade da função seja considerada no ponto. Para isso proporemos um polinômio de grau $2$ centrado em $a$
+        \[
+          p_2(x) = f(a) + f'(a)\left( x-a \right) + c_2\left( x-a \right)^2
+        \]
+        que deve verificar tudo o já verificado e além disso a segunda derivada tenham o mesmo valor da função original (e dessa forma a concavidade), isto é
+        \[
+          p_2(a) = f(a),\quad p_2'(a) = f'(a)\quad\text{e}\quad p_2''(a) = f''(a)
+        \]
+        substituindo $x=a$ em $p_2(x)$
+        \begin{align*}
+          p_2(a) &= f(a) + f'(a)\left( a-a \right) + c_2\left( a-a \right)^2\\
+          p_2(a) &= f(a)
+        \end{align*}
+        verificando a primeira condição, derivando e substituindo $x=a$
+        \begin{align*}
+          p_2'(x) &=  f'(a) + 2c_2\left( x-a \right)\\
+          p_2'(a) &=  f'(a) + 2c_2\left( a-a \right)\\
+          p_2'(a) &=  f'(a)
+        \end{align*}
+        derivando novamente e substituindo
+        \begin{align*}
+          p_2''(x) &=   2c_2\\
+          c_2 &= \dfrac{p_2''(a)}{2}\\
+              &=  \dfrac{f''(a)}{2}
+        \end{align*}
+        uma vez que exigimos $p_2''(a) = f''(a)$, sendo assim podemos escrever nosso polinômio
+        \[
+          p_2(x) = f(a) + f'(a)\left( x-a \right) + \dfrac{f''(a)}{2}\left( x-a \right)^2
+        \]
+        podemos continuar com nossa aproximação indo até a terceira ordem
+        \[
+          p_3(x) = f(a) + f'(a)\left( x-a \right) + \dfrac{f''(a)}{2}\left( x-a \right)^2 + c_3\left( x-a \right)^3
+        \]
+        e exigindo
+        \[
+          p_3(x) = f(a),\quad p_3'(a) = f'(a),\quad p_3''(a) = f''(a)\quad\text{e}\quad p_3'''(a) = f'''(a)
+        \]
+        é fácil calcular que reobteremos o mesmo resultado que para o caso de $p_2(x)$, mas que na terceira derivada
+        \begin{align*}
+          p_3(x) &= f(a) + f'(a)\left( x-a \right) + \dfrac{f''(a)}{2}\left( x-a \right)^2 + c_3\left( x-a \right)^3\\
+          p_3'(x) &= f'(a)\left( x-a \right) + f''(a)\left( x-a \right) + 3c_3\left( x-a \right)^2\\
+          p_3''(x) &= f''(a) + \left(3\cdot 2\right) c_3\left( x-a \right)\\
+          p_3'''(x) &= \left(3\cdot 2\right) c_3\\
+          p_3'''(a) &= \left(3\cdot 2\right) c_3\\
+          c_3 &= \dfrac{f'''(a)}{3\cdot 2}\\
+          c_3 &= \dfrac{f'''(a)}{3!}
+        \end{align*}
+        ou seja
+        \[
+          p_3(x) = f(a) + f'(a)\left( x-a \right) + \dfrac{f''(a)}{2}\left( x-a \right)^2 + \dfrac{f'''(a)}{3!}\left( x-a \right)^3
+        \]
+        Estes resultados são generalizados na seguinte definição
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="teorematitulo">
+        Definição: Polinômios de Taylor
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p style="text-align: justify;"><em>
+        Seja $f$ uma função com $f',\, f'',\, \ldots , \, f^{(n)}$  definidas em $a$. O \textbf{polinômio de Taylor de ordem n} para $f$ centrada em $a$, denotado por $p_n$ tem a propriedade de coincidir com o valor e todas as $n$ derivadas da função $f$ no ponto $a$, isto é
+        \[
+        p_n(x) = f(a),\quad p_n'(a) = f'(a),\quad \cdots, \quad\text{e},\quad p_n^{n}(a) = f^{n}(a)
+        \]
+        e é definido como
+        \[
+        p_n(x) = f(a) + f'(a)\left( x-a \right) + \dfrac{f''(a)}{2}\left( x-a \right)^2 + \cdots + \dfrac{f^{(n)}(a)}{n!}\left( x-a \right)^n
+        \]
+        ou de forma mais compacta como
+        \[
+        p_n(x) = \sum_{k=0}^n c_k\,\left(x - a\right)^k
+        \]
+        com \textbf{coeficientes}
+        \[
+        c_k = \dfrac{f^{k}(a)}{k!},\quad \text{para } k = 0,\, 1, \, 2,\, \ldots , \, n
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h6>Exemplo</h6>
+      <ol>
+        <li>
+          Encontre $p_2(x)$ em torno do ponto $a=1$ para a função $f(x)= \ln x$ e utilize esse resultado para aproximar o valor de $\ln 0,9$ e $\ln 0.5$
+        </li>
+        <li>
+          Encontre $p_4(x)$ em torno do ponto $a=0$ para a função $f(x)= e^x$ e $g(x)=\cos (x)$. Utilize esse resultado para aproximar o valor de $e^{0,9}$ e $\cos (0.2)$
+        </li>
+        <li>
+          Utilize um polinômio de ordem $3$ para aproximar o valor de $\sqrt{18}$
+        </li>
+      </ol>
+      
+      <h4>Estimativa do resto do polinômio de Taylor</h4>
+      <p>
+        Similarmente ao feito no casos anteriores, o resto é definido como
+        \[
+          R_n(x) = f(x) - p_n(x)
+        \]
+        O valor absoluto do resto corresponde ao erro cometido ao aproximar a função pelo polinômio  de ordem $n$. Equivalentemente, podemos afirma que $f$ consiste de duas componente: a aproximação polinomial e o resto associado.
+      </p>
+      
+      <p>
+        O seguinte teorema nos permite calcular o resto de um polinômio de Taylor
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="teorematitulo">
+        Definição: Resto do teorema do Taylor
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p style="text-align: justify;"><em>
+        Seja $f$ uma função contínua com derivadas até a $f^{(n+1)}$ num intervalo, $I$, aberto contendo $a$. Para todo $x$ em $I$
+        \[
+          f(x) = p_n(x)+R_n(x)
+        \]
+        onde $p_n$ é o polinômio de $n-essima$ ordem para $f$ centrada em $a$ e o resto é dado por
+        \[
+          R_n(x) = \dfrac{f^{n+1}(c)}{(n+1)!}(x-a)^{n+1}
+        \]
+        para um ponto $c$ entre $x$ e $a$.
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <p>
+        Este tipo de resto é conhecido como \textbf{resto de Lagrange}, mas há outra expressão que pode ser utilizado para expressar o resto, o \textbf{resto por integral}
+        \[
+          R_n(x) = \dfrac{1}{n!}\int_a^x \left( x-t \right)^nf^{n+1}(t)\,dt
+        \]
+        
+        Voltando a nossa definição baseada no resto de Lagrange, observe que o termo que define o resto é muito similar ao primeiro termo desprezado na série de Taylor, excepto pelo fato de que $\displaystyle f^{(n+1)}$ é avaliado em algum ponto desconhecido $c$ entre $x$ e $a$. Dessa forma, como $c$ é desconhecido, a dificuldade em estimar o resto é encontrar um limite para $\displaystyle \left| f^{(n+1)}(c)  \right|$. Assumindo que possamos determinar esse ponto, o seguinte teorema nos permite estimar o resto
+      </p>
+      
+      <table class="tabela_de_lista">      
+      <tr>
+      <td class="teorematitulo">
+        Teorema: Estimando o Resto
+      </td>
+      </tr>
+      <tr>
+      <td class="teorema">
+      <p style="text-align: justify;"><em>
+        Seja $n$ um número positivo fixo. Suponha que existe um número $M$ tal que $\displaystyle \left| f^{(n+1)}(c)  \right| \leq M$, para todo $c$ entre $a$ e $x$, inclusive. O resto no $n$-éssimo termo do polinômio de ordem $n$ para $f$ centrado em $a$ satisfaz
+        \[
+          R_n(x) =\left|  f(x) - p_n(x) \right| =\left|   f^{n+1}(c)\dfrac{(x-a)^{n+1}}{(n+1)!}  \right| \leq M \dfrac{\left| x-a \right|^{n+1} }{(n+1)!}
+        \]
+      </em></p>
+      </td></tr>
+      </table>
+      
+      <h6>Exemplo</h6>
+      <ol>
+        <li>
+          Encontre um limite para o valor do resto para o polinômio de Taylor de $f(x)=\cos x$ centrado em $x=0$
+        </li>
+        
+        <li>
+          Determine o erro cometido ao aproximar $\sqrt{18}$ utilizando o polinômio de Taylor de ordem $3$
+        </li>
+        
+        <li>
+          Utilize o $n$-éssimo polinômio de Maclaurin (Taylor centrado em zero) da função $e^{x}$, para aproximar $e$ até a quinta casa decimal.
+        </li>
+        
+        <li>
+          Use o teorema da Estimativa do Resto para encontrar um intervalo contendo $x=0$ ao longo do qual $f(x)=\cos x$ pode ser aproximado por $p(x)=1-(x^{2}/2!)$ com precisão de três casas decimais.
+        </li>
+        
+        <li>
+          Utilize o teorema de Taylor para aproximar $\sin(0,1)$ a partir de $p_{3}(0,1)$, em torno de $x=0$, e determine la precisão desta aproximação.
+        </li>
+        
+        <li>
+          Determine o grau do polinômio de Taylor $p_{n}(x)$ expandido em torno de $a=1$ que deve ser usado para aproximar $\ln(1,2)$ de modo que o erro seja menor que $0,001$.
+        </li>
+      </ol>
+      
+      
+      <h5>Erro de arredondamento e truncamento</h5>
+      <p>
+        Existem dois tipos de erros que ocorrem ao calcular com séries. O primeiro, chamado erro de truncamento, é o erro que resulta quando uma série é aproximada por uma soma parcial; e o segundo, chamado erro de arredondamento, é o erro que surge de aproximações em cálculos numéricos. 
+      </p>
+
+      <p>
+        Métodos para estimar e controlar o erro de arredondamento são estudados em um ramo da matemática chamado análise numérica. No entanto, como regra geral, para atingir a precisão de $n$ casas decimais em um resultado final, todos os cálculos intermediários devem ser precisos em pelo menos $n + 1$ casas decimais.  Como uma questão prática, um bom procedimento de trabalho é executar todos os cálculos intermediários com o número máximo de dígitos que seu utilitário de cálculo pode manipular e, então, arredondar no final.
+      </p>
+      
       <h3>Série de Taylor</h3>
       
       <p>
-        Se $f(x)$ é representado por uma série centrada em $c$ no intervalo $\left| x-c \right| < R$ com $R > 0$, então chamaremos aquela série de <b>série de Taylor</b>
+        Um resultado interessante que se desprende da definição do resto é a possibilidade de expressar alguma funções, no de forma aproximada usando o polinômio de Taylor, e sim usando a série de potencia de Taylor (polinômio infinito). Par ver isso observe que
         \[
-          T\left( x\right) =\sum _{n=0}^{\infty }\dfrac {f^{\left( n\right) }\left( c\right) } {n!}\left( x-c\right) ^{n}
+          \lim_{n\to \infty} R_n(x) = 0 \Rightarrow f(x) = p_\infty (x)
         \]
-        Um caso especial desta série é quando $c=0$, nesse caso a série se denomina de <b>série de Maclaurin</b>
-        
-          \begin{array}{rcl}
-            f\left( x\right) &=& \displaystyle \sum _{n=0}^{\infty }\dfrac {f^{\left( n\right) }\left( 0\right) } {n!}x^{n}\\
-                            &=& f'\left( 0\right) +f''\left( 0\right) _{x}+\dfrac {1} {2!}f'''\left( 0\right) x^{2}+\\
-                            & &\dfrac {1} {3!}f^{\left( 4\right) }\left( 0\right) x^{3}+\ldots     
-          \end{array}
-        
-        Podemos utilizar a série de Taylor para representar uma função $f(x)$ em termos de série, contudo não temos garantia nenhuma de que esta série seja convergente, de fato somente podemos dizer
-      </p>
-      
-      <table class="tabela_de_lista">      
-      <tr>
-      <td class="definicaotitulo">
-      </td>
-      </tr>
-      <tr>
-      <td class="definicao">
-      <p><em>
-        A série de Taylor converge a $f(x)$ se e somente se
-        \[
-          \lim_{k \to \infty} R_k(x) = 0
-        \]
-        onde, $R_k$ é o resto de ordem $k$, definido como
-        \[
-          R_k(x) = f(x) - T(x)
-        \]
-      </em></p>
-      </td></tr>
-      </table>
-      
-      <p>
-        Esse método não é o que é utilizado mas o próximo teorema se aplica em casos importante
+        ou, de forma mais clara
       </p>
       
       <table class="tabela_de_lista">      
       <tr>
       <td class="teorematitulo">
-        Teorema
+        Definição: Série de Taylor/Maclaurin de uma função
       </td>
       </tr>
       <tr>
       <td class="teorema">
       <p style="text-align: justify;"><em>
-        Seja $I=(c-R, \,c+R)$, onde $R>0$.  Suponha que existe um $K>0$  tal que todas as derivadas de $f$ sejam limitas por $K$ em $I$:
-        \[
-        \displaystyle  \left| f^{\left( k\right) }\left( x\right) \right| \leq k\;\;\;\;\;\;\forall k>0\wedge x\in I
-        \]
-        Então $f(x)$ é representado por sua série de Taylor em $I$:
-        \[
-        f(x) =\displaystyle \sum _{n=0}^{\infty }\dfrac {f^{\left( n\right) }\left( c\right) } {n!}\left( x-c\right) ^{n}\;\;\;\;\;\;\forall x\in I
-        \]
+        Suponha que a função $f$ tem todas as derivadas de ordem $n$ definidas em um intervalo centrado no ponto $a$. A série de Taylor de $f$ centrada em $a$ é dada por
+          \[
+          f(a) + f'(a)(x-a) + \dfrac{f''(a)}{2!}(x-a)^2 +\dfrac{f^{(3)}(a)}{3!}(x-a)^3 +  \cdots =
+            \sum_{k=0}^\infty  \dfrac{f^k(a)}{k!}\,\left(x - a\right)^k
+          \]
+          
+          Se $a=0$, isto é se a série de Taylor é centrada em zero, então recebe o nome de série de Maclaurin:
+          \[
+          f(0) + f'(0)\, x + \dfrac{f''(0)}{2!}\, x^2 +\dfrac{f^{(3)}(0)}{3!}\, x^3 +  \cdots =
+          \sum_{k=0}^\infty  \dfrac{f^k(0)}{k!}\,x - a^k
+          \]
       </em></p>
       </td></tr>
       </table>
       
-      <h6>Exemplo de algumas séries de Taylor</h6>
-      
       <p>
-        \begin{array}{rcl}
-          \sin x &=& \displaystyle \sum _{n=0}^{\infty }\left( -1\right) ^{n}\dfrac {x^{2n+1}} {\left( 2n+1\right) !}\\
-                    &=&\displaystyle  x-\dfrac {x^{3}} {3!}+\dfrac {x^5} {5!}-\dfrac {x^{7}} {7!}+\ldots\\
-          &&\\
-          \cos x &=& \displaystyle \sum _{n=0}^{\infty }\left( -1\right) ^{n}\dfrac {x^{2n}} {\left( 2n\right) !}\\
-              &=& \displaystyle  1-\dfrac {x^{2}} {2!}+\dfrac {x^4} {4!}-\dfrac {x^{6}} {6!}+\ldots\\
-          &&\\
-          e^x &=& \displaystyle \sum _{n=0}^{\infty }\left( -1\right) ^{n}\dfrac {x^{n}} {\left( n\right) !}\\
-          &=& \displaystyle  1+\dfrac {x^{2}} {2!}+\dfrac {x^3} {3!}+\dfrac {x^{4}} {4!}+\ldots\\
-          &&\\
-          \displaystyle\dfrac{1}{1-x} &=& \displaystyle\sum _{n=0}^{\infty }x^n\\
-        \end{array}
+        A série de Taylor é uma série de potências conforme definido anteriormente. O Teorema relativo ao raio de convergência (\ref{reaioConvergencia}) implica que $a$ deve ser o centro de qualquer intervalo no qual tal série converge, mas a definição da série de Taylor não faz nenhuma exigência de que a série deva convergir em algum lugar, exceto no ponto $x = a$, onde a série é apenas $f(a) + 0 + 0 + \cdots$ . A série existe desde que todas as derivadas de $f$ existam em $x=a$; na prática, isso significa que cada derivada deve existir em um intervalo aberto contendo $x=c$. No entanto, a série pode convergir a lugar nenhum, exceto em $x = a$, e se convergir em outro lugar, pode convergir para algo diferente de $f(x)$. (Veja o exemplo \ref{serieTaylorFalha} para um exemplo de onde isso acontece.) Se a série de Taylor convergir para $f(x)$ em um intervalo aberto contendo $a$, então diremos que $f$ é analítica em $a$.
       </p>
-      
-      <h4>Importância do $x_0$ na expansão de Taylor</h4>
-      
-      <p>
-        A Taylor series is an approximation of a function with 'easy' functions, namely polynomials. A major difference between a Taylor series centered at one point vs. another is the domain over which the series converges
-      </p>
-      <p>
-        For example the Taylor series for $\displaystyle f(x) = \frac{1}{1-x}$ centered at $x=0$ is
-        \[
-          T_0(x) = x + x^2 + x^3 + x^4 + ...
-        \]
-        This series converges on the interval $(-1,1)$. In other words, for all $x \in (-1,1),\,\, T_0(x) = f(x)$ However outside that interval, not so. For instance $f(-2)=1/3$ but
-        \[
-          T_0(-2) = -2 + 4 - 8 + 16 + ...
-        \]
-        clearly doesn't converge.
-      </p>
-      <p>
-        We were to write out the Taylor series of $f(x)$ centered at $x=−1$, we would have,
-        \[
-          T_{-1}(x) = \frac{1}{2} + \frac{x+1}{4} + \frac{(x+1)^2}{8} + \frac{(x+1)^3}{16} + ...
-        \]
-        This series, $\displaystyle T_{−1}$, converges instead on the interval $(−3,1)$. The expression for $\displaystyle T_{−1}(−2)$ does converge (check!).
-      </p>
-      
-      <p>
-        Some Taylor series converge everywhere, such as the Taylor series for $e^x$ or $\sin x$.
-      </p>
-      
-      <p>
-        From <a href="https://math.stackexchange.com/questions/1008091/what-does-it-mean-intuitively-for-a-taylor-series-to-be-centered-at-a-specific-p" targer="_blank">Quora</a>
-      </p>
-      
-      <h3>Aproximação de funções mediante polinômios de Taylor</h3>
-      
       
       <table class="tabela_de_lista">      
       <tr>
       <td class="teorematitulo">
-        Teorema
+        Definição: Função analítica
       </td>
       </tr>
       <tr>
       <td class="teorema">
       <p style="text-align: justify;"><em>
-        Se $f$ tem $n$ derivadas em $c$, então o polinômio
-        \[
-          P_n(x) = f(c) + f'(c)(x-c) + \cdots + \dfrac{f^{(n)}(c)}{n!}(x-c)^n
-        \]
-        é chamado de  $n-esimo$ polinômio de Taylor de $f$ em $c$. Se $c=0$, então o polinômio é chamado de $n-esimo$ polinômio de Maclaurin de $f$.
+        Uma função $f$ é analítica em $a$ se $f$ tem uma serie de Taylor em $a$ a qual converge a $f(a)$ em um intervalo aberto contendo $a$. Se $f$ é analítica em cada ponto de um intervalo aberto, então diremos que $f$ é analítica no intervalo
       </em></p>
       </td></tr>
       </table>
+      
+      <p>
+        Ainda que não todas, muitas das funções elementares são funções analíticas, como veremos em vários dos exemplos a seguir
+      </p>
+      
+      <h6>Exemplo</h6>
+      <ol>
+        <li>
+          Determine a série de Maclaurin de $f(x)=\cos x$ e determine o intervalo de convergência.
+        </li>
+        <li>
+          Determine a série de Maclaurin de $f(x)=\dfrac{1}{1-x}$ e determine o intervalo de convergência.
+        </li>
+        <li>
+          Encontre os primeiros $4$ termos diferentes de zero da série de Taylor de $f(x)=\sqrt[3]{x}$ centrada em $8$.
+        </li>
+        <li>
+          Determine a série de Taylor de $f(x)=1/x$ centrada em $x=2$.
+        </li>
+        <li>
+          Represente $f(x)=\sin x$ como uma soma de série Taylor centrada em $x=\pi/3$
+        </li>
+        <li>
+          Represente $f(x)=\ln x$ como uma soma de série Taylor centrada em $x=1$.
+        </li>
+        <li>
+          Seja a função definida por
+          \[
+          f(x)=\begin{cases}
+          e^{-1/x^{2}} & x\neq0\\
+          0 & x=0
+          \end{cases}
+          \]
+          obtenha a série de Maclaurin para $f$, e demonstre que converge para todos o valores de $x$, e que só representa a $f(x)$ quando $x=0$
+        </li>
+      </ol>
+      
+      <h3>Séries de Taylor conhecidas</h3>
+      
+      <table summary="Série de Taylor e Intervalo de convergência" class="tabela_em_branco5">
+        <tr class="titulos_de_tabela_de_lista">
+            <th colspan="3">Série de Taylor</th>
+            <th>Intervalo de convergência</th>
+          </tr>
+          
+
+          <tr class="linhai_de_tabela_de_lista">
+            <td> $ e^{x} $ </td>
+            <td> $ = \displaystyle \sum_{n=0}^\infty \dfrac{x^{n}}{n!} $ </td>
+            <td> $ = 1 + x + \dfrac{1}{2}x^{2} + \dfrac{1}{3!}x^{3} + \dfrac{1}{4!}x^{4} + \cdots $ </td>
+            <td> $ (-\infty, \infty) $ </td>
+          </tr>
+          <tr class="linhap_de_tabela_de_lista">
+            <td> $ \cos x $ </td>
+            <td> $ = \displaystyle \sum_{n=0}^\infty (-1)^n \dfrac{x^{2n}}{(2n)!} $ </td>
+            <td> $ = 1 - \dfrac{1}{2!}x^{2} + \dfrac{1}{4!}x^{4} - \dfrac{1}{6!}x^{6} + \cdots $ </td>
+            <td> $ (-\infty, \infty) $ </td>
+          </tr>
+          <tr class="linhai_de_tabela_de_lista">
+            <td> $ \ln x $ </td>
+            <td> $ = \displaystyle \sum_{n=1}^\infty (-1)^{n+1} \dfrac{(x-1)^n}{n} $ </td>
+            <td> $ = (x-1) - \dfrac{1}{2}(x-1)^2 + \dfrac{1}{3}(x-1)^3 - \cdots $ </td>
+            <td> $ (0, 2] $ </td>
+          </tr>
+          <tr class="linhap_de_tabela_de_lista">
+            <td> $ \ln (x + 1) $ </td>
+            <td> $ = \displaystyle \sum_{n=1}^\infty (-1)^{n+1} \dfrac{x^n}{n} $ </td>
+            <td> $ = x - \dfrac{x^2}{2} + \dfrac{x^3}{3} - \dfrac{x^4}{4} + \cdots $ </td>
+            <td> $ (-1, 1) $ </td>
+          </tr>
+          <tr class="linhai_de_tabela_de_lista">
+            <td> $ \dfrac{1}{1-x} $ </td>
+            <td> $ = \displaystyle \sum_{n=0}^\infty (-1)^n x^n $ </td>
+            <td> $ = 1 - x + x^2 - x^3 + x^4 - \cdots $ </td>
+            <td> $ (-1, 1) $ </td>
+          </tr>
+          <tr class="linhap_de_tabela_de_lista">
+            <td> $ \tan^{-1} x $ </td>
+            <td> $ = \displaystyle \sum_{n=1}^\infty (-1)^n \dfrac{x^{2n+1}}{2n+1} $ </td>
+            <td> $ = x - \dfrac{x^3}{3} + \dfrac{x^5}{5} - \dfrac{x^7}{7} + \cdots $ </td>
+            <td> $ (-1, 1) $ </td>
+          </tr>
+          <tr class="linhai_de_tabela_de_lista">
+            <td> $ \sinh x $ </td>
+            <td> $ = \displaystyle \sum_{n=0}^\infty \dfrac{x^{2n+1}}{(2n+1)!} $ </td>
+            <td> $ = x + \dfrac{x^3}{3!} + \dfrac{x^5}{5!} + \dfrac{x^7}{7!} + \dfrac{x^9}{9!} + \cdots $ </td>
+            <td> $ (-\infty, \infty) $ </td>
+          </tr>
+          <tr class="linhap_de_tabela_de_lista">
+            <td> $ \cosh x $ </td>
+            <td> $ = \displaystyle \sum_{n=0}^\infty \dfrac{x^{2n}}{(2n)!} $ </td>
+            <td> $ = 1 + \dfrac{x^2}{2!} + \dfrac{x^4}{4!} + \dfrac{x^6}{6!} + \dfrac{x^8}{8!} + \cdots $ </td>
+            <td> $ (-\infty, \infty) $ </td>
+          </tr>
+        
+      </table>
+      
+      <h4>Construção de novas séries a partir de séries conhecidas</h4>
+
+      <p>
+        As séries de Taylor permitem integrar funções que pelos métodos tradicionais não podem ser integrados, os exemplos a seguir mostram como fazer essas operações.
+      </p>
+      
+      
+      <h6>Exemplo</h6>
+      <ol>
+        <li>
+          Utilize série para avalie as integrais
+          <ol>
+            <li>
+              $\displaystyle \int e^{-x^{2}}dx$
+            </li>
+            <li>
+              $\displaystyle \int_{0}^{1}e^{-x^{2}}dx$
+            </li>
+            <li>
+              $\displaystyle \int_{0}^{1}\sin x^{2}dx$
+            </li>
+            <li>
+              $\displaystyle \int_{0}^{0.5}\dfrac{dx}{1+x^{7}}$
+            </li>
+          </ol>
+        </li>
+        <li>
+          Avalie os limites
+          <ol>
+            <li>
+              $\displaystyle \lim_{x\to0}\dfrac{e^{x}-1-x}{x^{2}}$
+            </li>
+            <li>
+              $\displaystyle \lim_{x\to1}\dfrac{\ln x}{x-1}$
+            </li>
+            <li>
+              $\displaystyle \lim_{x\to0}\dfrac{\sin x-\tan x}{x^{3}}$
+            </li>
+            <li>
+              $\displaystyle \lim_{x\to0}\left(\dfrac{1}{\sin x}-\dfrac{1}{x}\right)$
+            </li>
+            <li>
+              $\displaystyle \lim_{x\to0}\left(\dfrac{\sin x^{3}-x^{3}}{x^{9}}\right)$
+            </li>
+          </ol>
+        </li>
+      </ol>
+      
+      <p>
+        É possível somar, restar, multiplicar e até mesmo dividir dois polinômios de Taylor conhecidos, com a finalidade de construir um novo polinômio. 
+      </p>
+      
+      <h6>Exemplo</h6>
+      <ol>
+        <li>
+          Considere a função $f(x)=\sqrt{1+x}$ 
+          <ol>
+            <li>
+              Encontre os primeiros cinco termos da série binomial para $f$ centrada em $0$
+            </li>
+            <li>
+              Aproxime $\sqrt{1,15}$ até quatro casas decimais. Assuma que a série para $f$ converge a $f$ no intervalo de convergência, que é $\left[-1,\,1\right]$
+            </li>
+          </ol>
+        </li>
+      </ol>
       
       <h3>Série binomial</h3>
       
       <p>
-        A série de Taylor gerada por $f(x) = \left( 1+x\right)^m$, quando $m$ é constante é chamada de série binomial. A série binomial converge absolutamente para $|x| < 1$.
+        Vamos analisar calcular a série de Maclaurin da função $\left(1+x\right)^n$
+        Vamos calcular as derivadas
+        \[
+        \begin{array}{rcl}
+        f(x) & = & \left(1+x\right)^{n}\\
+        f'(x) & = & n\left(1+x\right)^{n-1}\\
+        f''(x) & = & n\left(n-1\right)\left(1+x\right)^{n-2}\\
+        f^{(3)}(x) & = & n\left(n-1\right)\left(n-2\right)\left(1+x\right)^{n-3}\\
+        & \vdots\\
+        f^{(k)}(x) & = & n\left(n-1\right)\left(n-2\right)\cdots\left(n-k+1\right)\left(1+x\right)^{n-k}\\
+        & \vdots\\
+        f^{(n)}(x) & = & 1\\
+        f^{(n+1)}(x) & = & 0\\
+        & \vdots\\
+        f^{(n+m)}(x) & = & 0
+        \end{array}
+        \]
+        A série de Maclaurin é dada por
+        \begin{align*}
+        \left(1+x\right)^{n} & =1+n\,x+\left[\dfrac{n\left(n-1\right)}{2!}\right]x^{2}+\left[\dfrac{n\left(n-1\right)\left(n-1\right)}{3!}\right]x^{3}+\cdots+\\
+        & \qquad\qquad\left[\dfrac{n\left(n-1\right)\left(n-1\right)\cdots\left(n-k+1\right)}{k!}\right]x^{k}+\cdots+x^{n}\\
+        & =\sum_{k=0}^{n}\dfrac{n!}{\left(n-k\right)!k!}x^{k}\\
+        & =\sum_{k=0}^{n}\left(\begin{array}{c}
+        n\\
+        k
+        \end{array}\right)x^{k}
+        \end{align*}
+        esse resultado se resume no seguinte teorema
       </p>
       
+
       <table class="tabela_de_lista">      
       <tr>
       <td class="teorematitulo">
-        Teorema
+        Definição: Série binomial
       </td>
       </tr>
       <tr>
@@ -397,19 +774,50 @@
       <p style="text-align: justify;"><em>
         Para $-1 < x < 1$ se define a série binomial como
         \[
-          (1+x)^m = 1 + \sum_{k=1}^{\infty} \left(\begin{array}{c}m\\k\end{array} \right)x^k
+          (1+x)^n = 1 + \sum_{k=1}^{\infty} \left(\begin{array}{c}n\\k\end{array} \right)x^k
         \]
         onde definimos
         \[
-          \left(\begin{array}{c}m\\1\end{array}\right) = m\;\;\;\;\;\;\; \left(\begin{array}{c}m\\2\end{array} \right) = \dfrac{m(m-1)}{2!}
+          \left(\begin{array}{c}n\\1\end{array}\right) = n\;\;\;\;\;\;\; \left(\begin{array}{c}n\\2\end{array} \right) = \dfrac{n(n-1)}{2!}
         \]
         e
         \[
-          \left(\begin{array}{c}m\\k\end{array} \right) = \dfrac{m(m-1)(m-2)\cdots (m-k+1)}{k!}, \;\;k\geq 3
+          \left(\begin{array}{c}n\\k\end{array} \right) = \dfrac{n(n-1)(n-2)\cdots (n-k+1)}{k!}, \;\;k\geq 3
         \]
       </em></p>
       </td></tr>
       </table>
+      
+      
+      <h6>Exemplo</h6>
+      <ol>
+        <li>
+          Encontre os primeiros cinco termos da série binomial para $f$ centrada em $0$
+        </li>
+        <li>
+          Aproxime $\sqrt{1,15}$ até quatro casas decimais. Assuma que a série para $f$ converge a $f$ no intervalo de convergência, que é $\left[-1,\,1\right]$
+        </li>
+        <li>
+          Considere a função $f(x)=\sqrt[3]{1+x}$ e $g(x)=\sqrt[3]{c+x}$, onde $c>0$ é uma constante
+          <ol>
+            <li>
+              Encontre os quatro primeiros termos da série binomial para $f$ centrada em $0$
+            </li>
+            <li>
+              Utilize (a) para encontrar os quatro primeiros termos de $g$ centrada em zero
+            </li>
+            <li>
+              Utilize (b) para aproximar $\sqrt[3]{25}$, $\sqrt[3]{29}$. Assuma que a série para $g$ converge a $g$ no intervalo de convergência
+            </li>
+          </ol>
+        </li>
+        <li>
+          Encontre encontre a série binomial para $f$ centrada em $0$
+        </li>
+        <li>
+          Utilize (a) para calcular a série de $g(x)=\sin^{-1}x$
+        </li>
+      </ol>
       
 <!--  
 
